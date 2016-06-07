@@ -1,0 +1,33 @@
+<header class="top-bar">
+	<h1 class="logo"><a href="/gallery"><i></i></a></h1>
+<!--	<a href="javascript:;" class="column"><i></i></a>-->
+</header>
+
+<nav class="nav">
+	<span class="shrink"></span>
+	<h2 class="nav-logo"><i></i></h2>
+	<div class="nav-head">
+		<!--<a class="nav-logined" href="javascript:;">
+			<div class="nav-headimg">
+				<img src="">
+				<i></i>
+			</div>
+			<h4 class="nav-username">云浮木Float</h4>
+		</a>
+		<a class="nav-unlogin" href="javascript:;">
+			<div class="nav-headimg">
+				<img src="/static/phone/images/user_head.gif">
+			</div>
+			<h4 class="nav-username">未登录</h4>
+		</a>-->
+		<div class="nav-list">
+			<ul>
+				<li class="nav-pho"><a href="/gallery"><i></i><span>照片</span></a></li>
+<!--				<li class="nav-phog"><a href="/photog"><i></i><span>摄影师</span></a></li>-->
+				<!--<li class="nav-order"><i></i><span>订单</span></li>
+				<li class="nav-act"><i></i><span>活动</span></li>-->
+			</ul>
+		</div>
+		<!--<div class="login"><i></i><span>登出</span></div>-->
+	</div>
+</nav>

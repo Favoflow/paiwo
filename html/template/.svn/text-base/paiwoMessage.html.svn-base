@@ -1,0 +1,78 @@
+<div class="message_module">
+ <div class="message_shadow"></div>
+ <div class="messge_black"  id="paiwoMessage">
+    <div class="my_message_box">
+      <!--联系人窗口-->
+      <div class="message_box">
+        <i class="message_close"></i>
+        <header class="message_head">私信</header>
+        <div class="message_head_title">
+          <span class="head_title_left head_title_cur" id="cur_head">当前会话</span>
+          <span id="his_head">历史联系人</span>
+          <hr id="message_hr">
+        </div>
+        <ul class="message_list clearfix"> 
+              
+         <div id="cur_list">
+     
+         
+            </div>                   
+          <div id="his_list" style="display:none"></div>                                           
+        </ul>
+        <footer class="message_box_foot"></footer>
+      </div> 
+      <!--聊天窗口-->
+      <div class="message_talk_box" >
+        <i class="message_close"></i> 
+        <header class="talk_box_head">
+            <div style="display:none" id="message_talk_head">
+          <img width="35" height="35" src="">
+          <h4><!--i class="select-arrow"><p><u></u><i></i>清空记录</p></i--></h4>
+            </div>
+        </header>  
+        <!--没有联系人对话框-->
+        <div class="blank-box talk_box_inner">
+          <h2>拍我</h2>
+          <p>请选择一个会话</p> 
+        </div>
+        <!--联系人直接对话框-->
+        <div class="talk_box_inner_box" style="display:none">
+            <img src="/static/images/thumbnails/loading.gif" id="mylo">
+          <ul class="talk_box_inner" id="direct_contact"></ul>
+          <textarea class="talk_box_text" placeholder="输入文字，按回车键发送" id="message_send"></textarea>
+        </div>
+        <!--系统通知对话框-->
+        
+        <img src="/static/images/thumbnails/loading.gif" class="sysloading">
+        <ul  class="system_inform talk_box_inner" style=" display:none;" id="system_info">
+
+<!--
+          <li class="clearfix">
+            <p class="system-p box_inner_receive">
+              <i class="select-arrow"></i>
+              <a class="system_inform_head content_list_headimg"><img src="" width="32" height="32"></a>
+              <a class="system_inform_person connect_person">猪头五六七</a>
+              <span>12-26</span>
+              <u class="inform_content">在《傻逼文字题目》中回复了您！</u>
+            </p>
+          </li>
+-->
+
+                  
+        </ul>  
+
+      </div>
+    </div>
+    <!--删除弹窗-->
+    <div class="messge_black" id="msg_del_box">
+      <div class="alert_delete_box">
+        <h3>删除联系人<i class="message_close" id="msg_del_n2"></i></h3>
+        <p>确认删除选中的联系人么？</p> 
+        <div class="delete_button_box edit_button_box">
+          <button class="delete_confirm submit" id="msg_del_y">确定</button>
+          <button class="delete_cancel cancel" id="msg_del_n">取消</button>
+        </div>
+      </div>
+    </div> 
+ </div>
+</div> 

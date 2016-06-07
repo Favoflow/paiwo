@@ -1,0 +1,116 @@
+<div class="top-tab">
+  <h1 class="top-tab-logo"><a href="/">拍我</a></h1>
+  <ul class="top-tab-con">    
+    <li class="tab-icon-select tab-icon" id="tab-icon_myset">
+        
+     <a href="javascript:;" class="avatar-link" style="color:#b8b5ad;">
+       <div class="tab-icon_myset">
+         <i class="select-arrow"></i>
+         <img class="tab-icon-userhead">
+         <p></p> 
+       </div>
+     </a>
+      
+      <div class="tab_select_box">
+       	<i class="tab_select_arrow"></i>
+	      <div class="tab_select">         
+				  <a class="select_browse"><i class="select_browse_i"></i>我的主页</a>
+				  <a class="select_personcenter" href="/user" onclick="store.set('center_like','true')"><i class="select_personcenter_i"></i>个人中心</a>
+                  <a class="select_like" href="/user" onclick="store.set('center','1')">喜欢</a>
+				  <a class="select_store" href="/user" onclick="store.set('center','2')">收藏</a>
+                  <a class="select_like" href="/user" onclick="store.set('center','3')">订单</a>
+				  <a class="select_setting" href="/user" onclick="store.set('center','4')"><i class="select_like_i"></i>设置</a>
+		      <a class="select_login_out" href="/logout"><i class="select_login_i"></i>登出</a>
+	      </div>
+      </div>
+    </li>
+    <li class="tab-icon1 tab-icon" id="top_message">
+      <a class="tab-icon_myme" title="私信"></a><i></i>    
+    </li>
+    
+    <li class="tab-icon1 tab-icon" id="top_notice">
+      <a class="tab-icon_myno" title="消息" href="/notice"></a><i></i>    
+    </li>
+<!--
+    <li class="tab-icon1 tab-icon" id="up_loadimg">
+    	<a class="tab-icon_file"  href="/album/new" title="上传相册"></a> 
+    </li>
+-->
+    <li class="tab-login">
+      <a class="tab-login-a" href="javascript:;">登录</a>    
+    </li>
+    <li class="tab-regist">
+      <a class="tab-regist-a" href="/register">注册</a>   
+    </li>
+    <li class="tab-icon1 tab-icon" id="tab_search">
+      <a class="tab-icon_search" title="搜索"></a><i></i>    
+    </li>
+    <a id="tab-bephotog" href="/bephotog" target="blank">成为摄影师</a>
+  </ul>
+
+  <!-- 通知 -->
+  <div class="tab-notice-box" style="display:none">
+    <i class="notice-close"></i>
+    <span id="new_notice" style="display:none">你有<i>2</i>条新通知<a href="/notice">立即查看 &gt;</a></span>
+    <span id="new_message" style="display:none">你有<i>2</i>条私信<a>立即查看 &gt;</a></span>
+  </div>
+  
+</div>
+
+<!--搜索弹框-->
+<div class="search-back"></div>
+<div class="search-main">
+  <i class="search-sign"></i>
+  <i class="search-close"></i>
+  <h2 class="search-logo"><span></span><i></i></h2>
+  <div class="search-box">
+    <a href="javascript:;" class="search-mag"></a>
+    <div class="search-word">
+    <ul class="tab_search_ul">
+      <li class="searchlabels">
+
+      </li>
+      <input type="text" class="search_input" placeholder="搜索你喜欢的" />
+    </ul>
+  </div>  
+  </div>
+  <div class="search-key">
+    <dl>
+     	
+    </dl>
+  </div>
+</div>
+
+
+
+<div class="create-p" title="创建">
+    <a class="create-p-btn" href="javascript:;"><i></i></a>
+    <div class="create-p-main">
+        <a class="create-album" href="/album/new" target="_blank"><i class="create-p-arrow"></i>创建影集</a>
+        <a class="create-pocket" href="/pocket/add" target="_blank">创建图文</a>
+    </div>
+    
+    <div class="first-login create-p-first">
+        <i class="create-p-arrow"></i>
+        <h4>NEW!</h4>
+          <span class="check-new-tint">创建你的内容</span>
+          <a class="check-new-close">知道啦></a>
+    </div>
+</div>
+
+<!-- 新鲜事 -->
+<div class="check-new" title="新鲜事">
+  <a class="check-new-btn check-new-none" href="/feed">
+    <i class="check-new-p"></i>
+    <span class="check-new-num"></span>
+  </a>
+  <div class="first-login check-new-main">
+<!--    <i class="check-new-close"></i>-->
+    <i class="create-p-arrow"></i>
+    <h4>NEW!</h4>
+    <span class="check-new-tint">发现最热乎的新鲜事</span>
+<!--    <a href="/feed"><button class="submit check-new-submit">立刻去看看</button></a>-->
+     <a class="check-new-close">知道啦></a>
+  </div> 
+</div>
+

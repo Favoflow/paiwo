@@ -1,0 +1,251 @@
+.pg_list_foot {
+  margin-top: 100px;
+  background: #fafafa;
+  padding-bottom: 16px;
+}
+.pglist_foot_main {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 18px;
+  overflow: hidden;
+}
+.pg_foot_logo {
+  float: left;
+  color: #b6b3ad;
+  line-height: 24px;
+}
+.pg_foot_logo i {
+  display: inline-block;
+  width: 68px;
+  height: 24px;
+  border-right: 1px solid #b6b3ad;
+  background: url(/static/images/spirit.svg) no-repeat -200px -400px;
+}
+.pg_foot_logo span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  margin-left: 8px;
+}
+.pglist_foot_main dl { height: 180px;}
+.pglist_foot_main dt{
+  font: 12px 'NexaLight','Myriad Pro'; 
+  color: #b6b3ad;
+  padding:7px 0 16px;
+}
+.pglist_foot_main dt img {
+  width: auto;
+  height: 12px;
+}
+.pglist_foot_main dd a{
+  color:#8a8880;
+  font-size: 12px;
+  line-height: 24px;
+} 
+.pglist_foot_main dd a:hover{
+  color:#fc5b6e;
+} 
+.pg_list_about {
+  float: left;
+  padding: 0 40px 0 74px;
+  border-right: 1px solid #d8d6d3;
+}
+.pg_list_contact {
+  float: left;
+  padding:0 40px;
+  border-right: 1px solid #d8d6d3;
+}
+.pg_list_nav {
+  float: left;
+  padding:0 40px;
+  border-right: 1px solid #d8d6d3;
+}
+.pg_list_gizmos {
+  float: left;
+  padding:0 40px;
+}
+.pg_list_code {
+  float: right;
+}
+.pg_list_code h3 {
+  color: #b6b3ad;
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+.pg_list_code img {
+  width: 111px;
+  height: 111px;
+}
+.pg_list_copy {
+  margin-top: 46px;
+  text-align: center;
+  color: #b6b3ad;
+  font-size: 12px;
+  line-height: 24px;
+}
+.pg_list_copy i {
+  font-size: 12px;
+  font-family: arial;
+  color: #b6b3ad;
+}
+.pg_list_copy  p {
+  color: #b6b3ad;
+}
+.pg_list_copy a{
+  color: #b6b3ad;
+}
+.pg_list_copy a:hover{
+  text-decoration: underline;
+}
+.main,.stuido_mian,.search_main,.mylike_box {
+  min-height: 540px;
+  _height:auto;
+}
+
+
+/*建议反馈*/
+.feedback{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 102
+}
+.feedback-shadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+}
+.feedback-main {
+    padding-top: 37px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -257px 0 0 -250px;
+    width: 500px;
+    height: 477px;
+    background: #fff;
+    z-index: 2;
+}
+.feedback-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+}
+.feedback-close i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/static/images/spirit.svg) no-repeat 3px -948px;
+}
+.feedback h3 {
+    color: #020202;
+    font-size: 23px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.feedback-info {
+    position: relative;
+    width: 400px;
+    margin: 23px auto 0;
+}
+.feedback-info li{
+    display: block;
+    width: 400px;
+    margin-bottom: 10px;
+}
+.feedback-info input {
+    width: 386px;
+    height: 38px;
+    padding-left: 12px;
+    border: 1px solid #d8d6d0;
+    color: #414141;
+    line-height: 38px;
+}
+.feedback-info textarea {
+    width: 386px;
+    height: 196px;
+    padding-left: 12px;
+    border: 1px solid #d8d6d0;
+    color: #414141;
+    line-height: 38px;
+    resize: none;
+}
+
+.feedback-err{
+    position: absolute;
+    left: 0;
+    top: 306px;
+    height: 20px;
+    color: #dd2222;
+    font-size: 14px;
+    line-height: 20px;   
+}
+.feedback-err:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+.feedback-err i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("/static/images/spirit.svg") no-repeat scroll -200px -699px rgba(0, 0, 0, 0);
+}
+.feedback-err span {
+    float: left;
+}
+
+.feedback-submit {
+    width: 130px;
+    height: 40px;
+    margin-top: 45px;
+}
+
+.feedback-main.activeIn {
+    -webkit-animation: showIn .5s ease;
+    animation: showIn .5s ease;
+}
+.feedback-main.activeOut {
+	-webkit-animation: showOut .5s ease;
+	animation: showOut .5s ease;
+}
+
+.feedback-result {
+    display: none;
+    width: 182px;
+    margin: 78px auto 0;
+}
+.feedback-p1 span{
+    display: block;
+    color: #2dd888;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+.feedback-p1 i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 4px auto 25px;
+    background: url(/static/images/smile_face.png) no-repeat;
+    background-size: cover;
+}
+
+.feedback-p2 span {
+    display: block;
+    font-size: 14px;
+    color: #b6b3aa;
+    line-height: 16px;
+    text-align: center;
+}

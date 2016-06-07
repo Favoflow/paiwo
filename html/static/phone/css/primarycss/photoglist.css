@@ -1,0 +1,172 @@
+/*photog 摄影师列表*/
+
+.photog{ 
+  width:94.4%;
+  margin:46px auto 0;
+  background:#fff;
+  padding-bottom: 40px;
+  position: relative;
+}
+.more_pg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #757575;
+  font-size: 16px;
+  line-height: 40px;
+  background: #ccc;
+  color: #fff;
+}
+.pg_tit {
+  text-align: center;
+  border-bottom:1px dashed #eee;
+}
+.pg_commend,.pg_like {
+  font-size:1.125rem;
+  line-height:46px;
+  color:#dbdbdb;
+}
+.pg_tit_cur {color:#fc556a;}
+.care_pg_photobox {
+  display: none;
+}
+.search_pg_photobox {
+  width:95%;
+  margin: 0 auto;
+}
+.search_pg_photobox:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.search_pg_photobox li {
+  position: relative;
+  width: 87%;
+  height: 3.75rem;
+  margin: 1rem auto;
+}
+
+.search_pg_head_img {
+  width: 3.75rem;
+  height: 3.75rem;
+  float: left;
+}
+.search_pg_head_img img {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 1.875rem;
+  overflow: hidden;
+}
+.search_pg_photobox dl {
+  width: 6rem;
+  padding-left: 10px;
+  height: 3.2rem;
+  padding-top: 0.5rem;
+  margin-left: 11px;
+  border-left: 1px solid #eee;
+  float: left;
+}
+.search_pg_photobox dt {
+  height: 1rem;
+  line-height: 1rem;
+  margin-bottom: 1.4rem;
+  overflow: hidden;
+}
+.search_pg_photobox dt i {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+  background-size:330px auto;
+}
+.search_pg_photobox .girl {
+  background-position:-75px -1337px;
+}
+.search_pg_photobox .boy {
+  background-position:-161px -1337px;
+}
+.search_pg_photobox .nosex {
+  background: none;
+}
+.search_pg_photobox dt a {
+  color: #686868;
+  font-size: 0.875rem;
+  width: auto;
+  padding-right: 5px;
+  display: inline-block;
+}
+.search_pg_photobox dd {
+  height: 14px;
+  font-size: 0.75rem;
+  color: #b6b3ad;
+}
+.search_pg_photobox dd span {
+  color: #dd2338;
+  padding: 0 5px;
+}
+.pg_list_care { 
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: -0.75rem;
+  width:3.75rem;
+  height:3.75rem;  
+  text-align:center;
+  line-height:4rem;
+}
+.photog_add {
+  display:inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat -299px -1707px;
+  background-size:400px auto;
+}
+.pg_list_care .photog_iscare {
+  animation:care 0.5s forwards;
+  -webkit-animation:care 0.5s forwards;
+  background-position:-375px -1707px;
+}
+.pg_list_care .photog_notcare {
+  animation:notcare 0.5s forwards;
+  -webkit-animation:notcare 0.5s forwards; 
+}
+@keyframes care {
+  from{ background-color:#eee;}
+  to {
+    background-color:#fff;
+    }
+}
+@-webkit-keyframes care {
+  from{ background-color:#eee;}
+  to {
+    background-color:#fff;
+    }
+}
+@keyframes notcare {
+  from{ background-color:#eee;}
+  to {
+    background-color:#fff;
+    }
+}
+@-webkit-keyframes notcare {
+  from{ background-color:#eee;}
+  to {
+    background-color:#fff;
+    }
+}
+@media screen and (min-width:600px){
+  .search_pg_photobox {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .search_pg_photobox li {
+    float:left;
+    width:45%;
+    margin-right:2.5%;
+    margin-left:2.5%;
+  }
+}

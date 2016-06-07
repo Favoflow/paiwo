@@ -1,0 +1,50 @@
+{% extends "../base.html" %}
+
+{% block title %}
+<title>激活账号 - 拍我网</title>
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/com/navi.css">
+<link rel="stylesheet" type="text/css" href="/static/css/com/base.css">
+<link rel="stylesheet" type="text/css" href="/static/css/emailsend.css">
+{% end %}
+
+
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+{% block body %}
+
+
+<div class="main_content">
+    <div class="blank"></div>
+    <div class="box_mail">
+        <div class="head_send">
+			<h3>你需要验证邮箱才能执行进一步操作</h3>
+            <div><span class="email-add">{{ email }}</span></div>
+            <div></div>
+        </div>
+        <a class="mailbox" href="javascript:;" id="send_email" target="_blank">发送验证邮件</a>
+        <a class="mailbox hide submit" id="into_email" href="{{ email_address }}" target="_blank">进入邮箱</a>
+        <div class="line"></div>
+        <div class="tips">
+            <ul>
+                <li>没有收到验证邮件？</li>
+                <li>建议您检查邮件垃圾箱</li>
+                <li><input type="button" id="resend_email" value="重新发送验证邮件"></li>
+                <li>若仍未收到，<a href="/change" title="更换另一个邮箱地址">请更换另一个邮箱地址</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/js/register/mail.js"></script>
+<script src="/static/js/com/common.js"></script>
+<!--<script type="text/javascript" src="/static/js/side.js"></script>-->
+{% end %}

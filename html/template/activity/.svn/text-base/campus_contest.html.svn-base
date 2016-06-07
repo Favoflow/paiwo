@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>拍我网 - 高校摄影大赛</title>
+     <meta name="renderer" content="webkit">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+     <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    {% block commoncss %}
+    {% include "../commoncss.html" %}
+    {% end %}
+    <link rel="stylesheet" href="/static/css/activity/campus.css">
+    <!-- <link rel="stylesheet" href="/static/css/store.css">
+	<link rel="stylesheet" href="/static/css/browse.css">
+	<link rel="stylesheet" href="/static/css/com/bigPic.css"> -->
+    <!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <style>
+        #main_box{
+            height: 100%;
+        }
+        .pg_list_foot{
+            margin-top: 0;
+        }
+        .pg_list_foot{
+/*            display: block;*/
+        }
+    </style>
+</head>
+<body>
+  
+    <!--browse update-->
+    {% block update_notice %}
+    {% include "../update_notice.html" %}
+    {% end %}
+     
+    <!--提示-->
+    <div class="setting_succeed"></div>
+    {% block side %}
+    {% include "../side.html" %}
+    {% end %}
+    <!--侧边栏按钮-->
+    <ul class="push_button">
+      <li class="navi-one"></li>
+      <li class="navi-two"></li>
+      <li class="navi-three"></li>
+    </ul>
+     {% block top_bar %}
+     {% include "../top_tab.html" %}
+     {% end %}
+   
+   
+    <div id="main_box">
+        <div class="campus-main">
+           <div class="campus-txt">
+               <span class="campus-t"><img src="/static/images/activity/22.png"></span>
+               
+               <span class="campus-r"><img src="/static/images/activity/11.png"></span>
+               
+           </div>
+           <div class="campus-foot">
+             
+              <div class="campus-foot-main clearfix">
+              <span class="campus-b"><img src="/static/images/activity/33.png"></span>
+              <div class="btn-box">
+                  <button class="btn-join">我要参赛!</button>
+                  <button class="btn-show"><a href="/search?q=华东高校摄影大赛">参赛作品</a></button>
+              </div>
+              
+               <ul class="campus-foot-l">
+                   <li>
+                       <i>○</i>
+                       <span>作品格式为JPEG文件，长边不小于800像素。每人提交作品数量不多于五张。</span>
+                   </li>
+                   <li>
+                       <i>○</i>
+                       <span>参赛作品必须上传至指定网站（拍我网）及以附件形式发送至主办方邮箱 huadong@paiwo.co
+    发送邮箱需备注姓名、学校及手机联系方式。任何用代码链接的参赛作品无效。</span>
+                   </li>
+<!--
+                   <li>
+                       <i>○</i>
+                       <span>更多影赛细则请扫二维码后 详见比赛专题页面。</span>
+                   </li>
+-->
+               </ul>
+               <div class="campus-foot-r">
+                   <div class="campus-foot-host clearfix">
+                       <h4>主办方/</h4>
+                       <div class="campus-foot-org">
+                           <p>西交利物浦大学摄影协会  宁波诺丁汉大学摄影协会</p>
+                           <p>南京大学摄影协会   南京理工大学摄影协会</p>
+                           <p>浙江大学摄影协会   上海理工大学摄影协会</p>
+                       </div>
+                   </div>
+                   
+                   <div class="campus-foot-help clearfix">
+                       <h4>赞助方/</h4>
+                       <div class="campus-foot-logo"></div>
+                   </div>
+               </div>
+              </div>
+           </div>
+        </div>  
+    {% block foot %}
+    {% include "../foot.html" %}
+    {% end %}
+    </div>
+  
+    <!--弹框-->
+    <div class="campus-module">
+        <div class="campus-shadow"></div>
+            <div class="campus-topc">
+
+                <a class="campus-topc-close"><i></i></a>
+                <h3>温馨提示</h3>
+                <p>为了有更好的上传体验和上传效果，我们建议您通过电脑浏览器打开以下链接上传参赛作品。</p>
+                <dl>
+                    <dt>活动链接</dt>
+                    <dd>paiwo.co/huodong</dd>
+                </dl>
+                <div class="campus-topc-btn clearfix">
+                    <a class="campus-byphone submit">用手机上传</a>
+                    <a class="campus-back submit">回到活动页</a>
+                </div>
+        </div>
+    </div>
+   
+    {% block message %}
+    {% include "../paiwoMessage.html" %}
+    {% end %}
+
+     <div id="shadow_box"></div>
+    {% block login-box %}
+    {% include "../login-box.html" %}
+    {% end %}
+    
+   
+       <!-- 上传成功弹窗 -->
+        <div class="alert_body success_ok" style="display:none;">
+          <div class="upload-succeed-box alert_delete_box">
+            <h3><i class="check"></i>上传成功</h3>
+            <img src="/static/images/foot-images/paiwocode.jpg" class="succeed-img">
+            <p>跟踪活动动态，请关注<br>微信公众号“捕光捉影”</p>
+            <button class="succeed-button submit" id="">知道啦!</button>
+          </div>
+        </div>
+   
+    
+    <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/jquery.md5.js"></script>
+    <script src="/static/js/com/jquery.tmpl.min.js"></script>
+    {% block commonjs %}
+    {% include "../commonjs.html" %}
+    {% end %}
+   <script src="/static/js/activity/campusContest.js"></script>
+   
+   
+    <!--[if IE 6]>
+    <script src="static/js/login/update_notice.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <script src="static/js/login/update_notice.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+    <script src="static/js/login/update_notice.js"></script>
+    <![endif]-->
+</body>
+</html>

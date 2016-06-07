@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+	<title>404 - 拍我网</title>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    {% block commoncss %}
+    {% include "commoncss.html" %}
+    {% end %}
+    <script>
+  	var _hmt = _hmt || [];
+  	(function() {
+  	  var hm = document.createElement("script");
+  	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+  	  var s = document.getElementsByTagName("script")[0]; 
+  	  s.parentNode.insertBefore(hm, s);
+  	})();
+	</script>
+  </head>
+  <style type="text/css">
+  .building_content {
+  width: 1190px;
+  padding-left: 100px;
+  height: 510px;
+  margin: 0 auto;
+  position: relative;
+}
+.building_content_middle {
+  width: 372px;
+  height: 278px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -186px 0 0 -130px;
+}
+.building_content_middle dt {
+  width: 371px;
+  height: 277px;
+  background: url(/static/images/cute_bac/404.png) no-repeat;
+  background-size: cover;
+}
+.building_content_middle dd {
+  height: 32px;
+  line-height: 32px;
+  color: #c2c2c2;
+  font-size: 18px;
+  text-align: center;
+}
+.building_content a {
+  display: block;
+  color: #e43f52;
+  font-size: 18px;
+  width: 256px;
+  height: 32px;
+  margin-top: 15px;
+  line-height: 32px;
+  text-decoration: none; 
+}
+.building_content_logo {
+  position: absolute;
+  width: 226px;
+  height: 150px;
+  background: #000;
+  top: 0;
+  right: 60px;
+  background: url(/static/images/icons_01.png) no-repeat -156px -843px;
+  display: none;
+}
+
+  </style>
+
+  <body>
+   
+   {% block side %}
+    {% include "side.html" %}
+    {% end %}
+    
+  <!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "top_tab.html" %}
+{% end %}
+
+    
+    <div id="main_box">
+      <div class="building_content">
+        <dl class="building_content_middle">
+          <dt></dt>
+          <dd><a href="/">该网页已被撞毁 传送回首页</a></dd>
+        </dl>
+        <div class="building_content_logo"></div>
+      </div>
+      {% block foot %}
+      {% include "foot.html" %}
+      {% end %}
+
+   
+   
+    </div>
+    
+          
+      
+{% block message %}
+ {% include "paiwoMessage.html" %}
+ {% end %}
+ 
+ {% block login-box %}
+ {% include "login-box.html" %}
+ {% end %}
+   
+   <div id="shadow_box"></div>
+    <div class="back_color"></div>
+   
+    <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/jquery.tmpl.min.js"></script>
+    <script src="/static/js/com/jquery.md5.js"></script>
+    {% block commonjs %}
+   {% include "commonjs.html" %}
+   {% end %}
+  </body>
+</html>

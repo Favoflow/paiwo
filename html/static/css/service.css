@@ -1,0 +1,45 @@
+div#studio_albums
+	{	margin-left: 400px;}
+div#studio_tab
+	{	height: 40px;
+		line-height: 40px;
+		width: 100%;
+		background-color: #fafafa;
+		box-shadow: 1px 3px 3px 0px #dbdbdb;
+		position: fixed;
+		top: 0;
+		left: 400px;
+		z-index: 50;}
+div#tab_content
+	{	width: 94.2%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 40px;
+		border-left: 1px solid #eeeeee;}
+div#tab_content div
+	{	display: inline-block;
+		float: left;
+		font-family: "微软雅黑","黑体",SimHei,serif;
+		font-size: 16px;
+		color: #666666;
+		width: 160px;
+		text-align: center;
+		border-right: 1px solid #eeeeee;}
+div#tab_content a
+	{	text-decoration: none;
+		color: #666666;
+		display: block;
+		height: 37px;
+		border-bottom: 3px solid #fafafa;}
+div#tab_content a:hover
+	{	color: #666666;
+		border-bottom-color: #666666;}
+div#tab_content a.tab_active
+	{	color: #333333;
+		border-bottom-color: #333333;}
+div#albums_box
+	{	width: 910px;
+		margin:60px auto 60px auto;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 0px #dbdbdb;}
+

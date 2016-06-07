@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title>在线选片 摄影师- 拍我网</title>
+	<link rel="stylesheet" href="/static/css/com/reset.css" />
+	<link rel="stylesheet" href="/static/css/com/base.css" />
+	<link rel="stylesheet" href="/static/css/cloud/cloud.css" />
+	<link rel="stylesheet" href="/static/css/com/login-box.css" />
+	<link rel="stylesheet" href="/static/css/com/paiwoMessage.css">
+	<!--[if IE 6]>
+  <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+  <!--[if IE 7]>
+  <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<style>
+        html,body{
+          -moz-user-select:none;
+          -webkit-user-select:none;
+          -ms-user-select:none;
+          -khtml-user-select:none;
+          user-select:none;
+        }
+        .top-tab{z-index: 102;}
+        .message_module{z-index: 110;}
+/*        .alert_body{z-index: 122;}*/
+	</style>
+	<script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+	<script src="/static/js/plupload/plupload.full.min.js"></script>
+	<script> var pCloud =  {% raw p_cloud %}</script>
+</head>
+<body>
+  <div class="light-bac"></div>
+
+  <!--回到顶部-->
+  <a href="javascript:;" class="yun-pic-go-top go_top" id="go_top" style="display: none;"></a>
+
+  <div class="online-main">
+   
+   
+    <!--新tab部分-->
+   {% block cloud_top %}
+   {% include "../cloud_top.html" %}
+   {% end %}
+	  <!--tab结束-->
+       
+       
+       
+
+ 	  <!--底部tab-->
+    <div class="bottom-tab" style="display:none;">
+      <div class="customer-tab-center">
+        <p>将选片夹绑定至您的账号</p>
+        <span class="customer-tab-logined" style="display:none;"><img src=""><a class="delete-project">更换帐号</a></span>
+        <span class="customer-tab-unlogin" style="display:none;">您还没有登录，请先
+        <a href="javascript:;" class="login">登录</a>或<a href="http://paiwo.co/register" target="_blank">注册</a>
+        </span>
+        <button class="establish cus-band-btn">添加并打开</button>
+      </div>
+    </div>
+		<!--底部tab结束-->
+
+    <!--顾客收片页面-->
+    <div class="on-customerRecive clearfix" id="select-preview" style="display:none;">
+      <section class="setProject-title on-title-box">
+          <div class="subCustomer-middle" style="display:none;">
+	        <span>by.</span>
+	        <img class="avatar" src="">
+	        <p>摄影师<a href="javascript:;" class="nick-name"></a>的选片夹</p>
+	        <a class="on-customerRecive-a"><i></i>联系TA</a>
+	      </div>
+        <i class="customerRecive-close" style="display:none;"></i>
+        <h3 class="select-info"><span></span></h3>
+      </section>
+      <div class="subCustomer-middle-black subCustomer-middle">
+	        <span>by.</span>
+	        <img class="avatar" src="">
+	        <p>摄影师<a href="javascript:;" class="pg-nick-name"></a></p>
+	        <a class="on-customerRecive-a message-link"><i></i>联系TA</a>
+	    </div>
+      <div class="customerRecive-imgbox clearfix">
+<!--
+        <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+        <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+        <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+        <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+        <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+-->
+      </div>
+      <p class="count"></p>
+    </div> 
+    <!--顾客收片页面结束-->
+
+	  <!--绑定手机号码填写-->
+	  <div class="cus_bind alert_delete_box" id="phone-test">
+	    <h3>验证手机号码<i class="message_close"></i></h3>
+	    <span>您收到一个来自摄影师</span>
+	    <span class="bind-user-img"><img src=""><a href="javascript:void(0)"></a>的选片夹!</span>
+	    <span>请选验证您约片时的手机号码</span>
+	    <input type="text" placeholder="手机号" class="phone-num">
+	    <i class="error" style="display:none;">号码不正确!</i>
+	    <button class="delete_confirm submit">验证</button>
+	    <p>选片夹已被绑定？请咨询摄影师，或<a href="javascript:void(0)" class="contact-service" data-code="10859">联系客服</a></p>		 
+	  </div>
+
+    <!--账户已经绑定-->
+    <div class="cus_binded cus_bind alert_delete_box" id="cus-band-box" style="display:none;">
+      <i class="message_close"></i>
+      <span class="bind-user-img"><img src="" class="cus-avatar"><a href="javascript:void(0)" class="cus-nick"></a>已绑定了该选片夹</span>
+      <div class="binded-chabox">
+      	<span>你目前的帐号</span>
+      	<img src="" class="now-avatar">
+      	<a href="javascript:void(0)" class="now-nick"></a>
+      	<button class="delete_confirm submit"><i></i>切换帐号</button>
+      </div>
+      <p>如果您有任何疑问，可以<a href="javascript:void(0)" class="contact-service" data-code="10859">联系客服</a></p>
+    </div>
+
+    <!--账户已经绑定未登录-->
+    <div class="cus_binde_unlog cus_binded cus_bind alert_delete_box" id="customer_unlog" style="display:none;">
+      <i class="message_close"></i>
+      <span class="bind-user-img"><img src="" class="cus-avatar"><a href="javascript:void(0)" class="cus-nick"></a>已绑定该选片夹</span>
+      <div class="binded-chabox">
+      	<span>未登录</span>
+      	<i class="unlog-head"></i>
+      	<a href="javascript:void(0)"></a>
+      	<button class="delete_confirm submit">去登录</button>
+      </div>
+      <p>如果您有任何疑问，可以<a href="javascript:void(0)" class="contact-service" data-code="10859">联系客服</a></p>
+    </div>
+  </div>
+
+	<div class="alert_body" style="display:none;">   
+  
+    
+	  <!--选片夹取名弹窗-->
+    <div class="selet-pocket alert_delete_box" id="bind-select-name" style="display:none;">
+	    <h3>给选片夹取个名字吧<i class="message_close"></i></h3>
+	    <input class="name" placeholder="未命名选片夹" />
+	    <button class="delete_confirm submit" id="save">保存</button>
+	  </div>
+	  
+	  
+     <!--第三方登陆-->
+<!--
+     <div class="online-del-sein alert_delete_box" id="third-login-box" style="display:none;">
+       <h3>提示<i class="message_close"></i></h3>
+       <p>您选择通过第三方登陆</p>
+       <button class="delete-sel delete_confirm submit">已登录</button>
+       <button class="delete-sel cancel">取消</button>
+     </div>	
+-->
+    
+    
+	</div>
+	
+   {% block cloud-login-box %}
+   {% include "../cloud-login-box.html" %}
+   {% end %}
+   
+   {% block message %}
+   {% include "../paiwoMessage.html" %} 
+   {% end %}
+    
+    <!--消息提示-->
+    <div class="setting_succeed"></div>
+    
+    <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/jquery.md5.js"></script>
+    <script src="/static/js/com/jquery.tmpl.min.js"></script>
+    {% block cloud_common_js %}
+    {% include "../cloud_common_js.html" %}
+    {% end %}
+    <script src="/static//js/cloud/customerBind.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="screen-orientation" content="portrait">
+    <title>拍我自拍节-活动报名</title>
+    <style>
+        body,div,ul,li,dl,dt,dd,input,button,form,h1,h2,h3,h4,h5,h6,img,a,p,span,i,em,strong,address,section,nav,header,footer { 
+          margin: 0; 
+          padding: 0;
+          -webkit-tap-highlight-color: rgba(255,255,255,0);
+        }
+        input[type="button"], input[type="submit"], input[type="reset"] { -webkit-appearance: none;}
+        li { list-style:none;}
+        img { 
+          border: none; 
+          vertical-align: top;
+        }
+        em,i,b,address,strong { 
+          font-style: normal; 
+          font-weight: normal;
+        }
+        input,textarea,button { 
+          border: none; 
+          background: none; 
+          resize: none; 
+          outline: none;
+        }
+
+        a { 
+          text-decoration: none; 
+          color: #b6b3aa;
+          font: 14px "helvetica neue","Arial","sans-serif","MicrosoftYaHei","微软雅黑","宋体";}
+        body { 
+          width: 100%; 
+          font: 14px "helvetica neue","Arial","sans-serif","MicrosoftYaHei","微软雅黑","宋体"; 
+          color: #b6b3aa; 
+          margin: 0 auto;
+          background:#f5f5f5;
+        }
+        html { font-size: 290%;}
+        h1,h2,h3,h4,h5,h6 { 
+          font-weight: normal;
+        }
+        .clear { 
+          display: block;
+          clear: both;
+          content: "";
+        }
+        
+        
+       body{
+            background-color: #fff;
+        }
+        .main-box{
+            width: 7rem;
+            height: 10rem;
+            
+        }
+        .avatar{
+            width: 2.37rem;
+            height: 2.37rem;
+            margin: 0 auto;
+           
+            overflow: hidden;
+            margin-top: 1.4rem;
+        }
+        .avatar img{
+            width: 100%;
+            height: 100%;
+             border-radius: 50%; 
+        }
+        
+        .nick{
+            width: 4.5rem;
+            height: 1.3rem;
+            line-height: 1.3rem;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 0.47rem;
+            color: #8a8880;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            
+        }
+        
+        .join-ok,.luck_line{
+            width: 5.13rem;
+            height: 1rem;
+            line-height: 1rem;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .join-ok img{
+            width: 0.78rem;
+            height: 0.78rem;
+            float: left;
+            margin: 0.1rem 0 0 0.314rem;
+        }
+        
+        .join-ok .join_state{
+            display: block;
+            float: left;
+            font-size: 0.686rem;
+            color: #414141;
+            text-align: center;
+            line-height: 1rem;
+            margin-left: 0.47rem;
+        }
+        
+        .luck_line{
+            width: 4.82rem;
+            position: relative;
+        }
+        
+        .luck_line .line{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 0.02rem;
+            background-color: #8a8880;
+        }
+        
+        .luck_line .line_word{
+            position: absolute;
+            left: 50%;
+            margin-left: -0.745rem;
+            width: 1.5rem;
+            line-height: 1rem;
+            text-align: center;
+            background-color: #fff;
+            color: #8a8880;
+            font-size: 0.353rem;
+        }
+        
+        
+        .luck_code{
+            width: 4.745rem;
+            height: 1.4rem;
+            line-height: 1.4rem;
+            text-align: center;
+            border: 0.078rem solid #ff4c6a;
+            border-radius: 0.176rem;
+            margin: 0 auto;
+            font-size: 0.6rem;
+            color: #ff4c6a;
+            
+        }
+        
+        .luck_explain{
+            margin: 0 auto;
+            color: #8a8880;
+            font-size: 0.33rem;
+            width: 7rem;
+/*
+            margin-top: 0.686rem;
+            margin-bottom: 0.784rem;
+*/
+            margin: 0.686rem auto 0.784rem auto;
+        }
+        
+        .luck_explain p{
+            line-height: 0.47rem;
+            text-align: center;
+        }
+        
+        .luck_explain .tm_logo{
+            position: relative;
+            left: 0px;
+            top: -0.118rem;
+            font-size: 0.118rem;
+        }
+        
+        .luck_explain .time{
+            color: #ff4c6a;
+/*            font-weight: 200;*/
+        }
+        
+        .luck_explain .focus{
+            font-size: 0.4rem;
+            display: block;
+            margin-top: 0.2rem;
+            text-align: center;
+        }
+        
+        
+        .question{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 7rem;
+            margin-left: -3.5rem;
+            margin-bottom: 0.4rem;
+            text-align: center;
+            font-size:0.3rem;
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <div class="avatar">
+        <img src="{{ avatar }}" alt="">
+    </div>
+    
+    <div class="nick">{{ nick_name }}</div>
+    <div class="join-ok">
+        <img src="/static/images/join_ok.png" alt="">
+        <span class="join_state">报名成功！</span>
+    </div>
+    
+    <div class="luck_line">
+        <i class="line"></i>
+        <span class="line_word">抽奖码</span>
+    </div>
+    
+    <div class="luck_code">{{ lucky_num }}</div>
+    
+    <div class="luck_explain">
+        <p>你已成功报名拍我<i class="tm_logo">TM</i>自拍节的抽奖活动</p>
+        <p>抽奖环节将在<span class="time">19:30</span>开始，每30分钟进行一轮</p>
+        <p class="focus">敬请关注！</p>
+    </div>
+    
+    <div class="question">
+        <a href="http://paiwo.co/pocket/115703">什么是“拍我自拍节”？</a>
+    </div>
+</body>
+</html>

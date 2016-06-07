@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LR插件 - 拍我网</title>
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <link rel="stylesheet" href="/static/css/gizmos/lightroom.css">
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+<div id="main_box">
+  <div class="ir-main-box">
+    <h1 class="ir-logo">gizmos</h1>
+    <section class="section-one">
+      <h2 class="h2">lightroom发布插件下载</h2>
+      <p class="p">拍我网为摄影师小伙伴们开发了给力的Lightroom发布插件。起了个谐音的名字叫做Pablisher。目前Pablisher还在公测开发阶段，功能仅限于Lightroom相册的同步上传。</p>
+      <p class="p">未来更新中，将包含本地图片发生改动后重新发布（Republish）功能、点赞数收藏数查看功能等等。小伙伴们等着吧。</p>
+      <a class="download span" href="http://download.paiwo.co/paiwo_co_lightroom_Plugin_v1_8_1.zip">以下是Lightroom插件安装下载链接：</a>
+      <a href="http://download.paiwo.co/paiwo_co_lightroom_Plugin_v1_8_1.zip"><img class="seciton-one-img" src="/static/images/lightroom/section-one.jpg"></a>
+    </section>
+    <section class="section-two">
+      <h2 class="section-two-h2 h2">lightroom发布插件安装及使用教程</h2>
+      <p class="p2 p">以下是Lightroom插件安装使用的简单教程：</p>
+      <ol>
+      	<li>&nbsp&nbsp&nbsp&nbsp下载拍我网lightroom发布插件zip文件夹；</li>
+      	<li>&nbsp&nbsp&nbsp&nbsp解压zip文件夹，获取名为“paiwo vx.x.x.lrplugin”的文件；</li>
+      	<li>&nbsp&nbsp&nbsp&nbsp把paiwo vx.x.x.lrplugin放到电脑上某个你不会误删的文件夹里，文件夹名随意；<br>
+			&nbsp&nbsp&nbsp - 建议windows用户可以考虑在C盘下创建一个比如叫做“LR plugins”的文件夹<br>
+		 	&nbsp&nbsp&nbsp - 建议mac可以在图片文件夹下面创建一个比如叫做“lr插件们”的文件夹</li>
+    		<img src="/static/images/lightroom/section-two.jpg" class="seciton-two seciton-one-img">
+    		<li>&nbsp&nbsp&nbsp&nbsp在“文件”菜单中找到“增效工具管理器”，点击添加；</li>
+    		<img src="/static/images/lightroom/three.jpg" class="seciton-three seciton-one-img">
+    		<li>在弹出菜单找到那个插件，点确定。现在插件已经安装完成了；</li>
+    		<div class="seciton_four"><img src="/static/images/lightroom/section_four.jpg" class="seciton-one-4 seciton-one-img"></div>
+    		<li>在图库模式下，左侧导航栏中有“发布服务”一项，里面应该会有一个叫做“拍我”的服务，果断双击它，或者点“设置...”；</li>
+        <div class="section-five"><img src="/static/images/lightroom/five.jpg"></div>
+        <li>在弹开的“发布管理器”里面登录拍我网账号</li>
+        <li>然后开始设置下面的输出参数。这个设置适用于以后每一次的发布。推荐的参数如下：<br>-jpag品质设置成85，文件大小限制不用管它<br>-调整图像大小选择“宽度和高度”，数字各3000，勾选“不扩大”<br>-输出锐化的锐化对象勾选“屏幕”锐化量“标准”</li>
+        <div class="section-six"><img src="/static/images/lightroom/six.jpg"></div>
+        <li>右键点击“发布服务”列表里面那个“拍我”，创建“已发布的收藏夹”；<br>
+        - 你也可以创建“已发布的智能收藏夹”，如果你会用智能收藏夹这个牛逼功能<br>
+        - 可以创建“已发布的收藏夹集”，这样你可以把好几个收藏夹放一起，方便管理</li>
+        <li>给你的发布收藏夹起个名字，然后设置一下，点击“创建”；<br>
+        - 建议勾选“包括选定的照片”<br>
+        - 建议不要勾“新建虚拟副本”<br>
+        - 建议不要勾“设为目标收藏夹”</li>
+        <div class="section-seven"><img src="/static/images/lightroom/seven.jpg"></div>
+        <li>把你要发布的专辑照片拖至收藏夹内。</li>
+        <li>调整照片顺序，第一张会被默认当作专辑封面；</li>
+        <div class="section-eight"><img src="/static/images/lightroom/eight.jpg"></div>
+        <li>点击屏幕左下角的“发布”。</li>
+        <li>在弹出的窗口内输入要发布的专辑名、专辑描述和专辑标签；</li>
+        <li>Lightroom立即开始帮你转换图片格式、直接发布照片；<br>
+        - 结束之后会有弹窗告诉你已经发布成功，确认即可</li>
+        <div class="section-nine"><img src="/static/images/lightroom/nine.jpg"></div>
+        <li>快去你的拍我网个人主页看看吧。高清图片已经发布了！</li>
+      </ol>     
+    </section>
+  </div>
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+</div>
+<div class="back_color"></div>
+  <div id="shadow_box"></div>
+  
+  
+     {% block message %}
+     {% include "../paiwoMessage.html" %}
+     {% end %}
+     <div class="setting_succeed"></div>
+   {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script>
+var setM = null;
+function showMessage(content){
+    clearTimeout(setM);
+    $('.setting_succeed').html(content).animate({top:0}, 400, function(){
+            setM = setTimeout(hideMessage, 1800);
+    
+    });
+}
+
+function hideMessage(){
+    $('.setting_succeed').animate({top:'-40px'},400);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>拍我网 - 摄影师推荐</title>
+	<link rel="stylesheet" href="/static/phone/css/mincss.1.0/photogin.css">
+</head>
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+	<div class="commend-current">
+		<div class="commend-banner commendin-banner">
+			<!--背景蒙层-->
+			<div class="commend-cover"></div>
+			<!--banner文字-->
+			<div class="commend-text">
+				<div class="commend-find">
+					<span>/发现<br>优秀摄影师</span>
+					<span class="commend-time"></span>
+				</div>
+
+				<div class="commend-banner-tit">
+					<span></span>
+					<h2></h2>
+				</div>
+			</div>
+		</div>
+		<!--摄影师选项卡-->
+		<div class="commendpg-tab">
+			<div class="commendbg-avatar">
+				<a href="javascrit:;">
+					<img src="">
+					<h4></h4>
+					<i class="topghome"></i>
+				</a>				
+			</div>
+			<ul class="pg_info">
+		    	<li class="pg-info-cur"><span>专题访谈</span></li>
+		    	<li><span class="tit_line">|</span></li>
+		    	<li><span>摄影师信息</span></li>
+		    	<li class="pg_border"></li>
+		  </ul>
+		</div>
+	</div>
+
+	<!--专题访谈-->
+	<div class="pg-interview">
+		<h3>| Interview & Photographs |</h3>
+		<!--访谈内容-->
+		<div class="pg-interviews-main">
+<!--
+			<p><i class="interview-ques">Q :</i>你是从什么时候开始接触摄影的？</p>
+			<p><i class="interview-answer">A :</i>我是从92年的，从大二开始摄影，接触摄影已经两年多了，拍的第一组人像是14年1月开始的。</p>
+			<p><i class="interview-ques">Q :</i>你是从什么时候开始接触摄影的？</p>
+			<img src="/static/phone/images/photo4.jpg">
+-->
+		</div>
+
+		<!--分享-->
+		<div class="spec_share_main" style="display:none;">
+		    <h3>| 分享文章至...|</h3>
+		    <a class="sina" href="javascript:;"><i></i></a>
+		    <a class="weixin" href="javascript:;"><i></i></a>
+		    <a class="friend" href="javascript:;"><i></i></a>
+		    <a class="qq" href="javascript:;"><i></i></a>
+		    <a class="qzone" href="javascript:;"><i></i></a>
+		</div>
+	</div>
+
+	<!--摄影师信息-->
+	<div class="pg_msg">
+		<div class="pg_info_intro">
+			<span class="ifspread"></span>
+			<h3>简介</h3>
+			<ul class="spread-main" id="pg_summary">
+			
+<!--
+				<li class="pg_info_desc">
+					<span>描述/</span>
+					<p>在这里添加摄影师描述</p>
+				</li>
+			    <li>
+			      <span>个性域名/</span> 
+			      <em>sodksof</em>
+			    </li>
+			    <li>
+			      <span>生日/</span>
+			      <i>1992年11月15日</i>
+			    </li>
+			    <li>
+			      <span>性别/</span> 
+			      <i>男</i>
+			    </li>
+			    <li>
+			      <span>QQ/</span>
+			      <i>134155</i>
+			    </li>
+			    <li>
+			      <span>手机号码/</span> 
+			      <i>2331455</i>
+			    </li>
+			    <li>
+			      <span>微信/</span> 
+			      <i>1545415</i>
+			    </li>
+			    
+-->
+			    
+			</ul>
+		</div>
+
+		<div class="pg_info_intro pg_info_contact">
+			<span class="ifspread"></span>
+			<h3>联系方式</h3>
+			<ul class="spread-main">
+			    <li>
+			      <span>QQ/</span>
+			      <i>134155</i>
+			    </li>
+			    <li>
+			      <span>手机号码/</span> 
+			      <i>2331455</i>
+			    </li>
+			    <li>
+			      <span>微信/</span> 
+			      <i>1545415</i>
+			    </li>
+			</ul>
+		</div>
+
+		<!--摄影师服务信息-->
+		<div class="pg_info_service">
+			<span class="ifspread"></span>
+			<h3>服务信息</h3>
+			<div class="pg_service_content spread-main">
+				<dl class="photo_type">
+				    <dt>—— 接拍类型 ——</dt>
+				    <dd>儿童</dd>
+				    <dd>婚礼</dd>
+				    <dd>婚纱</dd>
+				    <dd>写真</dd>
+				    <dd>其他</dd>
+				</dl>
+				<dl class="photo_address">
+				    <dt>—— 接拍地 ——</dt>
+				    <dd>浙江全境</dd>
+				    <dd>南京</dd>
+				    <dd>上海全境</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/minjs.1.0/photogin.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+</body>
+</html>

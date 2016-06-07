@@ -1,0 +1,538 @@
+.pocket-content{
+    width: 900px;
+    margin: 60px auto 60px;
+    position: relative;
+    padding-bottom: 80px;
+}
+.pocket-vir-content{
+    width: 900px;
+    min-height: 1050px;
+    position: relative;
+    overflow: hidden;
+}
+.p-vir-blo{
+    float: left;
+    margin: 5px;
+/*    padding: 5px 10px;*/
+}
+.p-blo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 5px;
+    border: 2px solid transparent;
+}
+.p-r{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: black;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+    cursor: e-resize;
+}
+.p-b{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: black;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+    cursor: n-resize;
+}
+.p-rb{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: black;
+    border-radius: 15px;
+    cursor: nwse-resize;
+}
+.p-img-wrap{
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   position: relative
+}
+.p-img{
+    position: absolute;
+}
+.cover-photo{
+/*    width: 960px;*/
+    height: 640px;
+    margin: 0px auto;   
+}
+.cover-wrap{
+    width: 120px;
+    height: 98px;
+    margin: 232px auto;
+    text-align: center;
+    cursor: pointer;
+    color: #b6b3aa;
+    line-height: 64px;
+    font-size: 16px;
+}
+.cover-wrap img { margin-left: 12px;}
+.cover-add {
+    width: 32px;
+    height: 32px;
+    background: url(/static/images/spirit.svg) no-repeat -50px -2150px;
+    margin: 0 auto 4px;
+}
+.cover-wrap:hover { color: #8a8880;}
+.cover-wrap:hover .cover-add { background: url(/static/images/spirit.svg) no-repeat 0px -2150px;}
+.cover-bac{
+    margin: 0px auto;
+    height: 540px;
+    background: #eee;
+    overflow: hidden
+    
+}
+.cover-status{
+    position: relative;
+/*    width: 960px;*/
+    height: 640px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.cover-big-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 640px;
+    background: rgba(0,0,0,.2);
+}
+
+.main-title{
+    position: absolute;
+    top: 340px;
+    left: 200px;
+    z-index: 3;
+    text-align: center;
+    width:560px;
+    height: 55px;
+    border: 2px dotted #fff;
+    color: #fff;
+    font-size: 36px;
+    line-height: 55px;
+    outline: none;
+}
+.second-title{
+    position: absolute;
+    top: 440px;
+    left: 200px;
+    z-index: 3;
+    line-height: 30px;
+    text-align: center;
+    width: 560px;
+    height: 30px;
+    border: 2px dotted #fff;
+    color: #eee;
+    font-size: 14px;
+    outline: none;
+}
+
+
+
+
+.p-blo>i{
+    display: none
+}
+.select{
+    border: 2px solid black;
+    z-index: 30;
+}
+.select>i{
+    display: block
+}
+.pocket-text{
+    width: 880px;
+    border: 1px dotted transparent;
+    line-height: 24px;
+    padding: 5px 10px;
+    outline: none;
+    word-break: break-all;
+    position: absolute;
+}
+.pocket-text-select{ border: 2px dotted #33cc66;}
+
+::-moz-selection{
+    background:#c0f3db;
+} 
+::selection {
+    background:#c0f3db;
+} 
+.text-del{
+    width: 250px;
+    height: 26px;
+    padding: 5px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -1000px;
+    left: 0px;
+    z-index: 20
+}
+.text-del:after{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 4px solid black; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    position: absolute;
+    top: 36px;
+    left: 122px;
+}
+.text-font{
+    font-family: SimSun
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-edit-select{
+    background: #666666;
+}
+
+.del-flag-one{
+    width: 48px;
+    height: 31px;
+    background: url(/static/images/spirit2.svg) no-repeat -34px -393px #000;
+    float: left;
+
+}
+
+.del-flag-two{
+    width: 48px;
+    height: 31px;
+    float: left;
+    color: white;
+    text-align: center;
+    line-height: 34px;
+    background: #000
+}
+
+
+.del-flag{
+    width: 96px;
+    height: 26px;
+    padding: 5px 0;
+/*    background: url(/static/images/spirit2.svg) no-repeat -34px -391px #000;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.del-flag:after{
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-top: 8px solid black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  top: 36px;
+  left: 40px;
+}
+
+.select .del-flag{
+    display: block;
+}
+
+
+.add-flag{
+    display: none;
+    background: #000;
+    color: #fff;
+    width: 150px;
+    height: 26px;
+    position: absolute;
+    z-index: 20;
+    line-height: 26px;
+    padding: 5px 0;
+    text-align: center;
+}
+.add-flag:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-top: 18px solid transparent;
+  border-left: 18px solid transparent;
+  border-right: 18px solid black;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+  top: 0px;
+  left: -36px;
+}
+
+.text-add {
+    background: #000;
+    color: #fff;
+    width: 150px;
+    height: 26px;
+    position: absolute;
+    top: 0px;
+    left: 920px;
+    z-index: 20;
+    line-height: 26px;
+    padding: 5px 0;
+    text-align: center;
+}
+.a-flag{
+    width: 60px;
+    float: left;
+}
+.a-text,.b-text{
+    float: left;
+    width: 45px;
+    height: 26px;
+    cursor: pointer;
+    background: url(/static/images/spirit2.svg) no-repeat -134px -395px;
+}
+.a-img,.b-img{
+    float: left;
+    width: 42px;
+    height: 26px;
+    cursor: pointer;
+    border-right: 2px solid #414141;
+    background: url(/static/images/spirit2.svg) no-repeat -93px -395px;
+}
+.text-add:after{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 18px solid transparent; 
+    border-left: 18px solid transparent;
+    border-right: 18px solid black;
+    border-bottom: 18px solid transparent;
+    position: absolute;
+    top: 0px;
+    left: -36px;
+}
+
+
+.select .text-add{
+    display: block
+}
+
+
+/*按钮*/
+.text-del .a-delete { border: none;}
+.text-del span { 
+    float: left;
+    padding-left: 3px;
+    border-right: 2px solid #414141;
+}
+.text-del i { 
+    float: left;
+    width: 28px;
+    height: 26px;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: url(/static/images/spirit2.svg);
+    background-repeat: no-repeat; 
+}
+.font-1 { background-position: -392px -395px;}
+.font-2 { background-position: -443px -395px;}
+.align-left { background-position: -193px -395px;}
+.align-center { background-position: -243px -395px;}
+.align-right { background-position: -293px -395px;}
+.a-delete i { background-position: -43px -395px;}
+/*底部*/
+.pocket-footer {
+    background: #212121;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    margin: 0 auto;
+    z-index: 50;
+}
+.pocket-footer-contain {
+  width: 960px;
+  height: 40px;
+  margin: 0 auto;
+}
+.pocket-footer a {
+    float: left;
+    width: 90px;
+    height: 40px;
+    color: #eee;
+    line-height: 40px;
+    text-align: center;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.pocket-footer .pocket-footer-edit {
+    position: relative;
+    float: left;
+    padding-left: 23px;
+    width: 67px;
+    text-align: left;
+}
+.pocket-footer-edit:hover,.pocket-check:hover { background: #414141;}
+.pocket-footer-edit i {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    width: 12px;
+    height: 15px;
+    background: url(/static/images/spirit2.svg) no-repeat -349px -399px;
+}
+.pocket-num { 
+    float: left;
+    width: 630px;
+    text-align: center;
+    margin-left: 70px;
+    line-height: 40px;
+    color: #eee;
+}
+.pocket-num i { 
+    color: #dd2222;
+    margin: 0 3px;
+}
+.pocket-footer .pocket-publish { 
+    width:80px; 
+    background: #2dd888;
+    float: right;
+}
+.pocket-footer .pocket-check { width: 80px; float: right;}
+.stuido_header_editicon {
+  width: 60px;
+  height: 36px;
+  padding-left: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  z-index: 4;
+  color: #fff;
+  font-size: 12px;
+  line-height: 36px;
+  background: #2e2c2b;
+}
+.stuido_header_editicon i{
+  position: absolute;
+  left: 15px;
+  top: 3px;
+  width: 20px;
+  height: 30px;
+  background:url(/static/images/spirit2.svg) no-repeat -450px -42px;
+}
+
+/*上传失败*/
+.pocket-failed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  line-height: 32px;
+  background: #dd2222;
+  font-size: 12px;
+}
+.back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.message{
+    position: absolute;
+    width: 440px;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    border-radius: 2px;
+    height: 250px;
+    margin: -125px 0 0 -220px;
+        
+}
+.message img{
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.message h3{
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid #eee;
+    color: #6d6d6d;
+    line-height: 43px;
+    font-size: 17px;
+}
+.mes-line{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 60px;
+    line-height: 30px;
+    color: #414141;
+}
+.mes-btn{
+    width: 80px;
+    height: 40px;
+    background: #414141;
+    position: absolute;
+    bottom: 33px;
+    left: 114px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    border: 1px solid #414141;
+    
+}
+.mes-cel{
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    bottom: 33px;
+    left: 257px;
+    border: 1px solid #d8d6d0;
+    text-align: center;
+    line-height: 40px;
+}
+.setting_succeed{
+  width: 313px;
+  height: 40px;
+  position: fixed;
+  top: -40px;
+  left: 50%;
+  margin-left: -156px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  z-index: 500;
+}
+.bac-wrap{
+    position: relative;
+    width: 960px;
+    height: 640px;
+    margin: 0px auto;
+    z-index: 3;
+}

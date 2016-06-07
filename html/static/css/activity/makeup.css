@@ -1,0 +1,70 @@
+.makeup_banner {
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/activity/make_up.png) repeat;
+    background-size: 39px;
+    overflow: hidden;
+}
+.makeup_content {
+/*    position: relative;*/
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/images/activity/bj.png) no-repeat center 120px;
+    background-size: cover;
+}
+.makeup_p1 {
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    margin-left: -342px;
+    width: 684px;
+}
+.makeup_p1 img {
+    width: 684px;
+    height: auto;
+}
+.makeup_p2 {
+    position: absolute;
+    top: 257px;
+    left: 50%;
+    margin-left: -342px;
+    width: 670px;
+    padding-left: 14px;
+}
+.makeup_p2 img {
+    width: 500px;
+    height: auto;
+}
+.makeup_btn {
+    position: absolute;
+    bottom: 113px;
+    left: 50%;
+    width: 204px;
+    margin-left: -102px;
+}
+.makeup_btn img {
+    width: 204px;
+    height: auto;
+}
+
+.group-shot-p1 {
+    width: 125px;
+    left: 20px;
+    top: -7px;
+}
+.group-shot-img { 
+    left: -30px;
+    background-image: url(/static/images/activity/0914_3.jpg);
+    background-size: 500px;
+    background-position: -143px -83px;
+}
+.group-shot-p4 {
+    width: 205px;
+    left: 506px;
+    top: 88px;
+}
+.group-shot-p5 {
+    left: 771px;
+    top: -8px;
+}

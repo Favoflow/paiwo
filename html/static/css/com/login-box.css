@@ -1,0 +1,275 @@
+/*先逛逛按钮*/
+.look_look {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 4px;
+  right: 1px;
+  cursor: pointer;
+  z-index: 10;
+  background: url(/static/images/spirit.svg) no-repeat -36px -940px;
+}
+
+/*登录框样式*/
+.login_box { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  padding-top: 40px;
+  margin: -200px 0 0 -200px;
+  visibility: hidden;
+  background: #fff;
+  z-index: 102;
+}
+
+.login_box.activeIn{
+	-webkit-animation: showIn .5s ease;
+	animation: showIn .5s ease;
+}
+
+.login_box.activeOut{
+	-webkit-animation: showOut .5s ease;
+	animation: showOut .5s ease;
+}
+
+.login_box.ani {
+  opacity: 1;
+}
+.login_contet {
+  width: 250px;
+  margin: 0 auto;
+}
+.loginbox_logo {
+  width: 78px;
+  height: 37px;
+  margin: 0 auto 31px auto; 
+  background: url(/static/images/spirit.svg) no-repeat -100px -300px;
+}
+.inputs_title_h6 {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  line-height: 20px;
+  color: #92918d;
+  top: -2px;
+  left: 52px;
+  background: #fff;
+  font-size: 14px; 
+}
+.login_inputs .inputs_title_h6{ left: 84px;}
+
+ /*第三方登录*/
+ .login_inputs_title {
+  display: block;
+  width: 250px;
+  height: 7px;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #b6b3aa; 
+  position: relative;
+}
+.login_third_login {
+  width: 100%;
+  height: 87px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center; 
+}
+.login_third_login li{
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  margin: 0 13px;
+}
+.login_third_login li a {
+  display: block;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+}
+.login_qq { background: url(/static/images/spirit.svg) no-repeat -300px -1300px;}
+.login_qq:hover { background: url(/static/images/spirit.svg) no-repeat -200px -1500px;}
+.login_xinlang { background: url(/static/images/spirit.svg) no-repeat -200px -1300px;}
+.login_xinlang:hover { background: url(/static/images/spirit.svg) no-repeat -100px -1500px;}
+.login_weixin { background: url(/static/images/spirit.svg) no-repeat 0 -1400px;}
+.login_weixin:hover { background: url(/static/images/spirit.svg) no-repeat -300px -1500px;}
+
+/*inputs*/
+.inputs_box { 
+  width: 240px;
+  height: 150px;
+  margin:0 auto 15px auto;
+  position: relative;
+}
+.inputs_box li{ position: relative;}
+.forget_email,
+.forget_vcode,
+.inputs_box input {
+  display: block;
+  width: 228px;
+  height: 14px;
+  color: #8c8c8c;
+  border: 1px solid #cfcdce;
+  background: #fff;
+  margin-bottom: 10px;  
+  font-size: 12px;
+}
+#login_email,#login_pwd,#r_email,#r_pwd,#r_verify,#f_email,#f_verify{ 
+  padding: 12px 0 12px 10px;
+  height: 14px;
+}
+.forgetbox .login_botton,
+.register_box .login_botton { 
+  padding-left: 0;
+  width: 240px;
+  height: 40px;
+}
+.ver_code .forget_vcode { width: 120px;}
+.register_box .email_error { 
+  color: #be2a3c;
+  height: 37px;
+  border: 1px solid #F00;
+}
+.password { color: #8c8c8c;}
+.password_div { position: relative;}
+
+.login_botton {
+  color: #FFF;
+  width: 240px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+}
+.bottom_text {
+  width: 240px;
+  height: 20px;
+  margin: 0 auto;
+}
+.forget,
+.go_register {
+  height: 16px;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 auto; 
+  text-decoration: none;
+  cursor: pointer;
+  color: #b6b3aa;
+}
+.forget { float: left;}
+.go_register { float: right;}
+.bottom_text a:hover { text-decoration: underline;}
+.email_error_em,
+.password_error_em {
+  position: absolute;
+  top: 1px;
+  right: -150px;
+  width: 145px;
+  height: 40px;
+  line-height: 40px;
+  background: url(/static/images/login/spirit.png) no-repeat -104px -75px;
+  color: #505050;
+  font-size: 14px;
+  display: none;
+  text-indent: 20px;
+}
+.email_error_icon,
+.password_error_icon,
+.verify_error_icon{
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  background: url(/static/images/spirit.svg) no-repeat -200px -700px;
+  display: none;
+}
+.verify_error_icon { right:117px;}
+
+
+.login_module{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 120;
+}
+
+.login_module .login_shadow{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+@-webkit-keyframes
+		showIn {
+			0% {
+				-webkit-transform: scale(0.75);
+				opacity: 0.0
+			}
+			50% {
+				-webkit-transform: scale(1.05);
+				opacity: 1.0
+			}
+			100% {
+				-webkit-transform: scale(1);
+				opacity: 1.0
+			}
+		}
+		@keyframes
+		showIn {
+			0% {
+				-webkit-transform: scale(0.75);
+				transform: scale(0.75);
+				opacity: 0.0
+			}
+			50% {
+				-webkit-transform: scale(1.05);
+				transform: scale(1.05);
+				opacity: 1.0
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 1.0
+			}
+		}
+
+
+@-webkit-keyframes
+		showOut {
+			0% {
+				-webkit-transform: scale(1);
+				opacity: 1.0
+			}
+			50% {
+				-webkit-transform: scale(1.05);
+				opacity: 0.4
+			}
+			100% {
+				-webkit-transform: scale(0.4);
+				opacity: 0.0
+				
+			}
+		}
+	@keyframes
+		showOut {
+			0% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 1.0
+			}
+			50% {
+				-webkit-transform: scale(1.05);
+				transform: scale(1.05);
+				opacity: 0.4
+			}
+			100% {
+				-webkit-transform: scale(0.4);
+				transform: scale(0.4);
+				opacity: 0.0
+				
+			}
+		}

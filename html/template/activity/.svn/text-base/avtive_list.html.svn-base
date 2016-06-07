@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>活动 - 拍我网</title>
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+	{% block commoncss %}
+	{% include "../commoncss.html" %}
+	{% end %}
+	<link rel="stylesheet" href="/static/css/activeList.css">
+	<style>
+	    .wechat_box{display: none;}
+	</style>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+<div id="main_box">
+	<div class="active-main">
+		<!-- banner -->
+        <a href="javascript:;" target="_blank"><div class="active-banner"></div></a>
+		
+		<!-- 搜索框 -->
+		<div class="search-word search-active" style="display:none;">
+			<a href="javascript:;" class="search-mag"></a>
+			<ul class="tab_search_ul">
+				<li class="searchlabels">
+					<!-- <div class="search-color1">
+						<span class="search_data">傻逼丁丁</span>
+						<span class="search_ul_remove"><i></i></span>
+					</div> -->
+				</li>
+				<input type="text" class="search_input" placeholder="搜索你感兴趣的活动">
+			</ul>
+		</div>
+		<!-- 活动列表 -->
+		<div class="active-list">
+		
+		<div class="active-list-box" style="display:none;">
+		  
+<!--
+			<div class="studio-trend-area">
+				<div class="studio-trend-active clearfix">
+					<div class="studio-active-img"></div>
+					<div class="studio-active-detail">
+						<h3>适马摄影装逼大赛</h3>
+						<p class="studio-active-time">
+							<span>活动时间：</span>
+							<i>6-23</i>
+						</p>
+						<span class="studio-active-cond studio-active-will"><i></i>即将开始</span>
+						<button class="submit studio-look">去看看</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="studio-trend-area">
+				<div class="studio-trend-active clearfix">
+					<div class="studio-active-img"></div>
+					<div class="studio-active-detail">
+						<h3>适马摄影装逼大赛</h3>
+						<p class="studio-active-time">
+							<span>活动时间：</span>
+							<i>6-23</i>
+						</p>
+						<span class="studio-active-cond studio-active-ing"><i></i>正在进行</span>
+						<button class="submit studio-look">去看看</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="studio-trend-area">
+				<div class="studio-trend-active clearfix">
+					<div class="studio-active-img"></div>
+					<div class="studio-active-detail">
+						<h3>适马摄影装逼大赛</h3>
+						<p class="studio-active-time">
+							<span>活动时间：</span>
+							<i>6-23</i>
+						</p>
+						<span class="studio-active-cond"><i></i>即将开始</span>
+						<button class="submit studio-look">去看看</button>
+					</div>
+				</div>
+			</div>
+        </div>
+-->
+       
+            
+            </div>
+        
+            
+        
+        
+			<!-- 分页 -->
+			<div class="page" style="display:none;">
+				<div class="page-in">
+					<a class="page-pre">上一页</a>
+					<div class="page-no">
+<!--
+						<a class="page-cur">1</a>
+						<a>2</a>
+						<a>3</a>
+						<a>4</a>
+						<a>5</a>
+						<a>6</a>
+-->
+					</div>
+					<a class="page-next">下一页</a>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	{% block foot %}
+  	{% include "../foot.html" %}
+  	{% end %}
+</div>
+
+<div class="message-box"></div>
+<div id="shadow_box"></div>
+
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+ 
+{% block paiwoPhoto %}
+{% include "../paiwoPhoto.html" %}
+{% end %}
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/activity/activityList.js"></script>
+
+</body>
+</html>

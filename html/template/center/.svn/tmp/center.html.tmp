@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <!-- <link rel="stylesheet" href="/static/css/mincss/center0529.css"> -->
+  <link rel="stylesheet" href="/static/css/com/bigPic.css">
+  <link rel="stylesheet" href="/static/css/store.css">
+  <link rel="stylesheet" href="/static/css/search_photog.css">
+  <link rel="stylesheet" href="/static/css/center.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/jquery.Jcrop.min.css"> 
+   <!--[if IE 6]>
+   <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+   <![endif]-->
+   <!--[if IE 7]>
+   <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+   <![endif]-->
+   <!--[if IE 8]>
+   <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+   <![endif]-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+<body>
+
+<!--browse update-->
+{% block update_notice %}
+{% include "../update_notice.html" %}
+{% end %}
+
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+<div id="main_box">
+  <!--个人中心-->
+  <div class="person-center clearfix"> 
+    <!--个人中心导航-->
+    <div class="person-center-nav">
+      <ul class="person-tab clearfix">
+        <li id="h_li"><a>喜欢</a></li>
+        <li id="h_co"><a>收藏</a></li>
+        <li class="order-start" id="h_order"><a>订单</a></li>
+        <li class="person-setting"><a>设置</a></li>        
+        <!-- <li class="order-receive" style="display:none;">接收的订单<i></i></li> -->
+      </ul>
+    </div>
+
+    <div class="person-main">
+        
+        <!--账户设置-->
+        <div class="my-setting">
+
+          <!--登录设置-->
+          <div class="login-setting">
+            <h3 class="setting-tit"><span>登陆设置</span></h3>
+            <ul>
+              <li>
+                 <h4 class="setting-part-tit">绑定手机</h4> 
+                 <a class="setting-part-bind">添加绑定</a>
+                 <div class="setting-part-main">
+                 </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">社交账号：</h4>
+                <div class="login_setting_sociallist">
+                  <a class="login_setting_qq" id="qq"></a>
+                  <a class="login_setting_weibo" id="weibo"></a>
+                  <a class="login_setting_weixin" id="weixin"></a>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+
+          <!--摄影师信息-->
+          <div class="photog-infor" style="display:none;">
+            <h3 class="setting-tit"><span>摄影师信息</span></h3>
+            <ul>
+              <li>
+                <h4 class="setting-part-tit">拍摄类型：</h4>
+                <div class="style_choose_circle">
+                  <div>
+                    <a class="style_choose_por"><i></i></a>
+                    <span>人像写真</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_veil"><i></i></a>
+                    <span>婚纱摄影</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_wedding"><i></i></a>
+                    <span>婚礼跟拍</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_kid"><i></i></a>
+                    <span>家庭儿童</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_travel"><i></i></a>
+                    <span>旅行跟拍</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_biz"><i></i></a>
+                    <span>商业服务</span>
+                  </div>
+                  <div>
+                    <a class="style_choose_other"><i></i></a>
+                    <span>其他</span>
+                  </div>
+                  
+                </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">接拍地区：</h4>
+                <div class="photog-add">
+                  <i class="photog-add-left" id="lbtn"></i>
+                  <div class="service_list_box">
+                    <ul class="service_list">
+                    </ul>
+                  </div>
+                  
+                  <i class="photog-add-right" id="rbtn"></i>
+                </div>
+                <a class="photog-add-change" id="ss" href="javascript:;">更改</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--个人简介-->
+          <div class="self-intro">
+            <h3 class="setting-tit"><span>个人简介</span></h3>
+            <ul>
+              <!--头像-->
+              <li>
+                <h4 class="setting-part-tit">头像：</h4>
+                <div class="person_information_headimg">
+                  <img src="/static/images/user_head.gif" width="120" height="120" id="user_head" >
+                  <a id="change_head">更改头像</a>
+                </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">昵称：</h4>
+                <div>
+                  <input class="information_ul_nametext" id="nick_name" type="text">
+                  <i class="infor_ul_nametext_error" id="nick_i"></i>
+                  <span class="nick_error" id="nick_error"></span>
+                </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">性别：</h4>
+                <div class="radio" id="chose_man"><a></a><u>男</u></div>
+                <div class="radio" id="chose_female"><a></a><u>女</u></div>
+                <div class="radio" id="chose_secret"><a></a><u>保密</u></div>
+              </li>
+              <li class="infor_ul_birth">
+                <h4 class="setting-part-tit">生日：</h4>
+                <div class="select" id="year">
+                  <a>0</a>
+                  <dl></dl>
+                </div>
+                <div class="select" id="month">
+                  <a>0</a>
+                  <dl>
+                  </dl>
+                </div>
+                <div class="select" id="day">
+                  <a>0</a>
+                  <dl></dl>
+                </div>
+              </li>
+              <li class="infor_ul_place infor_ul_birth">
+                <h4 class="setting-part-tit">居住地：</h4>
+                <div class="select" id="province">
+                   <a>请选择</a>
+                   <dl></dl>
+                  </div>
+                <div class="select" id="place">
+                   <a>请选择</a>
+                   <dl></dl>
+                </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">个性域名：</h4>
+                <div class="setting-part-addr">
+                  <span>paiwo.co/</span>
+                  <input type="text" id="host_domain">
+                  <i class="photog_infor_ul_error" id="host_error">个性域名重复</i>
+                </div>
+              </li>
+              <li>
+                <h4 class="setting-part-tit">QQ：</h4>
+                <input type="text" id="qq_domain">
+              </li>
+              <li>
+                <h4 class="setting-part-tit">电话：</h4>
+                <input type="text" id="phone_domain">
+              </li>
+              <li>
+                <h4 class="setting-part-tit">微信：</h4>
+                <input type="text" id="wechat_domain">
+              </li>
+              <li>
+                <h4 class="setting-part-tit">简介：</h4>
+                <textarea id="desc_domain"></textarea>
+              </li>
+            </ul>
+          </div>
+          <button class="submit setting-submit" id="photog_save">保存</button>
+        </div>
+        
+        <!--person-coll-->
+        <div class="person-coll" id="favorite_wrap" style="display:none;">
+          <div class="person-add-coll">
+            <a href="javascript:;">
+              <span>+ 增加收藏夹</span>
+            </a>
+          </div>
+          <div class="person-coll-list clearfix" id="favorite_out">            
+
+          </div>
+        
+        <!--没有收藏夹-->
+        <div class="person-coll-none">
+          <i></i>
+          <p>你还没有收藏夹哦</p>
+          <a href="javascript:;">创建一个<u>收藏夹</u>吧!</a>
+        </div>
+
+      </div>  
+      <!--person-coll-inner-->
+      <div class="person-coll-inner" style="display:none;" id="favorite_in">
+        <section class="coll-inner-title">                   
+          <h3> </h3><h5> </h5>
+          <a class="inner-title-return">&lt; 返回</a>
+          <a class="all_button">管理</a>  
+          <section class="all_content2">         
+            <span class="checkbox" id="selectAllWrap">
+              <a><i id="selectAll"></i></a>
+              <u>全选</u>
+            </span>
+            <ul class="choose_buttons_box">
+              <li class="choose_button_delete">删除</li>
+              <li class="choose_button_move">移动至...</li>
+              <li class="choose_button_complete">完成</li>
+            </ul>
+          </section>   
+        </section>    
+        <ul class="coll-inner-photo clearfix" id="favorite_in_photos">        
+          <li class="in_fa in_fa_pagazine">
+            <div class="checkpho checkbox">
+              <a><i class="checkpho-i"></i></a>
+            </div>
+            <img width="280" height="200" src="http://image.paiwo.co/10136/album/da1608780f858e198f329ec27c2b31ad@!280x280">
+            <div class="in_fa_paga">
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="photo_fixbox" style="bottom: -36px;">
+              <a href="funzi" target="_blank">Fun!</a>
+              <button class="photo_fixbox_like"></button>
+              <button class="photo_fixbox_dinged"></button>
+            </div>
+          </li>      
+        </ul> 
+      </div>
+      
+      <!--我的赞-->
+      <div class="my-likes-ding" id="my_likes_ding">
+    <!--
+          
+          <div class="blank_container" >
+             <p></p>
+             <span>加入文字</span>
+             <button class="submit">上传</button>
+          </div>
+    -->
+          <div class="studio-none" style="display:none;" id="my_likes_ding_none">
+            <i></i>
+            <p>你还没有喜欢任何内容</p>
+            <a href="/gallery">去<u>画廊</u>逛逛吧!</a>
+          </div>
+          <ul class="my-like coll-inner-photo clearfix" id="likes_ul"></ul>
+      </div>
+      
+      <!--我关注的摄影师-->
+      <!--<ul class="search_pg_photobox" id="follows_ul"></ul>ul内容参照搜索摄影师view-->
+      
+      <!-- 发起的订单 -->
+      <div class="my-start-order">
+        
+        <ul class="person-center-nav person-order-tab clearfix" style="display:none;">
+          <li class="order-start person-tab-cur"><a>发起的订单</a></li>
+          <li class="order-receive"><a>接受的订单</a></li>
+        </ul>
+          
+        <ul class="aut-ul-left" id="aut-ul-left-self">
+         
+          <div class="studio-none">
+            <i></i>
+            <p>暂无已接受的订单</p>
+            <a href="/market">去看看你可能感兴趣的<u>订单</u>吧!</a>
+          </div>
+                
+        </ul>
+        
+        
+      </div>
+
+      <!-- 收到的订单 -->
+      <div class="my-receive-order">
+          <ul class="person-order-tab clearfix">
+            <li class="order-start person-tab-cur"><a>发起的订单</a></li>
+            <li class="order-receive"><a>接受的订单</a></li>
+          </ul>
+        <ul class="aut-ul-left" id="aut-ul-left-offer">
+          <div class="studio-none">
+            <p>暂无订单</p>
+            <a href="/market">去<u>集市</u>逛逛吧!</a>
+          </div> 
+        </ul>
+        
+      </div>
+      
+      <div class="loading" style="display:none;">
+        <img src="/static/images/loading.gif" width="60px"/>
+      </div>
+    </div>
+  </div>
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+</div>
+
+<div class="alert_body" style=" display: none;" id="alert_shadow">
+  <!--地区选择-->
+  <div id="area-select" style="display:none">
+    <div class="save-close">关闭</div>
+      <div class="areawindow">
+        <div class="in-pre"></div>
+        <div class="in-next"></div>
+        <div class="topbar"></div>
+      </div>
+      <div class="guo">
+        <p data="01-00-00-00">海外 &gt; </p>
+        <p data="02-00-00-00">国内 &gt; </p>
+      </div>
+      <dl class="shen"></dl>
+      <dl class="shi"></dl>
+    <div class="save-btn">保存</div>
+  </div>
+  <!--删除收藏夹图片弹窗--> 
+  <div class="alert_delete_box" id="del-photo-box" style=" display: none">
+    <h3>删除记录<img width="12" height="12" src="/static/images/icon/close12.png" id="cancel_d_x"></h3>
+    <p>确认删除选中的图片吗？</p> 
+    <div class="delete_button_box edit_button_box">
+      <button class="delete_confirm submit" id="delete_p">确定</button>
+      <button class="delete_cancel cancel" id="cancel_p">取消</button>
+    </div>
+  </div>
+  <!--删除收藏夹弹窗-->  
+  <div class="alert_delete_box" id="del-favorite-box" style=" display: none">
+    <h3>删除记录<img width="12" height="12" src="/static/images/icon/close12.png" id="cancel_f2"></h3>
+    <p>确认删除该收藏夹吗？</p> 
+    <div class="delete_button_box edit_button_box">
+      <button class="delete_confirm submit" id="delete_f">确定</button>
+      <button class="delete_cancel cancel" id="cancel_f">取消</button>
+    </div>
+  </div>
+  <!--添加收藏夹弹窗--> 
+  <div class="alert_add_box" style=" display: none;">
+    <h3>新收藏夹<img width="12" height="12" id="cancel_add" src="/static/images/icon/close12.png"></h3>
+    <div class="alert_add_content">
+      <input type="text" class="alert_add_input" placeholder="新收藏夹名" id="new_input">
+      <button class="add_button_none" id="add_save">创建</button>
+    </div>
+  </div>
+  <!--移动收藏夹中图片弹窗--> 
+  <div class="alert_move_box" style=" display: none;">
+    <h3>移动至其他收藏夹<img width="12" height="12" id="cancel_move" src="/static/images/icon/close12.png"></h3>
+    <div class="alert_add_content">
+      <div type="text" class="move_input alert_add_input" id="move_select_wrap"><a data="-1" id="select_move">请选择一个收藏夹</a>
+        <b class="select-arrow"></b>
+        <ul class="alert_move_select" style=" display: none;" id="select_menu">
+        </ul>
+      </div>
+      <button class="button_red submit" id="move_confirm">确定</button>
+    </div>
+  </div>
+  <!--编辑收藏夹弹窗--> 
+  <div class="alert_edit_box" style=" display: none;">
+    <h3>编辑专辑<img width="12" height="12" id="cancel_edit" src="/static/images/icon/close12.png"></h3>
+    <div class="alert_add_content">
+      <input type="text" class="edit_input alert_add_input" id="edit_input">
+      <span>收藏夹名</span>
+    </div>
+    <div class="edit_button_box clearfix">
+      <button class="delete" id="delete_btn">删除收藏夹</button><!--当输入框有内容的时候class改成submit-->
+      <button class="delete_submit submit" id="edit-save">保存设置</button>
+    </div>
+  </div> 
+
+  <!--上传头像弹窗-->
+  <div class="setting_alert_headimg" style="display: none;">
+    <h3>修改头像<img src="/static/images/icon/close12.png" id="close_head"></h3>
+    <div class="alert_headimg_photobox">
+      <div class="headimg_photobox_left">
+        <img id="bigpic">
+      </div>
+      <div id="mes_con">点击上传</div>
+      <ul class="headimg_photobox_right">
+        <li class="photobox_right_fir">
+          <img id="a_p">
+        </li>
+          <li class="photobox_right_sec">
+        <img id="b_p">
+        </li>
+        <li class="photobox_right_thi">
+          <img id="c_p">
+        </li>
+      </ul>
+    </div>
+    <button class="alert_bind_save alert_buttons_save" id="save_head">保存</button>
+    <input type="file" id="head_file" style="display:none">
+  </div>
+
+  <!--社交帐号绑定弹窗-->
+  <div class="setting_alert_bind" style=" display: none;">
+    <h3>社交账号绑定<img src="/static/images/icon/close12.png" id="close_btn"></h3>
+    <ul class="alert_bind_ul">
+      <li>
+        <a class="login_setting_qq"></a>
+        <!--绑定后class：login_setting_qq_bind (微信，微博如同)-->
+        <h5>QQ</h5>
+        <h6></h6>
+        <button class="alert_bind_button" id="qq_bind">绑定</button> 
+      </li>
+      <li>
+        <a class="login_setting_weibo"></a>
+        <h5>新浪微博</h5>
+        <h6></h6>
+        <button class="alert_bind_button" id="weibo_bind">绑定</button> 
+      </li>
+      <li>
+        <a class="login_setting_weixin"></a>
+        <h5>微信</h5>
+        <h6></h6>
+        <button class="alert_bind_button" id="wechat_bind">绑定</button> 
+      </li>
+    </ul>
+    <button class="alert_bind_save alert_buttons_save" id="alert_bind_save">保存</button> 
+  </div>  
+  <!--解除社交帐号绑定弹窗-->
+  <div class="setting_alert_cancelbind" style="display: none;" id="alert_unbind">
+    <h3><img src="/static/images/icon/close12.png" id="unbind_1"></h3>
+    <p>确认解除该社交账号绑定么？</p>
+    <div class="setting_alert_cancelbind_buttons setting_alert_buttons" >
+      <button class="alert_buttons_save" id="confirm_unbind">确定</button>
+      <button class="alert_buttons_cancel" id="unbind_2">取消</button>
+    </div>
+  </div> 
+  <!--绑定邮箱弹窗-->  
+  <div class="setting_alert_email" style=" display: none;">
+    <h3>绑定邮箱<img src="/static/images/icon/close12.png" class="close_bind_email"></h3>
+    <ul class="alert_email_inputs alert_repwd_inputs">
+      <li>
+        <span>邮箱：</span>
+        <input type="text" id="bind_email">
+        <i class="alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="bind_email_r">  </a>
+      </li>
+      <li>
+        <span>密码：</span>
+        <input type="password" id="bind_pwd">
+        <i class="alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="bind_email_pwd_r">  </a>
+      </li>
+      <li>
+        <span>验证码：</span>
+        <input class="email_inputs_vcode" type="text" id="bind_vail">
+        <img class="email_inputs_vimg">
+        <i class="email_inputs_vcode_i alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="bind_email_vail_r">  </a>
+      </li>
+      <div class="setting_alert_buttons">
+        <button class="alert_buttons_save" id="bind_next">下一步</button>
+        <button class="alert_buttons_cancel close_bind_email">取消</button>
+      </div>
+    </ul>
+  </div>
+
+  <!--修改密码弹窗-->
+  <div class="setting_alert_repwd" id="change_box">
+    <h3>重设密码<img src="/static/images/icon/close12.png" id="close_change"></h3>
+    <ul class="alert_repwd_inputs">
+      <li>
+        <span>原密码：</span>
+        <input type="password" id="old_i">
+        <i class="alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="old"></a>
+      </li>
+      <li>
+        <span>新密码：</span>
+        <input type="password" id="new1_i">
+        <i class="alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="new1"></a>
+      </li>
+      <li>
+        <span>新密码确认：</span>
+        <input type="password" id="new2_i">
+        <i class="alert_repwd_inputs_i"></i>
+        <a class="alert_repwd_inputs_error" id="new2"></a>
+      </li>
+      <div class="setting_alert_buttons">
+        <button class="alert_buttons_save" id="confirm_change">保存</button>
+        <button class="alert_buttons_cancel" id="cancel_change">取消</button>
+      </div>
+    </ul>
+  </div>
+</div>
+  
+<div class="setting_succeed"></div>
+<div id="shadow_box"></div> 
+
+
+
+{% block paiwoPhoto %}
+{% include "../paiwoPhoto.html" %}
+{% end %}
+   
+   
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+        
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.Jcrop.min.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+
+<script src="/static/js/com/LocationSearch.js"></script>
+<script src="/static/js/minjs/paiwoPhoto0807.js"></script>
+<script src="/static/js/center/view.js"></script>
+<script src="/static/js/center/help.js"></script>
+<script src="/static/js/center/data.js"></script>
+<script src="/static/js/center/controller.js"></script>
+
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+
+
+</body>
+</html>

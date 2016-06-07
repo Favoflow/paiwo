@@ -1,0 +1,49 @@
+{% extends "../base.html" %}
+
+{% block title %}
+<title>发送注册邮件 - 拍我网</title>
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/com/navi.css">
+<link rel="stylesheet" type="text/css" href="/static/css/emailsend.css">
+{% end %}
+
+
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+{% block body %}
+<div class="main_content">
+    <div class="blank"></div>
+    <div class="box_mail">
+        <div class="head_send">
+            <div><span>{{ email }}</span>将会收到一封来自拍我网的邮件</div>
+            <div>请点击邮件中的链接，即可完成注册。</div>
+        </div>
+        <a class="mailbox" href="{{ email_address }}" target="_blank">进入邮箱</a>
+        <div class="line"></div>
+        <div class="tips">
+            <p>没有收到验证邮件？</p>
+            <ul>
+                <li>若长时间没收到邮件，建议您检查邮件垃圾箱</li>
+                <li><input type="button" id="resend_email" value="重新发送验证邮件"></li>
+                <li>如果重发验证邮件仍然没有收到，<a href="/register" title="更换另一个邮箱地址">请更换另一个邮箱地址</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/static/js/register/mail.js"></script>
+<script src="/static/js/com/common.js"></script>
+
+
+<script type="text/javascript" src="/static/js/side.js"></script>
+{% end %}

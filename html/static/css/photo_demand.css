@@ -1,0 +1,371 @@
+.yuepai_main {
+  width: 1190px;
+  margin: 0 auto;
+  background: #fff;
+}
+.yuepai_main h1 {
+  height: 98px;
+  width: 100%;
+  font-size: 24px;
+  color: #313130;
+  line-height: 98px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+.yuepai_main_content { 
+  padding-top: 40px;
+  width: 560px;
+  margin: 0 auto 30px auto;
+}
+.yuepai_main_content .key{ color: #ff475c;}
+.yuepai_main_content li {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.yuepai_main_content li span {
+  float: left;
+  width: 102px;
+  text-align: right;
+  height: 40px;
+  line-height: 40px;
+  color: #8a8880;
+  margin-right: 24px;
+}
+.yuepai_main_inputs { 
+  float: left;
+  height: 40px;
+  line-height: 40px;
+/*  color:  #ff475c;*/
+}
+.photo_main_obj li{ line-height: 15px;}
+.yuepai_main_inputs dd { 
+  float: left;
+  width: 54px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #bbb8b2;
+  border-radius: 2px;
+  border: 1px solid #bbb8b2;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.yuepai_main_inputs dd:hover { border-color: #ff475c;}
+.yuepai_main_inputs dd { font-size: 16px;}
+.yuepai_main .other { 
+  width: 168px;
+  margin-right: 0;
+}
+.other input { 
+  color: #bbb8b2;
+  font-size: 16px;
+  padding: 12px 0 12px 10px;
+  width: 160px;
+  height: 16px;
+  line-height: 16px;
+}
+#photo_type dd.yuepai_main_inputs_dd_clicked {
+  color: #ff475c;
+  border: 1px solid #ff475c;
+  border-radius: 2px;
+}
+
+/****错误提示*****/
+.error_tip {
+  width: 295px;
+  height: 40px;
+  position: absolute;
+  right: -315px;
+  display: none;
+}
+.error_tip_long {
+  width: 350px;
+  right: -270px;
+}
+.error_tip i {
+  background: url("/static/images/spirit.svg") no-repeat scroll -200px -700px rgba(0, 0, 0, 0);
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 18px;
+}
+.yuepai_main .error_tip span {
+  color: #ff5367;
+  width: auto;
+  padding-left: 30px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+/****错误提示结束*****/
+/***约拍需求内容部分*****/
+.yuepai_main_checkbox {
+  float: left;
+  padding-top: 12px;
+  height: 28px;
+}
+.yuepai_main_checkbox dd { 
+  margin-right: 20px;
+  float: left;
+  cursor: pointer;
+}
+.yuepai_main_select { float: left;}
+.yuepai_main_select>div { 
+  width: 89px;
+  margin-right: 10px;
+}
+.yuepai_main_timeselect { 
+  float: left;
+  width: 317px;
+}
+.timeselect_select { width: 330px;}
+.yuepai_main_money dd { 
+  width: 133px; 
+  padding-left: 13px;
+}
+.yuepai_main_money a {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  color: #414141;
+  padding: 0 1px;
+}
+.yuepai_main_money dd input { 
+  height: 38px;
+  color: #b6b3ad;
+  font-size: 14px;
+  width: 133px;
+}
+.yuepai_main_albums dd {
+  float: left;
+  width: 137px;
+  height: 146px;
+  border: 1px solid #bbb8b2;
+  margin-right: 10px;
+  padding: 12px 0 0 16px;
+  position: relative;
+}
+.main_albums_add:hover{ background: #eee;}
+.yuepai_main_albums dd img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 3px 0 0 3px;
+}
+.yuepai_main_albums dd p {
+  width: 153px;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  line-height: 18px;
+  font-size: 12px;
+  color: #b6b3ad;
+  text-align: center;
+}
+.main_albums_add { 
+  position: relative;
+  padding: 0;
+}
+.main_albums_add i {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  background: url("/static/images/spirit.svg") no-repeat scroll 0 -2150px rgba(0, 0, 0, 0); 
+}
+.yuepai_main .yuepai_main_albumli { margin-bottom: 135px;}
+.yuepai_main_textarea textarea {
+  width: 322px;
+  height: 73px;
+}
+.yuepai_main .yuepai_main_textarea { margin-bottom: 55px;}
+.yuepai_main_inputtext { 
+  width: 322px;
+  float: left;
+}
+.submit_button,
+.reset_button {
+  width: 115px;
+  margin-bottom: 47px;
+}
+.place_select { width: 102px;}
+/***约拍需求内容部分结束*****/
+
+/*yuepai_main_footer*/
+.yuepai_main_footer {
+  background: #fff;
+  padding: 41px 0 116px 0;
+  margin: 0 auto;
+  border-top: 1px solid #eee; 
+}
+.yuepai_connect {
+  width:306px;
+  margin:0 auto;
+  text-align:center;
+  border-bottom:1px solid #eee;
+}
+.yuepai_connect img {
+  width:223px;
+  height:223px;
+}
+.yuepai_connect h3 {
+  color:#414141;
+  font-size:14px;
+  margin-top:10px;
+  line-height:24px;
+}
+.yuepai_connect i{
+  color:#b6b3ad;
+  font-size:12px;
+  line-height:24px;
+}
+.yuepai_connect p {
+  line-height:54px;
+  font-size:18px;
+  color:#414141;
+}
+.yuepai_connect p i {
+  color:#ff596b;
+  font-size:18px;
+}
+.yuepai_tel {
+  width:330px;
+  margin:18px auto 0;
+  overflow:hidden;
+}
+.yuepai_tel li {
+  float:left;
+  width:60px;
+  height:60px;
+  margin:0 2px;
+  border:1px solid #eee;
+  border-radius:50%;
+  text-align:center;
+}
+.yuepai_tel h4 {
+  color:#b6b3ad;
+  font-size:18px;
+  margin-top:13px;
+}
+.yuepai_tel span {
+  font-size:8px;
+  color:#bfbfbf;
+  line-height:16px;
+}
+.yuepai_tel i { color:#ff475c;}
+.mask,.mask2{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	display: none;
+	z-index: 100;
+}
+
+.store_album{
+	overflow: hidden;
+	border: 2px solid #ddd;
+}
+.store_album_img{
+	width: 60px;
+	height: 60px;
+	margin: 6px;
+	float: left;
+}
+.message-box{
+  width: 280px;
+  height: 27px;
+  position: fixed;
+  left: 50%;
+  margin-left: -140px;
+  background-color: rgba(0,0,0,0.5);
+  top: -52px;
+  z-index: 200;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+}
+.store_album_select li:hover{
+  background: #ff475c;
+  border: 1px solid #ff475c; 
+  border-radius: 5px;
+  color: #fff;
+}
+
+.reset_button { display: none;}
+.photo_main_obj .error_tip{ right: -250px;}
+.photo_main_time .error_tip,.photo_main_budget .error_tip,.photo_main_tel .error_tip{ right: -215px;}
+.alert_edit_box{
+   width: 440px;
+   height: 220px;
+   margin: -110px 0 0 -220px;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   background: #fff;
+   box-shadow: 0 0 5px 0 rgba(150,150,150,0.3);
+   border-radius: 2px;  
+	z-index: 200;
+}
+.edit_button_box {
+  height: 36px;
+  margin: 30px auto 0 auto;
+}
+.alert_add_content {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  margin-top: 35px;
+}
+.confirm {
+  width: 98px;
+  height: 34px;
+  border: 1px solid #d3d2d2;
+  color: #686868;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  background: #fff; 
+  cursor: pointer;
+}
+.delete {
+  width: 98px;
+  height: 34px;
+  border: 1px solid #dd2338;
+  background: #ff475c;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.alert_edit_box h3 {
+  width: 100%;
+  height: 43px;
+  text-align: center;
+  line-height: 43px;
+  border-bottom: 1px solid #eee;
+  color: #6d6d6d;
+  font-size: 17px;
+}
+.alert_edit_box h3 img{
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}

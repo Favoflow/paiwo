@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>摄影师推荐</title>
+	<link rel="stylesheet" href="/static/phone/css/mincss.1.0/photog.css">
+</head>
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+<div class="commend-current">
+	<h1 class="commend-tit">| 本期推荐 |</h1>
+	<div class="commend-banner">
+		<!--背景蒙层-->
+		<div class="commend-cover"></div>
+		<!--banner文字-->
+		<div class="commend-text">
+			<div class="commend-find">
+				<span>/发现<br>优秀摄影师</span>
+				<span class="commend-time"></span>
+			</div>
+
+			<div class="commend-banner-tit">
+				<span></span>
+				<h2></h2>
+			</div>
+
+			<div class="summary-pg">
+				<a href="javascript:;"><img src=""></a>
+				<span></span>
+			</div>			
+		</div>
+	</div>
+</div>
+<div class="commend-seminar">
+	<h1 class="commend-tit">| 专题：发现优秀摄影师 |</h1>
+	<div class="commend-seminar-main">
+	
+	
+<!--
+		<div class="seminar-area">
+			<div class="seminar-img"><a href="javascript:;"><img src="/static/phone/images/photo3.jpg"></a></div>
+			<div class="seminar-txt">
+				<h2 class="seminar-tit"><a href="javascript:;">别忘了摄影的初衷是拍了好玩</a></h2>
+				<div class="seminar-msg">
+					<span class="seminar-time">2014/12/17</span>
+					<span class="seminar-name">@云浮木Float名字</span>	
+				</div>		
+			</div>
+		</div>
+-->
+		
+<!--
+		<div class="seminar-area">
+			<div class="seminar-img"><a href="javascript:;"><img src="/static/phone/images/photo3.jpg"></a></div>
+			<div class="seminar-txt">
+				<h2 class="seminar-tit"><a href="javascript:;">别忘了摄影的初衷是拍了好玩</a></h2>
+				<div class="seminar-msg">
+					<span class="seminar-time">2014/12/17</span>
+					<span class="seminar-name">@云浮木Float名字</span>	
+				</div>		
+			</div>
+		</div>
+-->
+		
+	</div>
+	<div class="seminar-more" style="display:none;">加载中...</div>
+	<div class="seminar-nomore" style="display:none;">下面木有了:P</div>
+</div>
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/minjs.1.0/photog.js"></script>
+<!--<script src="/static/phone/js/photog.1.0.js"></script>-->
+</body>
+</html>

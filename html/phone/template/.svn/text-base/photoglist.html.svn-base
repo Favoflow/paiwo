@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>拍我网 - 摄影师列表</title>
+<link rel="stylesheet" href="/static/phone/css/public/reset.css">
+<link rel="stylesheet" href="/static/phone/css/public/nav.css">
+<link rel="stylesheet" href="/static/phone/css/photoglist.css">
+</head>
+
+<body>
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+<!--photog-->
+<div class="photog">
+  <div class="pg_tit">
+    <a href="javascript:;" class="pg_commend pg_tit_cur">推荐摄影师</a>
+    <!--<a href="javascript:;" class="pg_like">关注的摄影师</a>-->
+  </div>
+
+  <ul class="search_pg_photobox">
+    <!--<li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo4.jpg"></a>
+      <dl>
+        <dt><a>狼来了</a><i class="boy"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo2.jpg"></a>
+      <dl>
+        <dt><a>夜夜夜夜</a><i class="boy"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo6.jpg"></a>
+      <dl>
+        <dt><a>浊者自浊zz</a><i class="boy"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo7.jpg"></a>
+      <dl>
+        <dt><a>浊者自浊zz</a><i class="girl"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>-->
+  </ul>
+
+  <!--<ul class="care_pg_photobox search_pg_photobox">
+    <li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo4.jpg"></a>
+      <dl>
+        <dt><a>狼来了</a><i class="boy"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>
+    <li>
+      <a href="javascript:;" class="search_pg_head_img"><img src="/static/phone/images/photo2.jpg"></a>
+      <dl>
+        <dt><a>夜夜夜夜</a><i class="boy"></i></dt>
+        <dd>相册<span>14</span></dd>
+      </dl>
+      <a class="pg_list_care" href="javascript:;"><i class="photog_add"></i></a>
+    </li>
+  </ul>-->
+  <a class="more_pg" href="javascript:;">更多more</a>
+</div>
+
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/nav.js"></script>
+<script src="/static/phone/js/font.js"></script>
+<script src="/static/phone/js/photog/photog_view.js"></script>
+<script src="/static/phone/js/photog/photog_data.js"></script>
+<script src="/static/phone/js/photog/photog_help.js"></script>
+<script src="/static/phone/js/photog/photog_controller.js"></script>
+</body>
+</html>

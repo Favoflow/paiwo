@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>摄影师主页 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的自由影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <!-- <link rel="stylesheet" href="/static/css/mincss/studio0630.css"> -->
+  <link rel="stylesheet" type="text/css" href="/static/css/store.css">
+<link rel="stylesheet" type="text/css" href="/static/css/stu.css">
+<link rel="stylesheet" type="text/css" href="/static/css/com/bigPic.css">
+  <style>
+      .top-tab{
+          display: none;
+      }
+  </style>
+  
+  <style>
+    .comment_content_list li{
+        height: auto;
+    }
+    .black_bac .content_list_resend{
+        display: block;
+    }
+ </style>
+ 
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+  </script>
+</head>
+<body>
+	{% block side %}
+	{% include "../side.html" %}
+	{% end %}
+	<!--侧边栏按钮-->
+	<ul class="push_button">
+	  <li class="navi-one"></li>
+	  <li class="navi-two"></li>
+	  <li class="navi-three"></li>
+	</ul>
+	 {% block top_bar %}
+	 {% include "../top_tab.html" %}
+	 {% end %}
+	 <!--browse update-->
+	 {% block update_notice %}
+	 {% include "../update_notice.html" %}
+	 {% end %}
+	 <a class="stuido_header_editicon" style="display:none"><i></i>更换封面</a>
+<!--	 <a href="javascript:;" class="stuido_header_editicon"></a>-->
+	
+
+<!--摄影师主页头部banner-->
+<header class="stuido_header">  
+  <a href="javascript:;" class="stuido_header_sign"></a>
+  <div class="bpbox">
+    <div class="banner_bg"></div>
+    <div class="bpbox_blackbac"></div>
+  </div>
+  <input type="file" id="bigback" style="display:none">
+  <div class="stuido_header_textbox stuido_change">
+    <!--摄影师头像-->
+    <figure>
+      <img class="header_textbox_headimg" width="126" height="126">
+    </figure>
+    <!--摄影师昵称-->
+    <figcaption class="host-nick"></figcaption>
+    <!--摄影师域名-->
+    <p class="studio_url"></p>
+
+    <p class="photog_intro_text"></p>
+
+  </div>
+  <div class="stuido_header_imgbox">
+    <div class="back-image"></div>
+  </div>
+  
+  <div class="header-arrow"><i class="down-arrow"></i></div>
+
+  <!--更换封面-->
+  <div class="header-back-change">
+   
+    <ul class="header-back-online">
+      <li class="bg-choice" data-file="10450/style/52bdf344d4c032ce520b8bdca8f5399e" data-auth="©Andreas Winter">
+        <img src="http://image.paiwo.co/10450/style/52bdf344d4c032ce520b8bdca8f5399e@!280x280">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/1a74e5ecd19c3ee721232af0a641f9c3" data-auth="©J006">
+        <img src="http://image.paiwo.co/10450/style/1a74e5ecd19c3ee721232af0a641f9c3@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/abfb89ab65cf9a84ca305de54b0c6c34" data-auth="©James Woo">
+        <img src="http://image.paiwo.co/10450/style/abfb89ab65cf9a84ca305de54b0c6c34@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/61143eb65e3768e0c41d49a00173acc3" data-auth="©James Woo">
+        <img src="http://image.paiwo.co/10450/style/61143eb65e3768e0c41d49a00173acc3@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/ddf6b2c0aacb00513fc3dd904af02e23" data-auth="©James Woo">
+        <img src="http://image.paiwo.co/10450/style/ddf6b2c0aacb00513fc3dd904af02e23@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/654d0c0c37a8fe11300b26e747378ed0" data-auth="©James Woo">
+        <img src="http://image.paiwo.co/10450/style/654d0c0c37a8fe11300b26e747378ed0@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/b2eab956ed5328195a879971512e6025" data-auth="©James Woo">
+        <img src="http://image.paiwo.co/10450/style/b2eab956ed5328195a879971512e6025@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/d89e400a3f2b5de44c6f7d4828dd916e" data-auth="©Photostockeditor">
+        <img src="http://image.paiwo.co/10450/style/d89e400a3f2b5de44c6f7d4828dd916e@!280x200">
+        <i></i>
+      </li>
+      <li class="bg-choice" data-file="10450/style/1c17ff46b143b171b5852222b15149b0" data-auth="©Viktor Hanacek">
+        <img src="http://image.paiwo.co/10450/style/1c17ff46b143b171b5852222b15149b0@!280x200">
+        <i></i>
+      </li>
+    </ul>
+    
+    <div class="header-back-img">
+      <i class="select-add"></i>
+      <a class="header-back-up" href="javascript:;">
+        <i class="select-in"></i>
+        <span class="uploading-state">本地上传</span>
+        <p>(请上传小于5M的照片)</p>
+      </a>
+        <span class="re-choice" style="display:none;">
+            <span class="re-icon"></span><span class="re-cont">重新上传</span>
+        </span>
+    </div>
+    
+
+    <div class="header-back-btn">
+      <button class="submit header-back-submit">确认</button>
+      <button class="cancel header-back-cancel">取消</button>
+    </div>
+    <i class="header-back-arrow"></i>
+    
+  </div>
+</header>
+<!--loading进度条-->
+<div class="banner_loading"></div> 
+
+<div id="main_box">
+	<div class="studio-main">
+		<div class="studio_main_header stuido_header_textbox">
+	      <!--摄影师昵称-->
+	      <figcaption class="host-nick"></figcaption>
+
+	      <div class="studio-hot" style="display:none">	      	
+	      	<span class="studio-hot-text"><i></i>热度</span>
+	      	<span class="studio-hot-val"></span>
+	      </div>
+
+	      <div class="studio_cieclebox">
+			<button class="cieclebox_concen" data_code="关注">+ 关注</button>
+			<button class="cieclebox_message">私信</button>
+		  </div>
+
+	      <div class="studio_concern" style="display:none">
+	        <p class="studio_concern_self"><i></i>人关注他</p>
+	        <span></span>
+	        <p class="studio_concern_other">已关注<i></i>人</p>
+	      </div>
+	    </div>
+		<!--选项卡-->
+		<div class="studio-tab">
+			<ul class="clearfix">
+				<li class="studio-trend studio-tab-cur">
+					<a href="javascript:;">主页</a>
+				</li>
+				<li class="studio-album">
+					<a href="javascript:;">影集</a>
+				</li>
+				<li class="studio-pocket">
+					<a href="javascript:;">图文</a>
+				</li>
+				<li class="studio-friend"> 
+					<a href="javascript:;">朋友</a>
+				</li>
+			</ul>
+			<span class="studio-tab-line"></span>
+		</div>
+
+		<div class="studio-content clearfix">
+			<div class="studio-none studio-none-hack"></div>
+			<!--动态-->
+
+			<!-- 活动 -->
+			<div class="studio-con-trend"></div>
+		
+			<!-- 影集 -->
+			<div class="studio-con-album">
+				<div class="studio-none">
+					 <p></p>
+					 <a href="/album/new"></a>
+				</div>
+				<ul class="content_albumbox clearfix">
+<!--
+					<li class="self_li" style="display:none;">
+					   <a class="content_album_up" href="javascript:;">
+			            <i></i>
+			            <p>上传影集</p>
+			           </a>
+			        </li>
+-->
+				</ul>
+				
+				<!-- 分页 -->
+                <div class="page">
+                    <div class="page-in">
+                        <a class="page-pre page-first">上一页</a>
+                        <div class="page-no">
+                        </div>
+
+                        <a class="page-next">下一页</a>
+                    </div>
+                </div>
+			</div>
+			<!-- 兜 -->
+			<div class="studio-con-pocket">
+               <div class="studio-pocket-main">
+                   <div class="studio-none">
+                         <p></p>
+                         <span></span>
+                    </div>
+               </div>
+               <!-- 分页 -->
+                <div class="page">
+                    <div class="page-in">
+                        <a class="page-pre page-first">上一页</a>
+                        <div class="page-no">
+                        </div>
+
+                        <a class="page-next">下一页</a>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- 朋友 -->
+			<div class="studio-con-friend">
+				<div class="studio-friend-tit">
+					<ul class="clearfix">
+						<li class="studio-friend-care studio-friend-cur">
+							<span>关注</span>
+							<i>436</i>
+						</li>
+						<li class="studio-friend-fans">	
+							<span>粉丝</span>
+							<i>236</i>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="studio-care-main">
+					<div class="studio-none">
+						 <p></p>
+						 <span></span>
+					</div>
+					<div class="studio-care-content">
+						
+					</div>
+					<!-- 分页 -->
+					<div class="page">
+						<div class="page-in">
+							<a class="page-pre page-first">上一页</a>
+							<div class="page-no">
+							</div>
+							
+							<a class="page-next">下一页</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="studio-fans-main">
+					<div class="studio-none">
+						 <p></p>
+						 <span></span>
+					</div>
+					<div class="studio-fans-content"></div>
+					<!-- 分页 -->
+					<div class="page">
+						<div class="page-in">
+							<a class="page-pre page-first">上一页</a>
+							<div class="page-no">
+							</div>
+							
+							<a class="page-next">下一页</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- 侧边Bar -->
+			<div class="studio-content-r">
+				<!-- 个人资料 -->
+				<div class="studio-r-info">
+					<ul class="studio-info-tab clearfix">
+						<li>
+							<span>动态</span>
+							<i class="dynamic-count"></i>
+						</li>
+						<li>
+							<span>关注</span>
+							<i class="follow-count"></i>
+						</li>
+						<li>
+							<span>粉丝</span>
+							<i class="follower-count"></i>
+						</li>
+					</ul>
+					<ul class="studio-info-main">
+						<li class="studio-info-live">
+							<span><i></i>居住地：</span>
+							<p class="textbox_palce"></p>
+						</li>
+						<li class="studio-info-intro">
+							<span><i></i>简介：</span>
+							<p></p>
+						</li>
+						<li class="studio-info-url">
+							<span><i></i>个性域名：</span>
+							<p></p>
+						</li>
+						<li class="studio-info-type">
+							<span><i></i>类型：</span>
+							<dl>
+							</dl>
+						</li>
+						<li class="studio-info-place">
+							<span><i></i>接拍地：</span>
+							<dl>
+							</dl>
+						</li>
+					</ul>
+					<a href="javascript:;" class="studio-info-more">查看更多<i></i></a>
+				</div>
+
+				<!-- 活动 -->
+				<div class="studio-r-active">
+					<h3 class="studio-act-tit clearfix">
+						<span>他参加过的活动</span>
+						<a href="/activity" target="_blank" class="get-more" style="display:none;">更多<i>></i></a>
+					</h3>
+					<ul class="clearfix"></ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+{% block foot %}
+{% include "../foot.html" %}
+{% end %}
+</div>
+<div id="shadow_box"></div>
+<div class="back_color"></div>
+<div class="message-box"></div>
+<a href="javascript:;" class="go_top" id="go_top" style="display:none;"></a>
+<!--大图展示-->
+    
+    
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+     
+{% block paiwoPhoto %}
+{% include "../paiwoPhoto.html" %}
+{% end %}
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+
+<script src="/static/js/minjs/paiwoPhoto0922.js"></script>
+<script src="/static/js/minjs/studio0922.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+  <!--登录框-->
+  <div class="login_module">
+  	  <div class="login_shadow"></div>
+	  <div class="login_box"  id="login_box">
+		<a class="look_look" href="javascript:;"></a>
+		<div class="login_contet">
+		  <h2 class="loginbox_logo"></h2>         
+		  <ul class="login_third_login">
+			<span class="login_inputs_title"><h6 class="inputs_title_h6">使用第三方帐号登录</h6></span>
+			<li><a class="login_qq" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101164290&redirect_uri=http://paiwo.co/login/qq&state=zzz"></a></li>
+			<li><a class="login_xinlang" href="https://api.weibo.com/oauth2/authorize?client_id=2197733404&redirect_uri=http://paiwo.co/login/weibo"></a></li>
+			  <li><a class="login_weixin" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd804e40c6e964035&redirect_uri=http://paiwo.co/login/weixin&response_type=code&scope=snsapi_login#wechat_redirect"></a></li>
+		  </ul>
+		  <ul class="inputs_box">
+			<li class="inputs_email">
+			  <input class="email" type="text" placeholder="手机或邮箱账号" id="login_email">
+			  <span class="email_error_em" id="login_error_email"></span>
+			  <i class="email_error_icon"></i>
+			</li>
+			<li class="password_div">
+			  <input class="password" type="password" placeholder="密码" id="login_pwd">
+			  <span class="password_error_em" id="login_error_pwd"></span>
+			  <i class="password_error_icon"></i>
+			</li>
+			<a class="login_botton submit" id="login_b">登录</a>
+		  </ul>
+	  <div class="bottom_text">
+		<a href="/password" class="forget" id="t_forget">忘记密码</a>&nbsp&nbsp&nbsp 
+		<a href="/register" class="go_register" id="t_register">没有账号？去注册»</a>
+	  </div>
+	  </div>
+	</div>  
+</div>
+
+
+<!--建议反馈-->
+<div class="feedback">
+    <div class="feedback-shadow"></div>
+    <div class="feedback-main">
+        <a href="javascript:;" class="feedback-close"><i></i></a>
+        <h3>建议反馈</h3>
+        <div class="feedback-info">
+            <ul>
+                <li>
+                    <input type="text" placeholder="你的姓名">
+                </li>
+                <li>
+                    <input type="text" placeholder="邮箱地址">
+                </li>
+                <li>
+                    <textarea placeholder="反馈内容"></textarea>
+                </li>
+            </ul>
+            <a class="feedback-err">
+                <i></i>
+                <span>请填写有效的邮箱</span>
+            </a>
+            <button class="submit feedback-submit" id="photog_save">保存</button>
+        </div>  
+        
+        <!--反馈成功-->
+        <div class="feedback-result">     
+            <p class="feedback-p1">
+                <span>THANK</span>
+                <span>YOU</span>
+                <i></i>
+            </p> 
+            <p class="feedback-p2">
+                <span>感谢反馈！</span>
+                <span>我们会尽快通过邮件回复您。</span>
+            </p>
+        </div>
+    </div>
+</div>

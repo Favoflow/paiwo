@@ -1,0 +1,45 @@
+{% extends "../base.html" %}
+
+{% block title %}
+<title>拍我网 - 最具格调的自由摄影师平台</title>
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/register.css">
+<link rel="stylesheet" type="text/css" href="/static/css/footer.css">
+{% end %}
+
+{% block body %}
+<img class="bgimg" src="">
+<a href="" id="by"></a>
+<div id="login_box">
+    <div id="social_login" style="display: none;">
+        <div id="part">
+            <div class="line"></div>
+            或使用社交账号直接登录
+            <div class="line"></div>
+        </div>
+        <div id="social_button">
+            <div onclick=""><img src="/static/images/icon/login_weibo.png"></div>
+            <div onclick=""><img src="/static/images/icon/login_qq.png"></div>
+            <div onclick=""><img src="/static/images/icon/login_douban.png"></div>
+            <div onclick=""><img src="/static/images/icon/login_renren.png"></div>
+        </div>
+    </div>
+    <div id="logo"><img src="/static/images/icon/logo_white.png"></div>
+    <input class="wd200" type="text" placeholder="输入注册邮箱" name="email" id="email">
+    <input class="wd200" type="password" placeholder="输入密码" name="password" id="password1">
+    <input class="wd200" type="text" placeholder="输入验证码" name="verify" id="verify">
+    <div id="vimage"><img id="vvimage" src="/a/captcha/register"></div>
+    <p class="error_info hide" id="error_info"><img src="/static/images/icon/attention_small.png"></p>
+    <label>
+        <input type="checkbox" name="remember" id="remember" checked="checked">
+        我同意<a href="/protocol">《拍我网用户服务协议》</a>
+    </label>
+    <button class="ml20" id="register_button">注册</button>
+    <div id="gotologin">已有账号？<a href="/login">马上登录 &gt;&gt;</a></div>
+</div>
+<script src="/static/js/browse/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/browse/jquery.md5.js"></script>
+<script type="text/javascript" src="/static/js/register/register.js"></script>
+{% end %}

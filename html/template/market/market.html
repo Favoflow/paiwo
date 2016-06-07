@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>需求市场 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+<!--  <link rel="stylesheet" href="/static/css/mincss/com0424.css">-->
+   {% block commoncss %}
+   {% include "../commoncss.html" %}
+   {% end %}
+  <link rel="stylesheet" href="/static/css/market.css">
+  <script type="text/javascript">
+  	city = "{% raw city %}";
+  </script>
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+
+<div id="main_box">
+     <div class="yuepai_main">
+      <!--banner部分-->
+    	<div class="banner_box">
+  			<!-- <h1 class="banner_box_logo">拍我</h1> -->
+  	    <div class="banner_box_bp"></div> 
+        <!-- <img class="banner_box_bp" src="../static/images/bg.jpg"> -->
+  			<div class="banner_box_text">
+  			  <h2>免费为您推荐摄影师</h2>
+  			  <!-- <h3></h3> -->
+  			</div>
+  			<div class="banner_box_form clearfix" id="banner_box_form">
+  				<ul class="banner_box_buttons">
+  				  <li id="banner_sel_type">
+  					  <span>你想拍什么？</span>
+  					  <i></i>
+  					  <dl class="banner_select">
+  							<dd data-code="1">人像摄影</dd>
+  							<dd data-code="2">婚纱摄影</dd>
+  							<dd data-code="3">婚礼跟拍</dd>
+  							<dd data-code="4">家庭儿童</dd>
+  							<dd data-code="5">旅行跟拍</dd>
+  							<dd data-code="6">商业服务</dd>
+  							<dd data-code="7">其他</dd>
+  					  </dl>
+  				  </li>
+  				  <li id="banner_sel_area">
+  					  <input id="area_input" placeholder="你想在哪拍？" data-code="">
+  					  <dl class="banner_select_area">
+  					  </dl>
+  				  </li>
+  				</ul>
+  				<button class="banner_submit">去看看</button>  
+  		   </div>
+  		</div>
+  		<!--banner部分结束-->
+      
+      <!--当地热门摄影师-->
+      <div class="local-hot-phg">
+        <h3 class="hot-phg-h3">周边热门摄影师</h3>
+        <span class="hot-phg-tab">
+          当前所在地
+          <span id="chosed_pla"></span>
+          <a id="chosed_pla_btn">切换</a>
+          <div class="place-choose">
+            <b></b>
+            <ul class="pla-cho-zxpro clearfix" id="zhixia">
+            	<li data-code="02-01-00-00">北京</li>
+            	<li data-code="02-03-00-00">天津</li>
+            	<li data-code="02-04-00-00">重庆</li>
+            	<li data-code="02-02-00-00">上海</li>
+            	<li data-code="02-33-00-00">香港</li>
+            	<li data-code="02-34-00-00">澳门</li>
+            </ul>
+            <ul class="pla-cho-pro pla-cho-zxpro clearfix" id="pla_cho">	
+            	<li data-code="02-05-00-00">浙江<s></s></li>
+            	<li data-code="02-06-00-00">江苏<s></s></li>
+            	<li data-code="02-07-00-00">四川<s></s></li>
+            	<li data-code="02-08-00-00">云南<s></s></li>
+            	<li data-code="02-09-00-00">海南<s></s></li>
+            	<li data-code="02-10-00-00">西藏<s></s></li>
+            	<li class="pla-cho-pro2box"><ul></ul></li>
+            	<li data-code="02-11-00-00">青海<s></s></li>        	
+            	<li data-code="02-12-00-00">新疆<s></s></li>
+            	<li data-code="02-13-00-00">广东<s></s></li>
+            	<li data-code="02-14-00-00">广西<s></s></li>
+            	<li data-code="02-15-00-00">福建<s></s></li>
+            	<li data-code="02-16-00-00">江西<s></s></li>
+            	<li class="pla-cho-pro2box"><ul></ul></li>
+            	<li data-code="02-17-00-00">湖南<s></s></li>          	
+            	<li data-code="02-18-00-00">湖北<s></s></li>
+            	<li data-code="02-19-00-00">安徽<s></s></li>
+            	<li data-code="02-20-00-00">山东<s></s></li>
+            	<li data-code="02-21-00-00">河北<s></s></li>
+            	<li data-code="02-22-00-00">河南<s></s></li>
+            	<li class="pla-cho-pro2box"><ul></ul></li>
+            	<li data-code="02-23-00-00">山西<s></s></li>         	
+            	<li data-code="02-24-00-00">陕西<s></s></li>
+            	<li data-code="02-25-00-00">黑龙江<s></s></li>
+            	<li data-code="02-26-00-00">吉林<s></s></li>
+            	<li data-code="02-27-00-00">辽宁<s></s></li>
+            	<li data-code="02-28-00-00">内蒙古<s></s></li>
+            	<li class="pla-cho-pro2box"><ul></ul></li>
+            	<li data-code="02-29-00-00">甘肃<s></s></li>         	
+            	<li data-code="02-30-00-00">贵州<s></s></li>
+            	<li data-code="02-31-00-00">宁夏<s></s></li>
+            	<li data-code="02-32-00-00">台湾<s></s></li>
+              <li data-code="01-00-00-00">海外<s></s></li>
+            	<li class="pla-cho-pro2box"><ul></ul></li>
+            </ul> 
+          </div>
+        </span>
+        <span class="change_list_span"><b class="change_list">换一批<i></i></b></span>
+      	<ul class="hot-phg-ul clearfix" id="hotPhotog"></ul>
+      </div>
+      <!--当地热门摄影师结束-->
+  		
+  		<!--认证摄影师-->
+  		<div class="aut-photog clearfix" id="aut-photog">
+  			<h3 class="hot-phg-h3">集市订单</h3>
+  			<!-- <span class="hot-phg-tab"><a>如何成为认证摄影师？</a></span> -->
+  			<div class="clearfix">
+  				<ul class="aut-ul-left" id="aut-ul-left">
+  					<h4 class="hot-phg-h4">最新订单</h4>
+  				</ul>
+  				<ul class="aut-ul-right" id="recent_dem_ul">
+  					<h4 class="hot-phg-h42 hot-phg-h4">推荐</h4>
+  				</ul>
+  			</div>
+  			<a class="button-block cancel" id="allDem-btn">查看所有订单</a>
+  		</div>
+  		<!--认证摄影师结束-->
+
+  		<!--热门需求-->
+  	  <div class="hot-demand" style="display:none;">
+  	    <h3 class="hot-phg-h3">推荐</h3>
+  			<div class="hot-dem-photog aut-photog clearfix">
+  				<ul class="aut-ul-left" id="hot_ul_left">
+  					<h4 class="hot-phg-h4"><a class="hot-phg-h4-a-cur">全部</a><a>写真</a><a>儿童</a><a>婚纱</a><a>婚礼</a><a>其他</a></h4>
+  				</ul>
+  				<ul class="aut-ul-right" id="hot_ul_right">
+  					<h4 class="hot-phg-h42 hot-phg-h4">最近需求</h4>
+  				</ul>
+  			</div>
+  			<a class="hot-more button-block">更多<i>more</i></a>		
+  	  </div>
+  	  <!--热门需求结束-->
+    </div>
+    {% block foot %}
+    {% include "../foot.html" %}
+    {% end %}
+  </div>
+  <div id="shadow_box"></div>
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+<div class="setting_succeed"></div>
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/store.min.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/market/market_view.js"></script>
+<script src="/static/js/market/market_data.js"></script>
+<script src="/static/js/market/market_controller.js"></script>	
+
+</body>
+</html>

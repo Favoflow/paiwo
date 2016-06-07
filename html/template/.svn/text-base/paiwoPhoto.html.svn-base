@@ -1,0 +1,172 @@
+ <div class="wechat_box">
+ 	<span>“扫一扫” 分享到微信</span>
+ 	<div class="wechat_main"><img width="200" src=""/></div>
+ </div>
+ <div class="black_bac" style="display:none">
+   <button class="black_bac_close"></button>
+   <div class="big_pic_shadow"></div>
+     <div class="big_pic_main">
+	   <div class="big_main_left">
+		 <div class="big_photo_box">
+		   <a id="targeta">
+		     <img  id="bigpic" class="mouse-left">
+		   </a>
+		   <span class="loading_now">
+			 <span class="rotate"></span>
+		   </span>
+		   <div class="copyright"></div>
+		 </div>
+		 <div class="big_photo_comment">
+		  <ul class="photo_comment_tab">
+			<li class="comment_tab_buttons">
+			  <button class="tab_buttons_left"><i></i><span>喜欢</span></button>
+			  <button class="tab_buttons_right"><i></i><span>推荐</span></button>
+			  <button class="bigpic-star-icon" title="收藏"><i></i></button>
+			</li>
+			
+			<li class="comment_tab_copyright">
+          
+			  <span class="t1" style="display:none;" title="不使用原创授权">
+				<i href="javascript:;" class="type1"></i>
+			  </span>
+			  
+			  <span class="t2" style="display:none;" title="版权所有，禁止转载">
+				<i href="javascript:;" class="type2"></i>
+			  </span>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+                  <span class="t3" style="display:none;" title="署名-非商业使用-禁止演绎">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>
+                     <i href="javascript:;" class="type6"></i>
+                  </span>
+              </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                  <span class="t4" style="display:none;" title="署名-非商业使用-相同方式共享">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>
+                     <i href="javascript:;" class="type4"></i>
+                  </span>
+              </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                  <span class="t5" style="display:none;" title="署名-非商业性使用">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>
+                  </span>
+              </a>
+			  
+			 <a href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                  <span class="t6" style="display:none;" title="署名-禁止演绎">
+                    <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type6"></i>
+                  </span>
+             </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                  <span class="t7" style="display:none;" title="署名-相同方式共享">
+                    <i href="javascript:;" class="type5"></i>
+                    <i href="javascript:;" class="type4"></i>
+                  </span>
+              </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                  <span class="t8" style="display:none;" title="署名">
+                    <i href="javascript:;" class="type5"></i>
+                  </span>
+              </a>
+              
+			</li>
+			
+			
+		  </ul> 
+
+		  <ul class="photo_comment_line">
+
+		  	  <li class="photo_comment_hot">
+		  		<span>热度|</span>
+		  		<i class="temperature_num"></i>	
+		  	  </li>
+		  	  
+		  	  <li class="comment_tab_share">
+		  	  	<span>分享/</span>
+			  	<a class="tab_share_weibo"></a>
+			  	<a class="tab_share_wechat"></a>
+	<!--
+			  	<a class="tab_share_moments"></a>
+			  	<a class="tab_share_qq"></a>
+	-->
+			  	<a class="tab_share_qzone"></a>
+			  </li>
+			  <li class="photo_comment_coll">
+		  	  	<a href="javascript:;" style="display:none;">收藏</a>
+		  	  </li>
+		  </ul>
+		  <!-- <ul class="photo_comment_tips"></ul> -->
+		  <div class="photo_comment_content">
+		  
+		   <div class="comment_content_input" style="opacity:1;">
+			   <textarea id="reply_text" placeholder="添加回复"></textarea>
+			   <button id="send_reply">评论</button>
+			   <span id="red_reply"></span>
+			 </div>
+		  
+			 <div class="comment_content_box">
+				<ul class="comment_content_list"></ul>
+				<div class="content_list_bar_range">
+				  <div class="content_list_bar"></div>
+				</div>
+			 </div>
+			 
+			 
+			
+		  </div>
+		 
+		</div>
+		<div class="big_photo_maylike">
+		  <h4>你可能喜欢</h4>
+		  <div class="photo_maylike_imgbox"></div> 
+		</div>
+	  </div>
+	  <div class="big_main_right">
+		<div class="main_right_title">
+		  <span>照片来自影集</span><a class="main_right_titlea" target="_blank"></a>
+		</div>
+		<div class="main_right_imgbox"></div>
+		<div class="main_right_foot">
+		  <div class="userinfor">
+			<img class="userhead">
+			<a class="username" target="_blank"></a>
+		  </div>
+		</div>
+	  </div>
+  </div>
+  <div class="big_pic_range">
+  	<div class="big_pic_bar"></div>
+  </div>
+</div>
+<div class="alert_body" style="display:none" id="collect-back">
+  <!--收藏弹窗-->   
+  <div class="store_box">
+    <h2 class="store_title">选择收藏夹</h2>
+    <em></em>
+    <div class="store_contet">
+      <div class="store_album">
+        <img class="store_album_img" width="144" height="144">
+      </div>
+      <div class="store_album_selected">
+        <div class="store_album_input select">请选择一个收藏夹</div>
+        <button class="store_album_input_none">创建第一个收藏夹</button>
+      </div>
+      <ul class="store_album_select">                
+        <input class="store_select_text" type="text" placeholder="新收藏夹名">
+        <button class="store_select_button_none">创建</button>                  
+      </ul>
+      <div class="store_album_button">
+        <button class="store_button_submit submit" id="col_firm">收藏</button>
+        <button class="store_button_cancel cancel" id="col_cel">取消</button>
+      </div>
+    </div>
+  </div>                   
+</div>

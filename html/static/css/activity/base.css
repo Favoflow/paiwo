@@ -1,0 +1,305 @@
+/*活动内容*/
+.group-shot {
+    width: 100%;
+    height: 100%;
+}
+.group-shot-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/activity/pedication-active.png) no-repeat center center #CCC;
+    background-size: 1014px auto;
+}
+.group-shot-main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -105px 0 0 -478px;
+    width: 956px;
+    height: 210px;
+}
+.group-shot-content p {
+    position: absolute;
+    font-size: 14px;
+    color: #414141;
+    line-height: 20px;
+}
+.group-shot-p1 {
+    width: 125px;
+    left: 27px;
+    top: 20px;
+}
+.group-shot-p2 {
+    width: 110px;
+    left: 175px;
+    top: 115px;
+}
+.group-shot-p3 {
+    width: 168px;
+    left: 307px;
+    top: 20px;
+}
+.group-shot-p4 {
+    width: 205px;
+    left: 497px;
+    top: 115px;
+}
+.group-shot-p5 {
+    width: 180px;
+    left: 746px;
+    top: -20px;
+}
+.group-shot-p5 span {
+    display: block;
+}
+.group-shot-time { margin-left: 62px;}
+.group-shot-p5 i { 
+    font-weight: bold;
+    margin-left: 10px;
+}
+.group-shot-img {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    margin: 16px;
+    background: url(/static/images/activity/pedication-ava.png) no-repeat center #4c5060;
+    background-size: 144px;
+}
+.pedication-code {
+    position: absolute;
+    bottom: 21px;
+    right: 28px;
+}
+.pedication-code img {
+    width: 130px;
+    height: auto;
+}
+.pedication-place {
+    position: absolute;
+    bottom: -165px;
+    right: 38px;
+    width: 158px;
+    height: 158px;
+    border-radius: 50%;
+    background: url(/static/images/activity/place.png) no-repeat center;
+    background-size: cover;
+}
+
+/*faq*/
+.group-shot-faq h3 {
+    width: 285px;
+    height: 42px;
+    margin: 40px auto 0;
+    background: url(/static/images/activity/pedication-faq.png) no-repeat center;
+    background-size: 280px;
+}
+.pedication-author {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    color: #565656;
+    font-size: 14px;
+    
+}
+.group-faq-main {
+    position: relative;
+    width: 960px;
+    margin: 40px auto 0;
+}
+.group-faq-main ul {
+    float: left;
+    
+}
+.group-faq-main li {
+    display: block;
+    width: 384px;
+    height: 125px;
+    padding: 23px 33px 0;
+    background: #f5f5f5;
+    margin-bottom: 30px;
+}
+.group-faq-main h4 {
+    font-size: 18px;
+    color: #2a2a2a;
+    line-height: 34px;
+    text-align: left;
+}
+.group-faq-main p {
+    font-size: 16px;
+    color: #6c6c6c;
+    line-height: 20px;
+    padding-left: 20px;
+}
+.group-faq-main span {
+    float: left;
+    width: 0px;
+    height: 400px;
+    margin: 56px 28px 0;
+    border-left: 1px dashed #88b144;
+}
+
+/*弹框*/
+.setting_alert_shadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 100;
+}
+.setting_alert_repwd {
+    width: 550px;
+    height: 350px;
+    padding-top: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -210px 0 0 -275px;
+    background: #fff;
+    z-index: 20;
+    text-align: center;
+}
+.setting_alert_repwd h3 {
+    font-size: 24px;
+    color: #414141;
+}
+.alert_repwd_inputs {
+    margin-top: 47px;
+}
+.alert_repwd_inputs li {
+    height: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.alert_repwd_inputs li span {
+    width: 86px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #8a8880;
+    text-align: left;
+    float: left;
+}
+.alert_repwd_inputs li .put-info {
+    float: left;
+    height: 38px;
+    width: 156px;
+    padding-left: 14px;
+/*    border: 1px solid #dbd5d5;*/
+    color: #a8a8a8;
+    font-size: 14px;
+     -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.alert_repwd_inputs li input {
+    float: left;
+    height: 38px;
+    width: 156px;
+    padding-left: 14px;
+    border: 1px solid #dbd5d5;
+    color: #a8a8a8;
+    font-size: 14px;
+     -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.alert_repwd_inputs_i {
+    background: url("/static/images/spirit.svg") no-repeat scroll -200px -700px rgba(0, 0, 0, 0);
+    height: 20px;
+    position: absolute;
+    left: 270px;
+    top: 10px;
+    width: 20px;
+}
+.alert_repwd_inputs_error {
+    position: absolute;
+    left: 295px;
+    top: 10px;
+    font-size: 14px;
+    color: #dd2222;
+    line-height: 20px;
+}
+.alert_buttons_save {
+    display: block;
+    width: 113px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 16px;
+    color: #fff;
+    background: #414141;
+    border: 1px solid #414141;
+    text-align: center;
+    margin: 10px auto 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.alert_buttons_save:hover {
+    background: #2dd888;
+    border: 1px solid #2dd888;
+}
+.alert_repwd_inputs li input:focus{
+    border: 1px solid #2dd888;
+}
+/*参加报名*/
+.alert_input_sign { margin-left: 114px;}
+.setting_alert_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(/static/images/spirit.svg) no-repeat -44px -940px;
+}
+.setting_alert_mes {
+    position: absolute;
+    top: 104px;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #8a8880;
+    line-height: 20px;
+    text-align: center;
+}
+.set-code {
+    text-align: center;
+    margin-top: 50px;
+}
+.set-code img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 15px;
+}
+.set-code span {
+    display: block;
+    font-size: 14px;
+    color: #8a8880;
+    line-height: 20px;
+    text-align: center;
+}
+
+.setting_alert_repwd.activeIn{
+    -webkit-animation: showIn .5s ease;
+	animation: showIn .5s ease;
+}
+
+.setting_alert_repwd.activeOut{
+    -webkit-animation: showOut .5s ease;
+	animation: showOut .5s ease;
+}
+
+
+.setting_alert_shadow .checkbox{
+    float: none;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.active_success .setting_alert_mes{
+    margin: 6px 0;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>需求市场 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+   {% block commoncss %}
+   {% include "../commoncss.html" %}
+   {% end %}
+  <link rel="stylesheet" href="/static/css/market.css">
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+<a href="javascript:;" class="go_top" id="go_top" style="display: none;"></a>
+
+<div id="main_box">
+   <div class="yuepai_main">		
+  		<!--认证摄影师-->
+  		<div class="aut-photog clearfix" id="aut-photog">
+  			<div class="photo_main_type" id="market_list_title">
+          <span class="type-span">拍摄类型 </span>
+          <div class="photo_types clearfix" id="sel_type">
+            <div class="photo_type_por" data-code="0">
+              <i class="photo_type_all_i active"></i>
+              <span>全部类型</span>
+            </div>
+            <div class="photo_type_por" data-code="1">
+              <i class="photo_type_people_i"></i>
+              <span>人像写真</span>
+            </div>
+            <div class="photo_type_wed" data-code="2">        
+              <i class="photo_type_wed_i"></i>
+              <span>婚纱摄影</span>
+            </div>
+            <div class="photo_type_wedding" data-code="3">  
+              <i class="photo_type_wedding_i"></i>
+              <span>婚礼跟拍</span>
+            </div>
+            <div class="photo_type_kid" data-code="4">
+              <i class="photo_type_kid_i"></i>
+              <span>家庭儿童</span>
+            </div>
+            <div class="photo_type_travel" data-code="5">
+              <i class="photo_type_travel_i"></i>
+              <span>旅行跟拍</span>
+            </div>
+            <div class="photo_type_biz" data-code="6">
+              <i class="photo_type_biz_i"></i>
+              <span>商业服务</span>
+            </div>
+            <div class="photo_type_other" data-code="7">
+              <i class="photo_type_other_i"></i>
+              <span>其他</span>
+            </div>
+          </div>
+        </div>
+  			<div class="clearfix">
+  				<ul class="aut-ul-left" id="aut-ul-left">
+  					<h4 class="hot-phg-h4">最新订单</h4>
+  				</ul>
+  				<ul class="aut-ul-right" id="recent_dem_ul">
+  					<h4 class="hot-phg-h42 hot-phg-h4">推荐</h4>
+  				</ul>
+  			</div>
+        <img id="list_loading" src="/static/images/loading.gif" style="display:none">
+  			<a class="button-block cancel" id="change_page" style="display:none;">更多</a>
+        <span class="no-more-dem" style="display:none;">没有更多订单啦！</span>
+  		</div>
+  		<!--认证摄影师结束-->
+    </div>
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+</div>
+<div id="shadow_box"></div>
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/store.min.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/market/market_view.js"></script>
+<script src="/static/js/market/market_all.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>活动 - 拍我网</title>
+     <meta name="renderer" content="webkit">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+     <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+     {% block commoncss %}
+     {% include "../commoncss.html" %}
+     {% end %}
+    <link rel="stylesheet" href="/static/css/activity/base.css">
+    <link rel="stylesheet" href="/static/css/activity/makeup.css">
+    <style>
+        
+    body{
+        min-width: 920px;
+        height: 100%;
+    }
+        
+    .active_late h3{
+        margin-top: 0;
+    }
+
+
+    .active_late .alert_buttons_save{
+        margin: 60px auto 0;
+    }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="group-shot">
+    <!--banner-->
+    <div class="makeup_banner">
+        <div class="makeup_content">
+            <p class="makeup_p1"><img src="/static/images/activity/tiitlle.png"></p>
+            <p class="makeup_p2"><img src="/static/images/activity/word.png"></p>
+            <a class="makeup_btn"><img src="/static/images/activity/baoming.png"></a>
+        </div>            
+    </div>
+        
+    <!--活动内容-->
+        <div class="group-shot-content">
+          
+            <div class="group-shot-main">
+<!--                <div class="group-shot-cover"></div>-->
+                <p class="group-shot-p1">活动时间：<br>2015年10月17日 星期六 下午13：30-16：30</p>
+                <p class="group-shot-p2">摄影师需付费报名参加此次课程，费用为100元/人；限定男摄影师参加</p>
+                <p class="group-shot-p3">课程名额上限为10人，报满6人即开班授课。</p>
+                <p class="group-shot-p4">特别邀请知名化妆师董小四现场教学
+董小四（放照片着重介绍）：前《米娜》杂志专属造型师；土豆美妆达人16强；阿里巴巴俪人购造型总监；天梭手表巡展造型督导；美丽学院评委造型师；与陈晨、佟晨洁、王啸坤、潘霜霜等多位艺人合作
+    </p>
+                <p class="group-shot-p5">活动地点：<br>杭州市下城区绿城深蓝<br>广场1702<br>拍我网摄影棚</p>
+                <p class="group-shot-img"></p>
+            </div>
+        </div>
+        
+        
+        <!--faq-->
+        <div class="group-shot-faq">
+            <h3></h3>
+            <div class="group-faq-main clearfix">
+                <ul>
+                    <li>
+                        <h4>1. 为什有已经有拍我网账号却不能成功报名？</h4>
+                        <p>注册后需要上传作品到个人账号，并点击页面右上角的按钮“成为摄影师”，申请成为拍我网注册摄影师。</p>
+                    </li>
+                    <li>
+                        <h4>3. 拍摄时有几个场景，几个模特</h4>
+                        <p>每次主题拍摄限定一个场景一个模特进行拍摄。</p>
+                    </li>
+                    <li>
+                        <h4>5. 拍摄主题由谁设定，摄影师是否可以自由发挥</h4>
+                        <p>每次的拍摄主题、拍摄场地、模特服装由拍我网进行安排，拍摄期间摄影师不得要求更改拍摄场地或模特服装等。</p>
+                    </li>
+                </ul>
+                <span></span>
+                <ul>
+                    <li>
+                        <h4>2. 活动是否需要付费</h4>
+                        <p>每次活动会根据主题的不同收取一定的费用，报名的同时需支付该笔费用到指定账户。</p>
+                    </li>
+                    <li>
+                        <h4>4. 每组摄影师有几个人？</h4>
+                        <p>根据每次活动的限定人数进行分组，每组人数最多不超过7人。</p>
+                    </li>
+                    <li>
+                        <h4>6. 如何得知是否报名成功以及分组信息</h4>
+                        <p>完成支付即成功报名，分组信息将会在拍摄前3天分别以短信及邮件的方式进行发送。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+    {% block foot %}
+  	{% include "../foot.html" %}
+  	{% end %}
+        
+        
+    </div>
+   <!--弹框-->
+   <!--立即参与报名-->
+   <div class="setting_alert_shadow active_now">
+        <div class="setting_alert_repwd">
+           <i class="setting_alert_close"></i>
+            <h3>立即参与报名</h3>
+            <ul class="alert_repwd_inputs alert_input_sign">
+                <li>
+                    <span>姓名：</span>
+                    <input type="text" class="name-input">
+                    <i class="alert_repwd_inputs_i name-error-icon" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error name-error-wd" style="display:none;">请填写姓名</a>
+                </li>
+                <li>
+                    <span>联系方式：</span>
+                    <input type="text" class="phone-input">
+                    <i class="alert_repwd_inputs_i phone-error-icon" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error phone-error-wd" style="display:none;">请填写联系方式</a>
+                </li>
+            </ul>
+            <div class="checkbox">
+             <a><i class="right-icon"></i></a>
+             <u>关注拍我网此类活动</u>
+            </div> 
+            <a class="alert_buttons_save">提交</a>
+        </div>
+    </div>
+    <!--抱歉，您来晚了-->
+    <div class="setting_alert_shadow active_late">
+        <div class="setting_alert_repwd">
+           <i class="setting_alert_close"></i>
+            <h3>抱歉！您来晚了</h3>
+            <p class="setting_alert_mes">想要及时获得活动信息，请留下您的联系方式</p>
+            <ul class="alert_repwd_inputs alert_input_sign">
+                <li>
+                    <span>姓名：</span>
+                    <input type="text" class="name-input">
+                    <i class="alert_repwd_inputs_i name-error-icon" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error name-error-wd" style="display:none;">请填写姓名</a>
+                </li>
+                <li>
+                    <span>联系方式：</span>
+                    <input type="text" class="phone-input">
+                    <i class="alert_repwd_inputs_i phone-error-icon" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error phone-error-wd" style="display:none;">请填写联系方式</a>
+                </li>
+            </ul>
+            <a class="alert_buttons_save">提交</a>
+        </div>
+    </div>
+    <!--报名成功-->
+    <div class="setting_alert_shadow active_success">
+        <div class="setting_alert_repwd">
+           <i class="setting_alert_close"></i>
+            <h3>恭喜您！报名成功</h3>
+            <p class="setting_alert_mes" style="display:none;">感谢关注拍我网活动，我们会通过以下方式向你发送后续活动信息</p>
+            <ul class="alert_repwd_inputs alert_input_sign" style="display:none;">
+                <li>
+                    <span>姓名：</span>
+<!--                    <input type="text">-->
+                    <span class="put-info put-name"></span>
+                    <i class="alert_repwd_inputs_i" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error" style="display:none;">请填写姓名</a>
+                </li>
+                <li>
+                    <span>联系方式：</span>
+<!--                    <input type="text">-->
+                    <span class="put-info put-phone"></span>
+                    <i class="alert_repwd_inputs_i" style="display:none;"></i>
+                    <a class="alert_repwd_inputs_error" style="display:none;">请填写联系方式</a>
+                </li>
+            </ul>
+            <a class="alert_buttons_save">关闭</a>
+        </div>
+    </div>
+    <!--还差一步，报名成功-->
+    <div class="setting_alert_shadow active_soon">
+        <div class="setting_alert_repwd">
+           <i class="setting_alert_close"></i>
+            <h3>还差最后一步报名成功</h3>
+            <div class="set-code">
+                <img src="/static/images/activity/group_shot_2.pic.jpg">
+                <span>扫描二维码</span>
+                <span>在微店进行购买并支付后即可报名成功</span>
+            </div>
+        </div>
+    </div>
+    
+   <div class="setting_succeed"></div>
+   
+   {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+   
+
+   
+  
+ 
+    
+    <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/jquery.md5.js"></script>
+    
+    
+<!--
+    <script src="/static/js/com/common.js"></script>
+    <script src="/static/js/side.js"></script>
+    <script src="/static/js/activity/groupShot.js"></script>
+-->
+   
+<!--   <script src="/static/js/minjs/comSide0826.js"></script>-->
+    <script src="/static/js/com/common.js"></script>
+    <script src="/static/js/side.js"></script>    
+    <script src="/static/js/activity/groupShot.js"></script>
+</body>
+</html>

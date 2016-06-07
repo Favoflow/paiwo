@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>设置 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <!-- <link rel="stylesheet" href="/static/css/mincss/setting0313.css"> -->
+  <link rel="stylesheet" type="text/css" href="/static/css/setting.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/jquery.Jcrop.min.css"> 
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+<!--设置成功消息提示-->
+<div class="setting_succeed"></div> 
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+<div id="main_box"> 
+   <div class="setting_main">
+      <div class="setting_main_box">
+        <header class="setting_box_header">
+          <h2>设置</h2>
+          <ul class="setting_box_header_ul">
+            <li class="head-select" id="login_s">登录设置</li>
+            <li id="data_s">个人资料</li>
+            <li id="photog_s">摄影信息</li>
+          </ul>
+        </header>
+        <div id="set-content">             
+          <!--账号设置-->
+          <ul class="login_setting">
+            <li>
+              <span>社交帐号绑定:</span>
+              <div class="login_setting_sociallist">
+                <a class="login_setting_qq" id="qq"></a>
+                <a class="login_setting_weibo" id="weibo"></a>
+                <a class="login_setting_weixin" id="weixin"></a>
+              </div>
+            </li>
+          </ul>   
+          <!--个人信息设置-->
+          <section class="person_information" style="display:none">
+          <h3 class="person_information_headimg"><img src="/static/images/user_head.gif" width="120" height="120" id="user_head"><a id="change_head">更改</a></h3>
+          <ul class="person_information_ul">
+            <li>
+              <span>昵称：</span>
+              <input class="information_ul_nametext Tinput" type="text" id="nick_name">
+              <i class="infor_ul_nametext_error" id="nick_i"></i>
+		          <span class="nick_error" id="nick_error"></span>
+            </li>
+            <li>
+             <span>性别：</span>
+              <div class="radio" id="chose_man"><a></a><u>男</u></div>
+              <div class="radio" id="chose_female"><a></a><u>女</u></div>
+            </li>
+            <li class="infor_ul_birth">
+              <span>生日：</span>
+              <div class="select" id="year">
+                <a>0</a>
+               <dl></dl>
+              </div>
+              <div class="select" id="month">
+               <a>0</a>
+                <dl>
+                </dl>
+              </div>
+              <div class="select" id="day">
+                <a>0</a>
+                <dl></dl>
+              </div>
+            </li>
+           <li class="infor_ul_place infor_ul_birth">
+            <span>居住地：</span>
+             <div class="select" id="province">
+               <a>请选择</a>
+               <dl></dl>
+              </div>
+             <div class="select" id="place">
+               <a>请选择</a>
+               <dl></dl>
+             </div>
+            </li>
+          </ul>
+         <button class="person_information_save submit" id="save_btn">保存</button> 
+        </section>            
+       <!--摄影师资料-->     
+	      <section class="photog_infor">
+          <ul class="photog_infor_ul">
+            <li class="style_choose">
+              <span>接拍类型：</span>
+              <div class="style_choose_circle">
+                <a>婚纱</a>
+                <a>写真</a>
+                <a>婚礼</a>
+    		        <a>儿童</a>
+                <a style=" margin: 0;">其他</a>
+              </div>
+            </li>
+            <li class="take_place">
+              <span>接拍地区：</span>
+    		      <i class="btn_left" id="lbtn"></i>
+              <i class="btn_right" id="rbtn"></i>
+              <p class="take_place_change Tchange" id="ss">更改</p>
+              <div class="service_list_box">
+    			      <div class="service_list"></div>
+              </div>
+            </li>
+            <li>
+              <span>个性域名：</span>
+              <i class="photog_infor_ul_error infor_ul_nametext_error" id="host_error"></i>
+              <span class="person-domain">paiwo.co/<input type="text" id="host_domain"></span>
+            </li>
+            <li>
+              <span>QQ：</span>
+              <input class="Tinput" type="text" id="qq_domain">
+            </li>
+            <li>
+              <span>联系电话：</span>
+              <input class="Tinput" type="text" id="phone_domain">
+            </li>
+            <li>
+              <span>微信：</span>
+              <input class="Tinput" type="text" id="wechat_domain">
+            </li>
+            <li>
+              <span>微博：</span>
+              <input class="Tinput" type="text" id="weibo_domain">
+            </li>
+
+            <li class="photog_infor_ul_intro">
+              <span>签名：</span>
+              <textarea  class="textarea" id="desc_domain"></textarea>
+            </li>
+          </ul>
+        <button class="submit" id="photog_save">保存</button>
+      </section>
+    </div>
+  </div>
+</div>
+{% block foot %}
+{% include "../foot.html" %}
+{% end %}
+</div>
+<div id="shadow_box"></div>
+<div class="back_color"></div>
+	<!--几个弹窗部分-->
+  <div class="setting_alert_body" style=" display: none;">
+    <!--修改密码弹窗-->
+    <section class="setting_alert_repwd" id="change_box">
+      <h3>重设密码<img src="/static/images/icon/close12.png" id="close_change"></h3>
+      <ul class="alert_repwd_inputs">
+        <li>
+          <span>原密码：</span>
+          <input type="password" id="old_i">
+          <i class="alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="old"></a>
+        </li>
+        <li>
+          <span>新密码：</span>
+          <input type="password" id="new1_i">
+          <i class="alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="new1"></a>
+        </li>
+        <li>
+          <span>新密码确认：</span>
+          <input type="password" id="new2_i">
+          <i class="alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="new2"></a>
+        </li>
+        <div class="setting_alert_buttons">
+          <button class="alert_buttons_save" id="confirm_change">保存</button>
+          <button class="alert_buttons_cancel" id="cancel_change">取消</button>
+        </div>
+      </ul>
+    </section>
+    <!--修改密码弹窗-->
+    <div id="mailbox" style="display:none">
+      <i class="mail_close"></i>
+      <h3>验证邮箱</h3>
+      <p><span class="mail-span"></span></p>
+      <a class="mail-btn" href="" target="_blank">进入邮箱</a>
+      <div class="mailbox-line"></div>
+      <p>没有收到验证邮件？</p>
+      <p>建议您检查邮件垃圾箱</p>
+      <p id="resend_p"><a class="mail-url"  id="resend_mail">重新发送验证邮件</a></p>
+      <p>若仍未收到，<a class="mail-url" href="javascript:void(0);" onclick="window.location.reload(false);">请更换另一个邮箱地址注册</a></p>
+    </div>     
+    <!--社交帐号绑定弹窗-->
+    <section class="setting_alert_bind" style=" display: none;">
+      <h3>社交账号绑定<img src="/static/images/icon/close12.png" id="close_btn"></h3>
+      <ul class="alert_bind_ul">
+        <li>
+          <a class="login_setting_qq"></a>
+          <!--绑定后class：login_setting_qq_bind (微信，微博如同)-->
+          <h5>QQ</h5>
+          <h6></h6>
+          <button class="alert_bind_button" id="qq_bind">绑定</button> 
+        </li>
+        <li>
+          <a class="login_setting_weibo"></a>
+          <h5>新浪微博</h5>
+          <h6></h6>
+          <button class="alert_bind_button" id="weibo_bind">绑定</button> 
+        </li>
+        <li>
+          <a class="login_setting_weixin"></a>
+          <h5>微信</h5>
+          <h6></h6>
+          <button class="alert_bind_button" id="wechat_bind">绑定</button> 
+        </li>
+      </ul>
+      <button class="alert_bind_save alert_buttons_save" id="alert_bind_save">保存</button> 
+    </section>  
+    <!--解除社交帐号绑定弹窗-->
+    <section class="setting_alert_cancelbind" style="display: none;" id="alert_unbind">
+      <h3><img src="/static/images/icon/close12.png" id="unbind_1"></h3>
+      <p>确认解除该社交账号绑定么？</p>
+      <div class="setting_alert_cancelbind_buttons setting_alert_buttons">
+        <button class="alert_buttons_save" id="confirm_unbind">确定</button>
+        <button class="alert_buttons_cancel" id="unbind_2">取消</button>
+      </div>
+    </section> 
+    <!--绑定邮箱弹窗-->  
+    <section class="setting_alert_email" style=" display: none;">
+      <h3>绑定邮箱<img src="/static/images/icon/close12.png" class="close_bind_email"></h3>
+      <ul class="alert_email_inputs alert_repwd_inputs">
+        <li>
+          <span>邮箱：</span>
+          <input type="text" id="bind_email">
+          <i class="alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="bind_email_r">  </a>
+        </li>
+        <li>
+          <span>密码：</span>
+          <input type="password" id="bind_pwd">
+          <i class="alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="bind_email_pwd_r">  </a>
+        </li>
+        <li>
+          <span>验证码：</span>
+          <input class="email_inputs_vcode" type="text" id="bind_vail">
+          <img class="email_inputs_vimg">
+          <i class="email_inputs_vcode_i alert_repwd_inputs_i"></i>
+          <a class="alert_repwd_inputs_error" id="bind_email_vail_r">  </a>
+        </li>
+        <div class="setting_alert_buttons">
+          <button class="alert_buttons_save" id="bind_next">下一步</button>
+          <button class="alert_buttons_cancel close_bind_email">取消</button>
+        </div>
+      </ul>
+    </section>
+    <!--上传头像弹窗-->
+    <section class="setting_alert_headimg" style="display:none;">
+      <h3>修改头像<img src="/static/images/icon/close12.png" id="close_head"></h3>
+      <div class="alert_headimg_photobox">
+        <div class="headimg_photobox_left">
+            <img id ="bigpic">
+            <!--figcap0tion id="mes_con">点击上传</figcaption-->
+            <!--figcaption>拖拽或缩放</figcaption-->
+        </div>
+        <div id="mes_con">点击上传</div>
+        <ul class="headimg_photobox_right">
+          <li class="photobox_right_fir">
+            <img id='a_p'> 
+          </li>
+          <li class="photobox_right_sec">
+            <img id='b_p'>
+          </li>
+          <li class="photobox_right_thi">
+            <img id='c_p'> 
+          </li>
+        </ul>
+      </div>
+      <button class="alert_bind_save alert_buttons_save" id="save_head">保存</button>
+      <input type="file" id="head_file" style="display:none">
+    </section>
+    <!--地区选择-->
+    <section id="area-select" style="display:none">
+      <div class="save-close">关闭</div>
+        <div class="areawindow">
+          <div class="in-pre"></div>
+          <div class="in-next"></div>
+          <div class="topbar"></div>
+        </div>
+        <div class="guo">
+          <p data="01-00-00-00">海外 &gt; </p>
+          <p data="02-00-00-00">国内 &gt; </p>
+        </div>
+        <dl class="shen"></dl>
+        <dl class="shi"></dl>
+      <div class="save-btn">保存</div>
+    </section>
+    
+  </div>
+   {% block message %}
+   {% include "../paiwoMessage.html" %}
+   {% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.Jcrop.min.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/setting/service_list.js"></script>
+<script src="/static/js/minjs/setting0410.js"></script>
+
+
+</body>
+</html>

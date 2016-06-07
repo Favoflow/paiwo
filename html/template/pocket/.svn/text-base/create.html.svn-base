@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>创建图文-beta版</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+</head>
+<link rel="stylesheet" href="/static/css/com/reset.css">
+<link rel="stylesheet" href="/static/css/pocket/pocket.css">
+
+<body>
+  <div class="setting_succeed">保存成功</div>
+   <div class="pocket-footer clearfix">
+      <div class="pocket-footer-contain">
+        <a class="pocket-footer-edit" href="/"><i></i>退出编辑</a>
+        <p class="pocket-num">最多上传36张图片，已超出<i>0</i>张</p>       
+        <a class="pocket-publish" id="ok">发布</a>
+<!--        <a class="pocket-check" href="javascript:;">预览</a>-->
+      </div>
+    </div>
+    
+   <div style="display:none" id="hidediv">
+       <input type="file" multiple id="pocketFiels" accept="image/jpg,image/png,image/jpeg">
+       <input type="file" id="cover" accept="image/jpg,image/png,image/jpeg">
+        <button id="addImg">增加图片</button>
+        <button id="addText">增加文本</button>
+   </div>
+   
+   
+   <div class="cover-photo">
+     <div class="cover-bac">
+     
+     
+     
+      <div class="cover-wrap" id="addCov">
+          <p class="cover-add"></p>
+          <span>添加封面照片吧  beta版</span>
+      </div>
+      
+      
+     </div>
+       
+       
+       <div class="cover-status" style="display:none">
+         <div class="cover-big-shadow"></div>
+          <div class="bac-wrap">
+               <input class="main-title" placeholder="主标题">
+               <input class="second-title" placeholder="副标题">
+           </div>
+              <a class="stuido_header_editicon"><i></i>更换封面</a>
+       </div>
+       
+       
+   </div>
+   
+   
+   
+   
+    <div class="pocket-content">  
+        <div class="text-del">
+                <span class="a-edit-font">
+                    <i class="font-1"></i>
+                    <i class="font-2"></i>
+                </span>
+                <span class="a-edit-align">
+                    <i class="align-left"></i>
+                    <i class="align-center"></i>
+                    <i class="align-right"></i>
+                </span>
+                <span class="a-delete"><i></i></span>
+        
+        </div>
+        
+        
+        <div class="text-add">
+            <span class="a-flag">添加..</span>
+            <span class="a-img"></span>
+            <span class="a-text"></span>        
+        </div>
+    </div>
+    
+    
+    <div class="pocket-vir-content">
+         
+    </div>
+   
+    <div class="back" id="promnt">
+        <div class="message">
+            <h3>删除记录 <img width="12" height="12" src="/static/images/icon/close12.png" id="close_btn"></h3>
+            <div class="mes-line">确定删除吗？</div>
+            <span class="mes-cel">取消</span>
+            <span class="mes-btn">确定</span>
+        </div>
+    </div>
+    
+    <script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/minjs/pocketAdd0922.js"></script>
+<!--
+    <script src="/static/js/pocket/j1.js"></script>
+    <script src="/static/js/pocket/j2.js"></script>
+-->
+</body>
+</html>

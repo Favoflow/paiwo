@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*首页start*/
+.photos {
+  padding: 45px 0.348rem 0;
+  border-top: 1px solid #f0f0f0;
+  overflow: hidden;
+  z-index: 1;
+}
+.photos-main {
+  width: 102%;
+}
+
+
+/*标题*/
+.photo-gallery-tit {
+    width: 100%;
+    height: 1.5rem;
+    margin: 35px 0;
+    text-align: center;
+}
+.photo-gallery-c {
+    display: block;
+    margin: 0 auto;
+    width: 1.5rem;
+    height: 0.76rem;
+    background: url(/static/phone/images/galleryc.svg) no-repeat;
+    background-size: 1.5rem;
+}
+.photo-gallery-e {
+    display: block;
+    margin: 0 auto;
+    width: 1.5rem;
+    height: 0.435rem;
+    background: url(/static/phone/images/gallerye.png) no-repeat center center;
+    background-size: 1.5rem;
+    margin-top: 0.217rem;
+    background-size: 100%;
+}
+/*画廊分类*/
+.photo-classify{
+    position: relative;
+    width: 100%;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+.photo-classify ul{
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+    border-width: 2px 0;
+    border-color: #B6B3AA;
+    border-style: solid;
+}
+.photo-classify li {
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    color: #212121;
+}
+.photo-classify dl { display: none;}
+.photo-cla-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 42px;
+    border-width: 2px 0;
+    border-color: #212121;
+    border-style: solid;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+/*iphone5s及以下*/
+@media screen and (max-width:370px) {
+   .photo-classify li,.photo-cla-line{ width: 25%;}  
+}
+/*iphone6*/
+@media screen and (min-width:370px) and (max-width:400px) {
+   .photo-classify li,.photo-cla-line{ width: 20%;}  
+}
+/*iphone6p及以上*/
+@media screen and (min-width:400px) {
+   .photo-classify li,.photo-cla-line{ width: 16.66%;}  
+}
+
+
+/*屏幕小于500*/
+@media screen and (max-width:500px) {
+  .photos-list { 
+    float: left;
+    width: 48%; 
+    margin: 0 2% 2% 0;
+  }
+  .photog_count { font-size  :0.256rem;}
+  .photog_count .photo_author {
+    width: 1.4rem;
+    padding: 0 0.109rem;
+  }
+  .photog_count a { 
+    position: relative;
+    padding-left: 0.33rem;
+    width: 0.6rem;
+    line-height: 0.63rem;
+    font-size: 0.217rem;
+    text-align: left;
+  }
+  .photog_count i {
+    position: absolute;
+    left: 0;
+    top: 0.11rem;
+    width:0.33rem;
+    height:0.35rem;
+    background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+    background-size:5.783rem auto;
+  }
+  .count_coll i { background-position: 0.087rem -2.11rem;}
+  .count_like i { background-position:-0.69rem -2.11rem;}
+}
+
+/*屏幕大于500小于800*/
+@media screen and (min-width:500px) and (max-width:800px) {
+  .photos-list { 
+    float: left;
+    width: 31.3%; 
+    margin: 0 2% 2% 0;
+  }
+  .photog_count { font-size  :0.1rem;}
+  .photog_count .photo_author {
+    width: 0.8rem;
+    padding: 0 0.08rem;
+  }
+  .photog_count a { 
+    position: relative;
+    padding-left: 0.2rem;
+    width: 0.43rem;
+    line-height: 0.63rem;
+    font-size: 0.196rem;
+    text-align: left;
+  }
+  .photog_count i {
+    position: absolute;
+    left: 0;
+    top: 0.11rem;
+    width:0.33rem;
+    height:0.35rem;
+    background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+    background-size:4rem auto;
+  }
+  .count_coll i { background-position: 0 -1.4rem;}
+  .count_like i { background-position:-0.5rem -1.4rem;}
+}
+
+/*屏幕大于800*/
+@media screen and (min-width:800px) {
+  .photos-list { 
+    float: left;
+    width: 23%; 
+    margin: 0 2% 2% 0;
+  }
+  .photog_count { font-size  :0.1rem;}
+  .photog_count .photo_author {
+    width: 1.3rem;
+    padding: 0 0.08rem;
+  }
+  .photog_count a { 
+    position: relative;
+    padding-left: 0.2rem;
+    width: 0.43rem;
+    line-height: 0.63rem;
+    font-size: 0.196rem;
+    text-align: left;
+  }
+  .photog_count i {
+    position: absolute;
+    left: 0;
+    top: 0.11rem;
+    width:0.33rem;
+    height:0.35rem;
+    background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+    background-size:4rem auto;
+  }
+  .count_coll i { background-position: 0 -1.4rem;}
+  .count_like i { background-position:-0.5rem -1.4rem;}
+}
+
+.photos-main:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.photos-list img {
+  width: 100%;
+}
+.photog_count {
+  position: relative;
+  text-align : right;
+  background: #fff;
+  padding-right: 5px;
+  height: 0.656rem;
+}
+.photog_count .photo_author {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: left;
+}
+.photog_count a { 
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*首页 end*/
+
+
+/*图片加载*/
+.loading{
+	width: 100%;
+	height: 20px;
+	padding-top: 12px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 20px;
+	display: none;
+}

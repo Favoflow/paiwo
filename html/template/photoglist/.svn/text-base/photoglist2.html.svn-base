@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>摄影师列表 - 拍我网</title>
+	 <meta name="renderer" content="webkit">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <link rel="stylesheet" href="/static/css/mincss/search_photoglist0320.css">
+</head>
+<body>
+
+    {% block side %}
+    {% include "../side.html" %}
+    {% end %}
+    
+    <!--侧边栏按钮-->
+    <ul class="push_button">
+      <li class="navi-one"></li>
+      <li class="navi-two"></li>
+      <li class="navi-three"></li>
+    </ul> 
+    {% block top_bar %}
+    {% include "../top_tab.html" %}
+    {% end %}
+    <div id="main_box"> 
+      <div class="search_main">
+        <div class="search_title">
+          <h3 class="search_photog">推荐的摄影师</h3><h3 class="search_photog_follow dbcolor" >关注的摄影师</h3>
+        </div>
+        <div class="search_pg_button" style="display:none">
+          <span>筛选</span>
+          <a><i class="search_pg_button_i"></i></a>
+        </div>
+        <section class="search_pg_inputs">
+          <div class="search_pg_mix">
+            <a>综合排序</a>
+            <dl></dl>
+          </div>
+          <div class="search_pg_style">
+            <a>擅长类型</a>
+            <dl></dl>
+          </div>
+          <div class="search_pg_place">
+            <a>接拍地区</a>
+            <dl></dl>
+          </div>
+          <div class="search_pg_price">
+            <a>价格排序</a>
+            <dl></dl>
+          </div>
+          <ul class="search_pg_sex">
+            <li class="infor_ul_sexchoose">
+              <button><i></i></button>
+              <u>男</u>
+            </li>
+            <li class="infor_ul_sexchoose">
+              <button></button>
+              <u>女</u>
+            </li>
+          </ul>
+        </section>
+        <ul class="search_pg_photobox"></ul>
+        <a class="search_footer">更多</a>
+      </div>  
+  {% block footer %}
+  {% include "../foot.html" %}
+  {% end %}
+</div>
+<div class="back_color"></div>
+<div id="shadow_box"></div>
+<div class="message-box">登陆后，可关注摄影师</div>
+
+<script src="/static/js/com/jquery-1.8.3.min.js" ></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<link rel="stylesheet" href="/static/js/minjs/pglist20320.js">
+</body>
+</html>

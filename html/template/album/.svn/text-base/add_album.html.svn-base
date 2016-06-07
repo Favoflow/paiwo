@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN">
+<head>
+    <meta name="renderer" content="webkit|ie-stand" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>上传照片 - 拍我网</title>
+    {% block commoncss %}
+    {% include "../commoncss.html" %}
+    {% end %}
+    <link rel="stylesheet" type="text/css" href="/static/css/upload.css">
+
+    <!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/plupload/plupload.full.min.js"></script>
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+<!--侧边栏按钮-->
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+<!--设置成功消息提示-->
+<div class="setting_succeed"></div> 
+
+<div id="main_box">
+  <div id="upload">
+    <div id="upload_box">
+      <!--上传照片框部分-->      
+<!--      <div class="upload-title">上传相册</div>      -->
+      <div class="file-list" id="file_list">
+        <div id="error_info" class="select-font" style="display:none;">你的浏览器不支持Flash或HTML5，请更换浏览器。</div>
+       <!--上片父级-->
+        <div id="photobox">
+        
+<!--
+        	<div class="select-file" id="o_19behh304ehms8d1i486je1fcnc">
+        		<span class="pic_shadow"></span>
+        		<img src="" width="190" height="190">
+        		<div style=" background:#3DB6E3; display:inline-block;height:12px; width:0%"></div>
+        		<i class="select-file-i"></i>
+        		<div class="photo_fixbox" style="bottom: -30px;">
+        		<span class="set_cover span-left">设为封面</span><i></i><span class="delete_pic">删除照片</span></div>
+        		<canvas id="canvaso_19behh304ehms8d1i486je1fcnc" width="200" height="200"></canvas>
+        	</div>
+-->
+        	
+        	
+        </div>
+        <div class="add-file" id="father_select_file">
+          <div id="select_file" class="">
+            <img class="big-add" width="50" height="50" src="/static/images/icon/plushover.png">
+            <p>点击添加多张照片</p>
+<!--            <p>还可以上传<i>26</i>张照片</p>-->
+          </div>
+        </div>
+        <p class="file-number"><i id="now_count">0</i> / 36</p>
+      </div>     
+      <!--相册描述部分-->
+      <div id="title_share">
+        <div class="upload-title-desc mg20 clear">
+          <div class="input-title">
+            <span class="title_share_span">相册名：</span>
+            <input type="text" id="input_title" placeholder="请输入相册标题，不超过30个字">
+          </div>
+          <div class="input-desc">
+            <span class="title_share_span">描述：</span>
+            <textarea class="mg20" id="input_desc" placeholder="请输入相册描述"></textarea>
+          </div>
+
+          <!--照片描述部分-->
+          <div class="clear input-list">
+            <div class="replayce-allow">
+              <div class="checkbox">
+                <a><i id="is_tag"></i></a>
+                <u>允许优化标签</u>
+              </div>
+              
+             <a class="qusetion-hover">
+              <p class="list-qusetion-hover"><i></i>准确、丰富的标签使你的作品更易被发现，拍我网能够自动帮助你优化相册标签。</p>                </a>
+              
+            </div>
+            <p class="addtag-title"><i></i><span>为相册添加标签</span></p>
+            <div class="clearfix">
+              <span class="title_share_span">标签：</span>
+              <div class="clear tag-list">
+                <div id="added_tags">
+                  <o id="tags"></o>
+                  <input class="input-tag" type="text" id="input_tag" placeholder="在此直接输入标签，使用空格或回车分隔">
+                </div>
+              </div>
+            </div>
+            <!--标签选择框-->
+            <div id="tag_box">
+              <div class="mg20 clear" id="common_tag">
+                <div class="tags-col tags-type"><b>摄影类型</b>
+                  <span>人像</span>
+                  <span>人文</span>
+                  <span>风景</span>
+                  <span>东西</span>
+                  <i>...</i>
+                </div>
+                <div class="tags-col tags-rela">
+
+                  <div>
+                    <b>风格</b>
+                    <span>黑白</span>
+                    <span>复古</span>
+                    <span>清新</span>
+                    <span>纯艺术</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>分类</b>
+                    <span>纪实</span>
+                    <span>黑白</span>
+                    <span>旅行</span>
+                    <span>采访</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>分类</b>
+                    <span>旅行</span>
+                    <span>夜景</span>
+                    <span>城市</span>
+                    <span>航拍</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>分类</b>
+                    <span>纯艺术</span>
+                    <span>创意</span>
+                    <span>产品</span>
+                    <span>动物</span>
+                    <i>...</i>
+                  </div>
+                  
+                </div>
+
+                <div class="tags-col tags-rela">
+
+                  <div>
+                    <b>拍摄环境</b>
+                    <span>摄影棚</span>
+                    <span>森林</span>
+                    <span>校园</span>
+                    <span>废墟</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>拍摄环境</b>
+                    <span>街头</span>
+                    <span>集市</span>
+                    <span>车站</span>
+                    <span>公园</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>拍摄环境</b>
+                    <span>水面</span>
+                    <span>山</span>
+                    <span>森林</span>
+                    <span>旷野</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>拍摄环境</b>
+                    <span>摄影棚</span>
+                    <span>室内</span>
+                    <span>野外</span>
+                    <span>水下</span>
+                    <i>...</i>
+                  </div>
+                  
+                </div>
+                <div class="tags-col tags-rela">
+                  
+
+                  <div>
+                    <b>造型</b>
+                    <span>长裙</span>
+                    <span>古风</span>
+                    <span>制服</span>
+                    <span>裸露</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>主题</b>
+                    <span>都市</span>
+                    <span>困境</span>
+                    <span>感人</span>
+                    <span>批判</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>主题</b>
+                    <span>建筑</span>
+                    <span>自然</span>
+                    <span>云雾</span>
+                    <span>星轨</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>风格</b>
+                    <span>复古</span>
+                    <span>极简</span>
+                    <span>黑白</span>
+                    <span>色彩</span>
+                    <i>...</i>
+                  </div>
+
+                </div>
+                <div class="tags-col tags-rela">
+                  
+
+                  <div>
+                    <b>情绪</b>
+                    <span>忧郁</span>
+                    <span>笑</span>
+                    <span>放空</span>
+                    <span>情绪</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>情绪</b>
+                    <span>开心</span>
+                    <span>悲伤</span>
+                    <span>寂静</span>
+                    <span>愤怒</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>气象</b>
+                    <span>清晨</span>
+                    <span>日落</span>
+                    <span>下雪</span>
+                    <span>风暴</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>拍摄对象</b>
+                    <span>花卉</span>
+                    <span>水果</span>
+                    <span>美食</span>
+                    <span>宠物</span>
+                    <i>...</i>
+                  </div>
+
+                </div>
+                <div class="tags-col tags-rela">
+                  
+
+                  <div>
+                    <b>摄影特征</b>
+                    <span>大光圈</span>
+                    <span>重曝</span>
+                    <span>胶片</span>
+                    <span>柔光</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>摄影特征</b>
+                    <span>徕卡</span>
+                    <span>胶片</span>
+                    <span>抓拍</span>
+                    <span>手机摄影</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>摄影特征</b>
+                    <span>超广角</span>
+                    <span>拼接</span>
+                    <span>长曝光</span>
+                    <span>HDR</span>
+                    <i>...</i>
+                  </div>
+
+                  <div>
+                    <b>摄影特征</b>
+                    <span>浅景深</span>
+                    <span>闪光灯</span>
+                    <span>微距</span>
+                    <span>慢门</span>
+                    <i>...</i>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="input-allow clearfix">
+            <span class="title_share_span">许可：</span>
+            <p class="input-allow-input"></p>  
+			      <span class="upload_select-arrow select-arrow"></span>  
+            <!--许可-->
+            <div id="allow_select_box">
+				<ul class="input-allow_select">
+				  <li data="01" class="allow_select_1">
+					<span>
+					  <i class="input-allow_select_i6"></i>
+					</span>
+					<p>不使用原创授权</p>
+				  </li>
+				  <li data="02" class="allow_select_2">
+					<span>
+					  <i class="input-allow_select_i4"></i>
+					</span>
+					<p>版权所有，禁止转载</p>
+				  </li>
+				  <li data="03" class="allow_select_3">
+					<span>
+					  <i class="input-allow_select_i3"></i>
+					  <i class="input-allow_select_i1"></i>
+					  <i class="input-allow_select_i5"></i>
+					</span>
+					<p>署名-非商业使用-禁止演绎</p>
+				  </li>
+				  <li data="04" class="allow_select_4">
+					<span>
+					  <i class="input-allow_select_i3"></i>
+					  <i class="input-allow_select_i1"></i>
+					  <i class="input-allow_select_i2"></i>
+					</span>
+					<p>署名-非商业使用-相同方式共享</p>
+				  </li>
+				  <li data="05" class="allow_select_5">
+					<span>
+					  <i class="input-allow_select_i3"></i>
+					  <i class="input-allow_select_i1"></i>
+					</span>
+					<p>署名-非商业性使用</p>
+				  </li>
+				  <li data="06" class="allow_select_6">
+					<span>
+					  <i class="input-allow_select_i3"></i>
+					  <i class="input-allow_select_i5"></i>
+					</span>
+					<p>署名-禁止演绎</p>
+				  </li>
+				  <li data="07" class="allow_select_7">
+					<span>
+					  <i class="input-allow_select_i3"></i>
+					  <i class="input-allow_select_i2"></i>
+					</span>
+					<p>署名-相同方式共享</p>
+				  </li>
+				  <li data="08" class="allow_select_8"><span><i class="input-allow_select_i3"></i></span><p>署名</p></li>
+					<div class="select_more"><a href="http://creativecommons.net.cn/" target="blank">了解更多</a></div>
+				</ul>
+		   </div>
+            
+            
+            
+            <!--
+            <div class="comment_tab_share">
+              <span>分享至：</span>
+              <a class="tab_share_weibo"></a>
+		          <a class="tab_share_wechat"></a>
+              <a class="tab_share_moments"></a>
+              <a class="tab_share_qq"></a>
+              <a class="tab_share_qzone" style="margin-right:0;"></a>
+            </div>
+            -->
+          </div>
+        </div>
+        <div class="upload-confirm mg20 clear">
+          <input type="button" id="album_submit" value="发布">
+          <input type="button" id="album_cancel" value="取消">
+        </div>
+      </div>
+      
+
+  </div>
+</div>
+
+{% block foot %}
+{% include "../foot.html" %}
+{% end %}
+</div>
+<div class="message-box"></div>
+<div id="shadow_box"></div>
+<div class="back_color"></div>
+
+
+
+<div class="up-load-message"><a class="load-message-s"></a><span>成功</span></div>
+<!--browse update-->
+ {% block update_notice %}
+ {% include "../update_notice.html" %}
+ {% end %}
+ 
+ {% block message %}
+ {% include "../paiwoMessage.html" %}
+ {% end %}
+  <!--[if IE 6]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/store.min.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<!--<script src="/static/js/minjs/album0424.js"></script>-->
+
+
+<script src="/static/js/album/upload.js"></script>
+<script src="/static/js/album/page.js"></script>
+
+</body>
+</html>

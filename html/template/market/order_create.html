@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>需求市场 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+   {% block commoncss %}
+   {% include "../commoncss.html" %}
+   {% end %}
+  <link rel="stylesheet" href="/static/css/market.css">
+  <script type="text/javascript">
+  	city = "{% raw city %}";
+  </script>
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+<!--底部tab保存需求-->
+<div class="save_button yuepai_main_button">
+	<button class="submit_button submit" id="detai_btn">去发起我的订单</button>
+	<div class="detail-sub clearfix">
+	  <button class="detail-sub-s submit" id="detail_submit">发布订单</button>
+	  <button class="detail-sub-c cancel" id="detail_cancel">取消</button>	
+	</div>
+</div>
+
+<div id="main_box">
+  <div class="yuepai_main">    		
+	  <!--我的需求表单部分-->
+    <div class="yuepai_main_tit">
+	  <h2>推荐摄影师</h2>
+	</div>
+		<!--基本需求-->
+		<ul class="yuepai_main_content">
+			<!--拍摄地点-->
+			<li class="photo_main_area">
+				<span>拍摄地点：</span>
+				<div class="yuepai_main_select">
+					<div class="select" id="sel_area">
+						<i>请选择</i>
+						<dl class="place_select" style="display: none;">
+							<dd data-code="01-00-00-00">海外</dd>
+							<dd data-code="02-00-00-00">国内</dd>
+						</dl>
+					</div>
+					<div class="select" id="sel_prov" style="display: none;">
+						<i>请选择</i>
+						<dl class="place_select" style="display: none;"></dl>
+					</div>
+					<div class="select" id="sel_city" style="display: none;">
+						<i>请选择</i>
+						<dl class="place_select" style="display: none;"></dl>
+					</div>
+					<p class="error_tip_long error_tip" id="place_error">
+						<i></i>
+						<span>请选择详细拍摄地点，以便我们为您挑选摄影师</span>
+					</p>
+				</div>				
+			</li>
+
+			<!--拍摄类型-->
+			<li class="photo_main_type">
+				<span class="type-span">拍摄类型：</span>
+				<div class="photo_types clearfix" id="sel_type">
+					<div class="photo_type_por" data-code="1">
+					  <i class="photo_type_people_i active"></i>
+						<span>人像写真</span>
+					</div>
+					<div class="photo_type_wed" data-code="2">				
+						<i class="photo_type_wed_i"></i>
+						<span>婚纱摄影</span>
+					</div>
+					<div class="photo_type_wedding" data-code="3">	
+						<i class="photo_type_wedding_i"></i>
+						<span>婚礼跟拍</span>
+					</div>
+					<div class="photo_type_kid" data-code="4">
+						<i class="photo_type_kid_i"></i>
+						<span>家庭儿童</span>
+					</div>
+					<div class="photo_type_travel" data-code="5">
+						<i class="photo_type_travel_i"></i>
+						<span>旅行跟拍</span>
+					</div>
+					<div class="photo_type_biz" data-code="6">
+						<i class="photo_type_biz_i"></i>
+						<span>商业服务</span>
+					</div>
+	                <div class="photo_type_other" data-code="7">
+						<i class="photo_type_other_i"></i>
+						<span>其他</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!--详细需求-->
+		<div class="yuepai_detail" style="display:none;">
+			<h3 class="yuepai_detail_tit"><i></i><span>详细需求</span></h3>
+			<ul class="yuepai_main_content">
+			  <!--拍摄时间-->
+				<li class="photo_main_time">
+					<span>拍摄时间：</span>
+					<div class="yuepai_main_select">
+						<div class="yuepai_main_timeselect select" id="year">
+							<i>年</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+						<div class="yuepai_main_date yuepai_main_timeselect select" id="month">
+							<i>月</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+						<div class="yuepai_main_date yuepai_main_timeselect select" id="day">
+							<i>日</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+						<span class="yuepai_time_to">至</span>
+						<div class="yuepai_main_timeselect select" id="year2">
+							<i>年</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+						<div class="yuepai_main_date yuepai_main_timeselect select" id="month2">
+							<i>月</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+						<div class="yuepai_main_date yuepai_main_timeselect select" id="day2">
+							<i>日</i>
+							<dl class="timeselect_select"></dl>
+						</div>
+					</div>
+					<p class="people-error-tip error_tip" id="time_error" style="display: none;">
+						<i></i>
+						<span>请填写正确拍摄时间</span>
+					</p>
+			  </li>
+
+			  <!--大致预算-->
+				<li class="photo_main_cash">
+					<span>大致预算：</span>
+					<div class="photo_cash_move">
+						<div class="cash_move">
+							<p>
+							    <b class="b-left">￥0</b>
+								<a class="cash_move_l" id="cash_move_l" href="javascript:;" style="left:0"></a>
+								<a class="cash_move_r" id="cash_move_r" href="javascript:;" style="left: 98px"></a>
+								<i class="cash_move_center"></i>
+								<b class="b-right">￥500</b>
+							</p>
+						</div>
+					</div>
+				</li>
+				<!--人数性别-->
+				<li class="photo_main_people">
+					<span>拍摄人数：</span>
+					<div class="photo_people_box">
+						<i class="photo_people_reduce"></i>
+						<input type="text" value="1">
+						<i class="photo_people_add"></i>
+					</div>
+				</li>
+				<li class="photo_main_sex">
+					<span>性别：</span>
+					<div class="photo_sex_radio">
+						<div class="radio" data-code="10">
+						    <a href="javascript:;"><i class="active"></i></a>
+						    <u>女</u>
+						</div>
+						<div class="radio" data-code="01">
+						    <a href="javascript:;"><i></i></a>
+						    <u>男</u>
+						</div>
+						<div class="radio" data-code="11">
+						    <a href="javascript:;"><i></i></a>
+						    <u class="market-rex-both">都有</u>
+						</div>
+					</div>
+					<p class="people-error-tip error_tip" id="num_error" style="display: none;">
+						<i></i>
+						<span>请填写正确人数</span>
+					</p>
+				</li>
+				<!--备注、简单描述-->
+				<li class="photo_main_style">
+					<span>详细信息：</span>
+					<textarea class="textarea" placeholder="您可以简单描述下你期望拍出什么样的照片"></textarea>
+					<span class="textarea-tip"><i>0</i>/ 120</span>
+					<!--textarea-tip-excced-->
+				</li>
+				<!--邮箱填写-->
+				<li class="photo_main_connect">
+					<span>联系邮箱：</span>
+					<input class="photo_connect_emial">
+					<p class="error_tip_connect error_tip" id="email_error" style="display: none;">
+						<i></i>
+						<span>请填写你常用的邮箱，如有摄影师有意向拍摄，你会通过该邮箱收到通知</span>
+					</p>
+				</li>
+				<!--邮箱填写-->
+				<li class="photo_main_connect">
+					<span>联系电话：</span>
+					<input class="photo_connect_phone" placeholder="此号码将不会向摄影师或第三方公开">
+				</li>
+			</ul>
+		</div>
+	</div>
+    <!--完整表单结束-->
+    <div class="yupai-foot-main">
+	    <!--推荐摄影师列表-->
+	    <div class="yuepai-main-footPhotog" >
+	        <h3 id="yuepai_main_footPhotog_h3">符合需求的摄影师</h3>
+	        <b class="change_list">换一批<i></i></b>
+	    	<div id="yuepai_main_footPhotog_box" style="display:none;">
+	    	    <i></i>
+	    	    <span>暂无符合需求的摄影师</span>
+	    	</div>
+	        <ul class="footPhotog-ul clearfix" id="order_creat_photoglist"></ul>	
+		</div>
+		<!--推荐摄影师列表结束-->
+    </div>
+</div>
+<div id="shadow_box"></div>
+
+<!-- 弹窗 -->
+<div class="alert_body" style="display:none;">
+	<div class="alert_delete_box" id="detail_submit_box" style="display:none;">
+	  <h3>确认发布我的订单<i class="message_close"></i></h3>
+	  <p>发布后将无法编辑，是否确定发布？</p>
+	  <div class="delete_button_box edit_button_box">
+	    <button class="delete_confirm submit" id="detail_submit_btn">确定</button>
+	    <button class="delete_cancel cancel" id="detail_cancel_btn">取消</button>
+	  </div>
+	</div>
+	<div class="alert_delete_box" id="order_tip_box" style="display:none;">
+	  <h3>提示<i class="message_close"></i></h3>
+	  <p>只能存在一个有效订单<br>如需重新发布请先关闭当前订单</p>
+	  <div class="delete_button_box edit_button_box">
+	    <button class="delete_confirm submit" id="order_tip_submit_btn">查看订单</button>
+	    <button class="delete_cancel cancel" id="order_tip_cancel_btn">我知道了</button>
+	  </div>
+	</div>
+</div>
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/store.min.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/market/market_view.js"></script>
+<script src="/static/js/market/market_order_creat.js"></script>	
+</body>
+</html>

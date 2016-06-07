@@ -1,0 +1,433 @@
+/*本期推荐*/
+.commend-current {
+	width: 100%;
+	padding-top: 40px;
+}
+.commend-tit {
+	color: #8a8880;
+	font-size: 0.34rem;
+	line-height: 0.85rem;
+	text-align: center;
+}
+.commend-swipe {
+	position: relative;
+	background: #fff;
+	color: #b6b3ad;
+}
+.commend-banner {
+	position: relative;
+	width: 100%;
+	height: 5.956rem;
+	padding-top: 0.24rem;
+	cursor: pointer;
+	background-repeat: no-repeat;
+/* 	background-image: url(../images/commendbg.jpg);*/
+	background-size:cover;
+	background-position: center;
+}
+.commend-cover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 6.196rem;
+	background: #414141;
+	opacity: 0.4;
+}
+.commend-text {
+	position: absolute;
+	left: 0;
+	top: 0.21rem;
+	width: 100%
+}
+.commend-find {
+	width: 1.6rem;
+	height: 1.6rem;
+	color: #d8d6d0;
+	font-size: 0.26rem;
+	border: 1px solid #d8d6d0;
+	padding: 2px;
+	margin: -0.3rem -0.1rem;
+	-webkit-transform:scale(0.75);
+	display: box;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-box-pack: justify;
+	box-pack: justify;
+}
+
+.commend-find span{ 
+	display: block;
+	line-height: 0.28rem;
+}
+.commend-banner-tit {	
+	text-align: center;
+	color: #eee;
+	padding: 0 0.64rem;
+	margin-top: -0.326rem;
+}
+.commend-banner-tit h2 {
+	text-align: center;
+	font-size: 0.435rem;
+	line-height: 0.696rem;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #fff;
+}
+.commend-banner-tit span {
+	display: inline-block;
+	width: 100%;
+	line-height: 0.55rem;
+	font-size: 0.34rem;
+	color: #d8d6d0;
+	border-bottom: 1px solid #d8d6d0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.summary-pg {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 0.34rem;
+}
+.summary-pg img {
+	width: 1.07rem;
+	height: 1.07rem;
+	border-radius: 50%;
+}
+.summary-pg span {
+	display: block;
+	padding: 0 1.4rem;
+	color: #d8d6d0;
+	line-height: 0.512rem;
+	font-size: 0.261rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/*专题*/
+.commend-seminar { margin-top: 0.261rem;}
+.commend-seminar-main { padding: 0 0.261rem; margin-top: -0.326rem;}
+.seminar-area {	
+	display: box;
+	display: -webkit-box;
+	height: 165px;
+	color: #a3a19c;
+	font-size: 0.256rem;
+	line-height: 0.427rem;
+	background: #fff;
+	margin-top: 0.326rem;
+}
+.commend-seminar-main .seminar-area1{ margin-top: 0;}
+
+.seminar-img img {
+	width: 165px;
+	height: 165px;
+/*	border-radius: 2px;*/
+	border: none;
+}
+.seminar-txt {
+	box-flex: 1;
+	-webkit-box-flex: 1;
+	padding: 12px 17px 5px; 
+	height: 148px;
+	overflow: hidden;
+	display: box;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-box-pack: justify;
+	box-pack: justify;
+}
+.seminar-tit a{
+	color: #414141;
+	font-size: 0.348rem;
+	line-height: 0.609rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	display: box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient:vertical;
+	box-orient:vertical;
+}
+.seminar-time {
+	font-size: 0.261rem;
+	line-height: 0.435rem;
+	color: #b6b3ad;
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #d8d6d0;
+}
+.seminar-name {
+	display: block;
+	text-align: center;
+	font-size: 0.304rem;
+	line-height: 0.565rem;
+	color: #ff475c;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.seminar-more,.seminar-nomore {
+  text-align: center;
+  line-height: 0.9rem;
+  font-size: 0.3rem;
+  color: #949494;
+  background: #f5f5f5;
+}
+.seminar-nomore { display: none;}
+/*推荐内页*/
+.commendin-banner { height: 4.65rem;}
+.commendin-banner .commend-cover { height: 4.89rem;}
+.commendpg-tab {
+	height: 2.609rem;
+	text-align: center;
+	color: #b6b3aa;
+}
+.commendbg-avatar {
+	padding: 0.217rem 0;
+	background: #fff;
+	height: 0.96rem;
+	position: relative;
+}
+.commendbg-avatar a { display: inline-block;}
+.commendbg-avatar a:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.commendbg-avatar img {
+	float: left;
+	width: 0.96rem;
+	height: 0.96rem;
+	border-radius: 50%;
+}
+.commendbg-avatar h4 {
+	float: left;
+	color: #414141;
+	font-size: 0.3rem;
+	line-height: 0.96rem;
+	max-width: 2.174rem;
+	padding: 0 0.2rem;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.topghome {
+	float: left;
+	width: 0.348rem;
+	height: 0.348rem;
+	margin-top: 0.34rem;
+	background: url(/static/phone/images/spirit_mobile.svg) no-repeat -5.05rem 0.043rem;
+    background-size: 5.783rem;
+}
+.pg_info{
+  position:relative;
+  height: 1.22rem;
+  width: 4.348rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: end;
+  box-align: end;
+}
+.tit_line {
+	display: inline-block;
+	width: 0.326rem;
+}
+.pg_info li {
+  padding: 0 5px;
+  height: 0.77rem;
+  font-size: 0.34rem;
+  color:#b6b3ad;
+  text-align:center;
+  line-height: 0.77rem;
+}
+
+.pg_info .pg-info-cur span{ color: #ff475c}
+.pg_info .pg_border {
+  position:absolute;
+  width: 1.36rem;
+  left: 0.24rem;
+  bottom: 0;
+  border-bottom:1px solid #ff475c;
+  z-index: 2;
+}
+
+/*专题访谈*/
+.pg-interviews-main {
+	width: 90%;
+	padding: 0.32rem 5%;
+	background: #fff;
+	text-align: center;
+}
+.pg-interview h3 {
+	color: #b6b3aa;
+	text-align: center;
+	font-size: 0.261rem;
+	line-height: 1.087rem;
+	background: #fff;
+}
+.pg-interview p {
+	font-size: 0.256rem;
+	line-height: 0.427rem;
+	color: #414141;
+	text-align: left;
+}
+.interview-ques,.interview-answer{
+	display: inline-block;
+	width: 0.68rem;
+}
+.interview-ques {
+	color: #b6b3aa;
+}
+.interview-answer {
+	color: #db252b;
+}
+.pg-interview img {
+	max-width: 100%;
+	height: auto;
+	margin: 0.217rem 0;
+	height: 4.27rem;
+}
+
+/*分享*/
+.spec_share_main {
+  text-align: center;
+  background: #fff;
+}
+.spec_share_main h3 {
+  font-size:0.304rem;
+  line-height:40px;
+}
+.spec_share_main a {
+  display:inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0.1rem;
+  text-align: center;
+  border: 1px solid #d8d6d0;
+  border-radius: 50%;
+}
+.spec_share_main i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+  background-size:266px auto;
+}
+.spec_share_main .sina i   { background-position: 6px -62px;}
+.spec_share_main .weixin i { background-position:-27px -62px;}
+.spec_share_main .friend i { background-position:-60px -62px;}
+.spec_share_main .qq i     { background-position:-93px -62px;}
+.spec_share_main .qzone i  { background-position:-128px -62px;}
+
+/*摄影师简介*/
+.pg_msg { 
+  display: none;
+  background: #fff;
+}
+.pg_msg h3 {
+  text-align: left;
+  font-size: 0.348rem;
+  line-height: 0.87rem;
+  padding: 0 0.957rem;
+  color: #414141;
+}
+.pg_info_intro {
+  position: relative;
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+.pg_info_service { 
+  position: relative;
+  overflow: hidden;
+}
+.pg_info_intro .ifspread,.pg_info_service .ifspread {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 0.8rem;
+  height: 0.87rem;
+  margin: 0;
+  background: url(/static/phone/images/spirit_mobile.svg) no-repeat -3.36rem 0.38rem;
+  background-size: 5.783rem;
+}
+.pg_info_intro ul {
+  padding: 0.435rem 0.957rem;
+  color: #b6b3ad;
+  font-size: 0.261rem;
+  border-top: 1px solid #eee;
+}
+.pg_info_intro li   { 
+  line-height:0.652rem; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pg_info_intro span {
+  display:inline-block;
+  margin-right: 5px;
+}
+.pg_info_intro i    { color:#686868;}
+.pg_info_intro em { color:#dd2338;}
+.pg_info_intro .pg_info_desc {
+  height: auto;
+  white-space: normal;
+  margin-bottom: 0.109rem;
+}
+.pg_info_desc:after {
+   display: block;
+   content: "";
+   clear: both;
+}
+.pg_info_desc span{
+  float: left;
+  line-height: 0.435rem;
+}
+.pg_info_desc p {
+  float: left;
+  color: #686868;
+  width: 5.217rem;
+  line-height: 0.435rem;
+}
+.pg_info_contact {
+  border-top: 1px solid #eee;
+}
+/*摄影师服务信息*/
+.pg_info_service {
+  border-top: 1px solid #eee;
+  background: #fff;
+  font-size: 0.261rem;
+  text-align: center;
+}
+.pg_info_service dt {
+  line-height:0.565rem;
+  text-align:center;
+  color: #b6b3aa;
+}
+.pg_info_service dd{
+  display: inline-block;
+  color:#8a8880;
+  text-align: center;
+  padding: 0 0.196rem;
+  line-height: 0.522rem;
+}
+.pg_info_service dl {
+  margin-bottom: 0.348rem;
+}
+.pg_service_content {
+  padding: 0.39rem 0.957rem;
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,101 @@
+/*相册内页*/
+.album-in { 
+  background: #fff;
+  margin-top: 40px;
+}
+.album-in-tit {
+  position: relative;
+  text-align: center;
+  color: #414141;
+  line-height: 0.826rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.album-in-tit h2 { font-size: 0.304rem;}
+.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 0.826rem;
+  padding-left: 0.25rem;
+  text-align: center;
+  line-height: 0.826rem;
+  color: #ff475c;
+  font-size: 0.304rem;
+}
+.back i {
+  float: left;
+  width: 0.348rem;
+  height: 0.348rem;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat -1.9rem 1px;
+  background-size:5.2rem auto;
+  margin-top: 0.22rem;
+}
+.back span {
+  float: left;
+}
+
+.album-in-keyword,.album-in-intro {
+  padding: 0 1.087rem;
+  color: #b6b3aa;
+  line-height: 0.522rem;
+  margin-top: 0.174rem;
+}
+.album-in-keyword p {
+  font-size: 0.26rem;
+  height: 1.043rem;
+  text-align: center;
+  overflow: hidden;
+}
+.album-in-intro p {
+  font-size: 0.22rem;
+}
+.album-in-keyword h3,.album-in-intro h3 {
+  text-align: center;
+  line-height: 0.61rem;
+  font-size: 0.26rem;
+}
+.spec_share_main {
+  width: 248px;
+  text-align: center;
+  background: #fff;
+  padding: 10px 0;
+  margin: 28px auto 0; 
+}
+.spec_share_main:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.spec_share_main span { 
+  float: left;
+  font-size: 12px;
+  line-height: 30px;
+  color: #b6b3aa;
+}
+.spec_share_main a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  border: 1px solid #d8d6d0;
+  border-radius: 50%;
+}
+.spec_share_main i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+  background-size:266px auto;
+}
+.spec_share_main .sina i   { background-position: 6px -62px;}
+.spec_share_main .weixin i { background-position:-27px -62px;}
+.spec_share_main .friend i { background-position:-60px -62px;}
+.spec_share_main .qq i     { background-position:-93px -62px;}
+.spec_share_main .qzone i  { background-position:-128px -62px;}
+
+.album-in-photos {
+  padding: 0 0.348rem;
+	overflow: hidden;
+}

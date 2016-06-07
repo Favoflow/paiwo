@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="/static/phone/css/mincss.1.0/pghome0826.css">
+
+<!--
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/reset.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/nav.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/photoghome.css">
+-->
+
+<style>
+    .pg_album_list{
+        position: relative;
+    }
+    
+    .pg_album_list .img-a{
+/*           position: absolute;*/
+        padding-bottom: 100%;
+        overflow: hidden;
+        height: 0;
+        
+    }
+</style>
+<title>拍我网 - 摄影师主页</title>
+</head>
+
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+<div id="photog_home_box">
+<!--photog_home-->
+<div class="photog_home">
+  <div class="photog_over"><i></i></div>
+  <div class="photog_content">
+    <h3 class="photog_tit">
+      <img  class="photog_avatar" src=""><br>
+      <span class="photog_nick">
+<!--     	 纹身君 Phase One<i class="boy"></i>-->
+      </span>
+    </h3>
+    <div class="photog_key">
+<!--
+      <span>"</span>
+      <span>黑白</span>
+      <i>|</i>
+      <span>小清新</span>
+      <i>|</i>
+      <span>森系</span>
+      <i>|</i>
+      <span>百褶裙</span>
+      <span>"</span>
+-->
+    </div>
+    <div class="photog_function" style="display:none;">
+      <a href="javascript:;">私信</a>
+      <a href="javascript:;">关注</a>
+    </div>
+  </div>
+  <div class="photog_count" style="display:none;">
+    <span class="count_coll">
+	<!--<i></i>2,231-->
+    </span>
+    <span class="count_line">|</span>
+    <span class="count_like">
+	<!--<i></i>6,619-->
+    </span>
+  </div>
+<!--
+  <ul class="pg_info">
+    <li class="pg-info-cur"><span>相册</span></li>
+    <li><span class="tit_line">|</span></li>
+    <li><span>简介</span></li>
+    <li class="pg_border"></li>
+  </ul>
+-->
+    <div class="pg-classify">
+<!--
+       <span class="pg-cla-line"></span>
+        <ul class="clear">
+            <li class="feed pg-cla-cur">主页</li>
+            <li class="album">相册</li>
+            <li class="info">简介</li>
+        </ul>
+-->
+    </div>
+</div>
+</div>
+
+<!--主页-->
+<div class="pg_all">
+  
+   <div class="pg_all_main">
+<!--推荐图文-->
+<!--
+    <div class="pg_all_type pg_recpocket">
+        <p class="pg_all_top">
+            <span class="pg_all_tit">推荐了图文</span>
+            <span class="pg_all_time">刚刚</span>
+        </p>
+        <div class="pg_pocket_main">
+            <div class="pg_all_shadow"></div>
+            <div class="pg_pocket_tit">
+                <h3>日照香炉生紫烟</h3>
+                <h4>自由摄影师--夏目</h4>
+            </div>
+        </div>
+        <p class="pg_all_author">
+            <span>原作者</span>
+            <span>|</span>
+            <span class="pg_author_name">James</span>
+        </p>
+    </div>
+-->
+    
+<!--推荐照片-->
+<!--
+    <div class="pg_all_type pg_recphoto">
+        <p class="pg_all_top">
+            <span class="pg_all_tit">推荐了照片</span>
+            <span class="pg_all_time">3小时前</span>
+        </p>
+        <div class="pg_photo_main">
+            <img src="/static/images/photo.jpg">
+        </div>
+        <p class="pg_all_author">
+            <span>原作者</span>
+            <span>|</span>
+            <span>James</span>
+        </p>
+    </div>
+-->
+    
+<!--发布了影集-->
+<!--
+    <div class="pg_all_type pg_pubalbum">
+        <p class="pg_all_top">
+            <span class="pg_all_tit">发布了影集</span>
+            <a class="pg_album_name">詹姆士的背影</a>
+            <span class="pg_all_time">昨天</span>
+        </p>
+若是发布的影集只有1张照片时，<div class="pg_pubalbum_main pg_pubalbum_one">
+        <div class="pg_pubalbum_main">
+            <div class="pg_pubalbum_cover">
+                <img src="/static/images/photo4.jpg">
+            </div>
+            <ul class="pg_pubalbum_img">
+                <li><img src="/static/images/photo4.jpg"></li>
+                <li><img src="/static/images/photo4.jpg"></li>
+                <li></li>
+            </ul>
+        </div>
+        <p class="pg_all_author">
+            <span>原作者</span>
+            <span>|</span>
+            <span>James</span>
+        </p>
+    </div>
+-->
+  
+ 
+
+
+  </div>
+  
+  <!--get more-->
+  <a class="load-more more-feed" style="display:none;">more</a>
+  
+</div>
+
+<!--相册-->
+<div class="pg_album" style="display:none;">
+<!--
+  <div class="pg_album_list">
+    <a href="javascript:;">
+      <img src="/static/phone/images/photo3.jpg">
+      <h4>这是第一个相册</h4>
+      <i>23张</i>
+    </a>
+  </div>
+-->
+
+    <div class="pg_album_main clear">
+        
+    </div>
+
+  <!--get more-->
+  <a class="load-more more-album" style="display:none;">more</a>
+</div>
+
+<!--简介-->
+<div class="pg_msg">
+  <div class="pg_info_intro">
+    <span class="ifspread"></span>
+    <h3>简介</h3>
+    <ul class="spread-main" id="pg_intro">
+<!--
+      <li class="pg_info_desc">
+        <span>描述/</span>
+        <p>在这里添加摄影师描述</p>
+      </li>
+        <li>
+          <span>个性域名/</span> 
+          <em>sodksof</em>
+        </li>
+        <li>
+          <span>生日/</span>
+          <i>1992年11月15日</i>
+        </li>
+        <li>
+          <span>性别/</span> 
+          <i>男</i>
+        </li>
+        <li>
+          <span>QQ/</span>
+          <i>134155</i>
+        </li>
+        <li>
+          <span>手机号码/</span> 
+          <i>2331455</i>
+        </li>
+        <li>
+          <span>微信/</span> 
+          <i>1545415</i>
+        </li>
+-->
+    </ul>
+  </div>
+
+  <div class="pg_info_intro pg_info_contact" style="display:none;">
+    <span class="ifspread"></span>
+    <h3>联系方式</h3>
+    <ul class="spread-main" id="pg_contact">
+<!--
+        <li>
+          <span>QQ/</span>
+          <i>134155</i>
+        </li>
+        <li>
+          <span>手机号码/</span> 
+          <i>2331455</i>
+        </li>
+        <li>
+          <span>微信/</span> 
+          <i>1545415</i>
+        </li>
+-->
+    </ul>
+  </div>
+
+  <!--摄影师服务信息-->
+  <div class="pg_info_service">
+    <span class="ifspread"></span>
+    <h3>服务信息</h3>
+    <div class="pg_service_content spread-main">
+      <dl class="photo_type">
+<!--
+          <dt>—— 接拍类型 ——</dt>
+          <dd>儿童</dd>
+          <dd>婚礼</dd>
+          <dd>婚纱</dd>
+          <dd>写真</dd>
+          <dd>其他</dd>
+-->
+      </dl>
+      <dl class="photo_address">
+<!--
+          <dt>—— 接拍地 ——</dt>
+          <dd>浙江全境</dd>
+          <dd>南京</dd>
+          <dd>上海全境</dd>
+-->
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+<!--coming soon-->
+<div class="ifCare">已关注</div>
+<div class="notCare">已取消关注</div>
+
+
+
+
+<!--big_pic-->
+<div class="big_pic" style="display:none;">
+  
+  <!--big_pic_main-->
+  <div class="big_pic_main">
+    <div class="big_pic_img"><a href="javascript:;"><img src=""></a></div>
+    <div class="big_pic_info">
+      <a class="more_info" href="javascript:;"><i></i></a>
+      <ul class="more_info_main">
+        <li>
+          <a href="javascript:;">
+            <i>from.</i> 
+            <h4 class="more_info_from"></h4>
+          </a>
+        </li>
+        <li><a href="javascript:;">
+          <i>by.</i> 
+          <h4 class="author"></h4></a>
+        </li>
+        <li>
+          <a class="more_info_1"></a>
+          <a class="more_info_2"></a>
+          <a class="more_info_3"></a>
+        </li>
+        <li class="big_pic_keyword" style="display:none;">
+          <span>复古</span>
+          <i>|</i>
+          <span>光影</span>
+          <i>|</i>
+          <span>复古</span>
+        </li>
+      </ul>
+    </div>
+    <div class="big_pic_tool" style="display:none;">
+      <a class="big_pic_forward" href="javascript:;"><i></i></a>
+      <a class="big_pic_coll like_coll" href="javascript:;"><i></i></a>
+      <a class="big_pic_like like1" href="javascript:;"><img src="/static/phone/images/like1.png"></a>
+    </div>
+  </div>
+
+  <!--大图评论-->
+  <div class="big_pic_comment" style="display:none;">
+    <!--bpc_list 评论内容列表-->
+    <ul class="bpc_list">
+      <li>
+        <div class="bpc_img"><a href="javascript:;"><img src="/static/phone/images/photo8.jpg"></a></div>
+        <div class="bpc_txt">
+          <h3><i>刚刚</i></h3>
+          <p>111</p>
+        </div>
+        <a class="big_pic_reply" href="javascript:;"><i></i></a>
+      </li>
+    </ul>
+    
+    <!--bpc_form 评论框-->
+    <div class="bpc_form">
+      <input type="text">
+      <button>评论</button>
+    </div>    
+  </div>
+  
+  <div class="may_like">
+    <h2>您可能喜欢的照片</h2>
+    <!--photo_data-->
+    
+    
+    <div class="like_photos">
+   
+    </div>
+  </div>
+  </div>
+  
+  <!--foot-->
+{% block foot %}
+{% include "../phone/template/foot.html" %}
+{% end %}
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+
+<script src="/static/phone/js/primaryjs/lib/fastclick.min.js"></script>
+
+<!--
+<script src="/static/phone/js/primaryjs/commom.js"></script>
+<script src="/static/phone/js/primaryjs/font.js"></script>
+<script src="/static/phone/js/primaryjs/nav.js"></script>
+<script src="/static/phone/js/primaryjs/pghome/pghome.js"></script>
+-->
+
+<script src="/static/phone/js/minjs.1.0/pghome0907.js"></script>
+</body>
+</html>

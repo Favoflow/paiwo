@@ -1,0 +1,320 @@
+body,html{ background: #eee;}
+.forgetbox_i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 13px;
+  height: 13px;
+  background:  url(/static/images/spirit.svg) no-repeat -50px -950px;
+  cursor: pointer;
+}
+.forgetbox_i:hover { background:  url(/static/images/spirit.svg) no-repeat 0 -950px;}
+/*注册成功*/
+.setting-mes {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 340px;
+    margin: -170px 0 0 -180px;
+    background: #FFF;
+    border-radius: 2px;
+}
+.reg-success {
+    position: relative;
+    margin-top: 26px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 30px;
+    color: #414141;
+    font-family: "微软雅黑";
+}
+.reg-success i {
+    position: absolute;
+    top: 0;
+    left: 64px;
+    width: 55px;
+    height: 55px;
+    background: url(/static/images/spirit.svg) -302px -886px no-repeat;
+}
+.setting-compe {
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: #b6b3aa;
+}
+.reg-suc-input {
+    width: 240px;
+    margin: 43px auto 0;
+}
+.reg-suc-input li:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.reg-suc-input li {
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.setting-part-tit {
+    float: left;
+    width: 60px;
+    color: #414141;
+    text-align: left;
+}
+.information_ul_nametext {
+    float: left;
+    width: 170px;
+    height: 38px;
+    padding-left: 8px;
+    border: 1px solid #eee;
+    line-height: 38px;
+}
+.setting-next {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.setting-next-forbid {
+    background: #b6b3aa;
+    cursor: auto;
+}
+.setting-next-allow {
+    background: #414141;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+.setting-next-allow:hover { background: #2dd888;}
+/*上传头像*/
+.reg-upava-tit {
+    margin: 0 auto;
+    line-height: 52px;
+    color: #414141;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    width: 330px;
+}
+.reg-ava-err {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    height: 18px;
+    width: 340px;
+    padding-left: 20px;
+    text-align: center;
+}
+.reg-ava-err i {
+    position: absolute;
+    left: 108px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: url("/static/images/spirit.svg") no-repeat -200px -700px;
+}
+.reg-ava-err span {
+    color: #dd2222;
+    font-size: 12px;
+    line-height: 18px;
+}
+.reg-upava {
+    margin: 44px auto 36px;
+    width: 240px;
+}
+.reg-upava:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.reg-upava-l {
+    float: left;
+    width: 94px;
+}
+.user-name{
+    display: block;
+    width: 94px;
+    margin-top: 14px;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #212121;
+    font-size: 12px;
+    line-height: 14px;
+}
+.reg-upava-r {
+    position: relative;
+    float: right;
+    width: 120px;
+    height: 120px;
+    background: #eee;
+}
+.reg-upava-r i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 40px auto 0;
+    background: url(/static/images/spirit.svg) -47px -2146px no-repeat;
+    cursor: pointer;
+}
+.reg-upava-r:hover i { background: url(/static/images/spirit.svg) 3px -2146px no-repeat;}
+
+.re-upload{
+    color: #bdbbb3;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+
+/*推荐关注*/
+.setting-rec {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin: -300px 0 0 -350px;
+    width: 700px;
+    height: 600px;
+    background: #fff;
+}
+.setting-rec-tit {
+    line-height: 54px;
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    color: #414141;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+.setting-rec-main {
+    position: relative;
+    width: 660px;
+    height: 447px;
+    margin: 22px auto 0;
+}
+.setting-rec-main:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.setting-rec-list {
+    float: left;
+    width: 260px;
+    margin: 0 35px 20px 35px;
+}
+.setting-rec-top {
+    width: 100%;
+    height: 30px;
+}
+.setting-rec-ava {
+    float: left;
+}
+.setting-rec-ava img {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.setting-rec-ava span {
+    float: left;
+    margin-left: 8px;
+    line-height: 30px;
+    width: 100px;
+    font-size: 14px;
+    color: #212121;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.setting-rec-care {
+    float: right;
+    width: 78px;
+    height: 14px;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 14px;
+}
+.setting-rec-care i {
+    float: left;
+    width: 16px;
+    height: 14px;
+    text-align: center;
+    line-height: 12px;
+}
+.setting-care-not {
+   color: #212121;
+   border: 1px solid #212121; 
+}
+.setting-care-not i { margin-left: 14px;}
+.setting-care-yes {
+    color: #02d888;
+    border: 1px solid #02d888;
+}
+.setting-care-yes i {     
+    margin-left: 7px;
+    background: url(/static/images/gou.svg) 0px 3px no-repeat;
+}
+.setting-rec-alb { 
+    float: left;
+    width: 260px;
+    margin-top: 12px;
+}
+.setting-rec-alb li {
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    background: #eee;
+}
+.setting-rec-alb li:last-child { margin-right: 0;}
+.setting-rec-alb img {
+    width: 80px;
+    height: 80px;
+}
+.setting-rec-change {
+    position: relative;
+    float: right;
+    padding-left: 18px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #8a8880;
+    top: -20px;
+    right: 55px;
+}
+.setting-rec-change i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 16px;
+    background: url(/static/images/spirit2.svg) -350px -50px no-repeat;
+}
+.pre-wrap{
+    width: 94px;
+    height: 94px;
+    border-radius: 47px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #b9b6b1
+}
+#re_upload{
+    cursor: pointer;
+}
+.backs{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1654px;
+    transition: 50s linear;
+    background-image: url(http://duopaizhao.com/static/images/login/register_bac.jpg);
+}

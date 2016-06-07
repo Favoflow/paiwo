@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>摄影师专辑</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="/static/phone/css/mincss.1.0/pghomein.css">
+	<style>
+        body{
+            background:#fff;
+        }
+	</style>
+</head>
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+	<div class="album-in">
+		<!--相册标题-->
+		<div class="album-in-tit">
+			<a class="back" href="javascript:;">
+				<i></i>
+				<span>相册</span>
+			</a>
+			<h2 class="album_name"></h2>
+		</div>
+		<!--关键词-->
+		<div class="album-in-keyword">
+			<h3>—— 关键词 ——</h3>
+			<p class="album_tag">
+<!--				"黑白|小清新|森系|百褶裙|最美兰园|最多不能超过两行"-->
+			</p>
+		</div>
+		<!--简介-->
+		<div class="album-in-intro" style="display:none;">
+			<h3>—— 简介 ——</h3>
+			<p class="album_intro">
+<!--				摄影师描述，随便怎么写都没关系，摄影师描述，随便怎么写都没关系，摄影师描述，随便怎么写都没关系，摄影师描述，随便怎么写都没关系，摄影师描述，随便怎么写都没关系，-->
+			</p>
+		</div>
+		<!--分享-->
+		<div class="spec_share_main" style="display:none;">
+		    <span>分享：</span>
+		    <a class="sina" href="javascript:;"><i></i></a>
+		    <a class="weixin" href="javascript:;"><i></i></a>
+		    <a class="friend" href="javascript:;"><i></i></a>
+		    <a class="qq" href="javascript:;"><i></i></a>
+		    <a class="qzone" href="javascript:;"><i></i></a>
+		</div>
+
+		<div class="album-in-photos">
+		
+<!--
+			<div class="photos-list">
+				<img src="/static/phone/images/photo.jpg">
+			</div>
+			
+			<div class="photos-list">
+				<img src="/static/phone/images/photo.jpg">
+				<div class="photog_count">
+				    <span class="count_coll"><i></i>2,231</span>
+				    <span class="count_like"><i></i>6,619</span>
+				</div>
+			</div>
+			<div class="photos-list">
+				<img src="/static/phone/images/photo.jpg">
+				<div class="photog_count">
+				    <span class="count_coll"><i></i>2,231</span>
+				    <span class="count_like"><i></i>6,619</span>
+				</div>
+			</div>
+			<div class="photos-list">
+				<img src="/static/phone/images/photo.jpg">
+				<div class="photog_count">
+				    <span class="count_coll"><i></i>2,231</span>
+				    <span class="count_like"><i></i>6,619</span>
+				</div>
+			</div>
+-->
+			
+			
+		</div>
+	</div>
+	
+	<!--foot-->
+    {% block foot %}
+    {% include "../phone/template/foot.html" %}
+    {% end %}
+
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/minjs.1.0/album0718.js"></script>
+<!--
+<script src="/static/phone/js/primaryjs/nav.js"></script>
+<script src="/static/phone/js/primaryjs/commom.js"></script>
+<script src="/static/phone/js/primaryjs/pghome/pghomein.js"></script>
+-->
+</body>
+</html>

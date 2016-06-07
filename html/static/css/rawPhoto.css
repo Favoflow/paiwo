@@ -1,0 +1,285 @@
+html,body
+	{	margin: 0;
+		padding: 0;
+		height: 100%;
+		background-color: #282828;
+		font-family: "宋体",SimSun,"微软雅黑","黑体",SimHei,serif;}
+body
+	{	font-size: 62.5%;}
+div.photo_box
+	{	position: relative;
+		margin-right: 390px;
+		height: 100%;}
+div.photo
+	{	position: relative;
+		width: 100%;
+		height: 100%;}
+div.photo img
+	{	max-width: 95%;
+		max-height: 93%;
+		margin: auto;/* 图片居中 */
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		box-shadow: 0 0 5px #000000;}
+div.left
+	{	width: 33%;
+		height: 93%;
+		margin: auto;
+		position: absolute;
+		left: 5%;
+		top: 0;
+		bottom: 0;
+		z-index: 10;
+		cursor: pointer;
+		opacity: 0;
+		filter:Alpha(opacity=0); /* IE8 以及更早的浏览器 */}
+div.left:hover
+	{	opacity: 1;
+		filter:Alpha(opacity=100); /* IE8 以及更早的浏览器 */}
+div.left_arrow
+	{	width: 30px;
+		height: 100px;
+		background-color: rgba(40,40,40,0.5);
+		margin: auto;
+		position: absolute;
+		left: 10%;
+		top: 0;
+		bottom: 0;}
+div.left_arrow img
+	{	margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;}
+div.right
+	{	width: 33%;
+		height: 93%;
+		margin: auto;
+		position: absolute;
+		right: 5%;
+		top: 0;
+		bottom: 0;
+		z-index: 10;
+		cursor: pointer;
+		opacity: 0;
+		filter:Alpha(opacity=0); /* IE8 以及更早的浏览器 */}
+div.right:hover
+	{	opacity: 1;
+		filter:Alpha(opacity=100); /* IE8 以及更早的浏览器 */}
+div.right_arrow
+	{	width: 30px;
+		height: 100px;
+		background-color: rgba(40,40,40,0.5);
+		margin: auto;
+		position: absolute;
+		right: 10%;
+		top: 0;
+		bottom: 0;}
+div.right_arrow img
+	{	margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;}
+div.hide
+	{	display: none;}
+div.dashboard
+	{	position: fixed;
+		top: 0;
+		right: 0;
+		width: 370px;
+		height: 100%;
+		padding-right: 20px;}
+div.close
+	{	position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;}
+div.close img:hover
+	{	opacity:0.8;
+		filter:Alpha(opacity=80); /* IE8 以及更早的浏览器 */}
+div.portrait
+	{	margin-top: 20px;}
+div.portrait div
+	{	display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin-right: 15px;
+		border-radius: 30px;
+		vertical-align: middle;
+		overflow: hidden;
+		cursor: pointer;}
+div.portrait img:hover
+	{	opacity:0.8;
+		filter:Alpha(opacity=80); /* IE8 以及更早的浏览器 */}
+div.portrait a
+	{	font-family: "微软雅黑","黑体",SimHei;
+		color: #ffffff;
+		font-size: 1.4em;
+		text-decoration: none;}
+div.portrait a:hover
+	{	text-decoration: underline;}
+div.title
+	{	margin-top: 10px;
+		margin-bottom: 10px;
+		color: #ffffff;
+		font-size: 1.8em;
+		height: 20px;
+		line-height: 20px;}
+div.title a
+	{	font-family: "微软雅黑","黑体",SimHei;
+		color: #ffffff;
+		text-decoration: none;
+		padding-right: 15px;}
+div.title a:hover
+	{	text-decoration: underline;}
+div.title span
+	{	font-size: 66.6%;}
+div.description
+	{	color: #ffffff;
+		font-size: 1.2em;
+		line-height: 16px;}
+div.cc_tags
+	{	margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.2em;
+		color: #ffffff;}
+span.cc img
+	{	margin-right: 15px;}
+span.tags
+	{	float: right;
+		clear: both;
+		max-width: 248px;
+		height: 16px;
+		margin-right: 10px;
+		overflow: hidden;}
+span.tags img
+	{	margin-right: 5px;
+		vertical-align: middle;}
+span.tags a
+	{	margin-left: 10px;
+		color: #ffffff;
+		text-decoration: none;}
+span.tags a:hover
+	{	text-decoration: underline;}
+div.collect_like_share
+	{	width: 332px;
+		height: 70px;
+		margin: 0 auto 10px auto;
+		font-size: 0;
+		color: #ffffff;}
+div.collect_like_share div
+	{	display: inline-block;
+		width: 110px;
+		font-size: 12px;
+		text-align: center;
+		padding-top: 10px;}
+div.center
+	{	border-left: 1px solid #444444;
+		border-right: 1px solid #444444;}
+div.collect_like_share div img
+	{	cursor: pointer;}
+div.collect_like_share div img:hover
+	{	opacity:0.8;
+		filter:Alpha(opacity=80); /* IE8 以及更早的浏览器 */}
+div.comment_input
+	{	margin-bottom: 10px;}
+div.comment_input textarea
+	{	min-width: 270px;
+		max-width: 270px;
+		min-height: 50px;
+		max-height: 50px;
+		border: none;
+		border-radius: 4px;
+		margin: 0;
+		padding: 5px;
+		background-color: #999999;
+		font-size: 1.2em;
+		color: #ffffff;}
+div.comment_input textarea::-webkit-input-placeholder
+{   color: #ffffff;}
+div.comment_input textarea:-moz-placeholder
+{   color: #ffffff;}
+div.comment_input textarea,div.comment_input button:focus
+	{	outline: none;}
+div.comment_input button
+	{	float: right;
+		width: 60px;
+		height: 60px;
+		margin-right: 10px;
+		border: none;
+		border-radius: 2px;
+		padding: 0;
+		background-color: #444444;
+		font-family: "微软雅黑","黑体",SimHei;
+		color: #ffffff;
+		font-size: 1.6em;
+		cursor: pointer;}
+div.comment_input button:hover
+	{	background-color: #555555;}
+div.comment_input button:active
+	{	background-color: #444444;}
+div.comment div
+	{	position: relative;
+		width: 360px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #444444;
+		color: #ffffff;
+		font-size: 1.2em;}
+a.comment_portrait_photog
+	{	display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		position: absolute;
+		top: 5px;
+		overflow: hidden;}
+a.comment_portrait_photog img:hover
+	{	opacity:0.8;
+		filter:Alpha(opacity=80); /* IE8 以及更早的浏览器 */}
+a.comment_portrait_customer
+	{	display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		position: absolute;
+		top: 5px;
+		overflow: hidden;}
+span.comment_content
+	{	display: inline-block;
+		margin-left: 35px;
+		margin-top: 7px;
+		margin-bottom: 7px;
+		width: 280px;
+		line-height: 16px;}
+a.comment_name
+	{	color: #3db6e3;
+		text-decoration: none;}
+a.comment_name:hover
+	{	text-decoration: underline;}
+div.comment button
+	{	position: absolute;
+		top: 22px;
+		right: 0;
+		margin: 0;
+		border: none;
+		padding: 0;
+		width: 30px;
+		height: 14px;
+		background-color: #282828;
+		font-family: "宋体",SimSun;
+		font-size: 1em;
+		color: #3db6e3;
+		cursor: pointer;}
+div.comment button:hover
+	{	color: #41c3f2;}
+div.comment button.delete
+	{	position: absolute;
+		top: 5px;
+		right: 0;}

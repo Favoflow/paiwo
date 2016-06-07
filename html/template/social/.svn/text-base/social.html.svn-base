@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>新鲜事 - 拍我网</title>
+	
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+	{% block commoncss %}
+	{% include "../commoncss.html" %}
+	{% end %}
+	<link rel="stylesheet" href="/static/css/social.css">
+	<!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+    <!--browse update-->
+     {% block update_notice %}
+     {% include "../update_notice.html" %}
+     {% end %}
+
+   {% block top_bar %}
+    {% include "../top_tab.html" %}
+    {% end %}
+    
+    {% block side %}
+    {% include "../side.html" %}
+    {% end %}
+       
+       
+
+       <!--侧边栏按钮-->
+    <ul class="push_button">
+      <li class="navi-one"></li>
+      <li class="navi-two"></li>
+      <li class="navi-three"></li>
+    </ul>
+	<div id="main_box">
+		<div class="social clearfix">
+			<!-- 社交banner -->
+			<div class="social-main">
+				<div class="social-banner">
+                    <a href="/activity/campus_contest" target="_blank"><img src="/static/images/activity/campus_600x96.jpg" width="600" height="96"></a>
+					<a class="social-join-close" href="javascript:;"></a>
+					<a class="social-join" href="javascript:;">马上参加</a>
+				</div>
+               
+                
+                <!--分类-->
+                <div class="social-cla clearfix">
+                    <a class="social-cla-cur" href="javascript:;">关注</a>
+                    <span></span>
+                    <a href="javascript:;">最新</a>
+                    <span></span>
+                    <a href="javascript:;">最热</a>
+                </div>
+				
+				<a class="social-news" href="javascript:;" style="display:none">
+					<i class="social-news-num">0</i>
+					<span class="social-news-txt">新鲜事 &nbsp;&uarr;</span>
+				</a>
+
+				<!-- 社交流 -->
+				<div class="social-flow" id= "content_main">
+ 
+		
+				</div>
+			</div>
+			
+			<!-- 社交小版块 -->
+			<div class="social-part">
+				
+				<!-- 个人信息 -->
+				<div class="social-part-info">
+					<a class="social-info-ava" href="javascript:;"><img></a>
+					<h3 class="social-info-intro">
+						<span class="social-info-name"></span>
+<!--						<span class="part-info-iden"><i></i>摄影师</span>-->
+					</h3>
+					<ul class="social-info-tab clearfix">
+					   <a>
+                            <li>
+                                <i class="dynamic-count"></i>
+                                <span>动态</span>
+                            </li>
+                        </a>
+                        <a>
+						<li style="border-left: 1px solid #d8d6d0;  border-right: 1px solid #d8d6d0;">
+							<i class="follow-count"></i>
+							<span>关注</span>							
+						</li>
+                        </a>
+                        <a>
+						<li>
+							<i class="follower-count"></i>
+							<span>粉丝</span>							
+						</li>
+						</a>
+					</ul>
+				</div>
+
+				<!-- 创建 -->
+				<div class="social-create clearfix">
+					<a class="social-create-album" href="album/new" target="_blank" style="display:none"><i></i>创建影集</a>
+					<span style="display:none"></span>
+					<a class="social-create-pocket" href="pocket/add" target="_blank"><i></i>创建图文</a>
+				</div>
+
+				<!-- 感兴趣的人 -->
+				<div class="social-interest" style="display:none">
+					<h3 class="social-interest-tit clearfix">
+						<span>可能感兴趣的人</span>
+						<a href="javascript:;" id="changes"><i></i>换一批</a>
+					</h3>
+					<ul class="social-interest-list">
+
+					</ul>
+<!--
+					<a class="social-check-more">
+						<span>查看更多</span>
+						<i></i>
+					</a>
+-->
+				</div>
+
+				<!-- 热门照片 -->
+				<div class="social-part-hot">
+					<h3 class="social-hot-tit"> 
+						<span>推荐照片</span>
+						<a href="/gallery">更多<i></i></a>
+					</h3>
+					<div class="social-hot-roll social-roll-album">
+						<ul class="social-hot-pic" id="photos"> 
+<!--
+							<li>
+								<div class="social-hot-shadow"></div>
+
+							</li>
+--> 
+                            
+						</ul>
+						<ul class="social-hot-point clearfix">
+							<li class="social-album-cur"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 热门图文 -->
+				<div class="social-part-hot" style="height:220px;">
+					<h3 class="social-hot-tit"> 
+						<span>推荐图文</span>
+						<a href="/pagazine">更多<i></i></a>
+					</h3>
+					<div class="social-hot-roll social-roll-pocket">
+					<div class="social-roll-pocket-shadow"></div>
+						<ul class="social-hot-pic" id="pocket"> 
+	
+						</ul>
+						<ul class="social-hot-point">
+							<li class="social-pocket-cur"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		{% block foot %}
+     	{% include "../foot.html" %}
+     	{% end %}
+	</div>
+<div class="setting_succeed"></div>
+<div id="shadow_box"></div>
+
+<div class="pocket-tip">
+    <div class="pocket-go-top"></div>
+</div>
+
+
+    {% block message %}
+    {% include "../paiwoMessage.html" %}
+    {% end %}
+       {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+   
+<script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+<script src="/static/js/lib/jquery.tmpl.min.js"></script>
+
+<script src="/static/js/com/jquery.md5.js"></script>
+    {% block commonjs %}
+    {% include "../commonjs.html" %}
+    {% end %}
+
+<script src="/static/js/social/view.js"></script>
+<script src="/static/js/social/app.js"></script>
+
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+
+</body>
+</html>

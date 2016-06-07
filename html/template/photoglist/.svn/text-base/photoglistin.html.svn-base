@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>摄影师推荐-拍我网</title>
+  	{% block commoncss %}
+	{% include "../commoncss.html" %}
+	{% end %}
+  <link rel="stylesheet" href="/static/css/mincss/article0313.css">
+	<!--[if IE 6]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 7]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+  <style>
+      html{
+           padding-left: calc(100vm-100%);
+      }
+      
+	  #top_msg{
+	 	position: fixed;
+		left: 422px;
+		top:0; 
+		z-index: 100;
+		background-color: #fff;
+		display: none;
+	 }
+      
+    #fixed-top{
+        position:absolute;
+        left: 45px;
+        top: 40px;
+/*        z-index: 120;*/
+        
+    }
+      
+    #fixed-top-box{
+      width: 1190px;
+      position: fixed;
+      left:50%;
+      margin-left: -595px;
+      height: 170px;
+      z-index: 98;
+       
+    }
+      
+      .pg-interview p img{
+          height: auto;
+      }
+      
+  </style>
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+    
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul> 
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+<!--browse update-->
+ {% block update_notice %}
+ {% include "../update_notice.html" %}
+ {% end %}
+<!--回到顶部-->
+<a href="javascript:;" class="go_top" id="go_top" style="display:none;"></a>\
+
+<div id="fixed-top-box" style="display:none;">
+    <div class="pg-article-L" id="fixed-top">
+        <div class="pg-article-headimg">
+        <img src="http://image.paiwo.co/11058/avatar/725bd4861a7ea8569273898d3ca66bab@7-297-567-567a_120w_120h.jpg" class="ihead">
+        <p class="inick">Parasol_</p>
+        </div>
+        <a class="pg-letter sendM">私信</a>
+        <a class="pg-care followM">关注</a>
+    </div>
+</div>
+
+
+
+<div id="main_box">
+  <!--文章内页大banner-->
+  <div class="inner-banner-box">
+    <div class="recommend-banner-inner" id="ibanner">
+      <div class="banner-black-innerbac banner-black-bac"></div>
+      <section class="recommend-banner-text">
+         <h4 class="cur-recommend">推荐摄影师</h4>
+         <p class="recommend-tips"><sup>"</sup><span id="ititle"></span><sup>"</sup></p>
+         <p class="photog-name" id="iname"></p>
+      </section>
+    </div>
+  </div>
+  <div class="recommend-main">
+    <!--文章内页-->
+   <div class="pg-article clearfix">
+   
+		<div class="pg-article-L" id="pg-l">
+			<div class="pg-article-headimg">
+				<img src="" class="ihead">
+				<p class="inick"></p>
+			</div>
+			<a class="pg-letter sendM">私信</a>
+			<a class="pg-care followM">关注</a>
+		</div>
+		
+		<div class="pg-article-R">
+			<div class="pg-article-info" style="display:none;">
+				<ul class="clearfix">
+					<li class="pg-type" style="display:none">
+						<h4>接拍类型/</h4>
+						<span id="itype"></span>
+					</li>
+					<li class="pg-address" style="display:none">
+						<h4>接拍地区/</h4>
+						<span id="iplace"></span>
+					</li>
+					<li class="pg-contact" style="display:none">
+						<div class="pg-contact-main">
+							<h4>手机/</h4>
+							<span id="iphone"></span>
+						</div>
+						<div class="pg-contact-main">
+							<h4>QQ/</h4>
+						 	<span id="iqq"></span>
+						</div>		
+					</li>
+				</ul>
+				<div class="pg-intro clearfix">
+					<h4>简介/</h4>
+					<p id="idesc"></p>
+				</div>
+			</div>
+			<div class="pg-interview" id="icontent"></div>
+		</div>
+	</div>
+  <!--内页评论部分-->
+	<div class="share-box">
+	  <h4>
+		  <div class="comment_tab_share clearfix">
+			  <span>分享文章/</span>
+			  <a id='weibo_share' class="tab_share_weibo"></a>
+			  <a class="tab_share_wechat"></a>
+			  <!--<a class="tab_share_moments"></a>
+			  <a class="tab_share_qq"></a>-->
+			  <a class="tab_share_qzone"></a>
+		  </div>
+	  </h4>
+		<div class="photo_comment_content" style="display:none;">
+			<div class="comment_content_box">
+				<ul class="comment_content_list clearfix"></ul>
+				<div class="content_list_bar_range">
+					<div class="content_list_bar"></div>
+				</div>
+			</div>
+			<div class="comment_content_input clearfix">
+				<textarea id="reply_text"></textarea>
+				<button class="send_reply submit" id="send_reply">评论</button>
+				<span id="red_reply"></span>
+			</div>	
+	</div>	
+  </div>
+  </div>
+  
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+
+</div>
+<!--wechat-->
+  <div class="wechat_box">
+  	<img width="260" src=""/>
+	<p>用微信“扫一扫”即可享至朋友圈</p>
+	<span class="wechat_close"></span>
+  </div>
+	<div class="wechat_shadow"></div>
+<!--
+<div class="pg-article-L" id="top_msg">
+	<div class="pg-article-headimg">
+		<img src="" id="ihead">
+		<p id="inick"></p>
+	</div>
+	<a class="pg-letter" id="sendM">私信</a>
+	<a class="pg-care" id="followM">关注</a>
+  </div>
+-->
+  
+<div id="shadow_box"></div>
+<div class="setting_succeed"></div>
+<div id="share_desc" style="display:none"></div>
+
+<!--script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2197733404" charset="utf-8"></script-->
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/setting/service_list.js"></script>
+<!--<script src="/static/js/minjs/comSideMess0320.js"></script>-->
+{% block commonjs %}
+   {% include "../commonjs.html" %}
+   {% end %}
+<!--<script src="/static/js/minjs/pg_in0327.js"></script>-->
+<script src="/static/js/photoglist/pg_in.js"></script>
+</body>
+</html>

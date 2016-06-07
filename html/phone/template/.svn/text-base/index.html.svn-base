@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<!--<link rel="stylesheet" href="/static/phone/css/mincss.1.0/gallery0826.css">-->
+<!--
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/reset.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/nav.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/foot.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/index.css">
+-->
+<link rel="stylesheet" href="/static/phone/css/mincss.1.0/gallery0911.css">
+<style>
+    .photos-list{
+/*
+        padding-bottom: 100%;
+        overflow: hidden;
+        height: 0;
+*/
+    }
+    
+    .photos-list .img-a{
+        display: block;
+        padding-bottom: 100%;
+        overflow: hidden;
+        height: 0;
+    }
+</style>
+<title>拍我网</title>
+</head>
+
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+<!--photo-->
+<div class="photos">
+<!--    gallery-->
+    <h2 class="photo-gallery-tit">
+        <span class="photo-gallery-c"></span>
+        <span class="photo-gallery-e"></span>
+    </h2>
+<!--   分类-->
+   <div class="photo-classify">
+       <span class="photo-cla-line"></span>
+       <ul class="clear">
+          <li class="photo-cla-cur">推荐</li>
+          <li>人像
+              <dl>
+                <dd>人像</dd>
+                <dd>写真</dd>
+                <dd>个人写真</dd>
+              </dl>
+          </li>
+          <li>黑白
+              <dl>
+                <dd>黑白</dd>
+              </dl>
+          </li>
+          <li>日系
+              <dl>
+                <dd>日系</dd>
+                <dd>小清新</dd>
+                <dd>清新</dd>
+                <dd>JK</dd>
+                <dd>DK</dd>
+              </dl>
+          </li>
+          <li>风景
+              <dl>
+                <dd>风光</dd>
+                <dd>风景</dd>
+              </dl>
+          </li>
+          <li>东西
+              <dl>
+                <dd>静物</dd>
+                <dd>东西</dd>
+              </dl>
+          </li> 
+       </ul>
+    </div>
+    <div class="photos-main">
+      <!--照片列表-->
+      <div class="photo-main-list"></div>
+      <div class="photo-main-list" style="display:none"></div>
+      <div class="photo-main-list" style="display:none"></div>
+      <div class="photo-main-list" style="display:none"></div>
+      <div class="photo-main-list" style="display:none"></div>
+      <div class="photo-main-list" style="display:none"></div>      
+    </div>
+      <a class="load-more" href="javascript:;">more</a>
+</div>
+
+<!--图片加载-->
+<div class="loading" style="display: none;">
+	<img src="/static/phone/images/loading.gif" width="60px">
+</div>
+
+<!--foot-->
+{% block foot %}
+{% include "../phone/template/foot.html" %}
+{% end %}
+
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/primaryjs/lib/fastclick.min.js"></script>
+
+<!--
+<script src="/static/phone/js/primaryjs/commom.js"></script>
+<script src="/static/phone/js/primaryjs/font.js"></script>
+<script src="/static/phone/js/primaryjs/nav.js"></script>
+<script src="/static/phone/js/primaryjs/index/index.js"></script>
+-->
+
+<script src="/static/phone/js/minjs.1.0/gallery0826.js"></script>
+
+</body>
+</html>

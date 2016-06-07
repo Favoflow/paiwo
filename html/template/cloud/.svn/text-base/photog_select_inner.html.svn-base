@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>在线选片 摄影师- 拍我网</title>
+	<link rel="stylesheet" href="/static/css/com/reset.css" />
+	<link rel="stylesheet" href="/static/css/com/base.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/com/login-box.css">
+	<link rel="stylesheet" href="/static/css/com/paiwoMessage.css">
+	<link rel="stylesheet" href="/static/css/cloud/cloud.css" />
+	<style>
+        
+/*
+        body ::selection {
+            color: green;
+            background-color:#E84893;
+            text-shadow:none;
+        }
+        body ::-moz-selection {
+            color: green;
+            background-color:#E84893;
+            text-shadow:none;
+        }
+*/
+        
+	    #detail-pic-box .pass-line-cur i{
+            background-color: #ff475c;
+            width: 12px;
+            border: 2px solid #fff;
+            height: 12px;
+        }
+        
+        .mouse-left,.mouse-right{
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .mouse-left{
+           left:-30px;
+        }
+        
+        #detail-pic-box .pass-line .pass-one{
+            cursor: pointer;
+        }
+        
+        #detail-pic-box .pass-line{
+/*            border-bottom:1px dashed #b6b3aa;*/
+            position: absolute;
+            width:initial;
+        }
+        
+        #detail-pic-box .pass-line li{
+             width: 46px;
+             height: 30px;
+             float: left;
+             margin-top: -27px;
+             position: static;
+             cursor: pointer;
+         }
+        
+        #detail-pic-box img{
+/*            cursor: pointer;*/
+        }
+        
+        
+        #detail-pic-box .detail-point span{
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+        }
+        
+        #detail-pic-box .detail-point dl {
+            display:block;
+            text-align: right;
+        }
+        
+        #detail-pic-box .detail-point dl .save-reply{
+            width: 50px;
+            height: 22px;
+            border: 1px solid #b6b3aa;
+            color: #b6b3aa;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        #detail-pic-box .detail-point dl .save-reply:hover{
+            border: 1px solid rgb(247, 72, 94);
+            color: rgb(247, 72, 94);
+        }
+        
+        .on-subCustomer .title_tip {
+            margin:-5px 0 0 -45px;
+        }
+        
+        .add-dem-right {
+            opacity: 1;
+            z-index: 110;
+        }
+        
+        .bottom-del-complet .binded_head-img i{
+            background-position: -42px -198px;
+        }
+	</style>
+	<!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+	<script src="/static/js/plupload/plupload.full.min.js"></script>
+</head>
+
+<body>
+  
+  <div class="light-bac"></div>
+  
+  <!--回到顶部-->
+  <a href="javascript:;" class="yun-pic-go-top go_top" id="go_top" style="display: none;"></a>
+  
+  <div class="online-main">
+    <!--新tab部分-->
+    <div class="top-tab">
+    <a href="http://paiwo.co/gallery" target="_blank" class="return-gallery">拍我首页</a>
+	  <h1 class="top-tab-logo" id="top-tab-logo"><a href="javascript:;"></a><span>云选片</span></h1>
+	  <ul class="top-tab-con">    
+	    <li class="tab-icon-select tab-icon" id="tab-icon_myset" style="display:none;">
+	      <div class="tab-icon_myset">
+	        <i class="select-arrow"></i>
+	        <img class="tab-icon-userhead" src="">
+	        <p></p> 
+	      </div>
+	      <div class="tab_select_box">
+	       	<i class="tab_select_arrow"></i>
+		      <div class="tab_select">         
+					  <a class="select_browse"><i class="select_browse_i"></i>我的主页</a>
+				  <a class="select_personcenter" href="http://paiwo.co/user" onclick="store.set('center_like','true')"><i class="select_personcenter_i"></i>个人中心</a>
+                  <a class="select_like" href="http://paiwo.co/user" onclick="store.set('center','1')">喜欢</a>
+				  <a class="select_store" href="http://paiwo.co/user" onclick="store.set('center','2')">收藏</a>
+                  <a class="select_like" href="http://paiwo.co/user" onclick="store.set('center','3')">订单</a>
+				  <a class="select_setting" href="http://paiwo.co/user" onclick="store.set('center','4')"><i class="select_like_i"></i>设置</a>
+		      <a class="select_login_out" href="http://paiwo.co/logout"><i class="select_login_i"></i>登出</a>
+		      </div>
+	      </div>
+	    </li>
+	    <li class="tab-icon1 tab-icon" id="top_message" style="display:none;">
+	      <a class="tab-icon_myme" title="我的消息"></a><i></i>    
+	    </li>
+	    
+	    <li class="tab-login" style="display:none;">
+	      <a class="tab-login-a" href="javascript:;">登录</a>    
+	    </li>
+	    <li class="tab-regist" style="display:none;">
+	      <a class="tab-regist-a" href="http://paiwo.co/register" target="_blank">注册</a>   
+	    </li>
+	  </ul>
+    <div class="tab-pc-change-select">
+      <span class="pg">我是摄影师</span>
+      <i class="select-arrow"></i>
+      <dl>
+        <dd class="cus">我是顾客</dd>
+      </dl>
+    </div>
+	</div>
+   
+  <!--tab结束-->
+  <!--底部tab-->
+  <div class="bottom-tab">
+    <!--button class="establish" id="save">保存</button-->
+<!--    <button class="establish save-submit" style="display:none;">保存</button>-->
+
+    <!--最新添加-->
+    <!--button class="establish" id="save">保存</button-->
+    <button class="establish upload-btn" style="display:none;">+ 上传照片</button>
+    <button class="establish uploading_line switch-btn" style="display:none;">
+    
+    <!--<span></span>已上传<i>10</i>张/共<i>200</i>张-->
+    </button>
+    <button class="establish create-submit save-submit" style="display:none;">保存</button>
+<!--    <button class="establish forbid create-submit">创建选片夹</button>-->
+    <!--最新添加结束-->
+
+    <!--收片-->
+    <button class="establish single-img-submit" style="display:none;">收片</button>
+    
+    <!--摄影师发片-->
+	  <div class="bottom-tab-cneter send-customer-box clearfix">
+	    <ul class="pass-line">
+	      <li class="pass-one pass-line-cur"><i class="pass-line-li-i"></i><p>已创建</p></li>
+	      <li class="pass-two"><i></i><p>精修</p></li>
+	      <li class="pass-three"><i></i><p>收片</p></li>
+	    </ul>
+	  	<i class="bottom-tab-i"></i>
+	  	
+        <!--<span class="bottom-tips"></span>-->
+          
+          <span class="bottom-tips list-tips">           
+            <i class="type-info"></i>  
+          </span>
+          
+          <span class="bottom-tips show-tips" style="display:none;"></span>
+	  	
+	  	  <div class="bottom-tab-center-buttons">
+    	  	<!--顾客选片进度-->
+    			<button class="cus-recive-uploading establish switch-btn decorate-ing" style="display:none;">
+    			  <!-- uploading_line-->
+                  <!--<span></span>-->
+    			  <!--已上传<i>10</i>张/共<i>200</i>张-->
+                  <!--需精修1135张/服务含1000张 <u>额外费用¥<i>10</i></u>-->
+    			</button>
+          </div>
+					
+	  	<button class="sub-to establish" id="send-to-customer" style="display:none;">提交给顾客</button>
+	  	
+			<span class="bottom-tab-span hover-info" id="selected-info" style="display:none;">
+			  <i class="bottom-tab-i"></i>顾客详情
+			  <div class="bottom-tab-detail"  style="display:none;">
+                    <h3>尚未绑定顾客</h3>
+                    <i></i>
+                    <p class="tab-detail-title"><span>校验信息</span></p>
+                <span>
+                    <label>手机号码:</label>
+                    <i class="phone-show"></i>
+                    <input type="text" class="phone-input">
+                </span>
+                
+<!--
+                <span>
+                    <label>电子邮件:</label>
+                    <i class="email-show">shabishabi@gmall.com</i>
+                    <input type="text" class="email-input">
+                </span>
+-->
+                
+                <span class="link-code-box">
+                    <label>链接:</label>
+                    <u style="display:none;" class="copy-link">已复制</u>
+                    <a class="link" data-clipboard-target="c_text" id="c_text"></a>                 
+                    <label style="display:none;">提取码:</label>
+                    <u style="display:none;">已复制</u>
+                    <a class="code" style="display:none;"></a>                   
+                </span>
+                
+                <p class="bottom-tab-detail-pp" style="display:none;">提示：更改验证手机号，将生成新的提取链接</p>
+                <a class="delete-project" id="edit-info">更改验证手机号</a>
+                <div class="bottom-tab-detail-button" style="display:none;">
+                    <a class="delete-project" id="save-info">提交</a>
+                    <a class="delete-project" id="cancel-info">取消</a>
+                </div>
+			  </div>
+		  </span>
+
+      <!--顾客已经绑定选片夹详情显示-->
+      <span class="bottom-cus-binded bottom-tab-span hover-info" id="cus-band-info" style="display:none;">
+        <i class="bottom-tab-i"></i>顾客详情
+        <div class="bottom-tab-detail"  style="display:none;">
+          <h3>选片夹绑定至</h3>
+          <div class="binded_head-img"><img>大傻逼纸哥</div>
+          <i></i>
+          <p class="tab-detail-title"><span>校验信息</span></p>
+          <span>
+              <label>手机号码:</label>
+              <i class="phone-show"></i>
+              <input type="text" class="phone-input">
+          </span>
+          <span class="link-code-box">
+              <label class="link">链接:</label>
+              <a class="links"></a>                   
+<!--
+              <label>提取码:</label>
+              <a class="code"></a>                   
+-->
+          </span>
+        </div>
+      </span>
+
+      <!--最终交易完成后显示详细信息-->
+      <span class="bottom-del-complet bottom-cus-binded bottom-tab-span " id="cus-complete" style="display:none;">
+      
+      <i class="bottom-tab-i"></i>已全部收片<u>详细信息</u>
+        <div class="del-complet-detail bottom-tab-detail"  style="display:none;">
+          <h3>服务顾客：</h3>
+          <div class="binded_head-img"><img>大傻逼纸哥<i></i></div>
+          <i></i>
+          <span><label>创建选片夹时间：</label><i class="create-time"></i></span>
+          <span class="del-complet-detail-span"><label>全部收片时间：</label><i class="complete-time"></i></span>
+
+          <span><label>原片数量：</label><i class="base-count">张</i></span>
+          <span><label>可选精修张数：</label><i class="select-count">张</i></span>
+          <span><label>定制精修：</label><i class="select-all">张</i></span>
+          <span class="del-complet-detail-span" style="display:none;"><label>其中含加修：</label><i class="add-count">张</i></span>
+
+          <span><label>摄影师精修：</label><i class="pg-select-count">张</i></span>
+<!--          <span class="del-complet-detail-span"><label>摄影师赠片</label><i>0张</i></span>-->
+
+          <span><label>加修照片价格：</label><i class="extra-price">(不允许加修)</i></span>
+          <span class="del-complet-detail-span"><label>总共额外费用:</label><i class="total">元</i></span>
+
+          <div class="checkbox" style="display:none;">
+            <a><i></i></a>
+            <u>允许摄影师公开展示精修照片</u>
+          </div>
+        </div>
+        
+        
+      </span>
+		  
+	  </div>
+	  
+	  
+	  
+	  
+	  
+    <!--顾客收片-->
+    <div class="customer-tab-center" style="display:none;">
+      <p>添加照片至您的账号</p>
+      <!--span class="customer-tab-logined"><img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">大煞笔纸哥<a class="delete-project">更换帐号</a></span-->
+      <span class="customer-tab-unlogin">您还没有登录，请先<a>登录</a>或<a>注册</a></span>
+      <button class="establish">添加并打开</button>
+    </div>
+    
+    
+    <!--顾客修改需求-->
+    <div class="bottom-tab-cneter-2 bottom-tab-cneter clearfix" style="display:none;">
+	    <ul class="pass-line" style="display:none;">
+<!--
+	      <li class="demandfix-pass pass-one pass-line-cur"><i class="pass-line-li-i"></i><p>挑选底片</p></li>
+	      <li class="demandfix-pass pass-two"><i></i><p>等待精修</p></li>
+	      <li class="pass-three"><i></i><p>收片</p></li>
+-->
+	    </ul>
+	    
+<!--
+	    <a class="demandfix-left-a">上一张</a>
+	    <a class="demandfix-right-a">下一张</a>
+	  	<button class="demandfix-buttom">
+	  	  已选精修照片
+	  	  <i>32</i>
+	  	  <a>提交</a>
+	  	  <div class="tab-demandfix-picbox">
+	  	    <h3>已选精修照片</h3>
+	  	    <ul class="demandfix-picbox-ul clearfix">
+	  	    	<li class="setProject">
+				    	<div class="demandfix-img-box setProject-img-box">
+				    	  <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+				    	  <p style="bottom: -24px;"><i></i>删除</p>
+				    	</div>
+				    </li>
+				    <li class="setProject">
+				    	<div class="demandfix-img-box setProject-img-box">
+				    	  <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+				    	  <p style="bottom: -24px;"><i></i>删除</p>
+				    	</div>
+				    </li> 
+				    <li class="setProject">
+				    	<div class="demandfix-img-box setProject-img-box">
+				    	  <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+				    	  <p style="bottom: -24px;"><i></i>删除</p>
+				    	</div>
+				    </li>
+				    <li class="setProject">
+				    	<div class="demandfix-img-box setProject-img-box">
+				    	  <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+				    	  <p style="bottom: -24px;"><i></i>删除</p>
+				    	</div>
+				    </li>
+	  	    </ul>
+	  	    <span>还有23张照片<a>查看全部</a></span>
+	  	    <p>已选精修照片<i>32</i></p>
+	  	    <a class="establish">提交给摄影师</a>    	
+	  	  </div>
+		  </button>
+-->
+		  
+	  </div>
+	  
+	  
+	  <!--摄影师上传-->
+      <div class="customer-tab-center" style="display:none;">
+        <a class="phg-select-all"><i class="phg-select-all-inone"></i>批量上传精修片</a>
+        <button class="establish" id="save">提交至顾客</button>
+      </div>
+    
+	  <!--摄影师上传单张精修-->
+	  <div class="customer-tab-center single-upload-tab" style="height:40px;display:none;">
+<!--        <a class="phg-select-all" style="display:none;">待精修照片</a>-->
+        <button class="establish">上传新版本</button>
+      </div>
+      
+	 </div>      
+   
+    <!--在线选中夹内页结束-->
+
+
+<!--创建选片夹-->
+
+<!--   <input type="button" value="删除" id="btn" />-->
+   
+    <div class="on-setProject" id="create-select-box" style="display:none;">
+      <section class="setProject-title on-title-box">
+        <h2>编辑选片夹</h2>
+        <a href="javascript:;" class="back"> &lt 关闭</a>
+        <a href="javascript:;" class="setProject-title-right del-select"><!--i class="setProject-title-right-inone"></i-->删除选片夹</a>                                                                                                                 
+      </section>
+      <div class="setProject-middle clearfix">
+        <div class="setProject-mid-left">
+          <span>选片夹名:</span><input type="text" class="name" placeholder=""><br>
+          <span>备注:</span><textarea class="textarea2 textarea remarks" placeholder="请在这里添加服务备注，本备注仅摄影师本人可见。"></textarea>
+        </div>
+        <div class="setProject-mid-right">
+          <p>顾客可选精修张数: <a class="on-editProject-cut select_lbtn"></a><input type="text" value="0" class="input_num"><a class="on-editProject_plus select_rbtn"></a></p>
+          <div class="checkbox2 checkbox is-allow-customer"><a><i></i></a>是否允许加修照片</div>
+            <div class="refer-price"><span>参考单价:</span><input placeholder="0" class="price"><i class="money">￥</i><p>元/张</p></div>
+        </div>
+        <span><div class="checkbox is-open"><a><i class="switch" style="display:block;"></i></a></div>向顾客申请公开展示其精修照片的授权<i class="question"><p class="list-qusetion-hover" style="display: none;"><i></i>出于对顾客隐私和肖像权的尊重，你需要获得其授权方可公开展示这些照片</p></i></span>  
+      </div>
+      <ul class="setProject-main-box clearfix" id="setProject-main">
+       
+        <li class="setProject-add" id="photo-add">
+          <dl>
+            <i></i>
+            <span>上传照片</span>
+            <p>不超过20M的jpg 、jpeg、png</p> 
+          </dl>
+        </li>
+        
+<!--
+        <li class="setProject">
+          <div class="setProject-img-box">
+            <div class="shadow"></div>
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <p class="delete-btn"><i></i>删除照片</p>
+            <canvas></canvas>
+          </div>
+          <h4>hshshhs</h4>
+        </li>
+-->
+                   
+      </ul>
+    </div>
+    <!--创建选片夹结束-->
+    
+    
+  <!--提交顾客-->
+  <div class="on-subCustomer main-info" style="display:block;">
+    <section class="on-title-box">
+	    <div class="on-title-left">
+  	    <h3>
+          <a href="/p/selects" class="project-list-link" style="color:#eee;"><span>选片夹</span></a>
+          <i>&gt</i>
+          <span class="select-name"></span>
+  	    </h3>
+  	    <span class="count"></span>
+        <i class="title_tip question"><p class="list-qusetion-hover" style="display: none;"><i></i>这里显示摄影师的选片夹注释，注释内容会被分享给顾客，所以如果摄影师骂人就搞笑了。字可以输入很多。字数限制最多120个字，所以现在这样的字数应该是平均字数，大概80个字。</p></i>
+      </div>
+	    <div class="on-title-right">
+	        <span class="time"></span>
+	        <a id="edit-btn" class="subCustomer-title-a" style="display:none;">
+	        <i class="subCustomer-title-i"></i>编辑</a>
+	    </div>
+	  </section>
+	  
+	  
+	  <div class="subCustomer-middle" style="display:none;">
+       
+	        <img class="avatar" src="" style="display:none;">
+	   
+	    <p style="display:none;">顾客<a href="javascript:;" class="user"></a>的选片夹</p>
+	    <div class="subCustomer-middle-radius">
+          
+	    	  <div class="radio radio2 radio-cur original-style">
+			    <a><i></i></a>
+			    <u>所有照片</u>
+              </div>
+              
+			  <div class="radio radio2 decorate-style">
+			    <a><i></i></a>
+			    <u>精修照片</u>
+			  </div>
+			  
+	    </div>
+    </div>
+    
+    
+    
+    <!--原片-->
+    <div class="subCustomer-main-box original-photo clearfix">
+
+    </div>
+    
+    
+    <div class="on-phg-truing on-demanded on-setProject pg-upload" style="display:none;">
+        <ul class="setProject-main-box clearfix">
+<!--
+          <li class="setProject">
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <h4>hshshhs</h4>
+            <button class="delete-project">上传精修片</button>
+          </li>
+          <li class="setProject">
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <h4>hshshhs</h4>
+            <button class="delete-project">上传精修片</button>
+          </li>
+          <li class="setProject">
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <h4>hshshhs</h4>
+            <button class="delete-project">上传精修片</button>
+          </li>
+          <li class="setProject">
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <h4>hshshhs</h4>
+            <button class="delete-project">上传精修片</button>
+          </li>
+          <li class="setProject">
+            <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+            <h4>hshshhs</h4>
+            <button class="delete-project">上传精修片</button>
+          </li>
+-->
+        </ul>
+      </div>
+    
+  </div>
+  
+  <!--提交顾客结束-->
+
+  <!--摄影师上传精修照片-->
+<!--
+  <div class="on-phg-truing on-demanded on-setProject pg-upload" style="display:none;">
+    <ul class="setProject-main-box clearfix">
+      <li class="setProject">
+        <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+        <h4>hshshhs</h4>
+        <button class="delete-project">上传精修片</button>
+      </li>
+      <li class="setProject">
+        <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+        <h4>hshshhs</h4>
+        <button class="delete-project">上传精修片</button>
+      </li>
+      <li class="setProject">
+        <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+        <h4>hshshhs</h4>
+        <button class="delete-project">上传精修片</button>
+      </li>
+      <li class="setProject">
+        <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+        <h4>hshshhs</h4>
+        <button class="delete-project">上传精修片</button>
+      </li>
+      <li class="setProject">
+        <img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">
+        <h4>hshshhs</h4>
+        <button class="delete-project">上传精修片</button>
+      </li>
+    </ul>
+  </div>
+-->
+  <!--摄影师上传精修照片结束-->
+    
+  <div class="alert_body3 alert_body" id="detail-pic-box" style="display:none;">
+    <div class="click-add-dem" style="margin:0 auto 180px auto;">
+      <h3><a href="javascript:;" style="display:inline-block;" class="back">&lt 关闭</a></h3>
+      <div class="add-dem-left" id="point-box">
+          <a href="javascript:;" class="mouse-left"></a>
+          <a href="javascript:;" class="mouse-right"></a>
+       <div class="point" style="width:100%;height:100%;position:absolute;display:none;">
+<!--
+           <i></i>
+           <i></i>
+           <i></i>
+-->
+       </div>
+    
+        <a class="join-aicon" href="javascript:;" style="display:none;">
+          <z></z>
+          <span>加入精修</span>
+        </a>
+        <img class="main-pic" src="" />
+          
+          
+          
+<!--
+        <div class="add-dem-right" style="position:fixed;right:8%;top:6%;">
+	      	<div class="dem-right-title clearfix">
+	      	
+	      		<div class="add-dem-checkbox checkbox" id="show-point">
+                    <a><i style="display:block;"></i></a>
+                    <u>显示标记</u>
+				</div>
+                  
+				<button class="dem-right-title-button">对比原片</button>
+	      	</div>
+-->
+<!--
+	      	<textarea class="textarea" placeholder="点击图片区域添加修片需求"></textarea>
+      	  <div class="dem-right-savbo"><button class="save">保存</button></div>
+-->
+<!--	      	<ul class="detail-point">-->
+	      	    
+<!--
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!帮我鼻子修小一点!<dl><dt>回复:</dt><dd>哈哈哈 你是要死你是要死你是要死你是要死么</dd></dl><i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+-->
+<!--	      	</ul>-->
+<!--	      	<div class="right-bot-buttons">-->
+	      		<!--button class="right-bot-add"><i></i>加入精修</button-->
+<!--	      		<a>要求重修</a>-->
+<!--	      		<a href="javascript:;">确认收片</a>-->
+<!--	      	</div>-->
+<!--        </div>	-->
+        
+        <ul class="dem-big-pic-line pass-line clearfix photo-version-box" style="bottom:-50px;">
+<!--            <li class="pass-one pass-line-cur"><p>原片</p><i class="pass-line-li-i"></i></li>-->
+<!--
+            <li class="pass-one"><p>版本1</p><i></i></li>
+            <li class="pass-one"><p>版本2</p><i></i></li>
+-->
+        </ul>
+        <div class="dem-big-pic-icobox" style="display:none;">
+            <a href="javascript:;" style="display:none;" class="back"></a>
+            <a href="javascript:;" style="display:inline-block;" class="fixpic-download-icon"></a>
+        </div>
+        <button class="dem-big-pic-check" style="display:none;">对比原片</button>      
+      </div>
+               
+    </div> 
+       
+  </div>  
+      
+      
+      
+    <div class="add-dem-right" style="position:fixed;right:8%;top:12%;display:none;">
+	      	<div class="dem-right-title clearfix">
+	      	
+	      		<div class="add-dem-checkbox checkbox" id="show-point">
+                    <a><i style="display:block;"></i></a>
+                    <u>显示标记</u>
+				</div>
+                  
+				<button class="dem-right-title-button">对比原片</button>
+	      	</div>
+
+	      	<ul class="detail-point">
+
+	      	</ul>
+
+        </div>	
+      
+  
+  
+  
+
+  <!--全部弹窗样式-->
+  <div class="alert_body" id="alert_box" style="display:none;">
+    
+    <!--选片夹取名弹窗-->
+    <div class="alert_delete_box" style="display:none;">
+      <h3>给选片夹取个名字吧<i class="message_close"></i></h3>
+      <p class="color-choose">标记：
+        <i class="alert-red-circel"></i>
+        <i class="alert-cyan-circel"></i>
+        <i class="alert-green-circel"></i>
+        <i class="alert-orange-circel"></i>
+        <i class="alert-purple-circel"></i>
+      </p>
+      <input placeholder="选片夹名">
+      <button class="delete_confirm submit" id="delete_p">保存</button>
+    </div>
+
+    <!--填写顾客手机号码-->
+    <div class="online-telephone alert_delete_box" id="online-telephone" style="display:none;">
+      <h3>填写顾客手机号码<i class="message_close"></i></h3>
+      <p>填写顾客手机号码以方便顾客校验身份</p>
+      <input placeholder="手机号码" id="phone-num" />
+      <button class="delete_confirm submit" id="phone-next">提交</button>
+      <span>提示：提交后将生成选片夹提取链接、提取码。</span>
+    </div>
+    
+    <!--删除选片夹弹窗-->
+    <div class="online-del-sein alert_delete_box" id="del-select-box" style="display:none;">
+      <h3>提示<i class="message_close"></i></h3>
+      <p>选片夹删除后，你将丢失所有已上传的照片。<br>你确定要删除这个选片夹么？</p>
+      <button class="delete-sel delete_confirm submit">删!</button>
+      <button class="delete-sel cancel">还是算了</button>
+    </div>
+
+    <!--没有保存提示弹窗-->
+    <div class="online-del-sein alert_delete_box" id="save-select-box" style="display:none;">
+      <h3>提示<i class="message_close"></i></h3>
+      <p>尚未保存，你将丢失对本选片夹所做的更改修改。<br>确定要返回选片夹列表？</p>
+      <button class="delete-sel delete_confirm submit">确定</button>
+      <button class="delete-sel cancel">取消</button>
+    </div>			
+
+    <!--提交给顾客弹窗-->
+    <div class="online-send-customer alert_delete_box" id="telephone-send" style="display:none;">
+      <h3>提交给顾客<i class="message_close"></i></h3>
+      <p>复制链接提交至顾客:</p>
+      <div class="send-customer-abox"><span class="link" id="fe_text"></span><a id="copy-link" data-clipboard-target="fe_text">复制链接</a></div>
+      <p class="send-customer-p2" style="display:none;">拍我云选片提取码:</p>
+      <div class="send-customer-abox" style="display:none;"><span class="link" id="fe_text" style="width:164px;display:inline-block;"></span><a id="copy-link" data-clipboard-target="fe_text">复制提取码</a></div>
+      <button class="delete_confirm submit" style="margin-top:114px;">关闭</button>
+    </div>
+    
+    
+    
+    <!--用户选择精修片超上限-->
+    <div class="on-alert-exceed alert_delete_box" style="display:none;">
+      <h3>用户选择的精修片超过上限<i class="message_close"></i></h3>
+      <p>上限<i>11</i>张&nbsp;&nbsp;&nbsp;&nbsp;实选<a>13</a>张</p>
+      <a>联系顾客 &gt</a>
+      <div class="edit_button_box">
+      	<button class="submit">同意修片</button>
+      	<button class="submit">退回重选</button>
+      </div> 
+    </div>
+    <!--批量上传提示-->
+    <div class="on-alert-bulk alert_delete_box" style="display: none;">
+      <h3>批量上传<i class="message_close"></i></h3>
+      <p>为保证原片和精修片能够对应，请确保精修片的文件名和原片的文件名前缀一致。</p>
+      <span><a>美女</a>.jpg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>美女</a>修改.jpg<i></i></span>
+      <button class="submit">上传</button>
+    </div>
+    
+    <!--批量上传添加照片-->
+    <div class="on-alert-bulk alert_delete_box single-upload" style="display: none;">
+      <h3>单张上传<i class="message_close"></i></h3>
+      <div class="alert-bulk-picBox" style="cursor:pointer;">
+        <i class="alert-bulk-picBox-i"></i> <!--hover状态 class:alert-bulk-picBox-ihover-->
+        <span class="upload">上传照片</span> 
+        <span class="loading" style="display:none;">
+            <img src="/static/images/thumbnails/loading.gif" width="50" />
+        </span>
+        <img style="display:none;" class="main-single-img">
+      </div>
+      <input type="file" id="single-upload-btn" style="display:none;"/>
+      
+      <button class="submit">确认并提交给顾客</button>
+    </div>
+    
+    <!--正在上传样式-->
+    <div class="on-alert-bulking alert_delete_box" style="display:none;">
+    	<h3><span>7</span>/9<i class="message_close"></i></h3>
+    	<ul class="setProject-main-box clearfix">
+<!--
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">  
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">  
+		    </li>
+		     <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">  
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">
+		    </li>
+		    <li class="setProject">
+		    	<img src="http://image.paiwo.co/11019/album/3d7b052eb26b6ea9856d594727930f93@!280x280">  
+		    </li>
+-->
+		    <li class="setProject-add">
+		      <dl>
+		        <i></i>
+		        <span class="bulking-span">继续上传</span>
+		        <p>不超过20M的jpg 、jpeg、png</p>	
+		      </dl>
+		    </li>   
+	    </ul>
+	    <button class="submit">保存</button>
+    </div>
+
+    <!--精修片下载-->
+    <div class="alter-download alert_delete_box" style="display:none;">
+      <h3>下载精修片<i class="message_close"></i></h3>
+      <div class="alter-download-com">
+        <div class="download-checkbox checkbox"><a><i></i></a></div>
+			  <span class="download-com-title">普通</span>
+			  <span>适合手机观看</span>
+      </div>
+      <div class="alter-download-high alter-download-com">
+        <div class="download-checkbox checkbox"><a><i></i></a></div>
+			  <span class="download-com-title">高清</span>
+			  <span>适合手机观看</span>
+      </div>
+      <div class="alter-download-ori alter-download-com">
+        <div class="download-checkbox checkbox"><a><i></i></a></div>
+			  <span class="download-com-title">原片</span>
+			  <span>适合手机观看</span>
+      </div>
+      <button class="submit">确认下载</button>
+    </div>
+
+    <!--细节大图-->
+      
+      
+      
+      
+      
+      
+    
+    <!--细节大图结束-->
+
+   
+    <!--细节精修图-->
+      
+    <!--细节精修图结束-->
+
+  </div>
+      
+      
+      
+
+  
+  
+  
+  </div>
+  
+   <!--消息提示-->
+<div class="setting_succeed"></div>
+ <!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+{% block cloud-login-box %}
+{% include "../cloud-login-box.html" %}
+{% end %}
+
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/lib/ZeroClipboard.min.js"></script>
+{% block cloud_common_js %}
+{% include "../cloud_common_js.html" %}
+{% end %}
+<script src="/static/js/cloud/selectUpload.js"></script>
+<script src="/static/js/cloud/pgSelectInner.js"></script>
+<!--<script src="/static/js/minjs/pgSelectInner0605.js"></script>-->
+ 
+
+</body>
+</html>

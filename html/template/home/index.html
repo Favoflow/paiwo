@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>拍我网</title>
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+	{% block commoncss %}
+    {% include "../commoncss.html" %}
+    {% end %}
+    <link rel="stylesheet" href="/static/css/store.css" />
+	<link rel="stylesheet" href="/static/css/index.css" />
+	<!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+
+ <!--browse update-->
+ {% block update_notice %}
+ {% include "../update_notice.html" %}
+ {% end %}
+ 
+<div class="setting_succeed"></div>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+ {% block top_bar %}
+ {% include "../top_tab.html" %}
+ {% end %}
+<span class="header-banner-pos"></span>
+ <div id="main_box">
+	<!--顶部banner-->
+	<div class="header-banner">
+
+		<div class="header-banner-img">
+		    <div class="header-banner-img1">
+<!--
+		        <div class="header-banner-author">
+		            <img src="http://image.paiwo.co/10582/avatar/10877e23559bd18a7c5ae90f80496da6@25-25-3010-3010a_240w_240h.jpg">
+                <a target="_blank" href="/linchangting"><span class="stuido_header_sign">©linchangting</span></a>
+		        </div>
+-->
+		    </div>
+		    <div class="header-banner-img2">
+<!--
+		        <div class="header-banner-author">
+		            <img src="http://image.paiwo.co/100798/avatar/2baee5a3f506adacd5be90f88d09200a@426-16-1311-1311a_240w_240h.jpg">
+                    <a target="_blank" href="/1v8h1pdl"><span class="stuido_header_sign">©人质</span></a>
+		        </div>
+-->
+		    </div>
+		</div>
+		<div class="header-banner-author">
+            <div class="header-banner-author1">
+                <a href="/linchangting"><img src="http://image.paiwo.co/10582/avatar/10877e23559bd18a7c5ae90f80496da6@25-25-3010-3010a_240w_240h.jpg"></a>
+                <a target="_blank" href="/linchangting"><span class="stuido_header_sign">©linchangting</span></a>
+		    </div>
+		    <div class="header-banner-author2">
+                <a href="/1v8h1pdl"><img src="http://image.paiwo.co/100798/avatar/2baee5a3f506adacd5be90f88d09200a@426-16-1311-1311a_240w_240h.jpg"></a>
+                    <a target="_blank" href="/1v8h1pdl"><span class="stuido_header_sign">©人质</span></a>
+		    </div>
+		</div>
+		<div class="header-banner-shadow"><i></i></div>
+		<!--banner内容-->
+		<div class="header-banner-content">
+			<h2>停下啊~时光</h2>
+			<div class="header-banner-cla clearfix">
+			    <span>展示个人作品</span>
+			    <span class="header-banner-line">|</span>
+			    <span>参与主题活动</span>
+			    <span class="header-banner-line">|</span>
+			    <span>发现图文趣贴</span>
+			</div>
+            <a class="header-banner-look">立即探索</a>
+		</div>
+        
+        <div class="header-arrow"><i class="down-arrow"></i></div>
+	</div>
+	<!--顶部banner end-->
+
+	<div class="index-main">
+	
+	
+	   
+		
+		<!--画廊gallery-->
+		<div class="index-gallery">
+			<style type="text/css">
+				.index-gallery-shadow a.copyright_photog {
+					position: absolute;
+					left: 8px;
+					bottom: 0px;
+					font-size: 12px;
+					color: #d8d6d0;
+					line-height: 30px;
+				}
+			</style>
+			<h3 class="index-part-tit index-gellery-tit"><a href="/gallery">画廊Gallery</a></h3>
+			
+			
+			<ul class="gallery-classify-txt clearfix">
+                <li class="gallery-cla-rec"><a href="/gallery" onclick="store.set('index_from','1')">推荐</a></li>
+                <li class="gallery-cla-hot"><a href="/gallery" onclick="store.set('index_from','2')">热门</a></li>
+                <li class="gallery-cla-new"><a href="/gallery" onclick="store.set('index_from','3')">新作</a></li>
+                <!-- <li>潜力</li> -->
+            </ul>
+			
+			
+
+
+			<div class="index-gallery-picshow">
+			
+				<ul class="clearfix">
+					<li id="people_tag">
+						<div class="picshow_box picshow_box1" width="420"></div>
+						<div class="index-gallery-shadow">
+							<span>人像</span>
+							<a class="copyright_photog" href="/iazeros">©海螺壳Azeros</a>
+						</div>
+					</li>
+					<li id="japan_tag">
+						<div class="picshow_box picshow_box6" width="205"></div>
+						<div class="index-gallery-shadow">
+							<span>日系</span>
+							<a class="copyright_photog" href="/uplusky">©UPLUSKY天天</a>
+						</div>
+					</li>
+					<li id="wb_tag">
+						<div class="picshow_box picshow_box3" width="420"></div>
+						<div class="index-gallery-shadow">
+							<span>黑白</span>
+							<a class="copyright_photog" href="/reallove999">©上海酷子</a>
+						</div>
+					</li>
+					<li id="goods_tag">
+						<div class="picshow_box picshow_box8" width="205"></div>
+						<div class="index-gallery-shadow">
+							<span>东西</span>
+							<a class="copyright_photog" href="/lekui">©乐葵</a>
+						</div>
+					</li>
+					<li id="emotion_tag">
+						<div class="picshow_box picshow_box4" width="205"></div>
+						<div class="index-gallery-shadow">
+							<span>情绪</span>
+							<a class="copyright_photog" href="/brendawang">©黑白之舞</a>
+						</div>
+					</li>
+					<li id="street_tag">
+						<div class="picshow_box picshow_box7" width="205"></div>
+						<div class="index-gallery-shadow">
+							<span>人文</span>
+							<a class="copyright_photog" href="/jameswu">©JamesWoo</a>
+						</div>
+					</li>					
+					<li id="kid_tag">
+						<div class="picshow_box picshow_box5" width="420"></div>
+						<div class="index-gallery-shadow">
+							<span>儿童</span>
+							<a class="copyright_photog" href="/feixiang">©摄影师飞翔</a>
+						</div>
+					</li>
+					<li id="view_tag">
+						<div class="picshow_box picshow_box2" width="280"></div>
+						<div class="index-gallery-shadow">
+							<span>风景</span>
+							<a class="copyright_photog" href="/huhan">©寒哥</a>
+						</div>
+					</li>					
+				</ul>	
+				
+			</div>
+
+			<a class="index-more-content" href="/gallery">更多精彩内容</a>
+
+		</div>
+		<!--画廊gallery end-->
+
+				<!--集市Bazzar-->
+		<div class="index-bazzar">
+			
+			<h3 class="index-part-tit index-bazzar-tit"><a href="/market">集市Bazzar</a></h3>
+
+ 			<div class="banner_box_form clearfix" id="banner_box_form">
+  				<ul class="banner_box_buttons">
+  				  <li id="banner_sel_type">
+  					  <span>你想拍什么？</span>
+  					  <i></i>
+  					  <dl class="banner_select">
+  							<dd data-code="1">人像摄影</dd>
+  							<dd data-code="2">婚纱摄影</dd>
+  							<dd data-code="3">婚礼跟拍</dd>
+  							<dd data-code="4">家庭儿童</dd>
+  							<dd data-code="5">旅行跟拍</dd>
+  							<dd data-code="6">商业服务</dd>
+  							<dd data-code="7">其他</dd>
+  					  </dl>
+  				  </li>
+  				  <li id="banner_sel_area">
+  					  <input id="area_input" placeholder="你想在哪拍？" data-code="">
+  					  <dl class="banner_select_area">
+  					  </dl>
+  				  </li>
+  				</ul>
+  				<button class="banner_submit submit">为我推荐摄影师</button>  
+  		   </div>
+  		</div>
+		<div class="index-bazzar-phers">
+			<h3>拍我入驻摄影师</h3>
+			<ul class="clearfix"></ul>
+			<a class="index-more-content" href="/market">去集市看看</a>
+		</div>
+		<!--集市Bazzar end-->
+
+		<!--拍格志pagazine-->
+		<div class="index-pagazine">
+			<h3 class="index-part-tit index-pagazine-tit"><a href="/pagazine">拍格志Pagazine</a></h3>
+			<div class="index-pagazine-banner">
+			    <a href="/pocket/132456" class="pagazine-banner-link">
+                    <div class="pagazine-bigpic" style="background-image: url(http://image.paiwo.co/12092/album/45971142a4137bd43c3ccd8e5e12741b);"></div>
+                    <div class="pagazine-banner-content"></div>
+                    <div class="pagazine-tit-box" style="width:682px;">
+                        <p class="pagazine-list-tit">大光圈易上瘾 试用适马35mm f1.4 Art</p>
+                        <i class="pagazine-bottom-line" style="width:622px;display:none;"></i>
+                        <p class="pagazine-tit-auth" style="display:none;"></p>
+                    </div>
+				</a>
+			</div>
+			<div class="index-pagazine-list">
+				<ul class="clearfix">
+					<li>
+                       <a href="javascript:;">
+                            <div class="pagazine-list"></div>
+                            <div class="pagazine-list-shadow"></div>
+                            <p class="pagazine-list-tit"></p>
+						 </a>
+					</li>
+					
+					<li>
+                       <a href="javascript:;">
+                            <div class="pagazine-list"></div>
+                            <div class="pagazine-list-shadow"></div>
+                            <p class="pagazine-list-tit"></p>
+                        </a>
+					</li>
+					
+					<li>
+                       <a href="javascript:;">
+                            <div class="pagazine-list"></div>
+                            <div class="pagazine-list-shadow"></div>
+                            <p class="pagazine-list-tit"></p>
+				       </a>
+					</li>
+					
+				</ul>
+			</div>
+
+			<a class="index-more-content" href="/pagazine">更多精彩内容</a>
+
+		</div>
+		<!--拍格志pagazine end-->
+		
+		
+		 <!--摄影师们-->
+		<div class="index-phers">
+			<h3 class="index-part-tit index-phers-tit"><a href="javascript:;">摄影师们Photographers</a></h3>
+			<div class="lib-box">
+				<div class="phers-tab">
+					<a class="most-popu active" href="javascript:;">最人气</a>
+					<a class="most-active" href="javascript:;">最活跃</a>
+					<a class="most-files" href="javascript:;">新上传</a>
+				</div>
+				<div class="phers-box">
+					<div class="phers-box-div clearfix">
+						<ul class="index-phers-list clearfix" id="most_popu_ul"></ul>
+						<ul class="index-phers-list clearfix" id="most_acti_ul"></ul>
+						<ul class="index-phers-list clearfix" id="most_file_ul"></ul>
+						<ul class="index-phers-list clearfix" id="most_popu2_ul"></ul>
+					</div>
+			    </div>
+			</div>	
+		</div>
+		<!--摄影师们 end-->
+
+		
+
+		<!--活动events-->
+		<div class="index-events">
+
+			<h3 class="index-part-tit index-events-tit"><a href="javascript:;" style="cursor:default;">活动Events</a></h3>
+
+			<div class="index-events-list">
+			
+				<ul class="clearfix">
+				
+					<li>
+					    <a href="http://weibo.com/5359657938/Cjtk7w3zc" target="_blank">
+                            <div class="activity-list activity-list5"></div>
+                            <div class="events-list-card">
+                                <h3>拍我系列影展-刘丹</h3>
+                                <span>06/8-06/14</span>
+                            </div>
+						</a>
+					</li>
+					
+					<li>
+					    <a href="/byxz" target="_blank">
+                            <div class="activity-list activity-list4"></div>
+                            <div class="events-list-card">
+                                <h3>“拍我青春”毕业季写真活动</h3>
+                                <span>05/21-06/14</span>
+                            </div>
+						</a>
+					</li>
+					
+					<li>
+					    <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDM5NjM5OA==&mid=205162351&idx=1&sn=8f3844078aafff723e1d55231889e12a&scene=18#rd" target="_blank">
+                            <div class="activity-list activity-list3"></div>
+                            <div class="events-list-card">
+                                <h3>大疆“角度”航拍摄影沙龙</h3>
+                                <span>04/22</span>
+                            </div>
+						</a>
+					</li>
+					
+					<li>
+					    <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDM5NjM5OA==&mid=204347699&idx=1&sn=fb47d5f105d4c6399a82245d478ad70c&scene=18#rd" target="_blank">
+                            <div class="activity-list activity-list1"></div>
+                            <div class="events-list-card">
+                                <h3>拍我网适马Art系列镜头深度体验</h3>
+                                <span>01/30 - 03/20</span>
+                            </div>
+						</a>
+					</li>
+										
+				</ul>
+				
+			</div>
+			 <a class="index-more-content" href="/activity">更多活动</a> 
+			
+			
+		</div>
+		<!--活动events end-->
+	</div>
+	{% block foot %}
+  	{% include "../foot.html" %}
+  	{% end %}
+</div>
+<div class="message-box"></div>
+<div id="shadow_box"></div>
+
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+
+<script src="/static/js/minjs/index0922.js"></script>
+<!--
+<script src="/static/js/index/index_view.js"></script>
+<script src="/static/js/index/index_help.js"></script>
+<script src="/static/js/index/index_data.js"></script>
+<script src="/static/js/index/index_controller.js"></script>
+-->
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+
+</body>
+</html>

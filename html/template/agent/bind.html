@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>绑定</title>
+</head>
+<body>
+
+	<div id="status">{{ state }}</div>
+	<div id="name">{{ nick }}</div>
+	<div id="error">{{ error }}</div>
+	
+<script>
+window.onload = function(){
+    var text = document.getElementById('status').innerHTML;
+	var name = document.getElementById('name').innerHTML;
+	var error = document.getElementById('error').innerHTML;
+	if(opener){
+        opener.doBind(text, name, error);
+	}
+ }
+</script>
+
+</body>
+</html>

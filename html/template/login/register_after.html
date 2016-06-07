@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册-推荐</title>
+    <link rel="stylesheet" href="/static/css/com/reset.css">
+    <link rel="stylesheet" href="/static/css/com/base.css">
+    <link rel="stylesheet" href="/static/css/reg_after.css">
+    <link rel="stylesheet" href="/static/css/jquery.Jcrop.min.css">
+</head>
+<body>
+   <div class="backs"></div>
+  
+   <!--注册成功-->
+    <div class="setting-mes">
+        <i class="forgetbox_i" id="name_close" style="display:none"></i>
+        <h2 class="reg-success">
+            <i></i>
+            <span>注册成功!</span>
+       </h2>
+       <p class="setting-compe">继续完善个人资料</p>
+       <ul class="reg-suc-input">
+           <li>
+                <h4 class="setting-part-tit">昵称：</h4>
+                <input class="information_ul_nametext" type="text">
+                <i class="error-i"></i>
+                <span class="error-name">昵称已存在</span>
+           </li>
+           <li>
+                <h4 class="setting-part-tit">性别：</h4>
+                <div class="radio"><a></a><u>男</u></div>
+                <div class="radio"><a></a><u>女</u></div>
+           </li>
+       </ul>
+       <!--启用状态：setting-next-allow-->
+       <a class="setting-next setting-next-forbid" id="f_next">下一步</a>
+    </div>
+
+    <!--上传头像成功-->
+    <div class="setting-mes" style="display:none">
+        <i class="forgetbox_i" id="ava_close" style="display:none"></i>
+        <h2 class="reg-upava-tit">上传头像</h2>
+         <p class="reg-ava-err">
+       </p>
+        <div class="reg-upava">
+           <span class="reg-upava-l">
+                <span class="pre-wrap">
+                      <img src="http://image.paiwo.co/0" id="pre_head" style="width: 95px; height: 95px;">
+               </span>
+               <span class="user-name"></span>
+           </span>
+           <span class="reg-upava-r">
+
+                        <i></i>
+            </span>
+            <span class="re-upload" style="display:none">重新上传</span>
+        </div>
+       <!--启用状态：setting-next-allow-->
+       <a class="setting-next setting-next-allow" id="sava_head">下一步</a>
+    </div> 
+    
+    <!--推荐关注-->
+    <div class="setting-rec" style="display:none">
+        <h2 class="setting-rec-tit">推荐关注</h2>
+        <div class="setting-rec-main">
+         
+        </div>
+           <a class="setting-rec-change" href="javascript:;"><i></i>换一批</a>
+        <a class="setting-next setting-next-forbid setting-next-allow" href="/" id="setting-end">完成</a>
+    </div>
+    
+    <div id="file-wrap" style="display:none"><input type="file" id="tar-file" accept="image/jpg,image/png,image/jpeg"></div>
+    
+    <script src="/static/js/lib/jquery-2.1.4.min.js"></script>
+    <script src="/static/js/lib/jquery.tmpl.min.js"></script>
+    <script src="/static/js/com/jquery.Jcrop.min.js"></script>
+    <script src="/static/js/com/common.js"></script>
+    <script src="/static/js/login/reg_help.js"></script>
+    <script src="/static/js/login/reg_app.js"></script>
+</body>
+</html>

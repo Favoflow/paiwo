@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图文展示</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+    {% block commoncss %}
+    {% include "../commoncss.html" %}
+    {% end %}
+    <link rel="stylesheet" href="/static/css/com/bigPic.css" />
+    <link rel="stylesheet" href="/static/css/pocdetail.css" />
+    <link rel="stylesheet" href="/static/css/store.css">
+</head>
+<body>
+        
+    {% block top_bar %}
+    {% include "../top_tab.html" %}
+    {% end %}
+    
+    {% block side %}
+    {% include "../side.html" %}
+    {% end %}
+    <div class="message-box"></div>
+
+    <!--底部导航条-->
+    <div class="pocket-tip">
+      <a class="pocket-go-top" style="display:none"></a>
+      <a class="pocket-edite" style="display:none"></a>
+      <a class="pocket-delet"  style="display:none"></a>
+<!--      <a class="pocket-showbig"></a>-->
+    </div>
+
+    <!--侧边栏按钮-->
+    <ul class="push_button">
+      <li class="navi-one"></li>
+      <li class="navi-two"></li>
+      <li class="navi-three"></li>
+    </ul>
+    
+     <div id="shadow_box"></div>  
+    <!--<div class="back_color"></div>-->
+     <div id="main_box">
+    <!-- banner -->
+    <div class="pocket-header">
+        <div class="pocket-header-back" style="background-image:url()"></div>
+        <div class="pocket-header-shadow"><i></i></div>
+        <div class="pocket-header-tit">
+            <h2></h2>
+            <h3></h3>
+        </div>
+    </div>
+   
+    <!-- 用户信息 -->
+    <div class="pocket-user-info clearfix">
+        <a href="javascript:;" class="pocket-user-ava" target="_blank"><img src=""></a>
+        <div class="pocket-user-name">
+            <a href="" target="_blank"></a>
+            <span class="put-time"></span>
+        </div>
+        <div class="studio_cieclebox">
+            <button class="cieclebox_concen"><i></i>已关注</button>
+            <button class="cieclebox_message" title="私信">私信</button>
+        </div>
+    </div>
+
+    <div class="content">
+       
+       
+       
+    </div>
+    <!-- 热度球 -->
+    <div class="pocket-hot">
+        <p class="pocket-hot-ch">热 度</p>
+        <span class="pocket-hot-num"></span>
+    </div>
+
+    <!--评论-->
+    <div class="big_photo_comment">
+       
+       
+        <ul class="photo_comment_tab">
+            <li class="comment_tab_buttons">
+                <button class="tab_buttons_left"><i class="pocket-like"></i><span>喜欢</span></button>
+                <button class="tab_buttons_right"><i class="pocket-rec"></i><span>推荐</span></button>
+                <button class="bigpic-star-icon" title="收藏"><i></i></button>
+            </li>
+            <li class="comment_tab_coll"> <a href="javascript:;" style="display:none;">收藏</a></li>
+            <li class="comment_tab_share">
+                <span>分享/</span>
+                <a class="tab_share_weibo"></a>
+                <a class="tab_share_wechat"></a>
+                <a class="tab_share_moments" style="display:none"></a>
+                <a class="tab_share_qq" style="display:none"></a>
+                <a class="tab_share_qzone"></a>
+            </li>
+        </ul>
+        <div class="comment_content_input">
+            <input id="reply_text" class="send-text">
+            <button id="send_reply">评论</button>
+        </div>
+        
+        <div id="comment-wrap">
+
+        
+        </div>
+
+        
+        
+    </div>
+        {% block foot %}
+        {% include "../foot.html" %}
+        {% end %}
+   </div>
+      
+    <!--微信二维码-->
+<!--    <div class="wechat_box" style="visibility: hidden;" id="wexchat"><img width="200" src=""></div>-->
+    <div class="wechat_box" id="wexchat">
+        <span>“扫一扫” 分享到微信</span>
+        <div class="wechat_main"><img width="200" src=""/></div>
+     </div>
+    {% block message %}
+    {% include "../paiwoMessage.html" %}
+    {% end %}
+  
+  
+  
+    {% block paiwoPhoto %}
+    {% include "../paiwoPhoto.html" %}
+    {% end %}
+  
+   {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+   
+    
+    
+    <div class="back" id="promnt">
+        
+        <div class="message">
+            <h3>删除<img width="12" height="12" src="/static/images/icon/close12.png" id="close_btn"></h3>
+            <div class="mes-line">确定要删除此图文吗?</div>
+            <span class="mes-cel">取消</span>
+            <span class="mes-btn">确定</span>
+        </div>
+        
+    </div>
+    
+    
+    
+   
+    <script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/jquery.tmpl.min.js"></script>
+    <script src="/static/js/com/jquery.md5.js"></script>
+    {% block commonjs %}
+    {% include "../commonjs.html" %}
+    {% end %}
+    
+    
+    <script src="/static/js/pocket/display2.js"></script>
+    <script src="/static/js/pocket/display.js"></script>
+</body>
+</html>

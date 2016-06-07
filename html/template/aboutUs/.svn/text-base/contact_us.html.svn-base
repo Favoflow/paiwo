@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们 - 拍我网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+     {% block commoncss %}
+     {% include "../commoncss.html" %}
+     {% end %}
+     <style>
+        .contact_list{
+            width: 1090px;
+            margin: 50px auto;  
+        }
+        #main_box{
+            height: calc(100% - 60px);
+        }
+    </style>
+</head>
+<body>
+  {% block side %}
+  {% include "../side.html" %}
+  {% end %}
+  <!--侧边栏按钮-->
+  <ul class="push_button">
+    <li class="navi-one"></li>
+    <li class="navi-two"></li>
+    <li class="navi-three"></li>
+  </ul>
+  {% block top_bar %}
+  {% include "../top_tab.html" %}
+  {% end %}
+   
+   
+   <div id="main_box">
+    <div class="contact_list">
+
+        <ul>
+            <li>杭州捕光捉影科技有限公司</li>
+            <li>地址：杭州市下城区朝晖路203号深蓝广场写字楼1702</li>
+            <li>联系人：陈浙涛 </li>
+            <li>联系电话：13656687791</li>
+        </ul>
+
+    </div>
+   
+   </div>
+   
+  <div id="shadow_box"></div>
+  {% block message %}
+  {% include "../paiwoMessage.html" %}
+  {% end %}
+  <div class="setting_succeed"></div>
+  {% block login-box %}
+  {% include "../login-box.html" %}
+  {% end %}
+  
+  <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+  <script src="/static/js/com/jquery.tmpl.min.js"></script>
+  <script src="/static/js/com/jquery.md5.js"></script>
+  {% block commonjs %}
+  {% include "../commonjs.html" %}
+  {% end %}
+</body>
+</html>

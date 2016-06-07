@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的人像摄影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+  <title>关于我们 - 拍我网</title>
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <link rel="stylesheet" href="/static/css/about0313.css">
+  <style>
+      
+      
+  </style>
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+ {% block side %}
+  {% include "../side.html" %}
+  {% end %}
+  <!--侧边栏按钮-->
+  <ul class="push_button">
+    <li class="navi-one"></li>
+    <li class="navi-two"></li>
+    <li class="navi-three"></li>
+  </ul>
+  {% block top_bar %}
+  {% include "../top_tab.html" %}
+  {% end %}
+  <div id="main_box">
+    <div class="about-con">
+      <h1 class="aboutus">About Us</h1>
+      <p class="about-slogan">拍我网（paiwo.co）是杭州捕光捉影科技有限公司旗下的互联网创业项目。</p>
+      <p class="about-slogan">杭州捕光捉影科技有限公司（The Light Chasers Inc.）是创立于2014年的互联网创业公司，公司现驻杭州。捕光捉影人是一群心怀梦想包含情怀的八五后，这些二货们咬着牙拼了命想要证明给世界看看我们到底能在互联网技术和摄影艺术的交叉口干点什么名堂出来。</p>
+      <p class="about-slogan">想知道我们都是谁？哼，难道我会告诉你们有来自红衫资本的合伙人么？难道我会告诉你们有来自中建九局的项目副总么？难道我会告诉你们有来自Amazone的云计算事业部负责人么？难道我会告诉你们有来自于Ammunation的首席用户体验设计师么？难道我会告诉你们有来自于Tumbler的整个前端团队么？难道我会告诉你我们有AnolarJS的原始开发核心成员么？我们不会，因为我们不是。</p>
+      <p class="about-slogan">以下是拍我网核心团队成员，无图无真相：</p>
+      <div class="team-members">
+        <ul>
+          <li>徐润</li>
+          <li>陈浙涛</li>
+          <li>张子枭</li>
+          <li>张榆炜</li>
+          <li>杜景宇</li>
+          <li>于格瑞</li>
+          <li>陈彦成</li>
+          <li>丁烜靖</li>
+          <li>余佳</li>
+        </ul>
+      </div>
+    </div> 
+    
+    <div class="contact-us"><a href="/contact" target="_blank">联系我们</a></div>
+      
+      
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+  </div>
+  <div class="back_color"></div>
+  <div id="shadow_box"></div>
+  
+  {% block message %}
+  {% include "../paiwoMessage.html" %}
+  {% end %}
+  <div class="setting_succeed"></div>
+  {% block login-box %}
+  {% include "../login-box.html" %}
+  {% end %}
+  <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+  <script src="/static/js/com/jquery.tmpl.min.js"></script>
+  <script src="/static/js/com/jquery.md5.js"></script>
+  {% block commonjs %}
+   {% include "../commonjs.html" %}
+   {% end %}
+	<script>
+	var setM = null;
+	function showMessage(content){
+		clearTimeout(setM);
+		$('.setting_succeed').html(content).animate({top:0}, 400, function(){
+				setM = setTimeout(hideMessage, 1800);
+
+		});
+	}
+
+	function hideMessage(){
+		$('.setting_succeed').animate({top:'-40px'},400);
+	}
+
+	</script>
+</body>
+</html>

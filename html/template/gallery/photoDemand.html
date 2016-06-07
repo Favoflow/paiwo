@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN">
+<head>
+<title>需求 - 拍我网</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <link rel="stylesheet" href="/static/css/mincss/photo_demand0320.css">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+  {% block side %}
+  {% include "../side.html" %}
+  {% end %}
+
+  {% block top_bar %}
+  {% include "../top_tab.html" %}
+  {% end %}
+  <!--侧边栏按钮-->
+  <ul class="push_button">
+    <li class="navi-one"></li>
+    <li class="navi-two"></li>
+    <li class="navi-three"></li>
+  </ul>
+  <div id="main_box">
+  <div class="yuepai_main_bigbox">
+    <div class="yuepai_main">
+      <h1>请告诉我们你想找什么样的摄影师？</h1>
+      <ul class="yuepai_main_content">
+        <li class="photo_main_type">
+		      <span><i class="key">*</i>拍摄类型:</span>
+          <dl class="yuepai_main_inputs" id="photo_type">
+          	<dd data-code="1">婚纱</dd><!--鼠标点击后 class: yuepai_main_inputs_dd_clicked -->
+          	<dd data-code="2">写真</dd>
+          	<dd data-code="3">婚礼</dd><!--同上-->
+          	<dd data-code="4">儿童</dd>
+          	<dd class="other" data-code="5"><input placeholder="其他" id="other_type"></dd>
+          </dl>
+          <!--填写错误信息提示-->
+          <p class="error_tip">
+            <i></i>
+            <span>请选择拍摄类型或在“其他”中输入</span>
+          </p>
+        </li>
+        <li class="photo_main_obj">
+          <span><i class="key">*</i>拍摄对象:</span>
+          <dl class="yuepai_main_checkbox">
+            <!--点击之后i:display:block-->
+            <dd class="checkbox" data-code="m"><a><i></i></a><u>先生</u></dd>
+            <dd class="checkbox" data-code="w"><a><i></i></a><u>小姐</u></dd>
+            <dd class="checkbox" data-code="o"><a><i></i></a><u>老人家</u></dd>
+            <dd class="checkbox" data-code="c"><a><i></i></a><u>小孩</u></dd>
+            <dd class="checkbox" data-code="f"><a><i></i></a><u>全家福</u></dd>
+          </dl>
+          <!--填写错误信息提示-->
+          <p class="error_tip">
+            <i></i>
+            <span>请选择拍对象</span>
+          </p>
+        </li>
+        <li class="photo_main_area">
+          <span><i class="key">*</i>拍摄地点:</span>
+          <!--地区的下拉菜单-->
+          <div class="yuepai_main_select" id="area_output">
+            <div class="select" id="sel_area">
+			        <i>请选择</i>
+              <dl class="place_select">
+              	<dd data-code="01-00-00-00">海外</dd>
+              	<dd data-code="02-00-00-00">国内</dd>
+              </dl>
+            </div>
+            <div class="select" id="sel_prov">
+				      <i>请选择</i>
+              <dl class="place_select"></dl>
+            </div>
+            <div class="select" id="sel_city">
+			       <i>请选择</i>
+              <dl class="place_select">
+              </dl>
+            </div>
+          </div>
+          <p class="error_tip_long error_tip">
+            <i></i>
+            <span>请选择详细拍摄地点，以便我们为您挑选摄影师</span>
+          </p>
+        </li>
+        <li class="photo_main_time">
+          <span><i class="key">*</i>拍摄时间:</span>
+          <div class="yuepai_main_timeselect select">
+		        <i data-code="">请选择拍摄时间</i>
+            <dl class="timeselect_select">
+              <dd data-code="1">一周内</dd>
+              <dd data-code="2">一个月内</dd>
+              <dd data-code="3">三个月内</dd>
+              <dd data-code="4">其他</dd>  
+            </dl>
+          </div>
+          <!--填写错误信息提示-->
+          <p class="error_tip">
+            <i></i>
+            <span>请选择拍摄时间</span>
+          </p>
+        </li>
+        <li class="photo_main_budget">
+          <span><i class="key">*</i>大致预算:</span>
+          <dl class="yuepai_main_money yuepai_main_inputs">
+            <dd><input placeholder="￥" id="budget_start"></dd>
+            <a>至</a>
+            <dd><input placeholder="￥" id="budget_end"></dd>
+          </dl>
+          <!--填写错误信息提示-->
+          <p class="error_tip">
+            <i></i>
+            <span>请填写完整预算区间</span>
+          </p>
+        </li>
+        <li class="yuepai_main_albumli">
+          <span>参考收藏夹:</span>
+          <dl class="yuepai_main_albums yuepai_main_inputs">
+          <!--<dd class="main_albums_show">
+                <img><img><img><img>
+                <p>sss</p>
+              </dd>-->
+            <dd class="main_albums_add"><i></i></dd>
+          </dl>
+        </li>
+        <li class="yuepai_main_textarea">
+          <span>具体要求:</span>
+          <textarea class="textarea" placeholder="在这里描述拍摄的具体要求" id="demand_describe"></textarea>
+        </li>
+        <li class="yuepai_main_qq">
+          <span>QQ:</span>
+          <input class="yuepai_main_inputtext Tinput" placeholder="请输入您的QQ" id="qq">
+        </li>
+        <li class="photo_main_tel">
+          <span><i class="key">*</i>电话:</span>
+          <input class="yuepai_main_inputtext Tinput" placeholder="请输入您的电话" id="tel">
+          <!--填写错误信息提示-->
+          <p class="error_tip">
+            <i></i>
+            <span>请填写联系电话以方便与您联系</span>
+          </p>
+        </li>
+        <li class="yuepai_main_wechat">
+          <span>微信:</span>
+          <input class="yuepai_main_inputtext Tinput" placeholder="请输入您的微信" id="wechat">
+        </li>
+      </ul>
+      <button class="submit_button submit">提交需求</button>
+      <button class="reset_button submit">重新提交</button>
+      <footer class="yuepai_main_footer">
+        <div class="yuepai_connect">
+          <img src="/static/images/foot-images/paiwocode.jpg">
+          <h3>您也可以联系拍我公众号"捕光捉影"</h3>
+          <i>或 拨打拍我网官方服务热线：</i>
+          <p>400-00-<i>72496</i></p>
+        </div>
+        <ul class="yuepai_tel">
+          <li>
+            <h4>7</h4>
+            <span><i>P</i>QRS</span>
+          </li>
+          <li>
+            <h4>2</h4>
+            <span><i>A</i>BC</span>
+          </li>
+          <li>
+            <h4>4</h4>
+            <span>GH<i>I</i></span>
+          </li>
+          <li>
+            <h4>9</h4>
+            <span><i>W</i>XYZ</span>
+          </li>
+          <li>
+            <h4>6</h4>
+            <span>MN<i>O</i></span>
+          </li>
+        </ul> 
+      </footer>
+    </div>
+  </div>
+  {% block foot %}
+  {% include "../foot.html" %}
+  {% end %}
+	</div>
+	<div id="shadow_box"></div>
+	<div class="back_color"></div>
+ 	
+  <!--收藏夹弹窗-->
+  <div class="store_box" style="display:none">
+    <h3 class="store_title">选择收藏夹</h3>
+    <em></em>
+    <div class="store_contet">
+      <div class="store_album">
+        <!--<img class="store_album_img" src="" width="144" height="144" data=""-->
+      </div>
+      <div class="store_album_selected">
+        <div class="store_album_input select">请选择一个收藏夹</div>
+        <button class="store_album_input_none">创建第一个收藏夹</button>
+      </div>
+      <ul class="store_album_select">          
+         <!--input class="store_select_text" type="text" placeholder="新收藏夹名">
+         <button class="store_select_button_none">创建</button-->
+      </ul>
+      <div class="store_album_button">
+        <button class="store_button_submit submit">选择</button>
+        <button class="store_button_cancel cancel">取消</button>
+      </div>
+      </div>
+  </div>  
+
+  <div class="mask"></div>
+    <div class="mask2"></div>
+    <div class="message-box"></div>
+    <div class="alert_edit_box" style=" display: none;">
+	  <h3>提交新订单<img width="12" height="12" id="cancel_edit" src="/static/images/icon/close12.png"></h3>
+	  <div class="alert_add_content">将创建一个新的拍我需求订单，原有订单将被取消</div>
+	  <div class="edit_button_box">
+		<button class="delete" id="delete_btn">确定</button>
+		<button class="confirm" id="edit-save">取消</button>
+	  </div>
+	</div>
+	
+   {% block message %}
+   {% include "../paiwoMessage.html" %}
+   {% end %}
+
+   {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+  <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+  <script src="/static/js/com/jquery.tmpl.min.js"></script>
+  <script src="/static/js/com/jquery.md5.js"></script>
+  <script src='/static/js/com/LocationSearch.js'></script>
+  {% block commonjs %}
+   {% include "../commonjs.html" %}
+   {% end %}
+  <script src="/static/js/minjs/demand0313.js"></script>
+</body>
+</html>

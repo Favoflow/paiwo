@@ -1,0 +1,75 @@
+ <footer class="pg_list_foot">
+  <div class="pglist_foot_main">
+    <h2 class="pg_foot_logo">
+      <i></i>
+      <span>最具格调的自由摄影师平台</span>
+    </h2>
+    <dl class="pg_list_about">
+      <dt><img src="/static/images/foot-images/about_us.png" alt="关于我们"></dt>
+      <dd><a href="/about">关于我们</a></dd>
+      <dd><a href="/protocol">条款与隐私</a></dd>
+      <dd><a href="mailto:help@paiwo.co">建议反馈</a></dd>
+      <dd><a href="/employ" target="_blank">加入我们</a></dd>
+    </dl> 
+    <dl class="pg_list_contact">
+      <dt><img src="/static/images/foot-images/contact_us.png" alt="联系我们"></dt>
+      <dd><a href="http://www.weibo.com/paiwoco" target="_blank">新浪微博</a></dd>
+      <dd><a href="https://www.facebook.com/paiwo.co" target="_blank">Facebook</a></dd>
+      <dd><a href="https://twitter.com/paiwo_co" target="_blank">twitter</a></dd>
+    </dl>
+    <dl class="pg_list_nav">
+      <dt><img src="/static/images/foot-images/sitemap.png" alt="网站地图"></dt>
+      <dd><a href="/gallery" target="_blank">首页</a></dd>
+      <dd><a href="/gallery" target="_blank">画廊</a></dd>
+      <dd><a href="/pagazine" target="_blank">拍格志</a></dd>
+      <dd><a href="/market" target="_blank">集市</a></dd>
+<!--      <dd><a href="/demand" target="_blank">提交订单</a></dd>-->
+      <dd><a href="/biz" target="_blank">商业服务</a></dd>
+      <dd><a href="/activity/sigma" target="_blank">活动</a></dd>
+    </dl>
+    <dl class="pg_list_gizmos">
+      <dt><img src="/static/images/foot-images/gizmos.png" alt="下载"></dt>
+      <dd><a href="/gizmos/lightroom">Lightroom插件下载</a></dd>
+    </dl>
+    <div class="pg_list_code">
+      <h3>拍我网官方微信：</h3>
+      <img src="/static/images/foot-images/paiwocode.jpg">
+    </div>
+  </div>
+  <div class="pg_list_copy">
+    <p>拍我网官方服务热线：400-00-72496</p>
+    <span><i class="copy">&copy;&nbsp;</i>2014 paiwo.co 版权所有 </span>
+    <a href="http://www.miitbeian.gov.cn/" class="zhejiang" target="_blank">浙 ICP 备 14026381 号-1</a>
+  </div>
+</footer>
+
+
+<!--建议反馈-->
+<!--
+<div class="feedback">
+    <a href="javascript:;" class="feedback-close"><i></i></a>
+    <h3>建议反馈</h3>
+    <div class="feedback-info">
+        <ul>
+            <li>
+                <input type="text" placeholder="你的姓名">
+            </li>
+            <li>
+                <input type="text" placeholder="邮箱地址">
+            </li>
+            <li>
+                <textarea placeholder="反馈内容"></textarea>
+            </li>
+        </ul>
+        <a class="feedback-err">
+            <i></i>
+            <span>请填写有效的邮箱</span>
+        </a>
+        <button class="submit feedback-submit" id="photog_save">保存</button>
+    </div>
+    
+    <div class="feedback-result">
+        
+    </div>
+</div>
+-->

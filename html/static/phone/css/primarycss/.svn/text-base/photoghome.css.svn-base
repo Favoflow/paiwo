@@ -1,0 +1,583 @@
+/*photog_home*/
+html,body { background: #fff;}
+.photog_home {
+  margin:40px auto 0;
+  position:relative;
+  color:#eee;
+}
+.photog_content {
+  position:relative;
+  height:4.78rem;
+  color: #eee;
+}
+.photog_over {
+  border-radius:4px 4px 0 0;
+  position:absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height:4.78rem;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.photog_over i {
+  display:block;
+  width:100%;
+  height:4.78rem;
+  background:rgba(66,66,66,0.45);
+}
+.photog_tit {
+  text-align:center;
+}
+.photog_tit img{
+  width:1.3rem;
+  height:1.3rem;
+  border-radius:50%;
+  margin-top:1.4rem;
+}
+.photog_tit span {
+  display:block;
+  max-width: 4.78rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height:0.85rem;
+  font-size:0.3rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pg_album { 
+  padding: 0 0.348rem;
+  margin-top:20px;
+  overflow:hidden;
+}
+.photog_album {
+  width:91.7%;
+  margin:0 auto;
+  overflow:hidden;
+}
+.pg_album_blank {
+  background:#fff;
+  width:48%;
+}
+.pg_album_list {
+  position:relative;
+  float:left;
+  width:48%;
+  margin-bottom:10px;
+}
+.pg_album_list a { display: block;}
+.pg_album_list:nth-child(odd) { margin-right:4%;}
+.pg_album_list img{
+  width:96%;
+  box-shadow:6px 6px #dcdcdc;
+}
+.pg_album_list h4 {
+  float:left;
+  padding-left:6px;
+  color:#686868;
+  font-size: 14px;
+  line-height: 40px;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pg_album_list i {
+  float:right;
+  color:#b6b3ad;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+/*分享以及关注功能*/
+.photog_function {
+  position:absolute;
+  left:50%;
+  bottom:-25px;
+  text-align:center;
+  margin-left: -63px;
+  z-index: 1;
+}
+.photog_function a {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius:50%;
+  background-color:#414141;
+  color: #d4d0c9;
+  margin: 0 6px;
+}
+.photog_key {
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+  text-align :center;
+  font-size  :0.256rem;
+  line-height:0.55rem;
+}
+.photog_key i {
+  padding: 0 2px;
+}
+.photog_count {
+  text-align :center;
+  line-height:0.55rem;
+  font-size  :0.256rem;
+  padding :0.8rem 0 0.65rem;
+  color :#b6b3ad;
+  background: #fff;
+}
+.photog_count span { 
+  position:relative;
+  padding-left:0.35rem;
+  width: auto;
+}
+.photog_count i {
+  position:absolute;
+  left:0;
+  top:-1px;
+  width:0.35rem;
+  height:0.55rem;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+  background-size:5.783rem auto;
+}
+.photog_count .count_line { padding-left: 0;}
+.count_coll { margin-right: 10px;}
+.count_like { margin-left: 10px;}
+.count_coll i { background-position: 0.1rem -1.957rem;}
+.count_like i { background-position:-0.67rem -1.957rem;}
+.pg_moreinfo {
+  display   :block;
+  margin-top:15px;
+  font-size :0.875rem;
+  width     :100%;
+  text-align:center;
+  color     :#eee;
+}
+
+.person-coll {
+  padding: 0 0.37rem;
+  background: #fff;
+}
+
+/*
+.pg_info{
+  position:relative;
+  height: 1.22rem;
+  width: 4.348rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: end;
+  box-align: end;
+}
+.tit_line {
+  display: inline-block;
+  width: 0.326rem;
+}
+.pg_info li {
+  width: 0.8rem;
+  height: 0.77rem;
+  font-size: 0.34rem;
+  color:#b6b3ad;
+  text-align:center;
+  line-height: 0.77rem;
+}
+
+.pg_info .pg-info-cur span{ color: #ff475c}
+.pg_info .pg_border {
+  position:absolute;
+  width: 0.8rem;
+  left: 0.979rem;
+  bottom: 0;
+  border-bottom:1px solid #ff475c;
+}
+*/
+.pg-classify{
+    position: relative;
+    height: 46px;
+    overflow: hidden;
+    margin: 0.9rem 0.348rem;
+}
+.pg-classify ul{
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+    border-width: 2px 0;
+    border-color: #B6B3AA;
+    border-style: solid;
+}
+.pg-classify li {
+    float: left;
+    width: 33.33%;
+    font-size: 16px;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    color: #212121;
+}
+.pg-cla-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33.33%;
+    height: 42px;
+    border-width: 2px 0;
+    border-color: #212121;
+    border-style: solid;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+/*性别*/
+.photog_tit i {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 10px;
+  display: inline-block;
+  background:url(/static/phone/images/spirit_mobile.svg) no-repeat;
+  background-size: 5.783rem auto;
+}
+.photog_tit .girl {
+  background-position:-3.565rem -2.06rem;
+}
+.photog_tit .boy {
+  background-position:-2.87rem -2rem;
+}
+.photog_tit .nosex {
+  background: none;
+}
+
+/*关注弹框*/
+.ifCare,.notCare {
+  display:none;
+  opacity:0;
+  position:fixed;
+  top:70px;
+  left:50%;
+  margin-left:-30px;
+  color:#dcdcdc;
+  font-size:12px;
+  width:60px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  border:1px solid #dcdcdc;
+  border-radius:4px;
+  background:rgba(255,255,255,0);
+  animation:fade 3s;
+  -webkit-animation:fade 3s;  
+}
+.notCare { width:80px; margin-left:-40px;}
+@keyframes fade {
+  from{
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+@-webkit-keyframes fade {
+  from{
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+/*摄影师简介*/
+.pg_msg { 
+  display: none;
+  background: #fff;
+}
+.pg_msg h3 {
+  text-align: left;
+  font-size: 0.348rem;
+  line-height: 0.87rem;
+  padding: 0 0.957rem;
+  color: #414141;
+}
+.pg_info_intro {
+  position: relative;
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+.pg_info_service { 
+  position: relative;
+  overflow: hidden;
+}
+.pg_info_intro .ifspread,.pg_info_service .ifspread {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 0.8rem;
+  height: 0.87rem;
+  margin: 0;
+  background: url(/static/phone/images/spirit_mobile.svg) no-repeat -3.37rem 0.38rem;
+  background-size: 5.783rem;
+}
+.pg_info_intro ul {
+  padding: 0.435rem 0.957rem;
+  color: #b6b3ad;
+  font-size: 0.261rem;
+  border-top: 1px solid #eee;
+}
+.pg_info_intro li   { 
+  line-height:0.652rem; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pg_info_intro span {
+  display:inline-block;
+  margin-right: 5px;
+}
+.pg_info_intro i    { color:#686868;}
+.pg_info_intro em { color:#dd2338;}
+.pg_info_intro .pg_info_desc {
+  height: auto;
+  white-space: normal;
+  margin-bottom: 0.109rem;
+}
+.pg_info_desc:after {
+   display: block;
+   content: "";
+   clear: both;
+}
+.pg_info_desc span{
+  float: left;
+  line-height: 0.435rem;
+}
+.pg_info_desc p {
+  float: left;
+  color: #686868;
+  width: 5.217rem;
+  line-height: 0.435rem;
+}
+.pg_info_contact {
+  border-top: 1px solid #eee;
+}
+/*摄影师服务信息*/
+.pg_info_service {
+  border-top: 1px solid #eee;
+  background: #fff;
+  font-size: 0.261rem;
+  text-align: center;
+}
+.pg_info_service dt {
+  line-height:0.565rem;
+  text-align:center;
+  color: #b6b3aa;
+}
+.pg_info_service dd{
+  display: inline-block;
+  color:#8a8880;
+  text-align: center;
+  padding: 0 0.196rem;
+  line-height: 0.522rem;
+}
+.pg_info_service dl {
+  margin-bottom: 0.348rem;
+}
+.pg_service_content {
+  padding: 0.39rem 0.957rem;
+  border-top: 1px solid #eee;
+}
+
+/*主页*/
+.pg_all {
+    padding: 0 0.348rem;
+    background: #fff;
+}
+.pg_all_type { margin-bottom: 8px;}
+.pg_all_top {
+    height: 36px;
+    line-height: 36px;
+}
+.pg_all_top:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.pg_all_tit {
+    float: left;
+    font-size: 14px;
+    color: #212121;
+}
+.pg_all_time {
+    float: right;
+    font-size: 12px;
+    color: #8A8880;
+    padding-right: 1%;
+}
+.pg_all_shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 8.15rem;
+/*    background: rgba(255,255,255,.2);*/
+    background: rgba(0,0,0,.2);
+    z-index: 2;
+}
+.pg_all_author {
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.pg_all_author span {
+    display: inline-block;
+    margin-right: 5px;
+    color: #8a8880;
+    font-size: 14px;
+}
+.pg_all_author .pg_author_name { color: #414141;}
+
+.pg_pocket_tit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    z-index: 3;
+}
+.pg_pocket_tit h3 {
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+    line-height: 44px;
+}
+.pg_pocket_tit h4 {
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.pg_pocket_main {
+    position: relative;
+    width: 100%;
+    height: 8.15rem;
+/*    background: url(/static/images/photo4.jpg) no-repeat center center;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.pg_photo_main img {
+    width: 100%;
+    height: auto;
+}
+
+.pg_album_name {
+    float: left;
+    margin-left: 5px;
+    color: #8A8880;
+    font-size: 14px;
+    line-height: 36px;
+}
+.pg_pubalbum_cover {
+    float: left;
+    width: 74%;
+}
+.pg_pubalbum_main:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.pg_pubalbum_cover img {
+/*    width: 5.5rem;*/
+/*    height: 5.5rem;*/
+    width: 100%;
+}
+.pg_pubalbum_img { 
+    float: right;
+/*    width: 1.78rem;*/
+    padding-left: 1%;
+    width: 25%;
+}
+.pg_pubalbum_img li {
+    display: block;
+/*    width: 1.78rem;*/
+/*    height: 1.78rem;*/
+/*    background: #eee;*/
+/*    margin-bottom:0.087rem;*/
+    margin-bottom: 3.1%;
+    
+}
+.pg_pubalbum_img li:last-child{ margin-bottom: 0;}
+.pg_pubalbum_img img { 
+/*    width: 100%;*/
+    width: 97%;
+}
+/*发布的影集只有1张照片*/
+.pg_pubalbum_one .pg_pubalbum_cover { width: 100%;}
+.pg_pubalbum_one .pg_pubalbum_cover img { 
+    width: 7.45rem;
+    height: 7.45rem;
+}
+.pg_pubalbum_one .pg_pubalbum_img { display: none;}
+/*动画*/
+
+/*淡入动画*/
+.fadeshow {
+  animation:fadeShow 0.3s forwards;
+  -webkit-animation:fadeShow 0.3s forwards;
+}
+@keyframes fadeShow {
+  from{
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadeShow {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+/*淡出动画*/
+.fadeout {
+  animation:fadeout 0.3s forwards;
+  -webkit-animation:fadeout 0.3s forwards;
+}
+@keyframes fadeout {
+  from{
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}

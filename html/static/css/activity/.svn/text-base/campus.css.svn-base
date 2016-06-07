@@ -1,0 +1,307 @@
+#main_box {
+    padding-top: 0;
+}
+.pg_list_foot { display: none;}
+.campus-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/activity/telephoto.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 688px;
+}
+.campus-txt {
+/*    position: absolute;*/
+    position: relative;
+/*    top: 0;*/
+/*    left: 50%;*/
+/*    margin-left: -595px;*/
+    width: 1090px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.campus-t {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 215px;
+    height: 190px;
+}
+.campus-t img {
+    width: 215px;
+    height: auto;
+}
+.campus-b {
+    position: absolute;
+/*    bottom: 158px;*/
+    top:-116px;
+    left: 0;
+    width: 338px;
+}
+.campus-b img {
+    width: 338px;
+    height: auto;
+}
+.campus-r {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 315px;
+}
+.campus-r img {
+    width: 315px;
+    height: auto;
+}
+
+.btn-box{
+    position: absolute;
+    top: -116px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 48px;
+    
+}
+.btn-join,.btn-show {
+   
+  
+/*    bottom: 190px;*/
+    border-radius: 4px;
+    background: rgba(0,0,0,.5);
+    font-size: 18px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn-join:hover {
+    background: rgba(0,0,0,.65);
+}
+
+.btn-join{
+    width: 160px;
+}
+
+.btn-show{
+    width: 120px;
+    margin-left: 10px;
+   
+}
+
+.btn-show a{
+   color: #e3e099;  
+}
+
+
+.campus-foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+/*    padding-top: 18px;*/
+    padding: 18px 0;
+    background: #fff;
+    z-index: 2;
+}
+.campus-foot-main {
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+}
+.campus-foot-l {
+    float: left;
+    width: 590px;
+/*    width: 800px;*/
+    
+    
+}
+.campus-foot-l li:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.campus-foot-l i {
+    float: left; 
+    width: 18px;
+    font-size: 12px;
+    line-height: 22px;
+}
+.campus-foot-l span {
+    float: left;
+    width: 570px;
+    color: #414141;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.campus-foot-r {
+    float: right;
+    width: 360px;
+}
+.campus-foot-r h4 {
+    float: left;
+    width: 70px;
+    font-size: 14px;
+    color: #b5b5b4;
+    line-height: 22px;
+}
+.campus-foot-org {
+    float: left;
+    width: 290px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #414141;
+}
+.campus-foot-help {
+    margin-top: 14px;
+}
+.campus-foot-logo { 
+    float: left;
+    width: 260px;
+    height: 30px;
+    background: url(/static/images/activity/campus_icon.png) no-repeat center top;
+}
+
+
+/*弹框*/
+
+.campus-module{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.campus-shadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+
+.campus-topc {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 640px;
+    height: 632px;
+    border-top: 8px solid #2dd888; 
+    margin: -320px 0 0 -320px;
+    background: #fff;
+    z-index: 110;
+}
+.campus-topc-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    padding: 20px;    
+}
+.campus-topc-close i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(/static/images/spirit.svg) no-repeat 6px -1898px;
+    background-size: 800px;
+}
+.campus-topc h3 {
+    width: 600px;
+    height: 52px;
+    padding-top: 18px;
+    line-height: 48px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    font-size: 36px;
+    color: #000;
+    margin: 0 auto;
+}
+.campus-topc p {
+    width: 530px;
+    margin: 56px auto 0;
+    line-height: 32px;
+    font-size: 24px;
+    color: #8a8880;
+}
+.campus-topc dl {
+    width: 530px;
+    margin: 48px auto 0;
+}
+.campus-topc dt {
+    color: #2dd888;
+    font-size: 28px;
+    line-height: 44px;
+}
+.campus-topc dd {
+    font-size: 56px;
+    color: #212121;
+    line-height: 84px;
+}
+.campus-topc-btn {
+    width: 530px;
+    margin: 100px auto 0;
+}
+.campus-topc-btn a {
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 0;
+    text-align: center;
+    font-size: 24px;
+}
+.campus-byphone { float: left;}
+.campus-back { float: right;}
+
+
+#upload_succeed_box {
+  width: 360px;
+  height: 340px;
+  margin: -180px 0 0 -170px;
+}
+
+.success_ok .upload-succeed-box{
+    height: 350px;
+    margin: -175px 0 0 -220px;
+}
+.upload-succeed-box h3 {
+  height: 98px;
+  line-height: 98px;
+  font-size: 24px;
+  color: #323232;
+  border: none;
+}
+.upload-succeed-box h3 i {
+  display: inline-block;
+  width: 45px;
+  height: 30px;
+  background: url(/static/images/spirit.svg) no-repeat -300px -900px;
+  vertical-align: top;
+  margin-top: 33px;
+}
+.upload-succeed-box img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 7px auto;
+}
+.upload-succeed-box p {
+  line-height: 19px;
+  margin: 0 0 23px 0;
+}
+.succeed-button { width: 240px;}
+
+
+
+

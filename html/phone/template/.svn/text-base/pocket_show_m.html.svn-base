@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>图文展示 - 拍我网</title>
+    <link rel="stylesheet" href="/static/phone/css/primarycss/public/reset.css">
+    <link rel="stylesheet" href="/static/phone/css/primarycss/pocket_show.css">
+   
+</head>
+<body>
+
+<!--    <div class="sign-img" style="display:none;"></div>-->
+   
+   <div style="display:none;">
+       <img src="" class="friends-share-img">
+   </div>
+
+   <!--banner-->
+   <div class="banner-module">
+      
+<!--
+       <div class="banner-img"></div>
+       
+       <div class="banner-title">
+           <h3>从来没有想过也有一天可以是</h3>
+           <p>自由摄影师——夏目的晴haruko</p>
+       </div>
+       
+       <div class="banner-share"></div>
+-->
+       
+   </div>
+   
+   
+   <!--main-->
+   <div class="main-module">
+   
+       <!--avatar-->
+       <div class="auth-box">
+         
+              <div class="auth-avatar">
+                 <a href="" class="auth-avatar-link">
+                  <img src="" alt="">
+                 </a>
+                   <!--certificate-->
+<!--                   <i class="auth-certificate"></i>-->
+              </div>
+
+           <div class="auth-nick"><a href="javascript:;"></a></div>
+
+              <div class="auth-btn clearfix" style="display:none;">
+
+                  <a class="auth-focus"></a><a class="auth-sms"></a>
+
+              </div>
+              
+       </div>
+       
+       
+       
+       
+       <!--content-->
+       
+       
+       <div class="content-module">
+          
+           <div class="content-box">
+           
+           </div>
+           
+       </div>       
+       
+       
+   </div>
+   
+   
+
+    
+    <script src="/static/phone/js/zepto.min.js"></script>
+    <script src="/static/phone/js/primaryjs/pocket/pocket_show.js"></script>
+    
+    
+</body>
+</html>
+
+
+
+

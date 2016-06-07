@@ -1,0 +1,45 @@
+ <div class="login_module">
+  	  <div class="login_shadow"></div>
+	  <div class="login_box"  id="login_box">
+		<a class="look_look" href="javascript:;"></a>
+		<div class="login_contet">
+		  <h2 class="loginbox_logo"></h2>         
+		  <ul class="login_third_login">
+			<span class="login_inputs_title"><h6 class="inputs_title_h6">使用第三方帐号登录</h6></span>
+			<li><a class="login_qq" target="_blank" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101164290&redirect_uri=http://paiwo.co/login/qq&state=zzz"></a></li>
+			<li><a class="login_xinlang" target="_blank" href="https://api.weibo.com/oauth2/authorize?client_id=2197733404&redirect_uri=http://paiwo.co/login/weibo"></a></li>
+			  <li><a class="login_weixin" target="_blank" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd804e40c6e964035&redirect_uri=http://paiwo.co/login/weixin&response_type=code&scope=snsapi_login#wechat_redirect"></a></li>
+		  </ul>
+		  <ul class="inputs_box">
+			<li class="inputs_email">
+			  <input class="email" type="text" placeholder="手机或邮箱账号" id="login_email">
+			  <span class="email_error_em" id="login_error_email"></span>
+			  <i class="email_error_icon"></i>
+			</li>
+			<li class="password_div">
+			  <input class="password" type="password" placeholder="密码" id="login_pwd">
+			  <span class="password_error_em" id="login_error_pwd"></span>
+			  <i class="password_error_icon"></i>
+			</li>
+			<a class="login_botton submit" id="login_b">登录</a>
+		  </ul>
+	  <div class="bottom_text">
+		<a href="/password" class="forget" id="t_forget">忘记密码</a>&nbsp&nbsp&nbsp 
+		<a href="/register" class="go_register" id="t_register">没有账号？去注册»</a>
+	  </div>
+	  </div>
+	</div>  
+</div>
+
+  
+  <!--第三方登陆弹窗-->
+  <div class="third-login-shadow" style="display:none;z-index:122;">  
+  
+     <div class="online-del-sein alert_delete_box" id="third-login-box" style="display:none;">
+       <h3>提示<i class="message_close"></i></h3>
+       <p>您选择通过第三方登陆</p>
+       <button class="delete-sel delete_confirm submit">已登录</button>
+       <button class="delete-sel cancel">取消</button>
+     </div>	
+    
+   </div>

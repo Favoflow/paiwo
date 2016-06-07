@@ -1,0 +1,231 @@
+        body{
+            background-color: #fff;
+        }
+        .clearfix:after{
+            display: table;
+            content: '';
+            clear: both;
+        }
+        /*banner*/
+        .banner-module{
+            width: 100%;
+            height: 270px;
+            position: relative;
+        }
+
+        .banner-shadow{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            background:-webkit-linear-gradient(bottom, rgba(0,0,0,.4), rgba(255,255,255,0));
+            background:linear-gradient(bottom, rgba(0,0,0,.4), rgba(255,255,255,0));
+        }
+        
+        .banner-module .banner-img{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .banner-module .banner-title{
+            width: 100%;
+            position: absolute;
+            bottom: 9px;
+            left: 0;
+            color: #fff;
+        }
+        
+        .banner-module .banner-share{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: url(/static/phone/images/svg-dou-wap.svg) no-repeat -215px 0px;
+            background-size: 380px 50px;
+        }
+        
+        .banner-module h3{
+            font-size: 20px;
+            text-align: center;
+            line-height: 31px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        
+        .banner-module p {
+            font-size: 14px;
+            text-align: center;
+            height: 21px;
+            line-height: 21px;
+            margin-top: 4px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+
+
+        
+        
+        
+        /*main*/
+        .main-module{
+            width: calc(100% - 50px);
+            padding: 0 20px 60px 20px;
+            
+        }
+        
+        .main-module .auth-box{
+            height: auto;
+            margin-top: 24px;
+            border-bottom: 1px solid #D8D6D0;
+        }
+        
+        .main-module .auth-avatar{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+        }
+        
+        .main-module .auth-avatar img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        
+        .main-module .auth-avatar .auth-certificate{
+            position: absolute;
+            margin: -60px 0px 0px 38px; 
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: url(/static/phone/images/svg-dou-wap.svg) no-repeat -77px -11px #fff;
+            background-size: 200px 65px;
+        }
+        
+        .main-module .auth-box .auth-nick{
+            width: 154px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            margin: 12px auto 10px auto;
+            font-weight:bold;
+            text-overflow:ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .main-module .auth-box .auth-nick a{
+            color: #000;
+            font-weight:bold;
+        }
+        
+        .main-module .auth-btn{
+            width: 100%;
+            height: 42px;
+            text-align: center;
+            margin: 0 auto 10px;
+        }
+        
+        .main-module .auth-btn a{
+/*            float: left;*/
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+           
+        }
+        .main-module .auth-focus{
+            border: 1px solid #2DD888;
+            background-image: url(/static/phone/images/svg-dou-wap.svg);
+            background-position: -85px 10px;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-size: 360px 56px;
+        }
+
+         .main-module .auth-focus.add-status{
+            border: 1px solid #b6b3aa;
+            background-image: url(/static/phone/images/addFriends.svg);
+            background-color: #b6b3aa;
+            background-position: -44px 10px;
+            background-size: 133px 17px;
+        }
+        
+        .main-module .auth-sms{
+            margin-left: 20px;   
+            border: 1px solid #414141;
+            background: url(/static/phone/images/svg-dou-wap.svg) no-repeat -28px 13px #fff;
+            background-size: 360px 56px;
+        }
+        
+        .main-module .content-module{
+/*            overflow: hidden;*/
+        }
+        
+        .main-module .content-module .content-box{
+            width: calc(100% + 16px);
+            overflow: hidden;
+/*            margin-left: -5px;*/
+            margin: 0 auto 0;
+            padding-top: 30px;
+            font-size: 12px;
+            color: #414141;
+        }
+        
+        .main-module .content-module .p-vir-blo{
+            float: left;
+            position: relative;
+            overflow: hidden;
+/*            margin: 8px 5px 0;*/
+            margin: 0.18rem 0.12rem 0.18rem;
+/*            font-size: 0.26rem;*/
+            font-size: 0.3rem;
+/*            line-height: 0.37rem;*/
+            line-height: 0.4rem;
+        }
+
+
+
+/*
+        .main-module .content-module .p-vir-blo.img-part{
+            margin: 16px 5px;
+        }
+
+        .main-module .content-module .p-vir-blo.text-part{
+             margin: 24px 5px;
+        }
+*/
+
+
+/*
+        .main-module .content-module .p-vir-blo div{
+            line-height: 17px;
+        }
+*/
+
+        
+        .main-module .content-module .p-vir-blo img{
+            position: absolute;
+        }
+        /*内容样式*/
+        
+        .text-center{
+            text-align: center
+        }
+        
+        .text-right{
+            text-align: right
+        }
+        
+        .text-font{
+            font-family: SimSun
+        }

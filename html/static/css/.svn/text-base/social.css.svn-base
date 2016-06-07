@@ -1,0 +1,946 @@
+.social {
+	width: 934px;
+	margin: 0 auto;
+}
+.social-main {
+	float: left;
+    margin-top: 60px;
+}
+
+/*banner*/
+.social-banner {
+	position: relative;
+	width: 600px;
+	height: 96px;
+/*
+	background: url(/static/images/social/social_banner.jpg) no-repeat;
+	background-size: cover;
+*/
+    margin-bottom: 25px;
+    
+}
+.social-join {
+    display: none;
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	width: 72px;
+	height: 24px;
+	background: #414141;
+	font-size: 12px;
+	line-height: 24px;
+	color: #fff;
+	text-align: center;
+}
+.social-join-close {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 18px;
+	height: 18px;
+	background: url(/static/images/spirit2.svg) no-repeat -47px -47px rgba(33,33,33,.6);
+}
+.social-news {
+	display: block;
+	width: 140px;
+	height: 32px;
+	margin: 12px auto 0;
+	border-radius: 16px;
+	background: #fafafa;
+	text-align: center;
+	font-size: 12px;
+	line-height: 32px;
+	box-shadow: 0 1px 2px rgba(13,5,8,.2);
+	-webkit-transition:box-shadow .3s;
+	transition:box-shadow .3s;
+}
+.social-news:hover { box-shadow: 0 1px 2px rgba(13,5,8,.4);}
+.social-news-num { color: #03c269;}
+.social-news-txt { color: #414141;}
+
+/*flow*/
+.social-flow-list { 
+	position: relative;
+	width: 600px;
+  	margin-bottom: 40px;
+}
+.social-flow-ava {
+	position: absolute;
+	top: 0px;
+	left: -52px;
+}
+.social-flow-ava img {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+}
+.social-flow-tit { line-height: 42px;}
+.social-flow-tit span {
+	float: left;
+	margin-right: 20px;
+	color: #212121;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	max-width: 130px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.social-flow-tit p {
+	float: left;
+	font-size: 14px;
+	color: #414141;
+}
+.social-flow-tit a {
+	float: left;
+	color: #5a7f88;
+	font-size: 14px;
+    font-weight: bold;
+	max-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    padding: 0 10px;
+}
+.social-flow-tit i { 
+	float: right;
+	font-size: 12px;
+	color: #8a8880;
+}
+.social-flow-area { width: 600px; }
+.ph-dete { 
+  display: block;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  line-height: 400px;
+  color: #8a8880;
+}
+.social-flow-area>a { cursor: pointer;}
+.flow-album-cover>img { cursor: pointer;}
+.flow-album-img li img { cursor: pointer;}
+.flow-album-cover {
+	position: relative;
+	float: left;
+	width: 479px;
+}
+.flow-album-cover img{
+	width: 479px;
+	height: 479px;
+}
+.flow-album-cover h4 {
+	position: absolute;
+  	right: 10px;
+  	bottom: 10px;
+  	font-weight: normal;
+  	width: 45px;
+  	height: 24px;
+  	padding-left: 9px;
+  	line-height: 24px;
+  	color: #fff;
+  	text-align: right;
+  	background: rgba(0,0,0,.5);
+  	z-index: 2;
+  	border-radius: 12px;
+  	font-size: 12px;
+}
+.flow-album-cover i {
+	float: left;
+  	width: 12px;
+  	height: 24px;
+  	background: url(/static/images/spirit2.svg) no-repeat -849px 7px;
+}
+.flow-album-cover span {
+	padding: 0 2px;
+  	float: left;
+  	width: 24px;
+  	text-align: center;
+}
+
+.social-flow-area { width: 600px; }
+.ph-dete { 
+  display: block;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  line-height: 400px;
+  color: #8a8880;
+}
+.social-flow-area>a { 
+    cursor: default; 
+    display: block;
+}
+.flow-album-cover>img { cursor: pointer;}
+.flow-album-img li img { cursor: pointer;}
+.flow-album-cover {
+	position: relative;
+	float: left;
+	width: 479px;
+}
+.flow-album-cover img{
+	width: 479px;
+	height: 479px;
+}
+.flow-album-cover h4 {
+	position: absolute;
+  	right: 10px;
+  	bottom: 10px;
+  	font-weight: normal;
+  	width: 45px;
+  	height: 24px;
+  	padding-left: 9px;
+  	line-height: 24px;
+  	color: #fff;
+  	text-align: right;
+  	background: rgba(0,0,0,.5);
+  	z-index: 2;
+  	border-radius: 12px;
+  	font-size: 12px;
+}
+.flow-album-cover i {
+	float: left;
+  	width: 12px;
+  	height: 24px;
+  	background: url(/static/images/spirit2.svg) no-repeat -849px 7px;
+}
+.flow-album-cover span {
+	padding: 0 2px;
+  	float: left;
+  	width: 24px;
+  	text-align: center;
+}
+.social-flow-album ul {
+	float: right;
+}
+.social-flow-album li { margin-bottom: 13px;}
+.social-flow-album li:nth-child(4n){ margin-bottom: 0;}
+.social-flow-album li img {
+ 	width: 110px;
+ 	height: 110px;
+ }
+ .social-flow-pocket{
+ 	position: relative;
+ 	display: block;
+ 	width: 600px;
+ 	height: 400px;
+ }
+ .social-pocket-logo {
+ 	position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  z-index: 3;
+  background: url(/static/images/spirit2.svg) no-repeat -250px -200px;
+ }
+ .social-flow-img span {
+  line-height: 400px;
+  color: #8a8880;
+  font-size: 16px;
+ }
+ .social-flow-img {
+  width: 600px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  text-align: center;
+  background-position: center center;
+ }
+ .social-flow-shadow {
+	position: relative;
+	width: 600px;
+	height: 400px;
+ }
+ .social-flow-shadow span {
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 600px;
+ 	height: 400px;
+ 	background: rgba(33,33,33,.3);
+ 	z-index: 2;
+ }
+ .social-flow-shadow img {
+ 	width: 600px;
+ 	height: 400px;
+ }
+ .social-pocket-tit {
+ 	position: absolute;
+ 	bottom: 54px;
+ 	left: 50%;
+ 	width: 316px;
+ 	margin-left:-158px; 
+ 	color: #eee;
+ 	text-align: center;
+ 	z-index: 3;
+ }
+ .social-pocket-tit h3 {
+ 	line-height: 64px;
+ 	font-size: 24px;
+ 	border-bottom: 1px dotted #eee;
+     overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+     max-width: 320px;
+     
+ }
+ .social-pocket-tit p {
+ 	line-height: 45px;
+ 	font-size: 12px;
+       overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+     max-width: 320px;
+ }
+ .social-active-img {
+  float: left;
+  width: 240px;
+  height: 240px;
+  background-image: url(/static/images/photo4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+.social-active-detail {
+  float: left;
+  width: 230px;
+  height: 170px;
+  padding: 44px 64px 24px 64px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  text-align: center;
+}
+.social-active-detail h3 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 50px;
+  color: #414141;
+  border-bottom: 1px solid #d8d6d0;
+}
+.social-active-time {
+  font-size: 12px;
+  line-height: 24px;
+  padding: 10px 0 20px;
+}
+.social-active-time span { color: #8a8880;}
+.social-active-time i { color: #414141;}
+.social-active-cond {
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #8a8880;
+}
+.social-active-cond i { 
+  position: absolute;
+  left: 1px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/spirit2.svg) -299px -349px no-repeat;
+}
+.social-look { 
+  width: 100px;
+  height: 32px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/*点赞*/
+.tab_buttons_left:before,.tab_buttons_right:before{
+/*
+  left: -9px;
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 56px;
+  top: -14px;
+  border-radius: 10px;
+  left: -9px;
+  background: #ff475c;
+  z-index: 2;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  -ms-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+*/
+}
+.tab_buttons_left:before{
+  left: -9px;
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 56px;
+  top: -14px;
+  border-radius: 10px;
+  left: -9px;
+  background: #ff475c;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  -ms-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+}
+.tab_buttons_left.liked-btn:before{
+   z-index: 2;
+  -webkit-animation: anim-moema 0.3s forwards;
+  animation: anim-moema 0.3s forwards;
+}
+
+.tab_buttons_right:before{
+ left: -9px;
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 56px;
+  top: -14px;
+  border-radius: 10px;
+  left: -9px;
+  background: #414141;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  -ms-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+
+}
+.tab_buttons_right.recd-btn:before{
+    z-index: 2;
+  -webkit-animation: anim-moema 0.3s forwards;
+  animation: anim-moema 0.3s forwards;
+}
+
+
+
+
+@-webkit-keyframes anim-moema {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes anim-moema {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+    
+    
+.social-button:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.social-button{ margin-top: 6px;}
+.social-button>a {
+  position: relative;
+  float: left;
+  width: 35px;
+  height: 28px;
+  padding-left: 27px;
+  margin-right: 6px;
+  border: 1px solid #d8d6d0;
+  line-height: 28px;
+  color: #8a8880;
+  font-size: 12px;
+  border-radius: 1px;
+  background: #fff;
+  -webkit-transition:border .3s;
+  transition:border .3s;
+}
+.social-button i {
+	position: absolute;
+	top: 7px;
+    left: 6px;
+	width: 16px;
+	height: 16px;
+}
+.social-button .liked-btn,
+.social-button .recd-btn{ color: #414141;}
+.like-btn:hover{ border-color: #ff475c;}
+.liked-btn:hover { border-color: #ff475c;}
+.rec-btn:hover { border-color: #414141;}
+.recd-btn:hover { border-color: #414141;}
+.like-btn i { background: url(/static/images/spirit2.svg) no-repeat -298px -298px;}
+.liked-btn i{ background: url(/static/images/spirit2.svg) no-repeat -248px -298px;}
+.rec-btn i { background: url(/static/images/spirit2.svg) no-repeat -398px -298px;}
+.recd-btn i { background: url(/static/images/spirit2.svg) no-repeat -348px -298px;}
+.social-rec-author {
+	float: right;
+	line-height: 30px;
+    cursor: pointer;
+}
+.social-rec-author span {
+	color: #212121;
+	font-size: 14px;
+	font-weight: bold;
+} 
+.social-rec-author a {
+	color: #212121;
+	font-size: 14px;
+	font-weight: bold;
+} 
+.social-rec-author i {
+  position: static;
+	font-size: 12px;
+	color: #8a8880;
+    margin-right: 3px;
+}
+.publish-time { 
+	float: right;
+	font-size: 12px;
+	color: #8a8880;
+	line-height: 30px;
+}
+
+/*小版块*/
+.social-part { float: right; margin-top: 60px;}
+
+/*个人信息*/
+.social-part-info {
+	position: relative;
+	width: 240px;
+	padding: 51px 0 2px;
+  	background: #fafafa;
+  	box-shadow: 1px 1px 3px rgba(13,5,9,.2);
+}
+.social-info-ava {
+	position: absolute;
+	top: -33px;
+	left: 86px;
+	width: 62px;
+	height: 62px;
+	padding: 2px;
+	border-radius: 50%;
+	box-shadow: 0 0 4px rgba(13,5,9,.3);
+}
+.social-info-ava img {
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+}
+.social-info-intro {
+	line-height: 22px;
+	text-align: center;
+}
+.social-info-name {
+	font-size: 16px;
+	color: #212121;
+	font-weight: bold;
+}
+.part-info-iden {
+	position: relative;
+	display: inline-block;
+	width: 42px;
+	height: 22px;
+	padding-left: 22px;
+	border-radius: 11px;
+	background: #d1c694;
+	font-size: 12px;
+	color: #fff;
+	text-align: left;
+    top: -2px;
+    margin-top: 7px;
+}
+.part-info-iden i {
+	position: absolute;
+	left: 5px;
+	top: 4px;
+	width: 15px;
+	height: 15px;
+	background: url(/static/images/spirit2.svg) -60px -358px no-repeat;
+}
+
+.social-info-tab { margin: 18px 0 20px 0;}
+.social-info-tab li {
+	float: left;
+	width: 78px;
+	text-align: center;
+    cursor: pointer;
+}
+.social-info-tab li:nth-child(2n){
+	border-left: 1px solid #d8d6d0;
+	border-right: 1px solid #d8d6d0;
+}
+
+.social-info-tab span {
+	color: #8a8880;
+	line-height: 22px;
+	display: block;
+}
+.social-info-tab i {
+	color: #414141;
+	line-height: 26px;
+	font-size:16px;
+}
+
+/*创建*/
+.social-create {
+	width: 240px;
+	height: 42px;
+	background: #414141;
+	margin-top: 10px;
+}
+.social-create a {
+	position: relative;
+	float: left;
+	width: 73px;
+	padding-left: 46px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 42px;
+	-webkit-transition: background .3s;
+	transition: background .3s;
+}
+.social-create i {
+	position: absolute;
+	left: 17px;
+	top: 11px;
+	width: 26px;
+	height: 22px;
+}
+.social-create-album i { background: url(/static/images/spirit2.svg) -98px -398px no-repeat;}
+.social-create-pocket i { background: url(/static/images/spirit2.svg) -146px -398px no-repeat;}
+.social-create span {
+	float: left;
+	width: 2px;
+	height: 30px;
+	margin-top: 6px;
+	background: #8a8880;
+	-webkit-transition: background .3s;
+	transition: background .3s;
+}
+.social-create a:hover { background: #2dd888;}
+.social-create:hover span { 
+	height: 42px;
+	margin-top: 0;
+	background: #2dd888;
+}
+
+/*感兴趣的人*/
+.social-interest {
+	width: 240px;
+	height: 278px;
+	background: #fafafa;
+  	box-shadow: 1px 1px 3px rgba(13,5,9,.2);
+  	margin-top: 20px;
+}
+.social-interest-tit {
+	padding: 0 15px;
+	line-height: 39px;
+	border-bottom: 1px solid #eee;
+}
+.social-interest-tit span {
+	float: left;
+	font-size: 14px;
+	color: #414141;
+}
+.social-interest-tit a {
+	position: relative;
+	float: right;
+	width: 40px;
+	padding-left: 20px;
+	color: #8a8880;
+	font-size: 12px;
+}
+.social-interest-tit i {
+	position: absolute;
+  	left: 4px;
+  	top: 12px;
+  	width: 16px;
+  	height: 16px;
+  	background: url(/static/images/spirit2.svg) -350px -50px no-repeat;
+}
+.social-interest-list li {
+	display: block;
+	width: 170px;
+	height: 50px;
+	padding: 13px 40px 16px 25px;
+	border-bottom: 1px solid #eee;
+}
+.social-interest-list li:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.social-interest-ava {
+	float: left;
+	position: relative;
+	padding: 5px 0 3px 0;
+    margin-left: 5px;
+}
+.social-interest-ava img {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+}
+.social-interest-ava i {
+	position: absolute;
+	right: -11px;
+	top: -2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: url(/static/images/spirit2.svg) 1px -349px no-repeat #fff;
+}
+.social-interest-r {
+	float: left;
+    margin-left: 33px;
+}
+.social-interest-name {
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	color: #414141;
+	font-weight: bold;
+	width: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.social-interest-add,
+.social-interest-added-2,
+.social-interest-added-4 {
+	display: block;
+	margin-top: 8px;
+	width: 78px;
+	height: 22px;
+	border: 1px solid #d8d6d0;
+	text-align: center;
+	line-height: 22px;
+	color: #414141;
+	font-size: 12px;
+}
+.social-interest-add:hover,
+.social-interest-added-2:hover,
+.social-interest-added-4:hover { border-color: #414141;}
+.social-interest-add i {
+  float: left;
+  width: 7px;
+  height: 7px;
+  margin: 7px 0 0 10px;
+  background: url(/static/images/spirit2.svg) no-repeat 0px -250px;
+}
+.social-interest-added-4 i{
+  float: left;
+  width: 10px;
+  height: 8px;
+  margin: 6px 0 0 10px;
+  background: url(/static/images/spirit2.svg) no-repeat -150px -250px;
+}
+.social-interest-added-2 i {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin: 8px -10px 0 10px;
+  background: url(/static/images/spirit2.svg) no-repeat -100px -250px;
+}
+.social-check-more {
+	position: relative;
+	display: block;
+	font-size: 12px;
+	color: #414141;
+	line-height: 32px;
+	text-align: center;
+}
+.social-check-more i {
+	position: absolute;
+	left: 148px;
+	top: 10px;
+	width: 12px;
+	height: 14px;
+	background: url(/static/images/arrow/arrow-l.png) no-repeat;
+}
+
+/*热门*/
+.social-part-hot {
+	width: 240px;
+	height: 280px;
+	background: #fafafa;
+  	box-shadow: 1px 1px 3px rgba(13,5,9,.2);
+  	margin-top: 20px;
+}
+.social-hot-tit { 
+	padding: 0 0 0 15px;
+	line-height: 40px;
+}
+.social-hot-tit:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+.social-hot-tit span {
+	float: left;
+	font-size: 14px;
+	color: #414141;
+}
+.social-hot-tit a {
+	position: relative;
+	float: right;
+	width: 40px;
+	padding-right: 20px;
+	color: #8a8880;
+	font-size: 12px;
+}
+.social-hot-tit i {
+	position: absolute;
+  	right: 7px;
+  	top: 13px;
+  	width: 12px;
+  	height: 14px;
+  	background: url(/static/images/arrow/arrow-l.png) no-repeat;
+}
+.social-hot-roll {
+	position: relative;
+	width: 240px;
+	height: 240px;
+	overflow: hidden;
+}
+.social-hot-pic {
+	position: relative;
+	display: block;
+	width: 3000px;
+	height: 240px;
+}
+.social-hot-pic:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.social-hot-pic li {
+	position: relative;
+	float: left;
+	width: 240px;
+	height: 240px;
+	cursor: pointer;
+/*	background-image: url(/static/images/photo4.jpg);*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+.social-hot-shadow {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 240px;
+	height: 240px;
+	background: rgba(13,5,9,.3);
+	z-index: 1;
+}
+.social-hot-pic span {
+	position: absolute;
+	top: 104px;
+	left: 30px;
+	width: 180px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 2;
+    text-shadow: 0 0 4px rgba(0,0,0,.4);
+}
+.social-hot-point {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 72px;
+	height: 8px;
+    padding: 22px 84px 10px;
+	z-index: 3;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.4));
+    background: -linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.4));
+}
+.social-hot-point li {
+	float: left;
+	margin: 0 5px;
+	width: 6px;
+	height: 6px;
+	background: #948e8b;
+	cursor: pointer;
+	-webkit-transform:rotateZ(45deg);
+	transform:rotateZ(45deg);
+}
+.social-hot-point .social-album-cur,
+.social-hot-point .social-pocket-cur { background: #fff;}
+.delete-img{
+    margin: 5px auto;
+    display: block;
+}
+.delete-text{
+  text-align: center;
+  color: #8a8880;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 10px;
+}
+.pocket-tip{
+  width: 40px;
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 100;
+  display: none;
+}
+.pocket-go-top{
+    background: url(/static/images/spirit.svg) no-repeat -300px -350px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.pocket-go-top:hover{
+    background:url(/static/images/pocket/go_top_hover.png);
+}
+
+.social-roll-pocket{
+    height: 180px;
+}
+
+.social-roll-pocket-shadow{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33,33,33,.3);
+}
+
+/*分类*/
+.social-flow { margin-top: 18px;}
+.social-cla {
+    display: none;
+    width: 236px;
+    margin: 34px auto 0;
+}
+.social-cla a {
+    float: left;
+    font-size: 18px;
+    color: #8a8880;
+    line-height: 32px;
+}
+.social-cla a:hover,.social-cla .social-cla-cur {
+    font-weight: bold;
+    color: #212121;
+}
+.social-cla span {
+    float: left;
+    width: 1px;
+    height: 18px;
+    background: #eeeeeb;
+    margin: 7px 29px;
+}

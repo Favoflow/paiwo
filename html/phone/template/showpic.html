@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="/static/phone/css/mincss.1.0/showpic0826.css">
+<!--
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/reset.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/public/nav.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/index.css">
+<link rel="stylesheet" href="/static/phone/css/primarycss/big_pic.css">
+-->
+<title>拍我网</title>
+</head>
+
+<body>
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+
+<!--photo-->
+<div class="photos" style="display:none">
+  
+</div>
+    
+<!--big_pic-->
+<div class="big_pic">
+  
+  <!--big_pic_main-->
+  <div class="big_pic_main">
+    <div class="big_pic_img">
+      <a class="big_show" href="javascript:;">
+        <span class="big-loading"></span>
+        <img class="show_pic" src="">
+      </a>
+      <a class="big_pic_left" href="javascript:;"><i></i></a>
+      <a class="big_pic_right" href="javascript:;"><i></i></a>
+    </div>
+    <div class="big_pic_info">
+      <ul class="more_info_main">
+        <li class="big_pic_func" style="display:none;">
+          <a href="javascript:;" class="big_pic_coll"><i></i><span>收藏</span></a>
+          <a href="javascript:;" class="big_pic_like"><i></i><span>赞</span></a>
+        </li>
+        <li class="big_pic_msg">
+          <a href="javascript:;">
+            <i>来自相册</i> 
+            <h4 class="more_info_from"></h4>
+          </a>
+        </li>
+        <li class="big_pic_ava">
+          <a class="pic_ava_link">
+            <img class="pic_ava" src="">
+            <h4 class="author"></h4>
+          </a>
+        </li>
+        <!--分享-->
+        <li class="big_pic_share">
+          <div class="spec_share_main" style="display:none;">
+              <span>分享：</span>
+              <a class="sina" href="javascript:;"><i></i></a>
+              <a class="weixin" href="javascript:;"><i></i></a>
+              <a class="friend" href="javascript:;"><i></i></a>
+              <a class="qq" href="javascript:;"><i></i></a>
+              <a class="qzone" href="javascript:;"><i></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% block comment %}
+{% include "../phone/template/comment.html" %}
+{% end %}
+  <div class="may_like">
+    <h2><span>你可能喜欢</span></h2>
+    <!--photo_data-->
+    <!--photo-->
+    <div class="like-photos">
+        <div class="photos-main">
+<!--
+          <div class="photos-list">
+            <img src="/static/phone/images/photo.jpg">
+            <div class="photog_count">
+                <span class="photo_author">大傻逼1</span>
+            </div>
+          </div>
+-->
+          
+          
+<!--
+          <div class="photos-list">
+            <img src="/static/phone/images/photo.jpg">
+            <div class="photog_count">
+                <span class="photo_author">大傻逼2</span>
+                <span class="count_coll"><i></i>22</span>
+                <span class="count_like"><i></i>66192</span>
+            </div>
+          </div>
+-->
+          
+      <!--<div class="photo_data" style="display:none;">
+        <div class="photo_main">
+          <a class="photo" href="javascript:;">
+            <img src="" class="show_img">
+          </a>
+          <div class="fix_box">
+            <a class="fix_author" href="javascript:;"></a>
+          </div> 
+        </div>
+      </div>-->
+        </div>
+    </div>
+    </div>
+  </div>
+  
+  
+  <!--foot-->
+{% block foot %}
+{% include "../phone/template/foot.html" %}
+{% end %}
+  
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/primaryjs/lib/fastclick.min.js"></script>
+<!--
+<script src="/static/phone/js/primaryjs/font.js"></script>
+<script src="/static/phone/js/primaryjs/nav.js"></script>
+<script src="/static/phone/js/primaryjs/commom.js"></script>
+<script src="/static/phone/js/primaryjs/showpic/showpic.js"></script>
+-->
+<script src="/static/phone/js/minjs.1.0/showpic0826.js"></script>
+</body>
+</html>

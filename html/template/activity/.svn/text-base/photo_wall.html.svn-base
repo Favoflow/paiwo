@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <link rel="stylesheet" href="/static/css/com/reset.css">
+    <link rel="stylesheet" href="/static/css/com/base.css">
+    <style>
+        body{
+            background-color: #ddd;
+        }
+        .photo-main{
+            width: 2000px;
+/*            width: 1200px;*/
+            height: 100%;
+            margin: 0 auto;
+        }
+        
+        .photo-list{
+            position: relative;
+            width: 384px;
+            height: 360px;
+/*
+                       
+            width: 230px;
+            height: 230px;
+*/
+            float: left;
+/*            background-color: green;*/
+/*            overflow: hidden;*/
+            position: relative;
+            z-index:1;
+        }
+        
+        .photo-list .photo-mod{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .photo-list img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .photo-list .photo-pai{
+/*            display: none;*/
+            position: relative;
+            width: 100%;
+            height: 100%;
+/*            background:url(spirit.svg) no-repeat -200px -400px; */
+            background-color: #fff;
+/*
+             -webkit-transform: perspective(1500px) rotateY(90deg);
+           transform: perspective(1500px) rotateY(90deg);
+*/
+            display: none;
+             
+        }
+        
+        .hide{
+           -webkit-transform: perspective(1500px) rotateY(90deg);
+           transform: perspective(1500px) rotateY(90deg);
+        }
+        
+        .photo-list .logo{
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -60px;
+            margin-top: -30px;
+            width: 120px;
+            height: 60px;
+            background:url(/static/images/spirit.svg) no-repeat -397px -793px;
+            background-size: 800px;
+            
+        }
+        
+        .in {
+/*
+           -webkit-animation-delay:2s;
+           animation-delay:2s;
+*/
+          
+           -webkit-animation:rotateOut .5s linear;
+           animation:rotateOut .5s linear;
+        }	
+        
+        
+        .out {
+          -webkit-animation: rotateIn .5s linear;
+           animation: rotateIn .5s linear;
+        }
+
+
+       
+
+/*
+        #login_box.out {
+            display:block;
+           -webkit-animation: rotateIn .5s linear;
+            animation: rotateIn .5s linear;
+        }	
+
+        #register_box.in {
+            display:block;
+           -webkit-animation:rotateOut .5s linear;
+           animation:rotateOut .5s linear;
+        }
+        
+*/
+        @-webkit-keyframes rotateIn {
+            0% {
+                -webkit-transform: perspective(1500px) rotateY(0deg);
+            }
+            100% {
+                -webkit-transform: perspective(1500px) rotateY(90eg);
+            }
+        }
+
+        @-webkit-keyframes rotateOut {
+            0% {
+                -webkit-transform: perspective(1500px) rotateY(-90eg);
+            }
+            100% {
+                -webkit-transform: perspective(1500px) rotateY(0deg);
+            }
+        }
+
+        @keyframes rotateIn {
+            0% {
+                -webkit-transform: perspective(1500px) rotateY(0deg);
+                transform: perspective(1500px) rotateY(0deg);
+            }
+            100% {
+                -webkit-transform: perspective(1500px) rotateY(90deg);
+                transform: perspective(1500px) rotateY(89deg);
+            }
+        }
+
+        @keyframes rotateOut {
+            0% {
+                -webkit-transform: perspective(1500px) rotateY(-90deg);
+                transform: perspective(1500px) rotateY(-89deg);
+
+            }
+            100% {
+                -webkit-transform: perspective(1500px) rotateY(0deg);
+                transform: perspective(1500px) rotateY(0deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="photo-main clearfix">
+       
+        <div class="photo-list" data-code="0">
+          
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+           
+              
+        </div>
+        
+        <div class="photo-list" data-code="1">
+          
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+              
+        </div>
+        
+        <div class="photo-list" data-code="2">
+
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>   
+            
+        </div>
+        
+        <div class="photo-list" data-code="3">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>  
+              
+        </div>
+        
+        <div class="photo-list" data-code="4">
+           
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div> 
+              
+        </div>
+        
+        <div class="photo-list" data-code="5">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>   
+           
+        </div>
+        
+        <div class="photo-list" data-code="6">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+              
+        </div>
+        
+        <div class="photo-list" data-code="7">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+              
+        </div>
+        
+         <div class="photo-list" data-code="8">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+               
+        </div>
+        
+        <div class="photo-list" data-code="9">
+            
+          <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+             
+        </div>
+        
+        <div class="photo-list" data-code="10">
+           
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div> 
+              
+        </div>
+        
+        <div class="photo-list" data-code="11">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>   
+           
+        </div>
+        
+         <div class="photo-list" data-code="12">
+
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>   
+            
+        </div>
+        
+        
+         <div class="photo-list" data-code="13">
+          
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>
+              
+        </div>
+        
+         <div class="photo-list" data-code="14">
+            
+           <div class="photo-mod">
+               <img src="" alt="">  
+           </div>
+           
+           <div class="photo-pai">
+               <span class="logo"></span>
+           </div>  
+              
+        </div>
+        
+    </div>
+    
+    <script src="/static/js/lib/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/com/common.js"></script>
+    
+    <script>
+        
+        
+        var albumIdArr = [];
+        var albumTmpArr = [];
+        var photoList = [];
+        var step = 0;
+        var photoTmpList = [];
+        var nowPhotoList = [];
+        
+        function albumList(fn){
+  
+            base.ajax({
+
+               data:{
+                        'method': 'paiwo.content.album_list.get',
+                        'host_domain':'zipaizipai',
+                        'page_no':1,
+                        'page_size':5000
+                    },
+
+                success:function(data){
+                    console.log('in');
+                    if(data.error_id == 0){
+                        var list = data.response.album_list;
+                        for(var i=0;i<list.length;i++){
+                            albumTmpArr.push(list[i].album_id);
+                        }
+                        
+                        fn && fn();
+//                        console.log(albumIdArr);
+                    }
+
+                }
+
+            });   
+        }
+        
+         albumList();
+        
+         function getAlbum(id){
+
+                base.ajax({
+                    data:{
+                        'method': 'paiwo.content.album.get',
+                        'album_id': id
+                    },
+                    success:function(data){
+                        if(data.error_id == 0){
+                            var response = data.response,
+                                list = response.photo_list;
+    //                        photoList.push(response.photo_list);
+
+                            console.log(list);
+
+    //                        photoList.concat(list);
+                            for(var i=0;i<list.length;i++){
+                                photoList.push(list[i]);
+                                photoTmpList.push(list[i]);
+                            }
+
+    //                        console.log(photoList);
+                        }
+                    }
+                });
+
+            }
+
+
+
+        for(var i=0;i<albumTmpArr.length;i++){
+            getAlbum(albumTmpArr[i]);
+            albumIdArr.push(albumTmpArr[i]);
+        }
+        
+        albumTmpArr = [];
+        
+       
+        
+        
+        
+        //获取当前所有照片
+        function getPhototList(){
+            
+            var tmpArr = [];
+            
+            function findArr(id,arr){
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i]==id){
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+
+            albumList(function(){
+                
+                console.log('数组'+albumTmpArr);
+                
+
+                for(var i=0;i<albumTmpArr.length;i++){
+                    if(!findArr(albumTmpArr[i],albumIdArr)){
+                        tmpArr.push(albumTmpArr[i]);
+                    }
+                }
+
+                console.log(tmpArr);
+                
+                for(var i=0;i<tmpArr.length;i++){
+                    getAlbum(tmpArr[i]);
+                    albumIdArr.push(tmpArr[i]);
+                }
+
+                albumTmpArr = [];
+                
+            });
+            
+            
+            
+        
+        }
+        
+        
+       
+        
+//        console.log(photoList);
+        var tmp = photoList.splice(0,15);
+//        console.log(aaa);
+        
+        var sonNode = $('.photo-main .photo-list');
+            $('.photo-main .photo-list').each(function(index,ele){
+//                console.log(index);
+                $(this).find('.photo-mod img').attr({
+                    'src':'http://image.paiwo.co/'+tmp[index].photo_path+'@!560x560',
+                    'data-code':tmp[index].photo_id
+                });
+            });
+       
+        
+        
+        var first = $('.photo-list').eq(0);
+           
+        function rotate(node){
+            var timer1 = null,
+                timer2 = null;
+            
+            node.find('.photo-mod').addClass('out');
+            
+            setTimeout(function(){
+               node.find('.photo-mod').hide(); 
+               node.find('.photo-pai').addClass('in').show();
+//               node.find('.photo-pai').removeClass('in out');
+            },500);
+            
+        
+            setTimeout(function(){
+                node.find('.photo-mod').removeClass('out');
+                node.find('.photo-pai').removeClass('in');
+            },1000);
+            
+            setTimeout(function(){
+                node.find('.photo-pai').addClass('out');
+//                node.find('.photo-mod').addClass('in').hide();
+//                node.find('.photo-mod').show();
+//                node.find('.photo-pai').removeClass('in');
+            },2000);
+            
+            
+            setTimeout(function(){
+                node.find('.photo-pai').removeClass('out').hide();
+                node.find('.photo-mod').addClass('in').show();
+            },2500);
+            
+        }
+            
+//        rotate(first);
+        
+//        setInterval(rotate,3000);
+        
+        var oldIndex = 0;
+        
+        function getIndex(){
+            
+            var listLen = $('.photo-main').children().length,
+                arrTmp = [],
+                index = rnd(1,16)-1,
+                nodeIndex = 0;
+               
+            
+            function rnd(n,m){
+                return parseInt(Math.random()*(m-n))+n;
+            }
+            
+            for(var i=0;i<listLen;i++){
+                arrTmp.push(i);
+            }
+            
+            
+            
+            function findNow(id,arr){
+                for(var i=0;i<arr.length;i++){
+                    if(id==arr[i].photo_id){
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+            
+            arrTmp.sort(function(){ return (0.5 - Math.random())})
+            
+            nodeIndex = arrTmp[index];
+//            return nodeIndex;
+        
+            
+            if(nodeIndex!=oldIndex){
+                var node = $('.photo-main .photo-list').eq(nodeIndex),
+                    zIndex = parseInt(node.css('z-index'));
+                
+                
+                if(typeof photoList[0]!='undefined'){
+                    var imgPath ='http://image.paiwo.co/'+photoList[0].photo_path+'@!560x560';
+                    var img_code = photoList[0].photo_id;
+                    var oImg = new Image();
+                    oImg.src = imgPath;
+                    oImg.onload =  function(){
+                        console.log('imgPath');
+                        node.css('z-index',zIndex++);
+                        setTimeout(function(){
+                            node.find('.photo-mod img').attr({
+                                'src':imgPath,
+                                'data-code':img_code
+                            });
+                        },500);
+                        rotate(node);
+                        oldIndex = nodeIndex;
+                        photoList.splice(0,1);
+                    };
+                    step = 0;
+                }else{
+                    
+                    node.css('z-index',zIndex++);
+                    rotate(node);
+                    oldIndex = nodeIndex;
+                    getPhototList();
+                    step++;
+                    if(step==5){
+                        console.log('ini-random');
+                        nowPhotoList = [];
+                        $('.photo-main img').each(function(index,ele){
+                            var code = $(this).attr('data-code'),
+                                path = $(this).attr('src');
+                            nowPhotoList.push({
+                                'photo_id':code,
+                                'photo_path':path
+                            });
+                            
+                        });
+                        
+                        for(var i=0;i<10;i++){
+                            var _index = rnd(1,photoTmpList.length-1)-1;
+                            
+                            
+                             if(!findNow(photoTmpList[_index].photo_id,nowPhotoList)){
+                                 photoList.push(photoTmpList[_index]);
+                                 nowPhotoList.push(photoTmpList[_index]);
+                             }else{
+                                 i--;
+                             }
+                            
+                        }
+                        step = 0;
+                    }
+                    
+                    
+                }
+               
+                
+                
+                
+//                console.log('zIndex ', ++zIndex);
+                    
+                
+                
+                
+//                    console.log(nodeIndex);
+//                    console.log(node.attr('data-code'));
+                
+            }else{
+                getIndex();
+                return;
+            }
+            
+        
+        }
+        
+//        3000
+        
+        
+//        setInterval(getPhototList,300000);
+        setInterval(getIndex,6000);
+        
+        
+        
+        
+    </script>
+</body>
+</html>

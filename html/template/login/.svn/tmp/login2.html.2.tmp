@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	<title>拍我网 - 最具格调的自由摄影师平台</title>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的自由摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+    <link href="/static/css/com/reset.css" rel="stylesheet">
+    <link href="/static/css/com/base.css" rel="stylesheet">
+    <link href="/static/css/register.css" rel="stylesheet">
+    <!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	</head>
+	
+<body>
+  <!--cdcsdcds-->
+  <div class="content" id="background"></div>
+   
+	<!--登录注册内容box-->
+    <div id="content_box">
+    	<!--登录框old-->
+  		<div class="login_box"  id="login_box" style="display:none;">
+  		  <a class="look_look" href="/">先逛逛»</a>
+  		  <a class="be_photoer" href="/iamphotog" style="display:none">立刻成为摄影师</a>
+	      <div class="login_contet">
+	        <h1 class="loginbox_h1_text">最具格调的自由摄影师平台 － 免费为您推荐自由摄影师</h1>
+	        <h2 class="loginbox_logo"></h2>	        
+	        <ul class="login_third_login">
+	          <span class="login_inputs_title"><h6 class="inputs_title_h6">使用第三方帐号登录</h6></span>
+	          <li><a class="login_qq" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101164290&redirect_uri=http://paiwo.co/login/qq&state=zzz"></a></li>
+	          <li><a class="login_xinlang" href="https://api.weibo.com/oauth2/authorize?client_id=2197733404&redirect_uri=http://paiwo.co/login/weibo"></a></li>
+              <li><a class="login_weixin" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd804e40c6e964035&redirect_uri=http://paiwo.co/login/weixin&response_type=code&scope=snsapi_login#wechat_redirect"></a></li>
+	        </ul>
+	        <ul class="inputs_box">
+	          <li class="inputs_email">
+	            <input class="email" type="text" placeholder="邮箱账号" id="login_email">
+	            <span class="email_error_em" id="login_error_email"></span>
+	            <i class="email_error_icon"></i>
+	          </li>
+	          <li class="password_div">
+	            <input class="password" type="password" placeholder="密码" id="login_pwd">
+	            <span class="password_error_em" id="login_error_pwd"></span>
+	            <i class="password_error_icon"></i>
+	          </li>
+	          <a class="login_botton submit" id="login_b">登录</a>
+	        </ul>
+			<div class="bottom_text">
+        <a class="forget" id="t_forget">忘记密码</a>&nbsp;&nbsp;&nbsp; 
+        <a class="go_register" id="t_register">没有账号？去注册»</a>
+			</div>
+		  </div>
+		</div>
+    <!--登录框-->
+		<div class="register_box" id="register_box" style="display:none;">
+		  <a class="look_look" href="/">先逛逛»</a>
+	      <a class="be_photoer" href="/iamphotog" style="display:none">立刻成为摄影师</a>
+	      <div class="login_contet">
+	        <h1 class="loginbox_h1_text">最具格调的人像摄影平台 － 免费为您推荐自由摄影师</h1>
+	        <h2 class="registbox_logo loginbox_logo"></h2>
+	        <ul class="login_third_login">
+	          <span class="login_inputs_title"><h6 class="inputs_title_h6">使用第三方帐号注册</h6></span>
+	          <li><a class="login_qq" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101164290&redirect_uri=http://paiwo.co/login/qq&state=zzz"></a></li>
+	          <li><a class="login_xinlang" href="https://api.weibo.com/oauth2/authorize?client_id=2197733404&redirect_uri=http://paiwo.co/login/weibo"></a></li>
+              <li><a class="login_weixin" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd804e40c6e964035&redirect_uri=http://paiwo.co/login/weixin&response_type=code&scope=snsapi_login#wechat_redirect"></a></li>
+	        </ul>
+	        <ul class="login_inputs">
+	          <li class="inputs_email">
+	           <input class="email" type="email" id="r_email" placeholder="输入手机或邮箱">
+	            <span class="email_error_em" id="r_error_email"></span>
+	            <i class="email_error_icon"></i>
+	          </li>
+	          <li class="password_div">
+	            <input class="password" type="password" id="r_pwd" placeholder="设置6-15位的字符密码">
+	            <span class="password_error_em" id="r_error_pwd"></span>
+	            <i class="password_error_icon"></i>
+	          </li>
+	          <li class="ver_code">
+	            <input class="vcode" type="text" id="r_verify" placeholder="输入验证码">
+	            <span class="verify_error_em" id="r_error_verify"></span>
+			          <i class="verify_error_icon"></i>
+                <img id="r_image"/>
+                <a class="ver-code-num" id="r_phone" style="display:none">获取验证码</a>
+	          </li>
+	          <a class="login_botton submit"id="register_b">注册</a>
+	        </ul>
+	        <p class="my-font">我已阅读并同意 <a class="agreement" target="_blank" href="/protocol">拍我网用户服务协议</a> </p>
+	        <a class="go_login" id="t_login">已有账号？马上登录»</a>
+	      </div>
+        </div>
+			<!--注册验证邮箱-->
+			<div id="mailbox" style="display:none" class="mailbox">
+			  <i class="mail_close" id="register_close"></i>
+			  <h3 class="v-email forget-title">验证邮箱</h3>
+			  <p><span class="mail-span"></span></p>
+			  <a class="mail-btn login_botton submit" target="_blank">进入邮箱</a>
+	          <div class="mailbox-line"></div>
+			  <ul class="bp_compelet_ul">
+	          <li>没有收到验证邮件？</li>
+	          <li>建议您检查邮件垃圾箱</li>
+	          <li id="resend_p"><a id="resend_mail">重新发送验证邮件</a></li>
+	          <li>若仍未收到，请联系客服<a class="mail-url" href="javascript:void(0);" onclick="window.location.reload(false);">或更换另一个邮箱地址注册</a></li>
+	          </ul>
+		  </div>
+		  
+		  <!--忘记密码框  手机-->
+		  <div class="forgetbox-phone" style="display:none">
+              <i class="forgetbox_i"></i>
+              <h3 class="forget-title">找回密码</h3>
+              <ul class="forgetbox_ul">
+                <li class="inputs_email">
+                  <input class="forget_email" placeholder="手机号码">
+                </li>
+                <li class="ver_code">
+                  <input class="forget_vcode" type="text" placeholder="输入验证码">
+                  <a class="ver-code-num ver-code-none">获取</a>
+                </li>
+                <a class="login_botton submit">确定</a>
+              </ul>
+              <a class="forget-way">通过邮箱找回</a>
+          </div>
+		  <!--忘记密码框  邮箱-->
+	    <div id="forgetbox" class="forgetbox" style="display:none">
+		  <i class="forgetbox_i" id="forget_close"></i>
+		  <h3 class="forget-title">找回密码</h3>
+          <i class="forgetbox_return" id="forget_back"></i>
+          <ul class="forgetbox_ul">
+            <li class="inputs_email">
+              <input class="forget_email" type="email" id="f_email" placeholder="邮箱地址">
+              <span class="email_error_em" id="f_error_email"></span>
+              <i class="email_error_icon"></i>
+            </li>
+            <li class="ver_code">
+              <input class="forget_vcode" type="text" id="f_verify" placeholder="输入验证码">
+              <span class="verify_error_em" id="f_error_verify"></span>
+			  <i class="verify_error_icon"></i>
+              <img id="f_image"/>
+            </li>
+            <a class="login_botton submit" id="reset_email">下一步</a>
+          </ul>
+          <a class="forget-way">通过手机找回</a>
+	    </div>
+		  <!--忘记密码验证邮箱-->
+	    <div id="mailbox2" style="display:none" class="mailbox">
+		  <i class="forgetbox_i" id="forget_verify_close"></i>
+		  <h3 class="v-email forget-title">验证邮箱</h3>
+		  <p><span class="mail-span"></span></p>
+		  <a class="mail-btn login_botton submit" target="_blank">下一步</a>
+		  <div class="mailbox-line"></div>
+		  <ul class="bp_compelet_ul">
+          <li>没有收到验证邮件？</li>
+          <li>建议您检查邮件垃圾箱</li>
+          <li id="resend_p2"><a id="resend_setmail">重新发送验证邮件</a></li>
+          <li>若仍未收到，请联系客服<a href="mailto:help@paiwo.co">help@paiwo.co</a></li>
+          </ul>
+	    </div>
+
+    </div>
+    
+    <!--图片验证-->
+        <div class="phone-defined">
+            <div class="phone-defined-main">
+               <i class="forgetbox_i"></i>
+               <h3>输入验证码</h3>
+                <div class="phone-def-code clearfix">
+                    <input class="vcode" type="text"placeholder="输入验证码">
+                    <span class="verify_error_em" style="display: none;"></span>
+                    <i class="verify_error_icon" style="display: none;"></i>
+                    <img id="r_image" src="/a/captcha/register?v=0.6014452094677836">
+                </div>
+                <a class="submit phone-defined-btn" id="register_b">确定</a>
+            </div>
+        </div>
+
+    <div id="er_code"></div>
+	 <!--升级提醒-->
+    {% block update_notice %}
+ 	{% include "../update_notice.html" %}
+ 	{% end %}
+  <!--[if IE 6]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+ <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+ <script src="/static/js/com/jquery.md5.js"></script>
+ <script src="/static/js/com/common.js"></script>
+ <script src="/static/js/login/login_view.js"></script>
+ <script src="/static/js/login/login_data.js"></script>
+ <script src="/static/js/login/login_help.js"></script>
+ <script src="/static/js/login/login_controller.js"></script> 
+ 
+</body>
+</html>
+  	  	

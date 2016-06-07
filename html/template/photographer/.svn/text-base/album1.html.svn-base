@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>摄影师主页 - 拍我网</title>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+  <meta name="description" content="拍我网-专业的自由影服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+  {% block commoncss %}
+  {% include "../commoncss.html" %}
+  {% end %}
+  <link rel="stylesheet" href="/static/css/com/bigPic.css">
+  <link rel="stylesheet" href="/static/css/store.css">
+  <link rel="stylesheet" href="/static/css/studio.css">
+   
+    <!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul>
+ {% block top_bar %}
+ {% include "../top_tab.html" %}
+ {% end %}
+ <!--browse update-->
+ {% block update_notice %}
+ {% include "../update_notice.html" %}
+ {% end %}
+  
+<div class="alert_body" style="display:none" id="delete_alert">
+  <!--删除相册弹窗--> 
+  <div class="del-box" style="display:none">
+    <h3>删除相册</h3>
+    <img width="12" height="12" src="/static/images/icon/close12.png" class="del-close">
+    <p class="box-mes">确认删除该相册吗?</p>
+    <button class="firm-del">确定</button> 
+    <button class="cancel-del">取消</button>
+  </div>
+                  
+</div>
+<div id="main_box">
+  <div class="stuido_mian">
+
+    <!--相册、简介、服务-->
+    <div class="stuido_content">
+      <!--相册专辑内页-->
+      <div class="content_photobox">
+        <div class="content_photobox_title">
+          <a class="title_photo_edit"><i></i>编辑相册</a>
+          <a class="title_photo_delete"><i></i>删除相册</a>
+          <h2 id="p-name"></h2>
+          <!--相册内部的相片描述-->
+          <div id='album_tags_list' class="content_photobox_tipbox content_title_tipbox">
+            <sup>“</sup><ul class="title_tipbox_ul"></ul><sup>”</sup>
+          </div>
+          <p class="photobox_title_intro"><span id="album-desc"> </span><a id="desc-more" style="display:none">更多</a></p> 
+          <div class="album_comment_tab_copyright">
+<!--
+            <a title="共同方式分享" href="http://creativecommons.org/licenses/by-nc-nd/2.5/deed.zh" target="_blank"></a>
+            <a title="署名" href="http://creativecommons.org/licenses/by-nc-nd/2.5/deed.zh" target="_blank"></a>
+            <a title="非商业性使用" style=" margin-right: 0;" href="http://creativecommons.org/licenses/by-nc-nd/2.5/deed.zh" target="_blank"></a>
+-->
+              
+			  <span class="t1" style="display:none;" title="不使用原创授权">
+			  	<i href="javascript:;" class="type1"></i>不使用原创授权
+			  </span>
+			  
+			  <span class="t2" style="display:none;" title="版权所有，禁止转载">
+			  	<i href="javascript:;" class="type2"></i>版权所有，禁止转载
+			  </span>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+                  <span class="t3" style="display:none;" title="署名-非商业使用-禁止演绎">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>
+                     <i href="javascript:;" class="type6"></i>署名-非商业使用-禁止演绎
+                  </span>
+			  </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                  <span class="t4" style="display:none;" title="署名-非商业使用-相同方式共享">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>
+                     <i href="javascript:;" class="type4"></i>署名-非商业使用-相同方式共享
+                  </span>
+			  </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+                  <span class="t5" style="display:none;" title="署名-非商业性使用">
+                     <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type3"></i>署名-非商业性使用
+                  </span>
+			  </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank">
+                  <span class="t6" style="display:none;" title="署名-禁止演绎">
+                    <i href="javascript:;" class="type5"></i>
+                     <i href="javascript:;" class="type6"></i>署名-禁止演绎
+                  </span>
+			  </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                  <span class="t7" style="display:none;" title="署名-相同方式共享">
+                    <i href="javascript:;" class="type5"></i>
+                    <i href="javascript:;" class="type4"></i>署名-相同方式共享
+                  </span>
+			  </a>
+			  
+			  <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                  <span class="t8" style="display:none;" title="署名">
+                    <i href="javascript:;" class="type5"></i>署名
+                  </span>
+			  </a>
+<!--
+				 <a href="javascript:;" class="type1"></a>
+				 <a href="javascript:;" class="type2"></a>
+				 <a href="javascript:;" class="type3"></a>
+				 <a href="javascript:;" class="type4"></a>
+				 <a href="javascript:;" class="type5"></a>
+				 <a href="javascript:;" class="type6"></a>
+-->
+         
+          </div>
+          <!--分享-->
+          <!--div class="comment_tab_share">
+            <a class="tab_share_weibo"></a>
+            <a class="tab_share_wechat"></a>
+            <a class="tab_share_moments"></a>
+            <a class="tab_share_qq"></a>
+            <a class="tab_share_qzone"></a> 
+          </div-->
+          <button class="slide_up"><span></span>收起</button> 
+      </div>
+		    <!--专辑内图片-->
+
+        <!--选项卡-->
+        <div class="photo-arrange">
+          <a href="javascript:;" class="photo-arrange-normal photo-normal-cur"><i></i></a>
+          <span>|</span>
+          <a href="javascript:;" class="photo-arrange-free"><i></i></a>
+          <span>|</span>
+          <a href="javascript:;" class="photo-arrange-full"><i></i></a>
+        </div>
+        
+        <div class="photo-section">
+          <ul class="photo_section_normal"></ul>
+          <ul class="photo_section_free" style="display:none">
+          </ul>
+          <ul class="photo_section_full" style="display:none"></ul>
+        </div>
+      </div>   
+    </div><!--.stuido_content.end-->
+  </div>
+  <!--stuido_mian.emd-->
+{% block foot %}
+{% include "../foot.html" %}
+{% end %}
+</div>
+  
+	<div id="shadow_box"></div>
+	<div class="back_color"></div>
+  <div class="message-box"></div>
+  <!--大图展示-->
+    
+    
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+     
+{% block paiwoPhoto %}
+{% include "../paiwoPhoto.html" %}
+{% end %}
+
+{% block login-box %}
+{% include "../login-box.html" %}
+{% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}
+<script src="/static/js/minjs/paiwoPhoto0327.js"></script>
+<script src="/static/js/photog/hp_view.js"></script>
+<script src="/static/js/photog/hp_help.js"></script>
+<script src="/static/js/photog/hp_data.js"></script>
+<script src="/static/js/photog/hp_controller.js"></script>
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+</body>
+</html>

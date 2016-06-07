@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="/static/phone/css/mincss.1.0/common.css">
+	<title>拍我网</title>
+	<style>
+	html,body { height: 100%; background: #eee;}
+	.building {
+		width: 300px;
+		margin: 0 auto;
+		text-align: center;
+		height: 100%;
+		min-height: 450px;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-pack: center;
+		box-pack: center;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+	}
+	.building-txt h2{ 
+		font-size: 18px;
+		padding-top: 20px;
+	}
+	.building-txt a {
+		display: block;
+		color: #e43f52;
+		width: 232px;
+		height: 50px;
+		line-height: 50px;
+		padding-right: 68px;
+		text-decoration: underline;
+	}
+	</style>
+</head>
+<body>
+<!--top&侧边栏-->
+{% block nav %}
+{% include "../phone/template/nav.html" %}
+{% end %}
+<div class="building">
+	<div class="building-img"><img src="/static/phone/images/building_bac.jpg"></div>
+	<div class="building-txt">
+		<h2>页面建设中...</h2>
+		<a href="/m">＜返回</a>
+	</div>
+</div>
+<script src="/static/phone/js/zepto.min.js"></script>
+<script src="/static/phone/js/minjs.1.0/nav.js"></script>
+</body>
+</html>

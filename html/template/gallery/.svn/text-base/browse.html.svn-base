@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	<title>画廊 - 拍我网</title>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的人像摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+
+    
+    
+    {% block commoncss %}
+	{% include "../commoncss.html" %}
+	{% end %}
+	<!-- <link rel="stylesheet" href="/static/css/mincss/browse0630.css"> -->
+	<link rel="stylesheet" href="/static/css/store.css">
+	<link rel="stylesheet" href="/static/css/browse.css">
+	<link rel="stylesheet" href="/static/css/com/bigPic.css">
+	<style>
+        .comment_content_list li{
+            height: auto;
+        }
+        .black_bac .content_list_resend{
+            display: block;
+        }
+    </style>
+	<!-- <link rel="stylesheet" href="/static/css/store.css">
+	<link rel="stylesheet" href="/static/css/browse.css">
+	<link rel="stylesheet" href="/static/css/com/bigPic.css"> -->
+    <!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	</head>
+	<body>
+  
+  
+    <!--browse update-->
+    {% block update_notice %}
+    {% include "../update_notice.html" %}
+    {% end %}
+   
+	{% block side %}
+	{% include "../side.html" %}
+	{% end %}
+
+	{% block top_bar %}
+	{% include "../top_tab.html" %}
+	{% end %}
+    
+	<!--侧边栏按钮-->
+	<ul class="push_button">
+      <li class="navi-one"></li>
+	  <li class="navi-two"></li>
+	  <li class="navi-three"></li>
+	</ul>
+        
+        
+	
+        
+        
+	<!--回到顶部-->
+	<a href="javascript:;" class="go_top" id="go_top" style="display:none;"></a>
+  <!--photo_box-->
+	<div id="main_box">
+
+	<!--分类-->
+	<div class="gallery-header">
+		<h2 class="gallery-tit"><a href="javascript:;">画廊Gallery</a></h2>
+
+		<ul class="gallery-classify-txt clearfix">
+			<li class="gallery-cla-rec classify-txt-cur">推荐</li>
+			<li class="gallery-cla-hot">热门</li>
+			<li class="gallery-cla-new">新作</li>
+			<!-- <li>潜力</li> -->
+		</ul>	
+		<ul class="gallery-classify-pic">
+			<li>
+				<a href="javascript:;" class="gallery-classify-part1">
+					<span class="gallery-classify-hover"></span>
+					<i></i>
+					<div class="classify-pic-bg">人像
+						<dl>
+							<dd>人像</dd>
+							<dd>写真</dd>
+							<dd>个人写真</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:;" class="gallery-classify-part6">
+					<i></i>
+					<div class="classify-pic-bg">日系
+						<dl>
+							<dd>日系</dd>
+							<dd>小清新</dd>
+							<dd>清新</dd>
+							<dd>JK</dd>
+							<dd>DK</dd>
+						</dl>
+					</div>
+				</a>	
+			</li>
+			<li>
+			   <a href="javascript:;" class="gallery-classify-part3">
+					<i></i>
+					<div class="classify-pic-bg">黑白
+						<dl>
+							<dd>黑白</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:;" class="gallery-classify-part10">
+					<i></i>
+					<div class="classify-pic-bg">东西
+						<dl>
+							<dd>静物</dd>
+							<dd>东西</dd>
+						</dl>
+					</div>
+				</a>
+			</li>
+			<li>
+			    <a href="javascript:;" class="gallery-classify-part8">
+					<i></i>
+					<div class="classify-pic-bg">情绪
+						<dl>
+							<dd>情绪</dd>
+							<dd>忧郁</dd>
+						</dl>
+					</div>
+				</a>	
+				<a href="javascript:;" class="gallery-classify-part7">
+					<i></i>
+					<div class="classify-pic-bg">人文
+						<dl>
+							<dd>人文</dd>
+						</dl>
+					</div>
+				</a>		
+			</li>
+			<li>
+				<a href="javascript:;" class="gallery-classify-part2">
+					<i></i>
+					<div class="classify-pic-bg">儿童
+						<dl>
+							<dd>儿童</dd>
+							<dd>儿童摄影</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:;" class="gallery-classify-part9">
+					<i></i>
+					<div class="classify-pic-bg">风景
+						<dl>
+							<dd>风光</dd>
+							<dd>风景</dd>
+						</dl>
+					</div>
+				</a>
+			</li>
+			<li>
+			    <a href="javascript:;" class="gallery-classify-part4">
+					<i></i>
+					<div class="classify-pic-bg">复古
+						<dl>
+							<dd>胶片</dd>
+							<dd>复古</dd>
+						</dl>
+					</div>
+				</a>
+			    <a href="javascript:;" class="gallery-classify-part5">
+					<i></i>
+					<div class="classify-pic-bg">中国风
+						<dl>
+							<dd>汉服</dd>
+							<dd>中国风</dd>
+							<dd>古风</dd>
+							<dd>旗袍</dd>
+						</dl>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+		<div class="main_content">
+			<div class="photos_box">
+				<!--show photo-->
+			    <div class="photos">
+						
+					<div class="photos-list">							
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						 </div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+	                    <div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+						
+						<div data="" class="photo-data">
+							<a class="photo" href="javascript:;"><img style="width:280px;height:280px" src="" class="photo-img"/></a>
+							<i class="inner_liked_img"></i>
+						</div>
+					</div>
+
+					
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+					
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">							
+					</div>
+
+
+					<div class="photos-list" style="display:none">
+					</div>
+
+					<div class="photos-list photos-list-hot" style="display:none">
+					</div>
+
+					<div class="photos-list photos-list-new" style="display:none">
+					</div>
+					
+			    </div>
+				<div class="loading" style="display:none;">
+					<img src="/static/images/loading.gif" width="60px" />
+				</div>
+				
+			</div>
+		</div>
+	</div>
+   
+  <div class="message-box"></div>
+  <div id="shadow_box"></div>
+  <!--browse update-->
+  {% block update_notice %}
+  {% include "../update_notice.html" %}
+  {% end %}
+  <!--[if IE 6]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+  <script src="static/js/login/update_notice.js"></script>
+  <![endif]-->
+    {% block message %}
+    {% include "../paiwoMessage.html" %}
+    {% end %}
+     
+    {% block paiwoPhoto %}
+    {% include "../paiwoPhoto.html" %}
+    {% end %}
+	
+   {% block login-box %}
+   {% include "../login-box.html" %}
+   {% end %}
+   
+   <footer class="pg_list_foot" style="display:none;">
+	  <div class="pglist_foot_main">
+		<h2 class="pg_foot_logo">
+		  <i></i>
+		  <span>最具格调的自由摄影师平台</span>
+		</h2>
+		<dl class="pg_list_about">
+		  <dt><img src="/static/images/foot-images/about_us.png" alt="关于我们"></dt>
+		  <dd><a href="/about">关于我们</a></dd>
+		  <dd><a href="/protocol">条款与隐私</a></dd>
+		  <dd><a href="mailto:help@paiwo.co">建议反馈</a></dd>
+		  <dd><a href="/employ" target="_blank">加入我们</a></dd>
+		</dl> 
+		<dl class="pg_list_contact">
+		  <dt><img src="/static/images/foot-images/contact_us.png" alt="联系我们"></dt>
+		  <dd><a href="http://www.weibo.com/paiwoco" target="_blank">新浪微博</a></dd>
+		  <dd><a href="https://www.facebook.com/paiwo.co" target="_blank">Facebook</a></dd>
+		  <dd><a href="https://twitter.com/paiwo_co" target="_blank">twitter</a></dd>
+		</dl>
+		<dl class="pg_list_nav">
+		  <dt><img src="/static/images/foot-images/sitemap.png" alt="网站地图"></dt>
+		  <dd><a href="/gallery">浏览照片</a></dd>
+		  <dd><a href="/photog">摄影师列表</a></dd>
+		  <dd><a href="/demand">提交订单</a></dd>
+		  <dd><a href="/biz" target="_blank">商业服务</a></dd>
+          <dd><a href="/activity/sigma" target="_blank">活动</a></dd>
+		</dl>
+		<dl class="pg_list_gizmos">
+		  <dt><img src="/static/images/foot-images/gizmos.png" alt="下载"></dt>
+		  <dd><a href="/gizmos/lightroom">Lightroom插件下载</a></dd>
+		</dl>
+		<div class="pg_list_code">
+		  <h3>拍我网官方微信：</h3>
+		  <img src="/static/images/foot-images/paiwocode.jpg">
+		</div>
+	  </div>
+	  <div class="pg_list_copy">
+		<p>拍我网官方服务热线：400-00-72496</p>
+		<span><i class="copy">&copy;&nbsp;</i>2014 paiwo.co 版权所有 </span>
+		<a href="http://www.miitbeian.gov.cn/" class="zhejiang" target="_blank">浙 ICP 备 14026381 号-1</a>
+	  </div>
+	</footer>
+	<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+  	<script src="/static/js/com/jquery.md5.js"></script>
+  	<script src="/static/js/com/jquery.tmpl.min.js"></script>
+  	<script src='/static/js/com/LocationSearch.js'></script>  
+
+   {% block commonjs %}
+   {% include "../commonjs.html" %}
+   {% end %}
+
+
+<script src="/static/js/minjs/paiwoPhoto0922.js"></script>
+<script src="/static/js/minjs/gallery0922.js"></script>
+
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+  
+   
+  </body>
+</html>

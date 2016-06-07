@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>搜索 - 拍我网</title>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="keywords" content="拍我网 拍我 paiwo 摄影 摄影师 婚纱照 写真 paiwo.co 儿童摄影 人像 婚礼 影楼 摄影工作室 拍照 照片 美女" />
+    <meta name="description" content="拍我网-专业的自由摄影师服务平台，免费帮顾客找摄影师，免费帮摄影师找顾客。我们的心愿是让摄影师的创意可以与摄影服务市场真正融合，留下值得珍藏的每一刻。" />
+    {% block commoncss %}
+	{% include "../commoncss.html" %}
+	{% end %}
+<!--    <link rel="stylesheet" href="/static/css/mincss/search0630.css">-->
+   <link rel="stylesheet" href="/static/css/search.css">
+    <style>
+    .comment_content_list li{
+        height: auto;
+    }
+    .black_bac .content_list_resend{
+        display: block;
+    }
+</style>
+    <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?4c5c9adb6a16cd129fb08b66e320353d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<script src="/static/js/lib/modernizr.js"></script>
+</head>
+<body>
+{% block side %}
+{% include "../side.html" %}
+{% end %}
+    
+<!--侧边栏按钮-->
+<ul class="push_button">
+  <li class="navi-one"></li>
+  <li class="navi-two"></li>
+  <li class="navi-three"></li>
+</ul> 
+{% block top_bar %}
+{% include "../top_tab.html" %}
+{% end %}
+
+<a href="javascript:;" class="go_top" id="go_top" style="display: none;"></a>
+
+<!--搜索滑动框-->
+<div class="search-sim">
+  <div class="search-box">
+    <a href="javascript:;" class="search-mag"></a>
+    <div class="search-word">
+      <ul class="tab_search_ul">
+        <li class="searchlabels">
+          <!--<div class="search-color1">
+            <span class="search_data"></span>
+            <span class="search_ul_remove"><i></i></span>
+          </div>-->
+        </li>
+        <input type="text" class="search_input" placeholder="搜索你感兴趣的人、关键词或主题">
+      </ul>
+	</div>
+  </div>
+</div>
+<div id="main_box">
+<div id="search_main_box">
+
+
+<!--常规搜索框-->
+<div class="search-normal">
+  <div class="search-box">
+    <a href="javascript:;" class="search-mag"></a>
+    <div class="search-word">
+      <ul class="tab_search_ul">
+        <li class="searchlabels">
+          <!--<div class="search-color1">
+            <span class="search_data"></span>
+            <span class="search_ul_remove"><i></i></span>
+          </div>-->
+        </li>
+        <input type="text" class="search_input" placeholder="搜索你感兴趣的人、关键词或主题">
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div class="search_main">
+    <div class="search_tips clearfix" style="display:none;">
+		<a href=""><img><span>大傻逼</span></a>
+		<a href=""><img><span>纸哥</span></a>
+		<a href=""><img><span>哈哈哈</span></a>
+		<a href=""><img><span>小清新</span></a>
+		<a href=""><img><span>大光圈</span></a>
+		<a href=""><img><span>大光圈</span></a>
+		<a href=""><img><span>大光圈</span></a>
+	</div>
+
+	<div class="search_title">
+	  <h3 class="search_mix title-select">综合</h3>
+	  <h3 class="search_photo">照片</h3>
+	  <!-- <h3 class="search_dou">兜</h3> -->
+	  <h3 class="search_photog_22">用户</h3>
+	</div>
+
+    <div class="search_mix_section clearfix"> 
+
+      <div class="mix_section_photobox_box">
+        <h4>相关照片<span id="sear_photo_num"></span><a class="search_showall search_footer">更多</a></h4>
+        <div class="search-none">
+          <h5>未找到相关照片!</h5>
+          <span>建议您可以尝试更换关键词，再次搜索。</span>
+          <p>以下是您可能感兴趣的照片</p>	
+        </div>	
+        <ul class="mix_section_photobox clearfix" id="dapul"></ul>
+        <div class="dou_section_box" style="display:none;">
+        	<h4>相关兜<span id="sear_dou_num"></span><a class="search_showall search_footer">更多</a></h4>
+        	<div class="search-none">
+	          <h5>未找到相关兜!</h5>
+	          <span>建议您可以尝试更换关键词，再次搜索。</span>
+	          <p>以下是您可能感兴趣的兜</p>	
+	        </div>
+	        <ul class="dou_section_ul clearfix">
+	        	<li>
+		        	<img width="280" height="280" src="http://image.paiwo.co/10030/album/c341b1e562ab3fac5057e253629f5589@!280x280">
+		        	<div class="photo_fixbox_big" style="bottom: -36px;">
+		        	    <h3>傻逼傻逼</h3>
+		        	    <span>哈哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈</span>
+			        	<div class="photo_fixbox">
+			        	  <a href="bird" target="_blank">by.鸟鸟</a>
+			        	  <button class="photo_fixbox_like"></button>
+			        	  <span class="hot_num"><i></i>1,455</span>
+			        	</div>
+			        </div>
+	        	</li>
+	        </ul>
+        </div>
+      </div>
+
+      <div class="mix_section_photog">
+
+        <!--活动板块-->
+		<div class="mix_section_activity" style="display:none;">
+		
+			<h4>相关活动<span id="sear_active_num"></span><a class="search_showall2" target="_blank" href="/activity">更多</a></h4>
+<!--
+			 <div class="section_activity_box">
+			  <img>
+			  <dl>
+			  	  <dt>适马™傻逼逗逼摄影装逼大赛</dt>
+			  	  <dd><span class="activity_span_left"><i></i>即将开始</span><span class="activity_span_right">6-22</span></dd>
+			  </dl>	
+			</div> 
+-->
+			
+		</div>
+	
+		<h4>相关用户<span id="sear_photog_num"></span><a class="search_showall2">更多</a></h4>
+        <div class="search-none-right search-none">
+          <h5>未找到相关用户!</h5>
+          <span>建议您可以尝试更换关键词，再次搜索。</span>
+          <p>以下是您可能感兴趣的用户</p>	
+        </div>
+        <ul class="mix_section_photobox search_pg_photobox clearfix" style="margin: 0" id="dapgul"></ul>	
+      </div> 
+      	 	
+    </div>
+
+		<div class="search_photo_section" style=" display: none;">
+		  <div class="search-none" id="noneb">
+	      <h5>未找到相关照片!</h5>
+	      <span>建议您可以尝试更换关键词，再次搜索。</span>
+	      <p>以下是您可能感兴趣的照片</p>	
+	    </div>	
+		  <ul class="photo_section_box clearfix" id="dbpul"></ul> 
+		</div>
+		<div class="search_photog_section" style=" display: none;">
+			<div class="search_pg_button">
+			  <span>筛选</span>
+			  <a><i class="search_pg_button_i"></i></a>
+			</div>
+			<section class="search_pg_inputs">
+		      <div class="search_pg_mix">
+		        <a>综合排序</a>
+		        <dl></dl>
+		      </div>
+		      <div class="search_pg_style">
+		        <a>擅长类型</a>
+		        <dl></dl>
+		      </div>
+		      <div class="search_pg_place">
+		        <a>接拍地区</a>
+		        <dl></dl>
+		      </div>
+		      <div class="search_pg_price">
+		        <a>价格排序</a>
+		        <dl></dl>
+		      </div>
+		      <ul class="search_pg_sex">
+				<li class="infor_ul_sexchoose">
+				  <button><i></i></button>
+				  <u>男</u>
+				</li>
+				<li class="infor_ul_sexchoose">
+				  <button></button>
+				  <u>女</u>
+				</li>
+		      </ul>
+			</section>
+	        <div class="search-none" id="nonec">
+		      <h5>未找到相关用户!</h5>
+		      <span>建议您可以尝试更换关键词，再次搜索。</span>
+		      <p>以下是您可能感兴趣的用户</p>	
+		    </div>	
+			<div class="studio-fans-content clearfix" id="dcpgul">
+				
+			</div>
+		  </div>
+	      <!--<a class="search_footer" id="foot_more">更多 <span>more</span></a>-->
+	   </div>
+	   <div class="loading">
+			<img src="/static/images/loading.gif" width="60px"/>
+	   </div>
+	  </div>
+     {% block foot %}
+     {% include "../foot.html" %}
+     {% end %}
+
+       
+    
+       
+    </div>
+<div class="setting_succeed"></div>
+<div id="shadow_box"></div>
+
+{% block paiwoPhoto %}
+{% include "../paiwoPhoto.html" %}
+{% end %}
+  
+ {% block message %}
+ {% include "../paiwoMessage.html" %}
+ {% end %}
+ 
+ {% block login-box %}
+ {% include "../login-box.html" %}
+ {% end %}
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/LocationSearch.js"></script>
+
+{% block commonjs %}
+{% include "../commonjs.html" %}
+{% end %}   
+
+<script src="/static/js/minjs/paiwoPhoto0922.js"></script>
+<script src="/static/js/minjs/search0922.js"></script> 
+
+</body>
+</html>

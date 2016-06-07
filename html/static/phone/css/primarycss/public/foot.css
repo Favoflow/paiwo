@@ -1,0 +1,21 @@
+.foot {
+    position: relative;
+    width: 100%;
+    line-height: 0.65rem;
+    text-align: center;
+}
+.foot span {
+    font-size: 0.21rem;
+    color: #414141;
+}
+.foot .foot-cur { color: #2DD888;}
+.foot .foot-cur a{
+    color: #2DD888;
+}
+.foot .foot-copy {
+    position: absolute;
+    right: 0.43rem;
+    top: 0.3rem;
+    font-size: 0.17rem;
+    color: #8A88800;
+}

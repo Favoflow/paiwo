@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>在线选片 摄影师- 拍我网</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/com/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/com/base.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/cloud/cloud.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/com/login-box.css">
+	<link rel="stylesheet" href="/static/css/com/paiwoMessage.css">
+	<style>
+        html,body{
+          -moz-user-select:none;
+          -webkit-user-select:none;
+          -ms-user-select:none;
+          -khtml-user-select:none;
+          user-select:none;
+        }
+	    #detail-pic-box .pass-line-cur i{
+            background-color: #ff475c;
+        }
+        
+        .mouse-left,.mouse-right{
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .mouse-left{
+           left:-30px;
+        }
+        
+        #detail-pic-box .pass-line .pass-one{
+            cursor: pointer;
+        }
+        
+        #detail-pic-box .pass-line{
+            border-bottom:1px dashed #b6b3aa;
+            position: absolute;
+            width:initial;
+        }
+        
+        #detail-pic-box .pass-line li{
+             width: 50px;
+             height: 30px;
+             float: left;
+             margin-top: -27px;
+             position: static;
+             cursor: pointer;
+         }
+        
+        #detail-pic-box img{
+            cursor: pointer;
+        }
+        
+        
+        #detail-pic-box .detail-point span{
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+        }
+        
+        #detail-pic-box .detail-point dl {
+            display:block;
+            text-align: right;
+        }
+        
+        #detail-pic-box .detail-point dl .save-reply{
+            width: 50px;
+            height: 22px;
+            border: 1px solid #b6b3aa;
+            color: #b6b3aa;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        #detail-pic-box .detail-point dl .save-reply:hover{
+            border: 1px solid rgb(247, 72, 94);
+            color: rgb(247, 72, 94);
+        }
+        
+        #customer-select-list .on-addDemand-mainbox li .delete-select{
+            height: 36px; 
+            line-height: 36px;
+            top:initial;
+        }
+        #selected-detail-pic-box{
+            overflow-y: auto;
+        }
+        
+               
+        #selected-detail-pic-box .pass-line .pass-one{
+            cursor: pointer;
+        }
+        
+        #selected-detail-pic-box .pass-line{
+/*            border-bottom:1px dashed #b6b3aa;*/
+            position: absolute;
+            width:initial;
+        }
+        
+        #selected-detail-pic-box .pass-line li{
+            width: 50px;
+            height: 30px;
+            float: left;
+            margin-top: -27px;
+            position: static;
+            cursor: pointer;
+/*            text-align: center;*/
+         }
+        
+        #selected-detail-pic-box img{
+            cursor: pointer;
+        }
+        
+        
+        #selected-detail-pic-box .detail-point span{
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+        }
+        
+        #selected-detail-pic-box .detail-point dl {
+            display:block;
+            text-align: right;
+        }
+        
+        #selected-detail-pic-box .detail-point dl .save-reply{
+            width: 50px;
+            height: 22px;
+            border: 1px solid #b6b3aa;
+            color: #b6b3aa;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        #selected-detail-pic-box .detail-point dl .save-reply:hover{
+            border: 1px solid rgb(247, 72, 94);
+            color: rgb(247, 72, 94);
+        }
+        
+        #selected-detail-pic-box .photo-version-box .pass-line-cur i{
+            background-color: #ff475c;
+        }
+        
+        .add-dem-right{
+            opacity: 1;
+        }
+        
+        .bottom-tab-cneter-2 .bottom-tab-i{
+/*
+            position: absolute;
+            margin-left:-415px;
+            margin-top: 1px;
+*/
+            margin-left:-140px;
+        }
+        
+        .bottom-tab-cneter-2 .bottom-tips{
+            margin-left:-58px;
+            padding-left: 55px;
+        }
+        
+        .del-complet-detail{
+            left: -552px;
+        }
+        
+        .bottom-del-complet .binded_head-img i{
+            background-position: -42px -198px;
+        }
+	</style>
+	<!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<script> var pCloud =  {% raw p_cloud %}</script>
+</head>
+
+<body>
+  <div class="light-bac"></div>
+  
+  <!--回到顶部-->
+  <a href="javascript:;" class="yun-pic-go-top go_top" id="go_top" style="display: none;"></a>
+
+  <div class="online-main">
+     
+    
+  {% block cloud_top %}
+  {% include "../cloud_top.html" %}
+  {% end %}
+  
+  
+
+  <!--底部tab-->
+  <div class="bottom-tab">
+    <!--button class="establish" id="save">保存</button-->
+
+    <!--摄影师发片-->
+	  <div class="bottom-tab-cneter clearfix" style="display:none;">
+	    <ul class="pass-line">
+	      <li class="pass-one pass-line-cur"><i class="pass-line-li-i"></i><p>已创建</p></li>
+	      <li class="pass-two"><i></i><p>精修</p></li>
+	      <li class="pass-three"><i></i><p>收片</p></li>
+	    </ul>
+	  	<i class="bottom-tab-i"></i>请确保照片已经上传完毕,提交后将再无法修改
+	  	<button class="sub-to establish">提交给顾客</button>
+
+			<span class="bottom-tab-span">
+			  <i class="bottom-tab-i"></i>选片夹详情
+			  <div class="bottom-tab-detail">
+			    <h3>顾客暂未收片</h3>
+			    <i></i>
+			    <p class="tab-detail-title"><span>校验信息</span></p>
+		        <span><label>手机号码:</label><!-- 13071866368 --><input type="text"></span>
+		        <span><label>电子邮件:</label><!-- shabishabi@gmall.com --><input type="text"></span>
+		        <span><label>链接:</label><a>http://t.cn/RZO1KwG</a></span>
+		        <a class="delete-project">更改信息</a>
+			  </div>
+		  </span>
+
+		  <!--最终交易完成后显示详细信息-->
+<!--
+      <span class="bottom-del-complet bottom-cus-binded bottom-tab-span">
+        <i class="bottom-tab-i"></i>已全部收片<u>详细信息</u>
+        <div class="del-complet-detail bottom-tab-detail"  style="display:none;">
+          <h3>服务顾客：</h3>
+          <div class="binded_head-img"><img>大傻逼纸哥<i></i></div>
+          <i></i>
+          <span><label>创建选片夹时间：</label><i>2015/2/12</i></span>
+          <span class="del-complet-detail-span"><label>全部收片时间：</label><i>2015/5/13</i></span>
+
+          <span><label>原片数量：</label><i>2011张</i></span>
+          <span><label>可选精修张数：</label><i>20张</i></span>
+          <span><label>定制精修：</label><i>11张</i></span>
+          <span class="del-complet-detail-span"><label>其中含加修：</label><i>2张</i></span>
+
+          <span><label>摄影师精修：</label><i>20张</i></span>
+          <span class="del-complet-detail-span"><label>摄影师赠片</label><i>0张</i></span>
+
+          <span><label>加修照片价格：</label><i>(不允许加修)</i></span>
+          <span class="del-complet-detail-span"><label>总共额外费用:</label><i>￥200元</i></span>
+
+          <div class="checkbox">
+            <a><i></i></a>
+            <u>允许摄影师公开展示精修照片</u>
+          </div>
+        </div>
+      </span>
+-->
+      
+	  </div>
+
+    <!--顾客收片-->
+    <div class="customer-tab-center" style="display:none;">
+      <p>添加照片至您的账号</p>
+      <!--span class="customer-tab-logined"><i></i><img src="http://image.paiwo.co/10678/album/cbd669847a8afee8e905b580a4c8705a@!280x280">大煞笔纸哥<a class="delete-project">更换帐号</a></span-->
+      <span class="customer-tab-unlogin">您还没有登录，请先<a>登录</a>或<a>注册</a></span>
+      <button class="establish">添加并打开</button>     
+    </div>
+       
+    <!--顾客修改需求-->
+    <div class="bottom-tab-cneter-2 bottom-tab-cneter clearfix">
+	    <ul class="pass-line">
+<!--
+	      <li class="demandfix-pass pass-one pass-line-cur"><i></i><p>挑选底片</p></li>
+	      <li class="demandfix-pass pass-two"><i></i><p>等待精修</p></li>
+	      <li class="pass-three"><i></i><p>收片</p></li>
+-->
+	    </ul>
+	    	<i class="bottom-tab-i"></i>
+	  	
+          <span class="bottom-tips list-tips"></span>
+          
+          <span class="bottom-tips show-tips" style="display:none;"></span>
+          
+          <span class="bottom-tips talk-tips" style="display:none;"></span>
+          
+<!--
+	    <a class="demandfix-left-a" style="display:none;">上一张</a>
+	    <a class="demandfix-right-a" style="display:none;">下一张</a>
+-->
+
+		    <!--购物车 顾客修改需求-->
+		  	<!--button class="demandfix-buttom">
+		  	  需精修照片
+		  	  <i class="count"></i>
+		  	  <a href="javascript:;" class="submit-pg">提交</a>
+		  	  <div class="tab-demandfix-picbox" id="sub-pg-box" style="display:none;">
+		  	    <h3>已选精修照片</h3>
+		  	    <ul class="demandfix-picbox-ul clearfix"></ul>
+		  	    <span class="more"><a href="javascript:;">查看全部</a></span>
+		  	    <p class="">已选精修照片<i class="count"></i></p>
+		  	    <a href="javascript:;" class="establish">提交给摄影师</a>    	
+		  	  </div>
+	      </button-->
+
+      <div class="bottom-tab-center-buttons">
+    	    <!--全部收片-->
+            <button class="allrecive-submit submit" style="display:none;">全部收片</button>
+
+            <!--提交-->
+            <button class="cus-submit submit" style="display:none;">提交</button>	
+
+            <!--顾客选片进度-->
+            <button class="cus-recive-uploading establish switch-btn" style="display:none;">
+              <!-- uploading_line-->
+              <!--<span></span>-->
+              <!--已上传<i>10</i>张/共<i>200</i>张-->
+              <!--需精修1135张/服务含1000张 <u>额外费用¥<i>10</i></u>-->
+            </button>	
+      </div> 
+      <!--顾客收片-->
+      <button class="establish complete-selected" style="display:none;">收片</button>
+      
+      <!--单张收片-->
+      <button class="establish single-confirm" style="display:none;">收片</button>
+       
+       
+        <!--最终交易完成后显示详细信息-->
+      <span class="bottom-del-complet bottom-cus-binded bottom-tab-span hover-info" id="cus-complete" style="display:none;">
+<!--        <i class="bottom-tab-i"></i>已全部收片<u>详细信息</u>-->
+        <div class="del-complet-detail bottom-tab-detail"  style="display:none;">
+          <h3>服务摄影师：</h3>
+          <div class="binded_head-img"><img>大傻逼纸哥<i></i></div>
+          <i></i>
+          <span><label>创建选片夹时间：</label><i class="create-time">2015/2/12</i></span>
+          <span class="del-complet-detail-span"><label>全部收片时间：</label><i class="complete-time">2015/5/13</i></span>
+
+          <span><label>原片数量：</label><i class="base-count">张</i></span>
+          <span><label>可选精修张数：</label><i class="select-count">张</i></span>
+          <span><label>定制精修：</label><i class="select-all">张</i></span>
+          <span class="del-complet-detail-span" style="display:none;"><label>其中含加修：</label><i class="add-count">张</i></span>
+
+          <span><label>摄影师精修：</label><i class="pg-select-count">张</i></span>
+<!--          <span class="del-complet-detail-span"><label>摄影师赠片</label><i>0张</i></span>-->
+
+          <span><label>加修照片价格：</label><i class="extra-price">(不允许加修)</i></span>
+          <span class="del-complet-detail-span"><label>总共额外费用:</label><i class="total">元</i></span>
+
+          <div class="checkbox" style="display:none;">
+            <a><i></i></a>
+            <u>允许摄影师公开展示精修照片</u>
+          </div>
+        </div>
+      </span>
+        
+    </div>
+     
+     
+     
+	  <!--摄影师上传-->
+    <div class="customer-tab-center" style="display:none;">
+	    <a class="phg-select-all"><i class="phg-select-all-inone"></i>批量上传精修片</a>
+	    <button class="establish" id="save">提交至顾客</button>
+	  </div>
+	  
+	  <!--顾客上传-->
+    <div class="customer-tab-center send-pg-select" style="display:none;">
+	    <span class="exre-span" style="display:none;">精修张数超出<a href="javascript:;" class="count"></a>张，预计额外支出<a href="javascript:;" class="price"></a>元</span>
+	    <button class="establish save">提交给摄影师</button>
+    </div>
+	  
+	</div>      
+  <!--底部tab结束-->
+
+  <!--顾客添加需求页面-->
+  <div class="on-addDemand on-subCustomer" id="customer-select-box">
+      <section class="on-title-box">
+		    <div class="on-addDemand-left on-title-left">	    
+		      <h3>
+            <a href="/c" class="project-list-link" style="color:#eee;"><span>所有选片夹</span></a>
+            <i>&gt</i>
+            <a href="javascript:;" class="project-name-link" style="color:#eee;"><span class="select-name"></span></a>            
+	        </h3>		    
+		      <span class="count"></span>
+		    </div>
+		    
+		    <div class="on-title-right">
+	            <span class="time"></span>
+	            <a id="edit-btn" class="subCustomer-title-a" style="display:none;">
+	            <i class="subCustomer-title-i"></i>编辑</a>
+	        </div>
+		    
+		    <!-- <h2 class="on-addDemand-h2">点击图片添加修片需求</h2> -->
+		  </section>
+	  <div class="subCustomer-middle">
+          <span>by.</span>
+          <a href="javascript:;" class="avatar-link" target="_blank"><img class="avatar" src=""></a>
+	    <p>摄影师<a href="javascript:;" class="nick-name" target="_blank"></a>的选片夹<span class="on-customerRecive-a message-link"><i></i>联系TA</span></p>
+	    <div class="customerReciveDon" style="display:none;"><i class="customerReciveDon-i"></i>批量下载照片</div>
+	    <div class="subCustomer-middle-radius" style="display:none;">
+	    	<div class="radio radio-cur radio2 original-style">
+			    <a><i></i></a><u>所有照片</u>
+			  </div>
+			  <div class="radio radio2 decorate-style">
+			    <a><i></i></a><u>精修照片</u>
+			  </div>
+	    </div>
+    </div>
+    
+    <ul class="on-addDemand-mainbox original-selected-box clearfix">
+    
+<!--
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><u class="on-addDemand-mainbox-tip">加入精修</u><b class=""></b>
+    	</li>
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><b class="on-addDemand-fixed">已精修</b></li>
+-->
+    	
+    </ul>
+    
+ <!--已精修照片-->
+    <ul class="on-addDemand-mainbox decorate-selected-box clearfix" style="display:none;">
+      
+<!--
+       <li>
+           <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+           <p><i>修片中...</i></p>
+           <b class="decorate-selected-give" style="display:none;"></b>
+       </li>
+       
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><b class="decorate-selected-give"></b></li>
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><b class="decorate-selected-fixed"></b></li> 
+-->
+    	
+    </ul>
+    
+  </div>
+	<!--顾客添加需求页面结束-->
+	
+	<!--全部精修照片-->
+	<div class="on-addDemand on-subCustomer" id="customer-select-list" style="display:none;">
+      <section class="on-title-box">
+		    <div class="on-addDemand-left on-title-left">
+		    
+        <h3 class="back">
+            <i style="padding:0 3px;">&lt</i>
+            <a href="javascript:;" class="project-list-link" style="color:#eee;"><span>返回</span></a>
+	    </h3>
+		    
+		    
+		    
+		    <span class="count"></span>
+		    </div>
+		    <h2 class="on-addDemand-h2"></h2>
+		  </section>
+	  <div class="subCustomer-middle" style="display:none;">
+	    <span>by.</span>
+	    <img class="avatar" src="">
+	    <p>摄影师<a href="javascript:;" class="nick-name"></a>的选片夹<span class="on-customerRecive-a"><i></i>联系TA</span></p><i class="customerReciveDon">下载所有原片</i>
+	    <div class="subCustomer-middle-radius">
+	    	<div class="radio radio-cur">
+			    <a><i></i></a><u>原片</u>
+            </div>
+            
+            <div class="radio radio2">
+			    <a><i></i></a><u>精修照片</u>
+            </div>
+            
+	    </div>
+    </div>
+    <ul class="on-addDemand-mainbox clearfix" style="padding-top:24px;">
+<!--
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i class="on-addDemand-inone"></i>需精修</p></li>
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p class="on-addDemand-ped"><i class="on-addDemand-ied"></i>已精修</p></li>
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i class="on-addDemand-inone"></i>需精修</p></li>
+    	<li data-path="10694/album/4b5163a74937d3f3a4fae831fc18d67b"><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i class="on-addDemand-inone"></i>需精修</p></li>
+-->
+    </ul>
+  </div>
+    <!--全部精修照片结束-->
+    
+    <!--细节大图-->
+<!--
+    <div class="alert_body3 alert_body" id="" style="display:none;">
+      <div class="click-add-dem">
+        <h3><a href="javascript:;" style="display:inline-block;" class="back">&lt 返回</a></h3>
+        <div class="add-dem-left" id="point-box2">
+          <b class="add-dem-left-fixed"></b>
+          <a href="javascript:;" class="mouse-left"></a>
+          <a href="javascript:;" class="mouse-right"></a>     
+          <img class="main-pic" src="" />
+          <button class="dem-big-pic-button dem-right-title-button">对比原片</button>
+          <ul class="dem-big-pic-line pass-line">
+            <li class="pass-one pass-line-cur"><p>原片</p><i class="pass-line-li-i"></i></li>
+            <li class="pass-two"><p>版本1</p><i></i></li>
+            <li class="pass-three"><p>版本2</p><i></i></li>
+          </ul>
+        </div>
+      </div> 
+    </div>    
+-->
+    <!--细节大图结束-->
+
+
+	<!--细节精修图-->
+	<div class="alert_body3 alert_body" id="detail-pic-box" style="display:none;">
+    <div class="click-add-dem">
+      <h3><a href="javascript:;" style="display:inline-block;" class="back">&lt 关闭</a></h3>
+      <div class="add-dem-left" id="point-box">
+          <a href="javascript:;" class="mouse-left"></a>
+          <a href="javascript:;" class="mouse-right"></a> 
+       <div class="point" style="width:100%;height:100%;position:absolute;">
+<!--
+           <i></i>
+           <i></i>
+           <i></i>
+-->
+       </div>
+    
+        <a class="join-aicon" href="javascript:;" style="display:none;">
+          <z></z>
+          <span>加入精修</span>
+        </a>
+        <img class="main-pic" src="" />
+        <b class="img-style add-dem-left-fixing" style="display:none;"></b>
+      </div>
+      
+<!--
+      <div class="add-dem-right" style="position:fixed;right:8%;top:6%;">
+	      	<div class="dem-right-title clearfix">
+	      	
+	      		<div class="add-dem-checkbox checkbox" id="show-point">
+                    <a><i style="display:block;"></i></a>
+                    <u>显示标记</u>
+				</div>
+                  
+				<button class="dem-right-title-button">对比原片</button>
+	      	</div>
+	      	<textarea class="textarea" placeholder="点击图片区域添加修片需求"></textarea>
+      	  <div class="dem-right-savbo"><button class="save">保存</button></div>
+	      	<ul class="detail-point">
+-->
+	      	    
+<!--
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!帮我鼻子修小一点!<dl><dt>回复:</dt><dd>哈哈哈 你是要死你是要死你是要死你是要死么</dd></dl><i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+-->
+<!--
+	      	</ul>
+	      	<div class="right-bot-buttons" style="display:none;">
+-->
+	      		<!--button class="right-bot-add"><i></i>加入精修</button-->
+<!--	      		<a>要求重修</a>-->
+<!--
+	      		<a href="javascript:;">确认收片</a>
+	      	</div>
+        </div>
+-->
+      
+       <ul class="dem-big-pic-line pass-line clearfix photo-version-box" style="bottom:-50px;">
+<!--            <li class="pass-one pass-line-cur"><p>原片</p><i class="pass-line-li-i"></i></li>-->
+<!--
+            <li class="pass-one"><p>版本1</p><i></i></li>
+            <li class="pass-one"><p>版本2</p><i></i></li>
+-->
+       </ul>
+        
+    </div> 
+    
+  </div>    
+  
+  
+  <div class="add-dem-right" style="position:fixed;right:9%;top:24%;z-index:110;display:none;">
+	      	<div class="dem-right-title clearfix">
+	      	
+	      		<div class="add-dem-checkbox checkbox" id="show-point">
+                    <a><i style="display:block;"></i></a>
+                    <u>显示标记</u>
+				</div>
+                  
+				<button class="dem-right-title-button" style="display:none;">对比原片</button>
+	      	</div>
+	      	<textarea class="textarea" placeholder="点击图片区域添加修片需求"></textarea>
+      	  <div class="dem-right-savbo"><button class="save">保存</button></div>
+	      	<ul class="detail-point">
+	      	    
+<!--
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!帮我鼻子修小一点!<dl><dt>回复:</dt><dd>哈哈哈 你是要死你是要死你是要死你是要死么</dd></dl><i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+-->
+	      	</ul>
+	      	<div class="right-bot-buttons" style="display:none;">
+	      		<!--button class="right-bot-add"><i></i>加入精修</button-->
+<!--	      		<a>要求重修</a>-->
+	      		<a href="javascript:;">确认收片</a>
+	      	</div>
+        </div>
+  
+  
+  <!--摄影师上传精修照片结束-->
+  
+  
+  <div class="alert_body3 alert_body" id="selected-detail-pic-box" style="display:none;">
+   
+    <div class="click-add-dem" style="margin:0 auto 180px auto;">
+      <h3><a href="javascript:;" style="display:inline-block;" class="back">&lt 关闭</a></h3>
+      <div class="add-dem-left" id="points-box">
+          <a href="javascript:;" class="mouse-left"></a>
+          <a href="javascript:;" class="mouse-right"></a>
+       <div class="point" style="width:100%;height:100%;position:absolute;display:none;">
+
+      
+      
+       </div>
+    
+        <a class="download-pic-btn" href="javascript:;" style="display:block;">
+<!--          <z></z>-->
+          <span>下载图片</span>
+        </a>
+        
+        <img class="main-pic" src="" />
+        <div class="add-dem-right" style="position:fixed;right:8%;top:6%;">
+        
+        
+<!--
+	      	<div class="dem-right-title clearfix">
+	      	
+	      		<div class="add-dem-checkbox checkbox" id="show-points">
+              <a><i style="display:block;"></i></a>
+              <u>显示标记</u>
+				</div>
+                  
+				<button class="dem-right-title-button">对比原片</button>
+	      	</div>
+-->
+
+
+<!--
+	      	<textarea class="textarea" placeholder="点击图片区域添加修片需求"></textarea>
+      	  <div class="dem-right-savbo"><button class="save">保存</button></div>
+-->
+<!--	      	<ul class="detail-point">-->
+	      	    
+<!--
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!<i></i></li>
+	      	  <li>帮我鼻子修小一点!帮我鼻子修小一点!<dl><dt>回复:</dt><dd>哈哈哈 你是要死你是要死你是要死你是要死么</dd></dl><i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+	      	  <li>背景做模糊点哈。<i></i></li>
+-->
+<!--	      	</ul>-->
+<!--	      	<div class="right-bot-buttons">-->
+	      		<!--button class="right-bot-add"><i></i>加入精修</button-->
+<!--	      		<a>要求重修</a>-->
+<!--	      		<a href="javascript:;">确认收片</a>-->
+<!--	      	</div>-->
+        </div>	
+        
+        <ul class="dem-big-pic-line pass-line clearfix photo-version-box" style="bottom:-50px;">
+<!--            <li class="pass-one pass-line-cur"><p>原片</p><i class="pass-line-li-i"></i></li>-->
+<!--
+            <li class="pass-one"><p>版本1</p><i></i></li>
+            <li class="pass-one"><p>版本2</p><i></i></li>
+-->
+        </ul>
+        
+        <div class="dem-big-pic-icobox">
+            <a href="javascript:;" style="display:none;" class="back"></a>
+            <a href="javascript:;" style="display:none;" class="fixpic-download-icon"></a>
+        </div>
+        
+      </div>
+       
+        
+    </div> 
+    
+    
+  </div>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--细节精修图结束-->
+  
+  <!--顾客添加需求页面 新更改-->
+<!--
+  <div class="on-addDemand on-subCustomer">
+    <section class="on-title-box">
+	    <div class="on-addDemand-left on-title-left"><h3>项目<i>&lt;</i>纸哥是个猪<i>&lt;</i><span>女孩们</span></h3><span>16张照片</span></div>
+	    <h2 class="on-addDemand-h2">点击图片添加修片需求</h2>
+	  </section>
+	  <div class="subCustomer-middle">
+	    <span>by.</span>
+	    <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+	    <p>用户<a>大傻逼纸哥</a>的选片夹<span class="on-customerRecive-a" ><i></i>联系TA</span></p>
+	    <div class="subCustomer-middle-radius">
+	    	<div class="radio radio-cur">
+			    <a><i></i></a><u>原片</u>
+			  </div>
+			  <div class="radio radio2">
+			    <a><i></i></a><u>精修照片</u>
+			  </div>
+	    </div>
+    </div>
+    <ul class="on-addDemand-mainbox clearfix">
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i>修片中...</i></p></li>
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i></i></p></li>
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i></i></p></li>
+    	<li><img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><p><i></i></p></li>
+    </ul>
+	</div>
+-->
+	<!--顾客添加需求页面结束-->
+
+</div>
+
+
+<!--全部弹窗样式-->
+<div class="alert_body alert_main_body_box" style="display: none;">
+
+  <!--单张照片精修片下载-->
+  <div class="alter-download alert_delete_box single-download" style="display:none;">
+    <h3>选择照片分辨率、版本<i class="message_close"></i></h3>
+    <div class="alter-download-com">
+      <div class="download-checkbox checkbox"><a class="phone-size"><i></i></a></div>
+		  <span class="download-com-title">普通</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download-high alter-download-com">
+      <div class="download-checkbox checkbox"><a class="pc-size"><i></i></a></div>
+		  <span class="download-com-title">高清</span>
+		  <span>适合电脑观看</span>
+    </div>
+    <div class="alter-download-ori alter-download-com">
+      <div class="download-checkbox checkbox"><a class="print-size"><i></i></a></div>
+		  <span class="download-com-title">原片</span>
+		  <span>适合冲印</span>
+    </div>
+      <a href="javascript:;" class="link-address" target="_blank" download><button class="submit">确认下载</button></a>
+  </div>
+  
+  <!--照片下载-->
+  <div class="alter-download-pic alter-download alert_delete_box" style="display:none;">
+    <h3>选择照片分辨率、版本<i class="message_close"></i></h3>
+    <div class="alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">普通</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download-high alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">高清</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download-ori alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">原片</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download2-selno">
+      <span class="aaaaa">所有版本<i></i></span>
+    	<ul class="alter-download2-line pass-line">
+				<li class="demandfix-pass pass-one pass-line-cur"><p>原片</p><i class="pass-line-li-i"></i></li>
+				<li class="demandfix-pass pass-two"><p>版本1</p><i></i></li>
+				<li class="pass-three"><p>版本2</p><i></i></li>
+			</ul>
+    </div>
+    <button class="submit">确认下载</button>
+  </div>
+
+  <!--所有照片下载-->
+  <div class="alter-download-pic alter-download alert_delete_box" style="display:none;">
+    <h3>选择全部照片分辨率、版本<i class="message_close"></i></h3>
+    <div class="alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">普通</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download-high alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">高清</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download-ori alter-download-com">
+      <div class="download-checkbox checkbox"><a><i></i></a></div>
+		  <span class="download-com-title">原片</span>
+		  <span>适合手机观看</span>
+    </div>
+    <div class="alter-download3-selno alter-download2-selno">
+    	<ul class="alter-download2-line pass-line">
+				<li class="demandfix-pass pass-one pass-line-cur"><p>所有版本</p><i class="pass-line-li-i"></i></li>
+				<li class="demandfix-pass pass-two"><p>最终版本</p><i></i></li>
+				<li class="pass-three"><p>所有原片</p><i></i></li>
+			</ul>
+    </div>
+    <button class="submit">确认下载</button>
+  </div>
+  <!--精修片下载结束-->
+
+
+  <!--加修提示-->
+  <div class="alter-download2 alter-picExceed alert_delete_box" style="display:none;">
+     <h3>提示<i class="message_close"></i></h3>
+     <p>你加入精修的照片数量已经超出了摄影师 设置的最大数量，继续要求加修将会按照<br><span class="price"></span>元/张<br>收取额外费用，你确定要加修么?</p>
+     <div class="edit_button_box">
+    	 <button class="submit">任性加修</button>
+    	 <button class="alter-picExceed-sub">还是算了</button>
+     </div>
+     <div class="checkbox">
+	     <a><i></i></a>
+	     <u>别再提示我</u>
+	   </div> 
+  </div>
+  <!--加修提示结束-->
+
+  <!---确认收片-->
+  <div class="alert-accept-pic alert_delete_box" id="cus-final" style="display:none;">
+     <h3>提示<i class="message_close"></i></h3>
+     <p>确认收片表示此次拍摄已经完结。是否确定全部收片？</p>
+     <button class="delete_confirm submit">确认</button>
+  </div> 
+    
+  <!--提交给摄影师-->
+  <div class="alert-accept-pic alert_delete_box" id="send-to-pg" style="display:none;">
+     <h3>提示<i class="message_close"></i></h3>
+     <p>确认将这些照片提交给摄影师进行精修？</p>
+     <button class="delete_confirm submit">确认</button>
+  </div> 
+    
+     
+     
+     
+  </div>
+  <!--确认收片结束-->
+
+<!--</div>-->
+ 
+ <!--消息提示-->
+<div class="setting_succeed"></div>
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+{% block cloud-login-box %}
+{% include "../cloud-login-box.html" %}
+{% end %}
+ 
+
+ <!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+{% block cloud_common_js %}
+{% include "../cloud_common_js.html" %}
+{% end %}
+<script src="/static/js/cloud/cusSelectInner.js"></script>
+
+
+</body>
+</html>

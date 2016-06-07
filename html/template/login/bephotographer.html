@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>摄影师认证 - 拍我网</title>
+	<meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="stylesheet" type="text/css" href="/static/css/com/reset.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/bp.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/jquery.Jcrop.min.css">
+</head>
+
+<body>
+  <div id="message">
+  </div>
+  
+  <div class="head-back">
+  	<div class="head-box">
+		<div class="head-h">修改头像</div>
+		<img class="head-close" src="/static/images/icon/close12.png" id="head-close">
+		<div class="head-big">
+			<img id="bigpic">
+		</div>
+		<div class="head-btn" id="head-btn">点击上传</div>
+		<div class="head-save" id="head-save">保存</div>
+		<div class="head-one"><img id="a_p"></div>
+		<div class="head-two"><img id="b_p"></div>
+		<div class="head-three"><img id="c_p"></div>
+     </div>
+  </div>	
+	
+	
+  <div class="bp_navi">
+    <ul class="bp_navi_content">
+      <li class="bp_navi_li_fini"></li>
+      <li class="bp_navi_li"></li>
+      <li class="bp_navi_li"></li>
+      <li class="bp_navi_li"></li>
+      <li class="bp_navi_li"></li>
+      <li class="bp_navi_li"></li>
+      <li class="bp_navi_li"></li>
+<!--      <li class="bp_navi_li"></li>-->
+
+    </ul> 
+  </div>
+<div id="show-content">
+   <div class="step_two_box" style="display:none">
+    <h2 class="step_two_h2 step_one_h2">您的接拍地区</h2>
+    
+   <i class="step_two_left" id="l_btn"></i>
+   <i class="step_two_right" id="r_btn"></i>
+   <ul class="location_choose" id="location_choose">
+
+	<div id="contPon">
+      <li class="gray_circel_div" id="gray_circel_div" data="">
+        <div class="gray_circel"></div>
+      </li>         
+		</div>
+    </ul>
+  
+    <ul class="location_search">
+   
+      <li class="location_search_left" id="location_search_left">
+        <dl class="search_left_dl" id="search_left_dl">
+          <dd id="earth" data="00-00-00-00" style="display:none">全球<i>+</i></dd>
+          <dd data="01-00-00-00">海外<span> > </span></dd>
+          <dd class="in_china" data="02-00-00-00">国内<span> > </span></dd>
+        </dl>
+      </li>
+      
+      <li class="location_search_middle" id="location_search_middle">
+       <dl class="overseas" id="overseas">
+          <dd data="01-01-00-00">日本<i>+</i></dd>
+          <dd data="01-02-00-00">韩国<i>+</i></dd>
+          <dd data="01-03-00-00">长滩岛<i class="pro_three">+</i></dd>
+          <dd data="01-04-00-00">沙巴<i>+</i></dd>
+          <dd data="01-05-00-00">马尔代夫<i class="pro_four">+</i></dd>
+          <dd data="01-06-00-00">尼泊尔<i class="pro_three">+</i></dd>
+          <dd data="01-07-00-00">斯里兰卡<i class="pro_four">+</i></dd>
+          <dd data="01-08-00-00">普吉岛<i class="pro_three">+</i></dd>
+          <dd data="01-09-00-00">巴厘岛<i class="pro_three">+</i></dd>
+          <dd data="01-10-00-00">美国<i>+</i></dd>
+          <dd data="01-11-00-00">阿根廷<i class="pro_three">+</i></dd>
+          <dd data="01-12-00-00">巴西<i>+</i></dd>
+          <dd data="01-13-00-00">玻利维亚<i class="pro_four">+</i></dd>
+          <dd data="01-14-00-00">澳大利亚<i class="pro_four">+</i></dd>
+          <dd data="01-15-00-00">大溪地<i class="pro_three">+</i></dd>
+          <dd data="01-16-00-00">斐济<i>+</i></dd>
+          <dd data="01-17-00-00">新西兰<i class="pro_three">+</i></dd>
+          <dd data="01-18-00-00">法国<i>+</i></dd>
+          <dd data="01-19-00-00">瑞士<i>+</i></dd>
+          <dd data="01-20-00-00">西班牙<i class="pro_three">+</i></dd>
+          <dd data="01-21-00-00">意大利<i class="pro_three">+</i></dd>
+          <dd data="01-22-00-00">英国<i>+</i></dd>
+          <dd data="01-23-00-00">希腊<i>+</i></dd>
+          <dd data="01-24-00-00">土耳其<i class="pro_three">+</i></dd>
+          <dd data="01-25-00-00">荷兰<i>+</i></dd>
+          <dd data="01-26-00-00">肯尼亚<i class="pro_three">+</i></dd>
+          <dd data="01-27-00-00">马达加斯加<i class="pro_five">+</i> </dd>
+          <dd data="01-28-00-00">毛里求斯<i class="pro_four">+</i></dd>
+          <dd data="01-29-00-00">塞舌尔<i class="pro_three">+</i></dd>
+          <dd data="01-30-00-00">其他<i>+</i></dd>
+        </dl>
+       <dl class="china" id="all_china">
+          <dt data="02-00-00-00">中国全境<i class="plus">+</i></dt>
+          <dd data="02-01-00-00">北京 > </dd>
+          <dd data="02-02-00-00">上海 > </dd>
+          <dd data="02-03-00-00">天津 > </dd>
+          <dd data="02-04-00-00">重庆 > </dd>
+          <dd data="02-05-00-00">浙江 > </dd>
+          <dd data="02-06-00-00">江苏 > </dd>
+          <dd data="02-07-00-00">四川 > </dd>
+          <dd data="02-08-00-00">云南 > </dd>
+          <dd data="02-09-00-00">海南 > </dd>
+          <dd data="02-10-00-00">西藏 > </dd>
+          <dd data="02-11-00-00">青海 > </dd>
+          <dd data="02-12-00-00">新疆 > </dd>
+          <dd data="02-13-00-00">广东 > </dd>
+          <dd data="02-14-00-00">广西 > </dd>
+          <dd data="02-15-00-00">福建 > </dd>
+          <dd data="02-16-00-00">江西 > </dd>
+          <dd data="02-17-00-00">湖南 > </dd>
+          <dd data="02-18-00-00">湖北 > </dd>
+          <dd data="02-19-00-00">安徽 > </dd>
+          <dd data="02-20-00-00">山东 > </dd>
+          <dd data="02-21-00-00">河北 > </dd>
+          <dd data="02-22-00-00">河南 > </dd>
+          <dd data="02-23-00-00">山西 > </dd>
+          <dd data="02-24-00-00">陕西 > </dd>
+          <dd data="02-25-00-00">黑龙江 > </dd>
+          <dd data="02-26-00-00">吉林 > </dd>
+          <dd data="02-27-00-00">辽宁 > </dd>
+          <dd data="02-28-00-00">内蒙古 > </dd>
+          <dd data="02-29-00-00">甘肃 > </dd>
+          <dd data="02-30-00-00">贵州 > </dd>
+          <dd data="02-31-00-00">宁夏 > </dd>
+          <dd data="02-32-00-00">台湾 > </dd>
+          <dd id="hk" data="02-33-00-00">香港<i>+</i></dd>
+          <dd id="tw" data="02-34-00-00">澳门<i>+</i></dd>
+        </dl>
+      </li>
+      
+      <li class="location_search_right" id="location_search_right">
+      
+      <dl class="">
+          <dt data="02-01-00-00">北京全境<i class="plus">+</i></dt>
+          <dd data="02-01-01-00">东城<i>+</i></dd>
+          <dd data="02-01-02-00">西城<i>+</i></dd>
+          <dd data="02-01-03-00">海淀<i>+</i></dd>
+          <dd data="02-01-04-00">朝阳<i>+</i></dd>
+          <dd data="02-01-05-00">丰台<i>+</i></dd>
+          <dd data="02-01-06-00">石景山<i class="pro_three">+</i></dd>
+          <dd data="02-01-07-00">门头沟<i class="pro_three">+</i></dd>
+          <dd data="02-01-08-00">房山<i>+</i></dd>
+          <dd data="02-01-09-00">通州<i>+</i></dd>
+          <dd data="02-01-10-00">顺义<i>+</i></dd>
+          <dd data="02-01-11-00">昌平<i>+</i></dd>
+          <dd data="02-01-12-00">大兴<i>+</i></dd>
+          <dd data="02-01-13-00">怀柔<i>+</i></dd>
+          <dd data="02-01-14-00">平谷<i>+</i></dd>
+          <dd data="02-01-15-00">密云<i>+</i></dd>
+          <dd data="02-01-16-00">延庆<i>+</i></dd>
+        </dl>
+       
+        <dl class="">
+          <dt data="02-02-00-00">上海全境<i class="plus">+</i></dt>
+          <dd data="02-02-01-00">黄埔<i>+</i></dd>
+          <dd data="02-02-02-00">徐汇<i>+</i></dd>
+          <dd data="02-02-03-00">长宁<i>+</i></dd>
+          <dd data="02-02-04-00">静安<i>+</i></dd>
+          <dd data="02-02-05-00">普陀<i>+</i></dd>
+          <dd data="02-02-06-00">闸北<i>+</i></dd>
+          <dd data="02-02-07-00">虹口<i>+</i></dd>
+          <dd data="02-02-08-00">杨浦<i>+</i></dd>
+          <dd data="02-02-09-00">闵行<i>+</i></dd>
+          <dd data="02-02-10-00">宝山<i>+</i></dd>
+          <dd data="02-02-11-00">嘉定<i>+</i></dd>
+          <dd data="02-02-12-00">浦东<i>+</i></dd>
+          <dd data="02-02-13-00">金山<i>+</i></dd>
+          <dd data="02-02-14-00">松江<i>+</i></dd>
+          <dd data="02-02-15-00">青浦<i>+</i></dd>
+		  <dd data="02-02-16-00">奉贤<i>+</i></dd>
+       	  <dd data="02-02-17-00">崇明<i>+</i></dd>
+        </dl>
+        
+         
+        <dl class="">
+          <dt data="02-03-00-00">天津全境<i class="plus">+</i></dt>
+          <dd data="02-03-01-00">和平<i>+</i></dd>
+          <dd data="02-03-02-00">河东<i>+</i></dd>
+          <dd data="02-03-03-00">河西<i>+</i></dd>
+          <dd data="02-03-04-00">南开<i>+</i></dd>
+          <dd data="02-03-05-00">河北<i>+</i></dd>
+          <dd data="02-03-06-00">红桥<i>+</i></dd>
+          <dd data="02-03-07-00">东丽<i>+</i></dd>
+          <dd data="02-03-08-00">西青<i>+</i></dd>
+          <dd data="02-03-09-00">津南<i>+</i></dd>
+          <dd data="02-03-10-00">北辰<i>+</i></dd>
+          <dd data="02-03-11-00">滨海<i>+</i></dd>
+          <dd data="02-03-12-00">武清<i>+</i></dd>
+          <dd data="02-03-13-00">宝坻<i>+</i></dd>
+          <dd data="02-03-14-00">宁河<i>+</i></dd>
+          <dd data="02-03-15-00">静海<i>+</i></dd>
+          <dd data="02-03-16-00">蓟县<i>+</i></dd>
+		</dl>
+       
+       <dl class="">
+          <dt data="02-04-00-00">重庆全境<i class="plus">+</i></dt>
+          <dd data="02-04-01-00">渝中<i>+</i></dd>
+          <dd data="02-04-02-00">大渡口<i class="pro_three">+</i></dd>
+          <dd data="02-04-03-00">江北<i>+</i></dd>
+          <dd data="02-04-04-00">沙坪坝<i class="pro_three">+</i></dd>
+          <dd data="02-04-05-00">九龙坡<i class="pro_three">+</i></dd>
+          <dd data="02-04-06-00">南岸<i>+</i></dd>
+          <dd data="02-04-07-00">北碚<i>+</i></dd>
+          <dd data="02-04-08-00">渝北<i>+</i></dd>
+          <dd data="02-04-09-00">巴南<i>+</i></dd>
+          <dd data="02-04-10-00">涪陵<i>+</i></dd>
+          <dd data="02-04-11-00">江津<i>+</i></dd>
+          <dd data="02-04-12-00">合川<i>+</i></dd>
+          <dd data="02-04-13-00">永川<i>+</i></dd>
+          <dd data="02-04-14-00">长寿<i>+</i></dd>
+          <dd data="02-04-15-00">南川<i>+</i></dd>
+          <dd data="02-04-16-00">綦江<i>+</i></dd>
+          <dd data="02-04-17-00">大足<i>+</i></dd>
+          <dd data="02-04-18-00">潼南<i>+</i></dd>
+          <dd data="02-04-19-00">铜梁<i>+</i></dd>
+          <dd data="02-04-20-00">荣昌<i>+</i></dd>
+          <dd data="02-04-21-00">璧山<i>+</i></dd>
+          <dd data="02-04-22-00">渝东北<i class="pro_three">+</i></dd>
+          <dd data="02-04-23-00">渝东南<i class="pro_three">+</i></dd>
+	   </dl>
+       
+       <dl class="">
+          <dt data="02-05-00-00">浙江全境<i class="plus">+</i></dt>
+          <dd data="02-05-01-00">杭州<i>+</i></dd>
+          <dd data="02-05-02-00">宁波<i>+</i></dd>
+          <dd data="02-05-03-00">温州<i>+</i></dd>
+          <dd data="02-05-04-00">嘉兴<i>+</i></dd>
+          <dd data="02-05-05-00">湖州<i>+</i></dd>
+          <dd data="02-05-06-00">绍兴<i>+</i></dd>
+          <dd data="02-05-07-00">金华<i>+</i></dd>
+          <dd data="02-05-08-00">衢州<i>+</i></dd>
+          <dd data="02-05-09-00">舟山<i>+</i></dd>
+          <dd data="02-05-10-00">台州<i>+</i></dd>
+          <dd data="02-05-11-00">丽水<i>+</i></dd>
+          <dd data="02-05-04-01">西塘<i>+</i></dd>
+          <dd data="02-05-04-02">乌镇<i>+</i></dd>
+          <dd data="02-05-09-01">东极岛<i class="pro_three">+</i></dd>
+		  <dd data="02-05-05-01">南浔<i>+</i></dd>
+		  <dd data="02-05-03-01">雁荡山<i class="pro_three">+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-06-00-00">江苏全境<i class="plus">+</i></dt>
+          <dd data="02-06-01-00">南京<i>+</i></dd>
+          <dd data="02-06-02-00">无锡<i>+</i></dd>
+          <dd data="02-06-03-00">徐州<i>+</i></dd>
+          <dd data="02-06-04-00">常州<i>+</i></dd>
+          <dd data="02-06-05-00">苏州<i>+</i></dd>
+          <dd data="02-06-06-00">南通<i>+</i></dd>
+          <dd data="02-06-07-00">连云港<i class="pro_three">+</i></dd>
+          <dd data="02-06-08-00">淮安<i>+</i></dd>
+          <dd data="02-06-09-00">盐城<i>+</i></dd>
+          <dd data="02-06-10-00">扬州<i>+</i></dd>
+          <dd data="02-06-11-00">镇江<i>+</i></dd>
+          <dd data="02-06-12-00">泰州<i>+</i></dd>
+          <dd data="02-06-13-00">宿迁<i>+</i></dd>
+          <dd data="02-06-02-01">太湖<i>+</i></dd>
+          <dd data="02-06-05-01">周庄<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-07-00-00">四川全境<i class="plus">+</i></dt>
+          <dd data="02-07-01-00">成都<i>+</i></dd>
+          <dd data="02-07-02-00">自贡<i>+</i></dd>
+          <dd data="02-07-03-00">攀枝花<i class="pro_three">+</i></dd>
+          <dd data="02-07-04-00">泸州<i>+</i></dd>
+          <dd data="02-07-05-00">德阳<i>+</i></dd>
+          <dd data="02-07-06-00">绵阳<i>+</i></dd>
+          <dd data="02-07-07-00">广元<i>+</i></dd>
+          <dd data="02-07-08-00">遂宁<i>+</i></dd>
+          <dd data="02-07-09-00">内江<i>+</i></dd>
+          <dd data="02-07-10-00">乐山<i>+</i></dd>
+          <dd data="02-07-11-00">南充<i>+</i></dd>
+          <dd data="02-07-12-00">眉山<i>+</i></dd>
+          <dd data="02-07-13-00">宜宾<i>+</i></dd>
+          <dd data="02-07-14-00">广安<i>+</i></dd>
+          <dd data="02-07-15-00">达州<i>+</i></dd>
+          <dd data="02-07-16-00">雅安<i>+</i></dd>
+          <dd data="02-07-17-00">巴中<i>+</i></dd>
+          <dd data="02-07-18-00">资阳<i>+</i></dd>
+          <dd data="02-07-19-00">阿坝<i>+</i></dd>
+          <dd data="02-07-20-00">甘孜<i>+</i></dd>
+          <dd data="02-07-21-00">凉山<i>+</i></dd>
+          <dd data="02-07-10-01">峨眉山<i class="pro_three">+</i></dd>
+          <dd data="02-07-20-01">稻城亚丁<i class="pro_four">+</i></dd>
+          <dd data="02-07-20-02">海螺沟<i class="pro_three">+</i></dd>
+          <dd data="02-07-20-03">康定<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-08-00-00">云南全境<i class="plus">+</i></dt>
+          <dd data="02-08-01-00">昆明<i>+</i></dd>
+          <dd data="02-08-02-00">曲靖<i>+</i></dd>
+          <dd data="02-08-03-00">玉溪<i>+</i></dd>
+          <dd data="02-08-04-00">保山<i>+</i></dd>
+          <dd data="02-08-05-00">昭通<i>+</i></dd>
+          <dd data="02-08-06-00">丽江<i>+</i></dd>
+          <dd data="02-08-07-00">思茅<i>+</i></dd>
+          <dd data="02-08-08-00">临沧<i>+</i></dd>
+          <dd data="02-08-09-00">楚雄<i>+</i></dd>
+          <dd data="02-08-10-00">红河<i>+</i></dd>
+          <dd data="02-08-11-00">文山<i>+</i></dd>
+          <dd data="02-08-12-00">西双版纳<i class="pro_four">+</i></dd>
+          <dd data="02-08-13-00">大理<i>+</i></dd>
+          <dd data="02-08-14-00">德宏<i>+</i></dd>
+          <dd data="02-08-15-00">怒江<i>+</i></dd>
+          <dd data="02-08-16-00">迪庆<i>+</i></dd>
+          <dd data="02-08-16-01">香格里拉<i class="pro_four">+</i></dd>
+          <dd data="02-08-16-02">雨崩<i>+</i></dd>
+          <dd data="02-08-04-01">腾冲<i>+</i></dd>
+          <dd data="02-08-10-01">元阳<i>+</i></dd>
+          <dd data="02-08-11-01">普者黑<i class="pro_three">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-09-00-00">海南全境<i class="plus">+</i></dt>
+          <dd data="02-09-01-00">海口<i>+</i></dd>
+          <dd data="02-09-02-00">三亚<i>+</i></dd>
+          <dd data="02-09-03-00">三沙<i>+</i></dd>
+          <dd data="02-09-04-00">五指山<i class="pro_three">+</i></dd>
+          <dd data="02-09-05-00">琼海<i>+</i></dd>
+          <dd data="02-09-06-00">儋州<i>+</i></dd>
+          <dd data="02-09-07-00">文昌<i>+</i></dd>
+          <dd data="02-09-08-00">万宁<i>+</i></dd>
+          <dd data="02-09-09-00">东方<i>+</i></dd>
+          <dd data="02-09-10-00">定安<i>+</i></dd>
+          <dd data="02-09-11-00">屯昌<i>+</i></dd>
+          <dd data="02-09-12-00">澄迈<i>+</i></dd>
+          <dd data="02-09-13-00">临高<i>+</i></dd>
+          <dd data="02-09-14-00">白沙<i>+</i></dd>
+          <dd data="02-09-15-00">昌江<i>+</i></dd>
+          <dd data="02-09-16-00">乐东<i>+</i></dd>
+          <dd data="02-09-17-00">陵水<i>+</i></dd>
+          <dd data="02-09-18-00">保亭<i>+</i></dd>
+          <dd data="02-09-19-00">琼中<i>+</i></dd>
+          <dd data="02-09-20-00">洋浦<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-10-00-00">西藏全境<i class="plus">+</i></dt>
+          <dd data="02-10-01-00">拉萨<i>+</i></dd>
+          <dd data="02-10-02-00">昌都<i>+</i></dd>
+          <dd data="02-10-03-00">山南<i>+</i></dd>
+          <dd data="02-10-04-00">日喀则<i class="pro_three">+</i></dd>
+          <dd data="02-10-05-00">那曲<i>+</i></dd>
+          <dd data="02-10-06-00">阿里<i>+</i></dd>
+          <dd data="02-10-07-00">林芝<i>+</i></dd>
+          <dd data="02-10-01-01">纳木措<i class="pro_three">+</i></dd>
+          <dd data="02-10-07-01">墨脱<i>+</i></dd>
+          <dd data="02-10-04-01">珠峰<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-11-00-00">青海全境<i class="plus">+</i></dt>
+          <dd data="02-11-01-00">西宁<i>+</i></dd>
+          <dd data="02-11-02-00">海东<i>+</i></dd>
+          <dd data="02-11-03-00">海北州<i class="pro_three">+</i></dd>
+          <dd data="02-11-04-00">黄南州<i class="pro_three">+</i></dd>
+          <dd data="02-11-05-00">海南州<i class="pro_three">+</i></dd>
+          <dd data="02-11-06-00">果洛州<i class="pro_three">+</i></dd>
+          <dd data="02-11-07-00">玉树州<i class="pro_three">+</i></dd>
+          <dd data="02-11-08-00">海西州<i class="pro_three">+</i></dd>
+          <dd data="02-11-01-01">青海湖<i class="pro_three">+</i></dd>
+          <dd data="02-11-01-02">祁连山<i class="pro_three">+</i></dd>
+          <dd data="02-11-06-01">年保玉则<i class="pro_four">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-12-00-00">新疆全境<i class="plus">+</i></dt>
+          <dd data="02-12-01-00">乌鲁木齐<i class="pro_four">+</i></dd>
+          <dd data="02-12-02-00">克拉玛依<i class="pro_four">+</i></dd>
+          <dd data="02-12-03-00">吐鲁番<i class="pro_three">+</i></dd>
+          <dd data="02-12-04-00">哈密<i>+</i></dd>
+          <dd data="02-12-05-00">昌吉州<i class="pro_three">+</i></dd>
+          <dd data="02-12-06-00">博尔塔拉<i class="pro_four">+</i></dd>
+          <dd data="02-12-07-00">巴音郭楞<i class="pro_four">+</i></dd>
+          <dd data="02-12-08-00">阿克苏<i class="pro_three">+</i></dd>
+          <dd data="02-12-09-00">克孜勒苏<i class="pro_four">+</i></dd>
+          <dd data="02-12-10-00">喀什<i>+</i></dd>
+          <dd data="02-12-11-00">和田<i>+</i></dd>
+          <dd data="02-12-12-00">伊犁<i>+</i></dd>
+          <dd data="02-12-13-00">塔城<i>+</i></dd>
+          <dd data="02-12-14-00">阿勒泰<i class="pro_three">+</i></dd>
+          <dd data="02-12-15-00">石河子<i class="pro_three">+</i></dd>
+          <dd data="02-12-16-00">阿拉尔<i class="pro_three">+</i></dd>
+          <dd data="02-12-17-00">图木舒克<i class="pro_four">+</i></dd>
+          <dd data="02-12-18-00">五家渠<i class="pro_three">+</i></dd>
+          <dd data="02-12-19-00">北屯市<i class="pro_three">+</i></dd>
+          <dd data="02-12-20-00">铁门关市<i class="pro_four">+</i></dd>
+          <dd data="02-12-21-00">双河市<i class="pro_three">+</i></dd>
+          <dd data="02-12-14-01">喀纳斯<i class="pro_three">+</i></dd>
+          <dd data="02-12-14-02">禾木<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-13-00-00">广东全境<i class="plus">+</i></dt>
+          <dd data="02-13-01-00">广州<i>+</i></dd>
+          <dd data="02-13-02-00">韶关<i>+</i></dd>
+          <dd data="02-13-03-00">深圳<i>+</i></dd>
+          <dd data="02-13-04-00">珠海<i>+</i></dd>
+          <dd data="02-13-05-00">汕头<i>+</i></dd>
+          <dd data="02-13-06-00">佛山<i>+</i></dd>
+          <dd data="02-13-07-00">江门<i>+</i></dd>
+          <dd data="02-13-08-00">湛江<i>+</i></dd>
+          <dd data="02-13-09-00">茂名<i>+</i></dd>
+          <dd data="02-13-10-00">肇庆<i>+</i></dd>
+          <dd data="02-13-11-00">惠州<i>+</i></dd>
+          <dd data="02-13-12-00">梅州<i>+</i></dd>
+          <dd data="02-13-13-00">汕尾<i>+</i></dd>
+          <dd data="02-13-14-00">河源<i>+</i></dd>
+          <dd data="02-13-15-00">阳江<i>+</i></dd>
+          <dd data="02-13-16-00">清远<i>+</i></dd>
+          <dd data="02-13-17-00">东莞<i>+</i></dd>
+          <dd data="02-13-18-00">中山<i>+</i></dd>
+          <dd data="02-13-19-00">潮州<i>+</i></dd>
+          <dd data="02-13-20-00">揭阳<i>+</i></dd>
+          <dd data="02-13-21-00">云浮<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="" data="">
+          <dt data="02-14-00-00">广西全境<i class="plus">+</i></dt>
+          <dd data="02-14-01-00">南宁<i>+</i></dd>
+          <dd data="02-14-02-00">柳州<i>+</i></dd>
+          <dd data="02-14-03-00">桂林<i>+</i></dd>
+          <dd data="02-14-04-00">梧州<i>+</i></dd>
+          <dd data="02-14-05-00">北海<i>+</i></dd>
+          <dd data="02-14-06-00">防城港<i class="pro_three">+</i></dd>
+          <dd data="02-14-07-00">钦州<i>+</i></dd>
+          <dd data="02-14-08-00">贵港<i>+</i></dd>
+          <dd data="02-14-09-00">玉林<i>+</i></dd>
+          <dd data="02-14-10-00">百色<i>+</i></dd>
+          <dd data="02-14-11-00">贺州<i>+</i></dd>
+          <dd data="02-14-12-00">河池<i>+</i></dd>
+          <dd data="02-14-13-00">来宾<i>+</i></dd>
+          <dd data="02-14-14-00">崇左<i>+</i></dd>
+	   	  <dd data="02-14-05-01">涠洲岛<i class="pro_three">+</i></dd>
+	      <dd data="02-14-03-01">阳朔<i>+</i></dd>
+	      <dd data="02-14-03-02">龙脊梯田<i class="pro_four">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-15-00-00">福建全境<i class="plus">+</i></dt>
+          <dd data="02-15-01-00">福州<i>+</i></dd>
+          <dd data="02-15-02-00">厦门<i>+</i></dd>
+          <dd data="02-15-03-00">莆田<i>+</i></dd>
+          <dd data="02-15-04-00">三明<i>+</i></dd>
+          <dd data="02-15-05-00">泉州<i>+</i></dd>
+          <dd data="02-15-06-00">漳州<i>+</i></dd>
+          <dd data="02-15-07-00">南平<i>+</i></dd>
+          <dd data="02-15-08-00">龙岩<i>+</i></dd>
+          <dd data="02-15-09-00">宁德<i>+</i></dd>
+          <dd data="02-15-02-01">鼓浪屿<i class="pro_three">+</i></dd>
+          <dd data="02-15-07-01">武夷山<i class="pro_three">+</i></dd>
+          <dd data="02-15-09-01">霞浦<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-16-00-00">江西全境<i class="plus">+</i></dt>
+          <dd data="02-16-01-00">南昌<i>+</i></dd>
+          <dd data="02-16-02-00">景德镇<i class="pro_three">+</i></dd>
+          <dd data="02-16-03-00">萍乡<i>+</i></dd>
+          <dd data="02-16-04-00">九江<i>+</i></dd>
+          <dd data="02-16-05-00">新余<i>+</i></dd>
+          <dd data="02-16-06-00">鹰潭<i>+</i></dd>
+          <dd data="02-16-07-00">赣州<i>+</i></dd>
+          <dd data="02-16-08-00">吉安<i>+</i></dd>
+          <dd data="02-16-09-00">宜春<i>+</i></dd>
+          <dd data="02-16-10-00">抚州<i>+</i></dd>
+          <dd data="02-16-11-00">上饶<i>+</i></dd>
+          <dd data="02-16-11-01">婺源<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-17-00-00">湖南全境<i class="plus">+</i></dt>
+          <dd data="02-17-01-00">长沙<i>+</i></dd>
+          <dd data="02-17-02-00">株洲<i>+</i></dd>
+          <dd data="02-17-03-00">湘潭<i>+</i></dd>
+          <dd data="02-17-04-00">衡阳<i>+</i></dd>
+          <dd data="02-17-05-00">邵阳<i>+</i></dd>
+          <dd data="02-17-06-00">岳阳<i>+</i></dd>
+          <dd data="02-17-07-00">常德<i>+</i></dd>
+          <dd data="02-17-08-00">张家界<i class="pro_three">+</i></dd>
+          <dd data="02-17-09-00">益阳<i>+</i></dd>
+          <dd data="02-17-10-00">郴州<i>+</i></dd>
+          <dd data="02-17-11-00">永州<i>+</i></dd>
+          <dd data="02-17-12-00">怀化<i>+</i></dd>
+          <dd data="02-17-13-00">娄底<i>+</i></dd>
+          <dd data="02-17-14-00">湘西<i>+</i></dd>
+          <dd data="02-17-14-01">凤凰<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-18-00-00">湖北全境<i class="plus">+</i></dt>
+          <dd data="02-18-01-00">武汉<i>+</i></dd>
+          <dd data="02-18-02-00">黄石<i>+</i></dd>
+          <dd data="02-18-03-00">十堰<i>+</i></dd>
+          <dd data="02-18-04-00">宜昌<i>+</i></dd>
+          <dd data="02-18-05-00">襄樊<i>+</i></dd>
+          <dd data="02-18-06-00">鄂州<i>+</i></dd>
+          <dd data="02-18-07-00">荆门<i>+</i></dd>
+          <dd data="02-18-08-00">孝感<i>+</i></dd>
+          <dd data="02-18-09-00">荆州<i>+</i></dd>
+          <dd data="02-18-10-00">黄冈<i>+</i></dd>
+          <dd data="02-18-11-00">咸宁<i>+</i></dd>
+          <dd data="02-18-12-00">随州<i>+</i></dd>
+          <dd data="02-18-13-00">恩施<i>+</i></dd>
+          <dd data="02-18-14-00">仙桃<i>+</i></dd>
+          <dd data="02-18-15-00">潜江<i>+</i></dd>
+          <dd data="02-18-16-00">天门<i>+</i></dd>
+          <dd data="02-18-17-00">神农架<i class="pro_three">+</i></dd>
+          <dd data="02-18-03-01">武当山<i class="pro_three">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-19-00-00">安徽全境<i class="plus">+</i></dt>
+          <dd data="02-19-01-00">合肥<i>+</i></dd>
+          <dd data="02-19-02-00">芜湖<i>+</i></dd>
+          <dd data="02-19-03-00">蚌埠<i>+</i></dd>
+          <dd data="02-19-04-00">淮南<i>+</i></dd>
+          <dd data="02-19-05-00">马鞍山<i class="pro_three">+</i></dd>
+          <dd data="02-19-06-00">淮北<i>+</i></dd>
+          <dd data="02-19-07-00">铜陵<i>+</i></dd>
+          <dd data="02-19-08-00">安庆<i>+</i></dd>
+          <dd data="02-19-09-00">黄山<i>+</i></dd>
+          <dd data="02-19-10-00">滁州<i>+</i></dd>
+          <dd data="02-19-11-00">阜阳<i>+</i></dd>
+          <dd data="02-19-12-00">宿州<i>+</i></dd>
+          <dd data="02-19-13-00">六安<i>+</i></dd>
+          <dd data="02-19-14-00">亳州<i>+</i></dd>
+          <dd data="02-19-15-00">池州<i>+</i></dd>
+          <dd data="02-19-16-00">宣城<i>+</i></dd>
+          <dd data="02-19-09-01">宏村<i>+</i></dd>
+          <dd data="02-19-16-01">徽杭古道<i class="pro_four">+</i></dd>
+	   </dl>
+	    <dl class="">
+          <dt data="02-20-00-00">山东全境<i class="plus">+</i></dt>
+		  <dd data="02-20-01-00">济南<i>+</i></dd>
+          <dd data="02-20-02-00">青岛<i>+</i></dd>
+          <dd data="02-20-03-00">淄博<i>+</i></dd>
+          <dd data="02-20-04-00">枣庄<i>+</i></dd>
+          <dd data="02-20-05-00">东营<i>+</i></dd>
+          <dd data="02-20-06-00">烟台<i>+</i></dd>
+          <dd data="02-20-07-00">潍坊<i>+</i></dd>
+          <dd data="02-20-08-00">济宁<i>+</i></dd>
+          <dd data="02-20-09-00">泰安<i>+</i></dd>
+          <dd data="02-20-10-00">威海<i>+</i></dd>
+          <dd data="02-20-11-00">日照<i>+</i></dd>
+          <dd data="02-20-12-00">莱芜<i>+</i></dd>
+          <dd data="02-20-13-00">临沂<i>+</i></dd>
+          <dd data="02-20-14-00">德州<i>+</i></dd>
+          <dd data="02-20-15-00">聊城<i>+</i></dd>
+          <dd data="02-20-16-00">滨州<i>+</i></dd>
+          <dd data="02-20-17-00">菏泽<i>+</i></dd>
+          <dd data="02-20-09-01">泰山<i>+</i></dd>
+          <dd data="02-20-08-01">曲阜<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-21-00-00">河北全境<i class="plus">+</i></dt>
+          <dd data="02-21-01-00">石家庄<i class="pro_three">+</i></dd>
+          <dd data="02-21-02-00">唐山<i>+</i></dd>
+          <dd data="02-21-03-00">秦皇岛<i class="pro_three">+</i></dd>
+          <dd data="02-21-04-00">邯郸<i>+</i></dd>
+          <dd data="02-21-05-00">邢台<i>+</i></dd>
+          <dd data="02-21-06-00">保定<i>+</i></dd>
+          <dd data="02-21-07-00">张家口<i class="pro_three">+</i></dd>
+          <dd data="02-21-08-00">承德<i>+</i></dd>
+          <dd data="02-21-09-00">沧州<i>+</i></dd>
+          <dd data="02-21-10-00">廊坊<i>+</i></dd>
+          <dd data="02-21-11-00">衡水<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-22-00-00">河南全境<i class="plus">+</i></dt>
+          <dd data="02-22-01-00">郑州<i>+</i></dd>
+          <dd data="02-22-02-00">开封<i>+</i></dd>
+          <dd data="02-22-03-00">洛阳<i>+</i></dd>
+          <dd data="02-22-04-00">平顶山<i class="pro_three">+</i></dd>
+          <dd data="02-22-05-00">安阳<i>+</i></dd>
+          <dd data="02-22-06-00">鹤壁<i>+</i></dd>
+          <dd data="02-22-07-00">新乡<i>+</i></dd>
+          <dd data="02-22-08-00">焦作<i>+</i></dd>
+          <dd data="02-22-09-00">济源<i>+</i></dd>
+          <dd data="02-22-10-00">濮阳<i>+</i></dd>
+          <dd data="02-22-11-00">许昌<i>+</i></dd>
+          <dd data="02-22-12-00">漯河<i>+</i></dd>
+          <dd data="02-22-13-00">三门峡<i class="pro_three">+</i></dd>
+          <dd data="02-22-14-00">南阳<i>+</i></dd>
+          <dd data="02-22-15-00">商丘<i>+</i></dd>
+          <dd data="02-22-16-00">信阳<i>+</i></dd>
+          <dd data="02-22-17-00">周口<i>+</i></dd>
+          <dd data="02-22-18-00">驻马店<i class="pro_three">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-23-00-00">山西全境<i class="plus">+</i></dt>
+          <dd data="02-23-01-00">太原<i>+</i></dd>
+          <dd data="02-23-02-00">大同<i>+</i></dd>
+          <dd data="02-23-03-00">阳泉<i>+</i></dd>
+          <dd data="02-23-04-00">长治<i>+</i></dd>
+          <dd data="02-23-05-00">晋城<i>+</i></dd>
+          <dd data="02-23-06-00">朔州<i>+</i></dd>
+          <dd data="02-23-07-00">晋中<i>+</i></dd>
+          <dd data="02-23-08-00">运城<i>+</i></dd>
+          <dd data="02-23-09-00">忻州<i>+</i></dd>
+          <dd data="02-23-10-00">临汾<i>+</i></dd>
+          <dd data="02-23-11-00">吕梁<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-24-00-00">陕西全境<i class="plus">+</i></dt>
+          <dd data="02-24-01-00">西安<i>+</i></dd>
+          <dd data="02-24-02-00">铜川<i>+</i></dd>
+          <dd data="02-24-03-00">宝鸡<i>+</i></dd>
+          <dd data="02-24-04-00">咸阳<i>+</i></dd>
+          <dd data="02-24-05-00">渭南<i>+</i></dd>
+          <dd data="02-24-06-00">延安<i>+</i></dd>
+          <dd data="02-24-07-00">汉中<i>+</i></dd>
+          <dd data="02-24-08-00">榆林<i>+</i></dd>
+          <dd data="02-24-09-00">安康<i>+</i></dd>
+          <dd data="02-24-10-00">商洛<i>+</i></dd>
+          <dd data="02-24-11-00">杨凌<i>+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt id="pro_tit_three" data="02-25-00-00">黑龙江全境<i class="plus">+</i></dt>
+          <dd data="02-25-01-00">哈尔滨<i class="pro_three">+</i></dd>
+          <dd data="02-25-02-00">齐齐哈尔<i class="pro_four">+</i></dd>
+          <dd data="02-25-03-00">鸡西<i>+</i></dd>
+          <dd data="02-25-04-00">鹤岗<i>+</i></dd>
+          <dd data="02-25-05-00">双鸭山<i class="pro_three">+</i></dd>
+          <dd data="02-25-06-00">大庆<i>+</i></dd>
+          <dd data="02-25-07-00">伊春<i>+</i></dd>
+          <dd data="02-25-08-00">佳木斯<i class="pro_three">+</i></dd>
+          <dd data="02-25-09-00">七台河<i class="pro_three">+</i></dd>
+          <dd data="02-25-10-00">牡丹江<i class="pro_three">+</i></dd>
+          <dd data="02-25-11-00">黑河<i>+</i></dd>
+          <dd data="02-25-12-00">绥化<i>+</i></dd>
+          <dd data="02-25-13-00">大兴安岭<i class="pro_four">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-26-00-00">吉林全境<i class="plus">+</i></dt>
+          <dd data="02-26-01-00">长春<i>+</i></dd>
+          <dd data="02-26-02-00">吉林<i>+</i></dd>
+          <dd data="02-26-03-00">四平<i>+</i></dd>
+          <dd data="02-26-04-00">辽源<i>+</i></dd>
+          <dd data="02-26-05-00">通化<i>+</i></dd>
+          <dd data="02-26-06-00">白山<i>+</i></dd>
+          <dd data="02-26-07-00">松原<i>+</i></dd>
+          <dd data="02-26-08-00">白城<i>+</i></dd>
+          <dd data="02-26-09-00">延边<i>+</i></dd>
+          <dd data="02-26-10-00">长白山<i class="pro_three">+</i></dd>
+          <dd data="02-26-11-00">梅河口<i class="pro_three">+</i></dd>
+          <dd data="02-26-12-00">公主岭<i class="pro_three">+</i></dd>
+	   </dl>
+	   
+	    <dl class="">
+          <dt data="02-27-00-00">辽宁全境<i class="plus">+</i></dt>
+          <dd data="02-27-01-00">沈阳<i>+</i></dd>
+          <dd data="02-27-02-00">大连<i>+</i></dd>
+          <dd data="02-27-03-00">鞍山<i>+</i></dd>
+          <dd data="02-27-04-00">抚顺<i>+</i></dd>
+          <dd data="02-27-05-00">本溪<i>+</i></dd>
+          <dd data="02-27-06-00">丹东<i>+</i></dd>
+          <dd data="02-27-07-00">锦州<i>+</i></dd>
+          <dd data="02-27-08-00">营口<i>+</i></dd>
+          <dd data="02-27-09-00">阜新<i>+</i></dd>
+          <dd data="02-27-10-00">辽阳<i>+</i></dd>
+          <dd data="02-27-11-00">盘锦<i>+</i></dd>
+          <dd data="02-27-12-00">铁岭<i>+</i></dd>
+          <dd data="02-27-13-00">朝阳<i>+</i></dd>
+          <dd data="02-27-14-00">葫芦岛<i class="pro_three">+</i></dd>
+	   </dl>
+     
+       <dl class="">
+          <dt id="pro_tit_three" data="02-28-00-00">内蒙古全境<i class="plus">+</i></dt>
+          <dd data="02-28-01-00">呼和浩特<i class="pro_four">+</i></dd>
+          <dd data="02-28-02-00">大连<i>+</i></dd>
+          <dd data="02-28-03-00">乌海<i>+</i></dd>
+          <dd data="02-28-04-00">赤峰<i>+</i></dd>
+          <dd data="02-28-05-00">通辽<i>+</i></dd>
+          <dd data="02-28-06-00">鄂尔多斯<i class="pro_four">+</i></dd>
+          <dd data="02-28-07-00">呼伦贝尔<i class="pro_four">+</i></dd>
+          <dd data="02-28-08-00">巴彦淖尔<i class="pro_four">+</i></dd>
+          <dd data="02-28-09-00">乌兰察布<i class="pro_four">+</i></dd>
+          <dd data="02-28-10-00">兴安<i>+</i></dd>
+          <dd data="02-28-11-00">锡林郭勒<i class="pro_four">+</i></dd>
+          <dd data="02-28-12-00">阿拉善<i class="pro_three">+</i></dd> 
+          <dd data="02-28-12-01">额济纳<i class="pro_three">+</i></dd>  
+          <dd data="02-28-10-01">阿尔山<i>+</i></dd>
+          <dd data="02-28-07-01">海拉尔<i class="pro_three">+</i></dd>         
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-29-00-00">甘肃全境<i class="plus">+</i></dt>
+          <dd data="02-29-01-00">兰州<i>+</i></dd>
+          <dd data="02-29-02-00">嘉峪关<i class="pro_three">+</i></dd>
+          <dd data="02-29-03-00">金昌<i>+</i></dd>
+          <dd data="02-29-04-00">白银<i>+</i></dd>
+          <dd data="02-29-05-00">天水<i>+</i></dd>
+          <dd data="02-29-06-00">武威<i>+</i></dd>
+          <dd data="02-29-07-00">张掖<i>+</i></dd>
+          <dd data="02-29-08-00">平凉<i>+</i></dd>
+          <dd data="02-29-09-00">酒泉<i>+</i></dd>
+          <dd data="02-29-10-00">庆阳<i>+</i></dd>
+          <dd data="02-29-11-00">定西<i>+</i></dd>
+          <dd data="02-29-12-00">陇南<i>+</i></dd>
+          <dd data="02-29-13-00">临夏<i>+</i></dd>
+          <dd data="02-29-14-00">甘南<i>+</i></dd>        
+	   </dl>
+	   
+	   
+	    <dl class="" data="">
+          <dt data="02-30-00-00">贵州全境<i class="plus">+</i></dt>
+          <dd data="02-30-01-00">贵阳<i>+</i></dd>
+          <dd data="02-30-02-00">六盘水<i class="pro_three">+</i></dd>
+          <dd data="02-30-03-00">遵义<i>+</i></dd>
+          <dd data="02-30-04-00">安顺<i>+</i></dd>
+          <dd data="02-30-05-00">铜仁<i>+</i></dd>
+          <dd data="02-30-06-00">黔西南<i class="pro_three">+</i></dd>
+          <dd data="02-30-07-00">毕节<i>+</i></dd>
+          <dd data="02-30-08-00">黔东南<i class="pro_three">+</i></dd>
+          <dd data="02-30-09-00">黔南<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-31-00-00">宁夏全境<i class="plus">+</i></dt>
+          <dd data="02-31-01-00">银川<i>+</i></dd>
+          <dd data="02-31-02-00">石嘴山<i class="pro_three">+</i></dd>
+          <dd data="02-31-03-00">吴忠<i>+</i></dd>
+          <dd data="02-31-04-00">固原<i>+</i></dd>
+          <dd data="02-31-05-00">中卫<i>+</i></dd>
+	   </dl>
+	   
+	   
+	    <dl class="">
+          <dt data="02-32-00-00">台湾全境<i class="plus">+</i></dt>
+          <dd data="02-32-01-00">台北<i>+</i></dd>
+          <dd data="02-32-02-00">新北<i>+</i></dd>
+          <dd data="02-32-03-00">台中<i>+</i></dd>
+          <dd data="02-32-04-00">台南<i>+</i></dd>
+          <dd data="02-32-05-00">高雄<i>+</i></dd>
+	   </dl>
+     
+      </li> 
+    </ul>
+    <button class="next_step" id="next_step_two">下一步</button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+ <script src="/static/js/com/jquery-1.8.3.min.js"></script>
+ <script src="/static/js/com/jquery.md5.js"></script>
+ <script src="/static/js/com/jquery.Jcrop.min.js"></script>
+ <script src="/static/js/photographer/p_view.js"></script>
+ <script src="/static/js/photographer/p_data.js"></script>
+ <script src="/static/js/photographer/p_help.js"></script>
+ <script src="/static/js/photographer/p_controller.js"></script>
+ <script src="/static/js/photographer/step_two.js"></script>
+</body>
+
+
+</html>

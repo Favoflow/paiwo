@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>在线选片 摄影师- 拍我网</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/com/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/com/base.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/com/login-box.css">
+	<link rel="stylesheet" href="/static/css/com/paiwoMessage.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/cloud/cloud.css" />
+	<!--[if IE 6]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+    <!--[if IE 7]>
+    <link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<!--[if IE 8]>
+	<link href="/static/css/update_notice.css" type="text/css" rel="stylesheet">
+	<![endif]-->
+	<style>
+	    html,body{
+          -moz-user-select:none;
+          -webkit-user-select:none;
+          -ms-user-select:none;
+          -khtml-user-select:none;
+          user-select:none;
+        }
+	</style>
+</head>
+
+<body>
+ 
+  <!--browse update-->
+  {% block update_notice %}
+  {% include "../update_notice.html" %}
+  {% end %}
+  
+  <div class="light-bac"></div>
+
+  <!--回到顶部-->
+  <a href="javascript:;" class="yun-pic-go-top go_top" id="go_top" style="display: none;"></a>
+  
+
+  <div class="online-main">
+<!-- 新tab部分-->
+ {% block cloud_top %}
+ {% include "../cloud_top.html" %}
+ {% end %}
+    
+  <!--tab结束-->
+  
+	 <!--底部bottom结束-->  
+	     
+  <!--在线选片项目结束-->
+  
+  
+  <!--在线选中夹内页-->
+  <div class="on-innerProject" style="display: block;">  
+    <section class="on-title-box select-head">
+	    <div class="on-title-left">
+<!--
+	    <h3>项目<i>﹤</i></h3>
+	    <span class="select-count"></span><i></i>
+-->
+        <h3>
+            <a href="/c" class="project-list-link" style="color:#eee;"><span>选片夹</span></a>
+	    </h3>
+	    <span class="select-count"></span>
+	    </div>
+	    <div class="on-title-right create-select" style="display:none;"><a>+ 创建新选片夹</a></div>
+    </section>   
+	  <ul class="innerProject-main-box project-main-box clearfix">
+    
+
+<!--
+	    <li> 
+	      <span class="innerProject-span">顾客已全部收片</span>
+	      <h4 class="has-portrait">阿猫阿狗</h4>
+	      <div class="portrait-text">for.<img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280"><br><span>大傻逼纸哥</span></div>
+	      <span>创建于 2015/3/2 13:22</span>
+	      <dl>
+	        <dd class="innerProject-img-none"></dd>
+	        <dd class="innerProject-img-none"></dd>
+	        <dd class="innerProject-img-none"></dd>
+	      </dl>
+	    </li>
+
+	    <li> 
+	      <span class="innerProject-span">修片中...</span>
+	      <h4 class="no-portrait">阿猫阿狗</h4>
+	      <span>创建于 2015/3/2 13:22</span>
+	      <dl>
+	        <dd class="innerProject-img-none"></dd>
+	        <dd class="innerProject-img-none"></dd>
+	        <dd class="innerProject-img-none"></dd>
+	      </dl>
+	    </li>
+
+	    <li class="icon-li">	         
+	    	<span class="innerProject-span">欢迎</span>
+	    	<b class="icon-li-sel"></b>
+	    	<u>创建你的第一个选片夹</u>
+	    </li>
+
+	    <li class="icon-li">
+	    	<span class="innerProject-span">欢迎</span>
+	    	<b class="icon-li-market"></b>
+	    	<u>去拍我集市找顾客！</u>
+	    </li>
+-->
+	    
+
+	  </ul>
+  </div>
+  <!--在线选中夹内页结束-->
+
+  <!--提交顾客-->
+  <div class="on-subCustomer" style="display:none;">
+    <section class="on-title-box">
+	    <div class="on-title-left"><h3>选片夹<i>﹤</i><i>﹤</i><span>女孩们</span></h3><span>16张照片</span>
+	      <b class="title_tip question">
+	      	<p class="list-qusetion-hover" style="display: none;"><i></i>这里显示摄影师的选片夹注释，注释内容会被分享给顾客，所以如果摄影师骂人就搞笑了。字可以输入很多。字数限制最多120个字，所以现在这样的字数应该是平均字数，大概80个字。</p>
+	      </b>
+	    </div>
+	    <div class="on-title-right"><span>更新于 2015/3/2</span><a id="edite" class="subCustomer-title-a"><i class="subCustomer-title-i"></i>编辑</a></div>
+	  </section>
+	  <div class="subCustomer-middle">
+	    <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+	    <p>用户<a>大傻逼纸哥</a>的选片夹</p>
+	    <div class="subCustomer-middle-radius">
+	    	<div class="radio radio-cur">
+			    <a><i></i></a>
+			    <u>所有照片</u>
+			  </div>
+			  <div class="radio radio2">
+			    <a><i></i></a>
+			    <u>精修照片</u>
+			  </div>
+	    </div>
+    </div>
+    <div class="subCustomer-main-box clearfix">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">
+      <img src="http://image.paiwo.co/10694/album/4b5163a74937d3f3a4fae831fc18d67b@!280x280">   
+    </div>
+  </div>
+  <!--提交顾客结束-->
+  
+  <!--全部弹窗样式-->
+  <div class="alert_body" style="display:none;">
+    <!--编辑项目弹窗-->
+    <div class="alert_delete_box" style="display:none;">
+      <h3>编辑项目<i class="message_close"></i></h3>
+      <ul class="color-choose">标记：
+        <li class="alert-red-circel-cho"><i></i></li>
+        <li class="alert-cyan-circel-cho"><i></i></li>
+        <li class="alert-green-circel"><i></i></li>
+        <li class="alert-orange-circel"><i></i></li>
+        <li class="alert-purple-circel"><i></i></li>
+      </ul>
+      <input placeholder="项目名">
+      <button class="delete_confirm submit" id="delete_p">创建</button>
+      <a class="delete-project">删除项目</a>
+    </div>
+    <!--选片夹取名弹窗-->
+    <div class="alert_delete_box" style="display:none;">
+      <h3>给选片夹取个名字吧<i class="message_close"></i></h3>
+      <p class="color-choose">标记：
+        <i class="alert-red-circel"></i>
+        <i class="alert-cyan-circel"></i>
+        <i class="alert-green-circel"></i>
+        <i class="alert-orange-circel"></i>
+        <i class="alert-purple-circel"></i>
+      </p>
+      <input placeholder="选片夹名">
+      <button class="delete_confirm submit" id="delete_p">保存</button>
+    </div>
+
+  </div>
+ </div>
+ 
+ <!--消息提示-->
+<div class="setting_succeed"></div>
+{% block message %}
+{% include "../paiwoMessage.html" %}
+{% end %}
+
+{% block cloud-login-box %}
+{% include "../cloud-login-box.html" %}
+{% end %}
+
+<script src="/static/js/com/jquery-1.8.3.min.js"></script>
+<script src="/static/js/com/jquery.md5.js"></script>
+<script src="/static/js/com/jquery.tmpl.min.js"></script>
+{% block cloud_common_js %}
+{% include "../cloud_common_js.html" %}
+{% end %}
+<script src="/static/js/cloud/cusSelectList.js"></script>
+<!--<script src="/static/js/cloud/pgSelectList.js"></script>-->
+<!--<script src="/static/js/cloud/paiwoMessage.js"></script>-->
+
+<!--[if IE 6]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<script src="static/js/login/update_notice.js"></script>
+<![endif]-->
+
+</body>
+</html>
